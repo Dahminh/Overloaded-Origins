@@ -1,0 +1,14 @@
+{
+	"type": "origins:target_action_on_hit",
+	"cooldown": 0,
+	"entity_action": {
+		"type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:poison",
+            "amplifier": 0,
+            "duration": 200
+        }
+	},
+	"name": "§a§nVenomous",
+	"description": "All of your attacks poison targets."
+}

@@ -1,0 +1,37 @@
+{
+    "powers": [
+        "phantom:positives/weapon_concealment",
+        "phantom:positives/ghost_touch",
+        "phantom:positives/night_vision",
+        "phantom:positives/ambush/ambush_2",
+        "phantom:positives/ambush/constants",
+        "phantom:positives/raw_food_good",
+        "phantom:phantom_form/constants",
+        "phantom:phantom_form/overlay",
+        "phantom:phantom_form/phasing_2",
+        "phantom:phantom_form/phantom_flight",
+        "phantom:neutral/transparent",
+        "phantom:negatives/burn_in_daylight",
+        "phantom:negatives/pyrophobia/constants",
+        "phantom:negatives/pyrophobia/pyrophobia_2",
+        "phantom:negatives/insomniac",
+        "phantom:negatives/intimidation",
+        "phantom:negatives/strange_anatomy",
+        "phantom:negatives/undead_nightmare"
+    ],
+    "icon": {
+        "item": "minecraft:phantom_membrane"
+    },
+    "unchoosable": true,
+    "order": 0,
+    "impact": 3,
+    "name": "Phantom Haunter",
+    "description": "You're now a Phantom Haunter, becoming more spectral and scarier than before.",
+	"upgrades": [
+		{
+			"condition": "minecraft:adventure/kill_all_mobs",
+			"origin": "phantom:upgraded2",
+			"announcement": "You have evolved into a Phantom Wraith. You are now at the pinnacle of your Origin."
+		}
+	]
+}

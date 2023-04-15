@@ -1,0 +1,303 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"kill": {
+		"type": "origins:self_action_on_kill",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players add @s ckills 1"
+			}
+			]
+		},
+		"target_condition": {
+			"type": "origins:entity_type",
+    		"entity_type": "minecraft:stray"
+		}
+	},
+	"contract_display": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "title @s actionbar [{\"text\":\"Contract Completion \",\"color\":\"gold\"},{\"score\":{\"name\":\"@s\",\"objective\":\"ckills\"},\"color\":\"gold\"},{\"text\":\"/10 Strays\",\"color\":\"gold\"}]"
+			}
+			]
+		}
+	},
+	"completed": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_1/stray"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.player.levelup",
+				"pitch": 0
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s 120 points"
+			},
+			{
+				"type": "origins:choice",
+				"actions": [
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:diamond",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Diamond\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:iron_ingot",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Iron Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 25
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gold_ingot",
+								"amount": 2
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"2 Gold Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:emerald",
+								"amount": 2
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"2 Emeralds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:arrow",
+								"amount": 48
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"48 Arrows\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 20
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:tipped_arrow",
+								"amount": 24,
+								"tag": "{Potion:\"minecraft:slowness\"}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"24 Arrows of Slowness\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 15
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:bone_block",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Bone Blocks\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 20
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:player_head",
+								"amount": 1,
+								"tag": "{display:{Name:'{\"text\":\"Stray Mask\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"DO NOT PLACE DOWN\",\"color\":\"dark_red\",\"italic\":false}','{\"text\":\"Placing Down Will Make You Lose The Effects\",\"color\":\"dark_red\",\"italic\":false}','{\"text\":\"[+] You Deal More Damage With Bows\",\"color\":\"green\",\"italic\":false}','{\"text\":\"[+] Arrows Are Converted Into Arrows Of Slowness\",\"color\":\"green\",\"italic\":false}','{\"text\":\"[-] You Are Considered An Undead\",\"color\":\"red\",\"italic\":false}']},HideFlags:1,Enchantments:[{id:\"minecraft:smite\",lvl:1s},{id:\"minecraft:infinity\",lvl:6s}],SkullOwner:{Id:[I;1785929880,503663408,-1696403692,-78066405],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM1MDk3OTE2YmMwNTY1ZDMwNjAxYzBlZWJmZWIyODcyNzdhMzRlODY3YjRlYTQzYzYzODE5ZDUzZTg5ZWRlNyJ9fX0=\"}]}}}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Stray Mask\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:enchanted_book",
+								"amount": 1,
+								"tag": "{StoredEnchantments:[{id:\"minecraft:smite\",lvl:3s}]}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Smite III Enchanted Book\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:enchanted_book",
+								"amount": 1,
+								"tag": "{StoredEnchantments:[{id:\"minecraft:projectile_protection\",lvl:2s}]}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Projectile Protection II Enchanted Book\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				}
+				]
+			}
+			]
+		},
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if score @s ckills matches 10..",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"failure": {
+		"type": "origins:action_over_time",
+		"interval": 24000,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_1/stray"
+				}
+			},
+			{
+				"type": "origins:heal",
+				"amount": -10
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s -600 points"
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:health",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "/tellraw @s [{\"selector\":\"@s\"},{\"text\":\" failed to complete their Contract\"}]"
+					}
+					]
+				}
+			}
+			]
+		}
+	}
+}

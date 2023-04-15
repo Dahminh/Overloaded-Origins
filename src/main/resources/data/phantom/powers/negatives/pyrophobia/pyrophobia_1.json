@@ -1,0 +1,56 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "addition",
+        "value": 1
+    },
+    "name": "§c§nUndead Phobias I",
+    "description": "Being part undead, you have the weaknesses of an undead as well.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/photoallergic.png",
+            "text": [
+                "§c§nPhotoallergic",
+                "\nYou begin to burn in daylight if §d§nPhantom Form§r is not active.",
+                "\n\n§nExplanation§r:\n\n",
+                "You burn and deal §c-25%§r damage whenever you are exposed to the Sun and not in §d§nPhantom Form§r."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/pyrophobia.png",
+            "text": [
+                "§c§nPyrophobic I",
+                "\nFire hurts even more than usual because of your undead nature",
+                "\n\n§nExplanation§r:\n\n",
+                "Fire damage deals an additional §c1§r damage.",
+                "\n\n§aFire Resistance§r has §c-75%§r less duration."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/smite.png",
+            "text": [
+                "§c§nBane of Undead",
+                "\nThe biggest weakness to undeads is Smite and unfortunately you also have that weakness as well.",
+                "\n\n§nExplanation§r:\n\n",
+                "When hit with an item enchanted with Smite, §d§nPhantom Form§r will be temporarily disabled for §c7.5§r seconds."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/no_trade.png",
+            "text": [
+                "§c§nIntimidation",
+                "\nBeing part Phantom terrifies villagers, making them refuse to trade with you and calling Iron Golems to get rid of you.",
+                "\n\n§nExplanation§r:\n\n",
+                "You cannot trade with Villagers",
+                "\n\nIron Golems will attack you"
+            ]
+        }
+    ]
+}

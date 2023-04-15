@@ -1,0 +1,97 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:distance",
+                "comparison": "<=",
+                "compare_to": 6
+            },
+            {
+                "type": "origins:relative_rotation",
+                "actor_rotation": "head",
+                "target_rotation": "body",
+                "comparison": ">",
+                "compare_to": 0.125,
+                "inverted": true
+            }
+        ]
+    },
+    "target_condition": {
+        "type": "origins:power",
+        "power": "*:shadow_abilities/decoy/decoy_power",
+        "inverted": true
+    },
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "player"
+            },
+            {
+                "type": "origins:name",
+                "name": "player.item"
+            }
+        ]
+    },
+    "target_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "moreoriginsmod:shadowbetrayal",
+            "duration": 300,
+            "show_particles": false
+        }
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "*:shadow_betrayal1"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "assassin:upgraded0"
+                    }
+                ]          
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "*:shadow_betrayal2"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "assassin:upgraded1"
+                    }
+                ]          
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "*:shadow_betrayal3"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "assassin:upgraded2"
+                    }
+                ]          
+            },
+            {
+                "type": "origins:status_effect",
+                "effect": "minecraft:invisibility",
+                "min_amplifier": 9
+            }
+        ]
+    },
+    "hidden": true
+}

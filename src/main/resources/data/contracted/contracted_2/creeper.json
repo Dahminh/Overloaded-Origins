@@ -1,0 +1,491 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"kill": {
+		"type": "origins:self_action_on_kill",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players add @s ckills 1"
+			}
+			]
+		},
+		"target_condition": {
+			"type": "origins:entity_type",
+    		"entity_type": "minecraft:creeper"
+		}
+	},
+	"contract_display": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "title @s actionbar [{\"text\":\"Contract Completion \",\"color\":\"gold\"},{\"score\":{\"name\":\"@s\",\"objective\":\"ckills\"},\"color\":\"gold\"},{\"text\":\"/20 Creepers\",\"color\":\"gold\"}]"
+			}
+			]
+		}
+	},
+	"completed": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_2/creeper"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.player.levelup",
+				"pitch": 0
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s 240 points"
+			},
+			{
+				"type": "origins:choice",
+				"actions": [
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:diamond",
+								"amount": 2
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"2 Diamonds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:iron_ingot",
+								"amount": 5
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"5 Iron Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 25
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gold_ingot",
+								"amount": 6
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"6 Gold Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:emerald",
+								"amount": 5
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"5 Emeralds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:enchanted_book",
+								"amount": 1,
+								"tag": "{StoredEnchantments:[{id:\"minecraft:blast_protection\",lvl:3s}]}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Blast Protection III Enchanted Book\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_13",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_cat",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_blocks",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_chirp",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_far",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_mall",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_mellohi",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_stal",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_strad",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_ward",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_11",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:music_disc_wait",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Music Disc\",\"color\":\"aqua\"}]"
+						}
+						]
+					},
+					"weight": 2
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:tnt",
+								"amount": 5
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"5 TNT\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:player_head",
+								"amount": 1,
+								"tag": "{display:{Name:'{\"text\":\"Creeper Mask\",\"color\":\"yellow\",\"italic\":false}',Lore:['{\"text\":\"[+] You Have More Blast Resistance\",\"color\":\"green\",\"italic\":false}','{\"text\":\"[+] You Are Able To Craft TNT With 2 Sand and 2 Gunpowder\",\"color\":\"green\",\"italic\":false}','{\"text\":\"[X] [Quinary Key] You Have The Ability To Explode Whenever You Want\",\"color\":\"light_purple\",\"italic\":false}','{\"text\":\"[-] Being Ignited Without Fire Resistance Will Make You Automatically Blow Up\",\"color\":\"red\",\"italic\":false}','{\"text\":\"[-] You Are Greatly Debuffed When Around Ocelots Or Cats\",\"color\":\"red\",\"italic\":false}']},HideFlags:1,mob:2,Enchantments:[{id:\"minecraft:blast_protection\",lvl:10s}],SkullOwner:{Id:[I;-288171773,-902673209,-1287927237,-605975132],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQyNTQ4MzhjMzNlYTIyN2ZmY2EyMjNkZGRhYWJmZTBiMDIxNWY3MGRhNjQ5ZTk0NDQ3N2Y0NDM3MGNhNjk1MiJ9fX0=\"}]}}}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Creeper Mask\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gunpowder",
+								"amount": 9
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"9 Gunpowder\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 20
+				}
+				]
+			}
+			]
+		},
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if score @s ckills matches 20..",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"failure": {
+		"type": "origins:action_over_time",
+		"interval": 24000,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_2/creeper"
+				}
+			},
+			{
+				"type": "origins:heal",
+				"amount": -10
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s -1200 points"
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:health",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "/tellraw @s [{\"selector\":\"@s\"},{\"text\":\" failed to complete their Contract\"}]"
+					}
+					]
+				}
+			}
+			]
+		}
+	}
+}

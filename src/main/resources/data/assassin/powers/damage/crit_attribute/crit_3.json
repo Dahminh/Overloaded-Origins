@@ -1,0 +1,9 @@
+{
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "additionalentityattributes:critical_bonus_damage",
+        "operation": "addition",
+        "value": 0.5
+    },
+    "hidden": true
+}

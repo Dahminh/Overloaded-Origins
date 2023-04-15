@@ -1,0 +1,76 @@
+{
+	"type": "origins:multiple",
+	"resource_regain": {
+		"type": "origins:action_over_time",
+		"interval": 5,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:mobility/dash/constants_charges",
+			"change": 15
+		}
+	},
+	"dash": {
+		"type": "origins:active_self",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:status_effect",
+						"effect": "minecraft:glowing",
+						"inverted": true
+					},	
+					{	    
+						"type": "origins:status_effect",
+						"effect": "minecraft:slowness",
+						"inverted": true
+					}
+				]
+			},
+			"if_action": {
+				"type": "origins:add_velocity",
+				"z": 2,
+				"space": "local",
+				"set": true
+			},
+			"else_action": {
+				"type": "origins:add_velocity",
+				"z": 1.25,
+				"space": "local",
+				"set": true
+			}
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:mobility/dash/constants_charges",
+					"comparison": ">=",
+					"compare_to": 300
+				}
+			]
+		}
+	},
+    "name": "§d§nDash III",
+    "description": "You become enveloped by your shadow and quickly dash.",
+    "badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/dash.png",
+            "text": [
+				"[§a5 Second Cooldown Per Charge§r]",
+				"\n[§bPrimary Active Ability§r], use with [",
+				{"keybind": "key.origins.primary_active"},
+				"] will make you to dash in the direction you are looking at.",
+				"\n\nYou have §a3§r charges.",
+				"\n\nYou can dash in the direction you are looking at.",
+				"\n\nIf §d§nDeath's Shadow§r is not active and not under the §cGlowing§r effect, you will enter §d§nDeath's Shadow§r§f for §a1 §fsecond, otherwise, you will dash normally.",
+				"\n\nWhen you have the §cGlowing§r effect or the §cSlowness§r effect, the dash will be weaker.",
+				"\n\n§cCannot§r be used while in elytra flight."
+			]
+		}
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "type": "origins:simple",
+	"name": "§a§nShadow Arts I",
+	"description": "You can manipulate the shadows to assist you in assassinations.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/dark_elf/concealed_presence.png",
+            "text": [
+                "§a§nConcealed Presence",
+                "\nYou slowly conceal your presence with the help of your shadow.",
+                "\n\n§nExplanation§r:\n\n",
+                "While remaining still, you slowly conceal your presence. You will gain the following when fully concealed:",
+                "\n§a-§r Lose aggro from mobs",
+                "\n§a-§r Prevent receiving aggro from mobs",
+				"\n§a-§r Armor, items, and such become invisibile",
+                "\n§e-§r Can move around as long as you are sneaking",
+				"\n§e-§r Emit a Shadow Trail",
+				"\n§c-§r Particle effects and the §cGlowing§r effect outline will still be visible",
+                "\n\nWhenever you move without sneaking, receive §cGlowing§r effect, getting hit, or hitting, will result you to reveal your presence."
+            ],
+            "type": "origins:tooltip"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/betrayal.png",
+            "text": [
+                "§a§nShadow Betrayal I",
+                "\nYou can make your target's shadow betray themselves.",
+                "\n\n§nExplanation§r:\n\n",
+                "Your melee attacks have a §a30%§r to inflict §cShadow Betrayal§r for §c30§r seconds. Successful backstabs or using assassinate will always guarantee §cShadow Betrayal§r for §c30§r seconds.",
+                "\n\n§cShadow Betrayal§r is a debuff that will do the following:",
+                "\n§c-§r Get rid of the regeneration effect upon application",
+                "\n§c-§r Reduce healing effectiveness by §c50%",
+                "\n§c-§r Be detected by Dark Elves and their Evolutions"
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/darkness.png",
+            "text": [
+                "§a§nDarkness Embraced",
+                "\nDark spreads Shadows and Shadows create Darkness.",
+                "\n\n§nExplanation§r:\n\n",
+                "While on a block with a light level less than §a9§r and away from the Sun, your melee attacks will deal §a1.25x§r damage.",
+                "\n\nThe cooldown rate for §d§nDeath's Shadow§r"," will also be §a3x§r faster."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/no_trace.png",
+            "text": [
+                "§e§nLeave no Trace",
+                "\nUpon death, your shadow will try to consume everything, making it seem like you were never there.",
+                "\n\n§nExplanation§r:\n\n",
+                "Your shadow will also lash out, attempting to consume all entities. Giving them §cWither V§r and §cSlowness II§r. Entities such as items will be completely consumed.",
+                "\n\n§4CURRENTLY BUGGED",
+                "\nDue to a bug right now, the \"Shadows\" you spawn are visible when they have the Glowing Effect. They normally should not be visible."
+            ]
+        }
+    ]
+}

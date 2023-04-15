@@ -1,0 +1,52 @@
+{
+	"type": "origins:multiple",
+	"cd": {
+		"type": "origins:cooldown",
+		"cooldown": 24000,
+		"hud_render": {
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 1
+		}
+	},
+	"contract": {
+	"type": "origins:action_over_time",
+	"interval": 20,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+		{
+			"type": "origins:execute_command",
+			"command": "/title @p actionbar {\"text\":\"New Contract!\",\"color\":\"gold\"}"
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scoreboard players set @s ckills 0"
+		},
+		{
+			"type": "origins:trigger_cooldown",
+			"power": "assassin:contracted_1/contract_cd"
+		},
+		{
+			"type": "origins:choice",
+			"actions": [
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/zombie"
+				},
+				"weight": 1
+			}
+			]
+		}
+		]
+	},
+	"condition": {
+		"type": "origins:resource",
+		"resource": "assassin:contracted_1/contract_cd",
+		"comparison": "==",
+		"compare_to": 0
+	}
+	},
+	"name": "§e§nContracted Killer I",
+	"description": "Every 20 minutes you are given an assassination contract and you will have 20 minutes to complete it. Completeting it will reward you while failing will penalize you greatly."
+}

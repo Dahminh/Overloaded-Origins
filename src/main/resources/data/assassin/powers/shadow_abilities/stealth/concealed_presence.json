@@ -1,0 +1,268 @@
+{
+    "type": "origins:multiple",
+    "meter": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 4,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "meter_change": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:moving",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:status_effect",
+                                "effect": "minecraft:glowing",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:resource",
+                                "resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+                                "comparison": "<",
+                                "compare_to": 400
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_meter",
+                        "change": 1,
+                        "operation": "add"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:moving"
+                                    },
+                                    {
+                                        "type": "origins:or",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:sneaking",
+                                                "inverted": true
+                                            },
+                                            {
+                                                "type": "origins:and",
+                                                "conditions": [
+                                                    {
+                                                        "type": "origins:resource",
+                                                        "comparison": "<",
+                                                        "compare_to": 4,
+                                                        "resource": "*:*_meter"
+                                                    },
+                                                    {
+                                                        "type": "origins:sneaking"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                    
+                                ]
+                            },
+                            {
+                                "type": "origins:status_effect",
+                                "effect": "minecraft:glowing"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_meter",
+                        "change": -2,
+                        "operation": "add"
+                    }
+                }
+            ]
+        }
+    },
+    "fade_1": {
+        "type": "origins:model_color",
+        "alpha": 0.75,
+        "condition": {
+            "type": "origins:resource",
+            "comparison": "==",
+            "compare_to": 1,
+            "resource": "*:*_meter"
+        }
+    },
+    "fade_2": {
+        "type": "origins:model_color",
+        "alpha": 0.5,
+        "condition": {
+            "type": "origins:resource",
+            "comparison": "==",
+            "compare_to": 2,
+            "resource": "*:*_meter"
+        }
+    },
+    "fade_3": {
+        "type": "origins:model_color",
+        "alpha": 0.25,
+        "condition": {
+            "type": "origins:resource",
+            "comparison": ">=",
+            "compare_to": 3,
+            "resource": "*:*_meter"
+        }
+    },
+	"feature_1": {
+		"type": "origins:prevent_feature_render",
+		"features": [
+			"stuck_objects"
+		],
+        "condition": {
+            "type": "origins:resource",
+            "comparison": ">=",
+            "compare_to": 1,
+            "resource": "*:*_meter"
+        }
+	},
+	"feature_2": {
+		"type": "origins:prevent_feature_render",
+		"features": [
+			"held_item"
+		],
+        "condition": {
+            "type": "origins:resource",
+            "comparison": ">=",
+            "compare_to": 2,
+            "resource": "*:*_meter"
+        }
+	},
+    "feature_3": {
+        "type": "origins:prevent_feature_render",
+		"features": [
+			"armor",
+			"elytra",
+			"cape",
+			"head"
+		],
+        "condition": {
+            "type": "origins:resource",
+            "comparison": ">=",
+            "compare_to": 3,
+            "resource": "*:*_meter"
+        }
+    },
+	"particles": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:dust_color_transition",
+			"params": "0.000 0.000 0.000 2 0.15 0.15 0.15"
+		},
+		"spread": {
+			"x": 0.3,
+			"y": 0.1, 
+			"z": 0.3
+			},
+		"count": 1,
+		"offset_y": 0.1,
+		"frequency": 1,
+		"visible_while_invisible": true,
+		"visible_in_first_person": false,
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": ">=",
+                    "compare_to": 3,
+                    "resource": "*:*_meter"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "min_amplifier": 9,
+                    "inverted": true
+                }
+            ]
+		}
+	},
+	"tick_action": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:invisibility",
+                "duration": 2,
+                "amplifier": 4,
+                "show_particles": false
+            }
+        },
+		"condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "compare_to": 4,
+                    "resource": "*:*_meter"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "min_amplifier": 9,
+                    "inverted": true
+                }
+            ]
+		}
+	},
+	"clear_1": {
+		"type": "origins:self_action_on_hit",
+		"entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_meter",
+            "change": -4,
+            "operation": "add"
+        },
+		"condition": {
+            "type": "origins:resource",
+            "comparison": ">",
+            "compare_to": 0,
+            "resource": "*:*_meter"
+        },
+		"target_condition": {
+			"type": "origins:power",
+			"power": "*:shadow_abilities/decoy/decoy_power",
+			"inverted": true
+		},
+		"cooldown": 0
+	},
+	"clear_2": {
+		"type": "origins:self_action_when_hit",
+		"cooldown": 0,
+		"entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_meter",
+            "change": -4,
+            "operation": "add"
+        },
+		"condition": {
+            "type": "origins:resource",
+            "comparison": ">",
+            "compare_to": 0,
+            "resource": "*:*_meter"
+        }
+	},
+    "hidden": true
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Enhanced Snow Body",
+    "description": "You have 7 Hearts.",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Max health increase",
+        "attribute": "minecraft:generic.max_health",
+        "value": -6,
+        "operation": "addition"
+    }
+}

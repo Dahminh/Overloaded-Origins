@@ -1,0 +1,30 @@
+{
+    "powers": [
+        "phantom:positives/weapon_concealment",
+        "phantom:positives/ghost_touch",
+        "phantom:positives/night_vision",
+        "phantom:positives/ambush/ambush_3",
+        "phantom:positives/ambush/constants",
+        "phantom:positives/raw_food_good",
+        "phantom:phantom_form/constants",
+        "phantom:phantom_form/overlay",
+        "phantom:phantom_form/phasing_3",
+        "phantom:phantom_form/phantom_flight",
+        "phantom:neutral/transparent",
+        "phantom:negatives/burn_in_daylight",
+        "phantom:negatives/pyrophobia/constants",
+        "phantom:negatives/pyrophobia/pyrophobia_3",
+        "phantom:negatives/insomniac",
+        "phantom:negatives/intimidation",
+        "phantom:negatives/strange_anatomy",
+        "phantom:negatives/undead_nightmare"
+    ],
+    "icon": {
+        "item": "minecraft:phantom_membrane"
+    },
+    "unchoosable": true,
+    "order": 0,
+    "impact": 3,
+    "name": "Phantom Wraith",
+    "description": "You're now the pinnacle of the Phantoms, becoming the embodiment of fear. All will fear you..."
+}

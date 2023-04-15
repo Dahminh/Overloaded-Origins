@@ -1,0 +1,52 @@
+{
+    "type": "origins:phasing",
+    "blacklist": true,
+    "render_type": "blindness",
+    "view_distance": 48,
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "origins:unphasable"
+    },
+    "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        },
+        "condition": {
+        "type": "origins:power_active",
+        "power": "*:phantom_form/constants_toggle"
+    },
+	"name": "§d§nPhantom Form II",
+	"description": "You can switch between human and Phantom form at will, but only while you are saturated enough to sprint.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/phantom_form.png",
+            "text": [
+				"[§bPrimary Toggleable Ability§r], Toggling with [",
+				{"keybind": "key.origins.primary_active"},
+				"] will switch between Human form and Phantom Form.",
+                "\n\nWhile §d§nPhantom Form§r is active, you will:",
+                "\n§a-§r Able to phase through blocks",
+                "\n§a-§r Invisible",
+                "\n§a-§r Fall damage resistant up to §a20 blocks§r",
+                "\n§a-§r Be able to fly when it is night time in the Overworld",
+                "\n§e-§r Considered an undead",
+                "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
+                "\n§c-§r Not be able to attack unless §a§nAmbush§r is active",
+                "\n\nYou cannot phase through the following blocks:",
+                "\n§c-§r Barrier",
+                "\n§c-§r Bedrock",
+                "\n§c-§r Obsidian",
+                "\n§c-§r Crying Obsidian",
+                "\n\nYou can only have §d§nPhantom Form§r active when you have 3 bars or more of hunger."
+			]
+        }
+    ]
+}

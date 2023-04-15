@@ -1,0 +1,12 @@
+{
+	"type": "origins:modify_damage_taken",
+	"damage_condition": {
+		"type": "origins:fire"
+	},
+	"modifier": {
+		"operation": "multiply_base",
+		"value": 2.5
+	},
+	"name": "Ice-Cold Body",
+	"description": "The energy of the Nether provides some resistance to fire, despite your innate weakness. (You take 2.5x damage from Fire.)"
+}

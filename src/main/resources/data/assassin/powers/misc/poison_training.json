@@ -1,0 +1,71 @@
+{
+	"type": "origins:multiple",
+	"0.5_durations": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effects": [
+			"minecraft:jump_boost",
+			"minecraft:night_vision",
+			"minecraft:fire_resistance",
+			"minecraft:speed",
+			"minecraft:resistance",
+			"minecraft:water_breathing",
+			"minecraft:regeneration",
+			"minecraft:strength"
+		],
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.5
+		}
+	},
+	"-1_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"modifier": {
+			"operation": "addition",
+			"value": -1
+		},
+		"status_effects": [
+			"minecraft:jump_boost",
+			"minecraft:speed",
+			"minecraft:poison",
+			"minecraft:regeneration",
+			"minecraft:strength",
+			"minecraft:slowness"
+		]
+	},
+	"resistance_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "addition",
+			"value": -3
+		}
+	},
+	"poison_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:poison",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": "-0.33"
+		}
+	},
+	"0.75_durations": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effects": [
+			"minecraft:slowness",
+			"minecraft:weakness"
+		],
+		"modifier": {
+			"operation": "multiply_total",
+			"value": "-0.25"
+		}
+	},
+	"slow_falling_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slow_falling",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": "-0.75"
+		}
+	},
+	"hidden": true
+}

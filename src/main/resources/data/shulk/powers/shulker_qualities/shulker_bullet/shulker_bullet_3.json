@@ -1,0 +1,60 @@
+{
+    "type": "origins:target_action_on_hit",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:projectile",
+                "projectile": "minecraft:arrow"
+            },
+            {
+                "type": "origins:projectile",
+                "projectile": "minecraft:spectral_arrow"
+            }
+        ]
+    },
+    "cooldown": 300,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 13
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:levitation",
+            "duration": 400
+        }
+    },
+    "name": "§e§nShulker Qualities I",
+    "description": "Being related to Shulkers, you have inherited some of their traits.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+                "§e§nTatical Retreat",
+                "\nYou have the ability to teleport like Shulkers, teleporting to a nearby but safer location when in dangerous situations.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a30 Second Cooldown (For 2 Teleports)§r]",
+                "\n[§a15 Second Cooldown (For 1 Teleport)§r]",
+                "\n\nWhile under §e50%§r health and taking damage, you have a §e30%§r chance to teleport once. This will set your cooldown to §a15§r seconds.",
+                "\n\nIf you are hit again after you teleported, you have a §e60%§r chance to teleport again. This will set your cooldown to §a30§r seconds.",
+                "\n\nIf you are taking damage in a pool of water or lava with no land nearby, you may teleport extremely far or will not even teleport.",
+                "\n\nThis passive is disabled when §d§nFortified Shell§r is active."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+                "§e§nShulker Bullet Imitation",
+                "\nYou can imitate the Shulker Bullets from the Shulkers through archery but because your hands are weirdly formed, you cannot effectively shoot a bow or crossbow.",
+                "\n\n§nExplanation§r:\n\n",
+                "Your arrows deal §c75%§r damage.",
+                "\n\n[§a15 Second Cooldown§r]",
+                "\nWhenever you hit a target with an arrow, they will receive the §cLevitation§r effect for §c20§r seconds."
+            ]
+        }
+    ]
+}

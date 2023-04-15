@@ -1,0 +1,18 @@
+{
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "name": "when weakness -1 damage",
+        "attribute": "minecraft:generic.attack_damage",
+        "value": -1,
+        "operation": "addition"
+    },
+    "tick_rate": 20,
+    "condition": {
+        "type": "origins:status_effect",
+        "effect": "minecraft:weakness",
+        "min_amplifier": 0,
+        "max_amplfier": 255
+    },
+    "name": "Wilting",
+    "description": "When you have weakness it is 1 damage more effective."
+}

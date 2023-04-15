@@ -1,0 +1,65 @@
+{
+    "type": "origins:multiple",
+    "name": "Mob neutrality",
+    "description": "Mobs are neutral to you. (Power made by McMake) (Yoinked by DemonD2131).",
+    "uundeadnow": {
+        "type": "origins:action_on_callback",
+        "entity_action_added": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team add mob",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join mob @s",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "team leave @s",
+            "permission_level": 4
+        }
+    },
+    "undeadundeadnow": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "team leave @e[tag=hateunow]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join mob @e[type=minecraft:wither_skeleton,tag=!hateunow]",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join mob @e[type=#minecraft:blaze,tag=!hateunow]",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "interval": 20
+    },
+    "umesswithundeadugetundead": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tag @s[team=mob,type=!minecraft:player] add hateunow",
+            "permission_level": 4
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "hidden": true
+}

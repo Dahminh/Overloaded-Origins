@@ -1,0 +1,14 @@
+{
+	"type": "origins:modify_damage_dealt",
+	"modifier": {
+		"value": 4,
+		"operation": "addition"
+    },
+	"condition": {
+		"type": "origins:fall_distance",
+		"comparison": ">",
+		"compare_to": 0
+	},
+	"name": "§a§nLeaping Strike+",
+	"description": "You deal even more damage while falling."
+}

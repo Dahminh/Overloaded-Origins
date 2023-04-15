@@ -1,0 +1,64 @@
+{
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+                "tag": "phantom:good_food"
+        }
+    },
+    "food_modifier": {
+        "operation": "multiply_total",
+        "value": 1.0
+    },
+    "saturation_modifier": {
+        "operation": "multiply_total",
+        "value": 3.0
+    },
+    "prevent_effects": true,
+    "name": "§e§nOdd Physique",
+    "description": "You have a peculiar physiqeu due to being half Human and half Phantom.",
+    "badges": [
+		{
+            "type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/phantom/hybrid_stomach.png",
+            "text": [
+                "§a§nHybrid Stomach",
+                "\nDue to being part phantom, your stomach can effectively digest most foods that humans cannot.",
+                "\n\n§nExplanation§r:\n\n",
+                "You will receive §a2x§r the amount of food and §a4x§r the amount of saturation from the following foods:",
+                "\n§a-§r Raw Beef",
+                "\n§a-§r Raw Chicken",
+                "\n§a-§r Raw Rabbit",
+                "\n§a-§r Raw Mutton",
+                "\n§a-§r Raw Cod",
+                "\n§a-§r Raw Salmon",
+                "\n§a-§r Raw Porkchop",
+                "\n§a-§r Rotten Flesh",
+                "\n§a-§r Spider Eye",
+                "\n\nThe §cHunger§r effect from rotten flesh and raw chicken and §cPoison§r effect from spider eyes will not apply to you."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/phantom_traits.png",
+            "text": [
+                "§e§nPhantom Traits",
+                "\nBeing part Phantom, you have also inherited their traits.",
+                "\n\n§nExplanation§r:\n\n",
+                "You are slightly transparent",
+                "\n\nYou can see in the dark.",
+                "\n\nYou cannot sleep"
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/strange_anatomy.png",
+            "text": [
+                "§c§nStrange Anatomy",
+                "\nBeing half Human and half Phantom resulted in some problems with the strength effect.",
+                "\n\n§nExplanation§r:\n\n",
+                "The Strength effect will have §c-50%§r duration and §c-2§r amplifier."
+            ]
+        }
+    ]
+}

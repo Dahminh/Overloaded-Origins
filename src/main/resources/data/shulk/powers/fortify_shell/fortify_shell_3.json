@@ -1,0 +1,183 @@
+{
+    "type": "origins:multiple",
+    "dr_1": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.5
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "<",
+                    "compare_to": 3
+                }
+            ]
+        }
+    },
+    "dr_2": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.4
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        }
+    },
+    "dr_3": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.3
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        }
+    },
+    "dr_4": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.2
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        }
+    },
+    "dr_5": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.1
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        }
+    },
+    "explosion": {
+        "type": "origins:modify_damage_dealt",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "explosion.player"
+        },
+        "modifiers": [
+            {
+                "resource": "*:fortify_shell/constants_resource",
+                "operation": "set_base",
+                "value": 0,
+                "modifier": {
+                    "operation": "multiply_total_multiplicative",
+                    "value": -0.80
+                }
+            }
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "eggolib:has_tag",
+                    "tag": "explosionDmg"
+                }
+            ]
+        }
+    },
+    "name": "§d§nFortified Shell III",
+    "description": "You can close your shell to fortify yourself and return a surprise for your enemies.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+				"[§a1 Minute Cooldown§r]",
+				"\n[§bSecondary Toggleable Ability§r], Toggling with [",
+				{"keybind": "key.origins.secondary_active"},
+				"] will close your shell and fortify yourself.",
+                "\n\nWhile §d§nFortified Shell§r is active, you will:",
+                "\n§a-§r Gain §aResistance II§r",
+                "\n§a-§r Have complete knockback resistance",
+                "\n§a-§r Touching water or lava will immediately teleport you to any random nearby land",
+                "\n§a-§r Gain projectile, collision, and §cLevitation§r immunity",
+                "\n§e-§r Have an indicator that shows your shell durability (On player model and hotbar)",
+                "\n§c-§r Gain §cBlindness§r",
+                "\n§c-§r Not be able to move, jump, and, attack, interact with entities, use items except food, and place or break blocks"
+			]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": [
+                "§d§nFortified Shell§r Continued:",
+                "\nThere are 7 Shell Durabilities, starting at §2Green§r. Each Shell Durability requires §a1.25§r hearts of damage to go down a tier",
+                " with the exception of §2Green§r, requiring §a3.75§r hearts of damage to go down a tier",
+                "\n\nEach Shell Durability will give some % damage reduction:",
+                "\n§2- Green§r: §a50%§r damage reduction",
+                "\n§a- Yellow-Green§r: §a40%§r damage reduction",
+                "\n§e- Yellow§r: §a30%§r damage reduction",
+                "\n§6- Orange§r: §a20%§r damage reduction",
+                "\n§4- Red§r: §a10%§r damage reduction",
+                "\n§7- None§r: No damage reduction",
+                "\n§8- Broken§r: §d§nFortified Shell§r will end and you will have the §eBroken Shell§r neutral buff for §e15§r seconds",
+                "\n\nWhile in §4Red§r Shell Durability or greater, taking at least 1 damage, and turning off §d§nFortified Shell§r,",
+                " you will reflect §a2x§r the all damage taken back,",
+                " give them §cLevitation§r for §c10§r seconds,",
+                " and emit particle effects to all nearby entities in a §a6§r block radius."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:modify_inventory",
+        "item_action": {
+            "type": "origins:modify",
+            "modifier": "*:repair"
+        },
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "*:leather_armor"
+            }
+        }
+    },
+    "hidden": true
+}

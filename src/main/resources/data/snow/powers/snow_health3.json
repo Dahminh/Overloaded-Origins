@@ -1,0 +1,11 @@
+{
+    "name": "Frostburn Body",
+    "description": "You have 9 Hearts after adapting to the Nether's conditions.",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Max health increase",
+        "attribute": "minecraft:generic.max_health",
+        "value": -2,
+        "operation": "addition"
+    }
+}

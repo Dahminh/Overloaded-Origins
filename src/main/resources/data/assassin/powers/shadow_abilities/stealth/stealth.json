@@ -1,0 +1,211 @@
+{
+	"type": "origins:multiple",
+	"stealth": {
+		"type": "origins:active_self",
+		"cooldown": 900,
+        "hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/dark_elf.png",
+			"bar_index": 2
+    	},
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:invisibility",
+				"duration": 600,
+				"amplifier": 9,
+				"show_particles": false,
+				"show_icon": true
+			}
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:status_effect",
+					"effect": "minecraft:glowing",
+					"inverted": true
+				},
+				{	    
+					"type": "origins:status_effect",
+					"effect": "minecraft:invisibility",
+					"min_amplifier": 9,
+					"inverted": true
+				},
+				{
+					"type": "eggolib:has_tag",
+					"tag": "prevent_stealth",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+					"comparison": "<",
+					"compare_to": 400
+				}
+			]
+		},
+		"key": {
+			"key": "key.origins.secondary_active",
+
+			"continuous": false
+		}
+	},
+	"true_invis": {
+		"type": "apoli:invisibility",
+		"render_outline": true,
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 4
+		}
+	},
+	"clear_invis_1": {
+		"type": "origins:self_action_on_hit",
+		"entity_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:invisibility"
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 9
+		},
+		"target_condition": {
+			"type": "origins:power",
+			"power": "*:shadow_abilities/decoy/decoy_power",
+			"inverted": true
+		},
+		"cooldown": 0
+	},
+	"clear_invis_2": {
+		"type": "origins:self_action_when_hit",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:invisibility"
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 9
+		}
+	},
+	"no_aggro": {
+		"type": "apugli:mobs_ignore",
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 4
+		}
+	},
+	"particles": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:dust_color_transition",
+			"params": "0.000 0.000 0.000 2 0.15 0.15 0.15"
+		},
+		"spread": {
+			"x": 0.3,
+			"y": 0.1, 
+			"z": 0.3
+			},
+		"count": 2,
+		"offset_y": 0.1,
+		"frequency": 1,
+		"visible_while_invisible": true,
+		"visible_in_first_person": false,
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 9
+		}
+	},
+	"tick_action": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shadow_abilities/decoy/decoy_charges",
+                    "operation": "add",
+                    "change": 1
+                }
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.ghast.shoot",
+					"pitch": 2
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:large_smoke ~ ~ ~ 0.5 0 0.5 0 25 normal",
+					"permission_level": 4
+				}
+			]
+		},
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.ghast.shoot",
+					"pitch": 2
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "particle minecraft:large_smoke ~ ~ ~ 0.5 0 0.5 0 25 normal",
+					"permission_level": 4
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 9
+		}
+	},
+	"sound_effect": {
+		"type": "origins:action_over_time",
+		"interval": 80,
+		"entity_action": {
+			"type": "origins:play_sound",
+			"sound": "minecraft:entity.phantom.ambient",
+			"pitch": 0,
+			"volume": 0.75
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:invisibility",
+			"min_amplifier": 9
+		}
+	},
+	"name": "§d§nDeath's Shadow",
+	"description": "You can cloak yourself with your shadow, making you nearly undetectable and deceiving your enemies.",
+    "badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/cloak.png",
+            "text": [
+				"[§a1.5 Minute Cooldown§r]",
+				"\n[§bSecondary Active Ability§r], Pressing [",
+				{"keybind": "key.origins.secondary_active"},
+				"] will activate §d§nDeath's Shadow§r for §a30§r seconds.",
+				"\n\nYou will do the following when §d§nDeath's Shadow§r is active:",
+				"\n§a-§r Lose aggro from mobs",
+				"\n§a-§r Prevent receiving aggro from mobs",
+				"\n§a-§r Armor, items, and such become invisibile",
+				"\n§e-§r Emit a Shadow Trail",
+				"\n§c-§r Occasionally play a sound effect",
+				"\n§c-§r Particle effects and the §cGlowing§r effect outline will still be visible",
+				"\n\nGetting hit or hitting unless backstabbing, will result you to deactivate §d§nDeath's Shadow§r."
+			]
+		}
+    ]
+}

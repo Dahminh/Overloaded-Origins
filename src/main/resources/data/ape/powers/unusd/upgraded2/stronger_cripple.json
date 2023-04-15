@@ -1,0 +1,43 @@
+{
+	"type": "origins:multiple",
+	"slowness_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slowness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"slowness_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:slowness",
+		"modifier": {
+			"operation": "addition",
+			"value": 2
+		}
+	},
+	"mining_fatigue_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:mining_fatigue",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"mining_fatigue_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:mining_fatigue",
+		"modifier": {
+			"operation": "addition",
+			"value": 2
+		}
+	},
+	"name": "§c§nThe Bigger The Slower I",
+	"description": "Your size makes slowness and mining fatigue effects stronger and longer.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Slowness and Mining Fatigue are more effective \non you. \n\nSlowness: §c+50%§r Duration, §c+2§r Amplifier \n\nMining Fatigue: §c+50%§r Duration, §c+2§r Amplifier"
+		}
+	]
+}

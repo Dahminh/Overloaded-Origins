@@ -1,0 +1,6 @@
+{
+    "name": "Bound to Frost",
+    "description": "You are unaffected by Fire Resistance Potions.",
+    "type": "origins:effect_immunity",
+    "effect": "minecraft:fire_resistance"
+}

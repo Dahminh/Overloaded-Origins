@@ -1,0 +1,28 @@
+{
+	"powers": [
+	"snow:tundraspawn",
+	"snow:snow_eater",
+	"snow:fire_res_immune",
+	"snow:fire_damage3",
+	"snow:snow_health3",
+	"snow:fbs",
+	"snow:size2",
+	"snow:durability2",
+	"snow:ocean_damage",
+	"snow:noeat",
+	"snow:reset3",
+	"snow:color",
+	"snow:particle"
+	],
+	"icon": "minecraft:snowball",
+	"order": 11,
+	"impact": 3,
+	"name": "Frostburn Snowball",
+	"description": "An ever-changing Snowball that gained sentience, somehow. After adapting to the harsh conditions of the Nether, you feel stronger than ever... and yet, there's now a strange dragon-like roar in your mind.",
+	"unchoosable": true,
+		"upgrades": {
+		"condition": "minecraft:end/kill_dragon",
+		"origin": "snow:level_4_snowball",
+		"announcement": "As you land the final blow on what seemed to be an unstoppable beast, you feel a Higher Power briefly stare at you... And then grant you strength. (Check your origin!)"
+	}
+}

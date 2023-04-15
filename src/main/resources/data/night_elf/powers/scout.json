@@ -1,0 +1,45 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:command",
+            "command": "scale get pehkui:eye_height @s",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "if_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+            		"type": "origins:execute_command",
+            		"command": "scale set pehkui:eye_height 12 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power grant @s night_elf:no_interaction"
+				}
+			]
+        },
+        "else_action": {
+            "type": "origins:and",
+			"actions": [
+				{
+            		"type": "origins:execute_command",
+            		"command": "scale set pehkui:eye_height 1 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "power revoke @s night_elf:no_interaction"
+				}
+			]
+		}
+    },
+    "cooldown": 60,
+	"hud_render": {
+		"bar_index": 7,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png"
+	},
+	"name": "§d§nScout",
+	"description": "[Primary Ability] Holding your primary ability will allow you to get a bird's eye view of your surroundings. [WARNING] Using this ability under a ceiling may not give you a bird's eye view."
+}

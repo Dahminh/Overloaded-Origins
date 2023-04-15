@@ -1,0 +1,243 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"kill": {
+		"type": "origins:self_action_on_kill",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players add @s ckills 1"
+			}
+			]
+		},
+		"target_condition": {
+			"type": "origins:entity_type",
+    		"entity_type": "minecraft:slime"
+		}
+	},
+	"contract_display": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "title @s actionbar [{\"text\":\"Contract Completion \",\"color\":\"gold\"},{\"score\":{\"name\":\"@s\",\"objective\":\"ckills\"},\"color\":\"gold\"},{\"text\":\"/5 Slimes\",\"color\":\"gold\"}]"
+			}
+			]
+		}
+	},
+	"completed": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_1/slime"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.player.levelup",
+				"pitch": 0
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s 70 points"
+			},
+			{
+				"type": "origins:choice",
+				"actions": [
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:diamond",
+								"amount": 1
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Diamond\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:iron_ingot",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Iron Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 25
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gold_ingot",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Gold Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:emerald",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Emeralds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:slime_block",
+								"amount": 3
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"3 Slime Blocks\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:player_head",
+								"amount": 1,
+								"tag": "{display:{Name:'{\"text\":\"Slime Head\",\"color\":\"yellow\",\"italic\":false}'},SkullOwner:{Id:[I;2131429491,-546682343,-1681000759,251135175],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODk1YWVlYzZiODQyYWRhODY2OWY4NDZkNjViYzQ5NzYyNTk3ODI0YWI5NDRmMjJmNDViZjNiYmI5NDFhYmU2YyJ9fX0=\"}]}}}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Slime Head\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:slime_ball",
+								"amount": 13
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"13 Slime Balls\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 20
+				}
+				]
+			}
+			]
+		},
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if score @s ckills matches 5..",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"failure": {
+		"type": "origins:action_over_time",
+		"interval": 24000,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_1/slime"
+				}
+			},
+			{
+				"type": "origins:heal",
+				"amount": -10
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s -350 points"
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:health",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "/tellraw @s [{\"selector\":\"@s\"},{\"text\":\" failed to complete their Contract\"}]"
+					}
+					]
+				}
+			}
+			]
+		}
+	}
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "This piece of Leather",
+        "color": "white",
+        "italic": false
+      },
+      {
+        "text": "Armor is improved.",
+        "color": "white",
+        "italic": false
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{BLA:1b}"
+  }
+]

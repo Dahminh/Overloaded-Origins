@@ -1,0 +1,76 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.75
+    },
+    "target_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.ender_dragon.ambient",
+                "pitch": 0,
+                "volume": 0.25
+            },
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 100
+                }
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "*:phantom_form/constants_toggle"
+            },
+            {
+                "type": "origins:resource",
+                "comparison": "==",
+                "compare_to": 0,
+                "resource": "*:positives/ambush/constants_cooldown"
+            }
+        ]
+    },
+    "name": "§a§nHaunt III",
+    "description": "You can easily haunt your enemies with your Ghostly abilities",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/weapon_concealment.png",
+            "text": [
+                "§a§nWeapon Concealment",
+                "\nYou can make your melee weapons appear invisible, making it hard for your enemies to know what hit them.",
+                "\n\n§nExplanation§r:\n\n",
+                "Any held melee weapons in your mainhand will not be rendered and thus appear invisible."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/ghost_touch.png",
+            "text": [
+                "§a§nSpectral Touch",
+                "\nYou can weaken your enemies as if a Ghost walked right through them.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a30 Second Cooldown§r]",
+                "\nWhen hitting a mob with your bare hands, you will heal for §a1§r heart and apply §cWeakness II§r and §cSlowness II§r for §c15§r seconds to the mob."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/ambush.png",
+            "text": [
+                "§a§nAmbush III",
+                "\nYou can ambush your targets, giving them an immediate scare",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a30 Second Cooldown§r]",
+                "\nWhen hitting a mob in §d§nPhantom Form§r, you will deal §a1.75x§r damage, apply §cDarkness§r for §c5§r seconds, and deactive §d§nPhantom Form§r. §d§nPhantom Form§r will be temporarily disabled for §e3§r seconds."
+            ]
+        }
+    ]
+}

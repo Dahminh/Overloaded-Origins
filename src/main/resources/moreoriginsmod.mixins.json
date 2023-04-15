@@ -3,7 +3,11 @@
 	"package": "dahminh.moreoriginsmod.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"LivingEntityMixin"
+	],
+	"client": [
+		"client.InGameHudMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

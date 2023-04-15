@@ -1,0 +1,19 @@
+{
+	"type": "origins:self_action_when_hit",
+	"cooldown": 0,
+	"entity_action": {
+		"type": "eggolib:loop",
+		"action": {
+			"type": "origins:execute_command",
+			"command": "summon bat ~ ~ ~ {Silent:1b,Invulnerable:1b,Tags:[\"Gluttony\"],cardinal_components:{\"apoli:powers\": {Powers: [{Type:\"assassin:shadow_abilities/leave_no_trace/gluttony\",Data: 1b, Sources:[\"apoli:command\"]}]}}}"
+		},
+		"value": 5
+	},
+	"condition":
+	{
+		"type": "origins:health",
+		"comparison": "<=",
+		"compare_to": 0
+	},
+	"hidden": true
+}

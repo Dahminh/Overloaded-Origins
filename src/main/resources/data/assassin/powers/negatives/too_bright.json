@@ -1,0 +1,183 @@
+{
+	"type": "origins:multiple",
+	"spectral_arrow": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "addition",
+			"value": 2
+		},
+		"damage_condition": {
+			"type": "origins:projectile",
+			"projectile": "minecraft:spectral_arrow"
+		}
+	},
+	"light_item": {
+		"type": "origins:self_action_when_hit",
+		"damage_condition": {
+			"type": "origins:attacker",
+			"entity_condition": {
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:ingredient",
+					"ingredient": {
+						"tag": "assassin:light"
+					}
+				}
+			}
+		},
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:glowing",
+				"duration": 100
+			}
+		}
+	},
+	"glowing_hurt": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 1.5
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:glowing"
+		},
+		"self_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:resource",
+				"resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+				"comparison": "<",
+				"compare_to": 400
+			},
+			"if_action": {
+				"type": "origins:change_resource",
+				"resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+				"operation": "add",
+				"change": 400
+			},
+			"else_action": {
+				"type": "origins:change_resource",
+				"resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+				"operation": "add",
+				"change": 20
+			}
+		}
+	},
+	"glowing_weakens": {
+		"type": "origins:modify_damage_dealt",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -0.25
+		},
+		"condition": {
+			"type": "origins:status_effect",
+			"effect": "minecraft:glowing"
+		}
+	},
+	"stronger_glowing": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:glowing",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 2
+		}
+	},
+	"name": "§c§nEnemy of Light",
+	"description": "As an Origin that depends on the shadows to assassinate, the light ruins your opportunity to assassinate.",
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/too_bright.png",
+			"text": [
+				"§c§nToo Bright",
+				"\nUnnatural light will weaken your Shadow Arts.",
+				"\n\n§nExplanation§r:\n\n",
+				"Receiving the §cGlowing§r effect will effect these skills:",
+				"\n§c-§r Disables §a§nAssassinate",
+				"\n§c-§r Disables §a§nShadow Betrayal",
+				"\n§c-§r Disables §a§nConcealed Presence",
+				"\n§c-§r Disables §a§nDarkness Embraced",
+				"\n§c-§r Disables §d§nDeath's Shadow",
+				"\n§c-§r Weakens §d§nDash",
+				"\n§c-§r Disables §d§nDeceiving Shadow",
+				"\n\nYou will also receive §c2.5x§r more damage and deal §c25%§r less damage while under the §cGlowing§r effect.",
+				"\n\nThe §cGlowing§r effect will last §c3x§r longer.",
+				"\n\nYou will receive §c+2§r damage from Spectral Arrows."
+			]
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/lethal_light.png",
+			"text": [
+				"§c§nLethal Light",
+				"\nItems that emit light can be detrimental to your Shadow Arts if used correctly.",
+				"\n\n§nExplanation§r:\n\n",
+				"Getting hit by any of the following:",
+				"\n§c-§r End Rod",
+				"\n§c-§r Torch",
+				"\n§c-§r Lantern",
+				"\n§c-§r Campfire",
+				"\n§c-§r Beacon",
+				"\n§c-§r Glowstone",
+				"\n§c-§r Shroomlight",
+				"\n§c-§r Sea Lantern",
+				"\n§c-§r Jack o'Lantern",
+				"\n\nWill apply the §cGlowing§r effect for §c30§r seconds."
+			]
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/lightning.png",
+			"text": [
+				"§c§nAstraphobia",
+				"\nLightning is full of light and being near a bolt will be deadly to you.",
+				"\n\n§nExplanation§r:\n\n",
+				"You will take §c2x§r damage when struck by lightning.",
+				"\n\nIf lightning strikes near you in a §c5§r block radius, you will be debuffed with §cWeakness III§r §ffor §c30 seconds§r §fand §cGlowing§r §ffor §c1§r §fminute.",
+				"\n\nInvisibility will also be cleared and will go immediately to the disabling threshold (§c400§r Detection) of §c§nLight Meter§r. Any lightning strikes afterward will increase the meter by §c+100§r Detection."
+			]
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/stealth_meter.png",
+			"text": [
+				"§c§nLight Meter",
+				"\nWhen there is too much exposure to the light, your Shadow Arts become disabled.",
+				"\n\n§nExplanation§r:\n\n",
+				"There is a meter that will do the following:",
+				"\n§c-§r Disables §a§nAssassinate",
+				"\n§c-§r Disables §a§nShadow Betrayal",
+				"\n§c-§r Disables §a§nConcealed Presence",
+				"\n§c-§r Disables §a§nDarkness Embraced",
+				"\n§c-§r Disables §d§nDeath's Shadow",
+				"\n§c-§r Weakens §d§nDash",
+				"\n§c-§r Disables §d§nDeceiving Shadow",
+				"\n\nWhen staying on the disabling threshold and above (400 Detection or greater).",
+				"\n\nWhen hitting the max of the meter, you will receive the §cGlowing§r effect for §c1§r minute."
+			]
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/dark_elf/stealth_meter.png",
+			"text": [
+				"§c§nLight Meter§r Continued",
+				"\nThe meter will work as follows per tick (1/20 second):",
+				"\n§a- -1§r Detection while in §d§nDeath's Shadow",
+				"\n§a- -1§r Detection while Sneaking",
+				"\n§c- +1§r Detection While under the Sun",
+				"\n§c- +1§r Detection While on a block with Light Level 10",
+				"\n§c- +2§r Detection While on a block with Light Level 11",
+				"\n§c- +3§r Detection While on a block with Light Level 12",
+				"\n§c- +4§r Detection While on a block with Light Level 13",
+				"\n§c- +5§r Detection While on a block with Light Level 14 or greater",
+				"\n\nWhile under the §cGlowing§r effect, the meter will not decrease.",
+				"\n\nGetting hit while under the §cGlowing§r effect will bring the meter to the disabling threshold (§c+400§r Detection), every hit afterwards will increment the meter by §c+20§r Detection.",
+				"\n\nGetting hit while on the disabling threshold or higher\nwill apply the §cGlowing§r effect for §c15§r seconds."
+			]
+		}
+	]
+}

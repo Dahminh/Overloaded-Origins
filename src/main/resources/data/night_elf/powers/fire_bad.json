@@ -1,0 +1,18 @@
+{
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "addition",
+        "value": 1
+    },
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+	"name": "§c§nTrauma from the War",
+	"description": "The war against the Burning Legion resulted in some trauma when around anything similar to the Burning Legion. [gotta do shit with the nether too]",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take §c+1§r damage from fire."
+        }
+	]
+}

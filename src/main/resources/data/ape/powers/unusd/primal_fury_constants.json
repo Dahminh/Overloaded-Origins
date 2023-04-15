@@ -1,0 +1,26 @@
+{
+    "type": "origins:multiple",
+	"overlay": {
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/misc/nausea.png",
+		"strength": 0.25,
+		"red": 1.0,
+		"green": 0,
+		"blue": 0,
+		"draw_mode": "texture",
+		"draw_phase": "above_hud",
+		"hide_with_hud": false,
+		"visible_in_third_person": true
+	},
+    "no_exhaustion": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.75
+        }
+    },
+    "slowness_immunity": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:slowness"
+    }
+}

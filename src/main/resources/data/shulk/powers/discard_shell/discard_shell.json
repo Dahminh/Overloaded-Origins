@@ -1,0 +1,44 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 600,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:item",
+                "tag": "{PickupDelay:30,Item:{id:\"minecraft:shulker_shell\",Count:1b,tag:{display:{Name:'{\"text\":\"Shulk Shell\",\"italic\":false}'}}}}"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:item.shield.break",
+                "pitch": 0.8
+            },
+            {
+                "type": "origins:grant_power",
+                "power": "*:discard_shell/discard_shell_effect",
+                "source": "apoli:command"
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">=",
+        "compare_to": 10.0
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "*:fortify_shell/constants_toggle"
+            },
+            {
+                "type": "origins:power",
+                "power": "shulk:discard_shell/discard_shell_effect"
+            }
+        ],
+        "inverted": true
+    },
+    "hidden": true
+}

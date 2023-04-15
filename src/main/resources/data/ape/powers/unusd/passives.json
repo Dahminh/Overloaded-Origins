@@ -1,0 +1,98 @@
+{
+	"type": "origins:multiple",
+	"wide": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 1.5"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s add monke"
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:width 1.5"
+		},
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "tag @s remove monke"
+				}
+			]
+		}
+	},
+	"default_stats": {
+		"type": "origins:attribute",
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.max_health",
+				"value": 0.5,
+				"operation": "multiply_total"
+			},
+			{
+				"attribute": "minecraft:generic.armor",
+				"value": 11,
+				"operation": "addition"
+			},
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"value": 0.5,
+				"operation": "addition"
+			},
+			{
+				"attribute": "minecraft:generic.attack_speed",
+				"value": -0.5,
+				"operation": "multiply_total"
+			},
+			{
+				"attribute": "minecraft:generic.luck",
+				"value": 1024,
+				"operation": "addition"
+			}
+		]
+	},
+	"fisting": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"value": 5,
+			"operation": "addition"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition":	{
+				"type": "origins:ingredient",
+				"ingredient":
+				{
+					"tag": "ape:no_tools"
+				}
+			},
+			"inverted": true
+		}
+	},
+	"heavy": {
+		"type": "origins:modify_falling",
+		"velocity": 0.10
+	},
+	"name": "§e§nGorilla Genes",
+	"description": "Gorillas are naturally stronger and bigger than humans.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "You gain the following stats: \n§a-§r You have §a1.5x§r health \n§a- +11§r Armor Points \n§a- +50%§r Knockback Resistance \n§a- +5§r Base Attack Damage when not holding Tools or Weapons \n§e-§r You are §e1.5x§r wider than a human \n§e-§r You are §e1.25x§r heavier than a human \n§c-§r You have §c50%§r less attack speed"
+		}
+	]
+}

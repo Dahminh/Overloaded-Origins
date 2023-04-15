@@ -1,0 +1,26 @@
+{
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+		{
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:slowness",
+            "amplifier": 5,
+            "duration": 53,
+			"show_icon": true
+        }
+		}
+		]
+		},
+    "cooldown": 0,
+	"name": "§c§nLight Body II",
+	"description": "Your agility based build comes with some consequences.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "You cannot wear any armor stronger than \nchainmail armor. \n\nWhenever you get hit, you will be crippled, \nreceiving §cSlowness V§r for §c2 seconds§r."
+		}
+	]
+}

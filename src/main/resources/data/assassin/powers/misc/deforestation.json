@@ -1,0 +1,12 @@
+{
+    "type": "origins:modify_break_speed",
+    "block_condition": {
+        "type": "origins:in_tag",
+		"tag": "minecraft:mineable/axe"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.5
+    },
+    "hidden": true
+}

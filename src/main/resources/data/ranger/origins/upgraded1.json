@@ -1,0 +1,34 @@
+{
+    "powers": [
+		"assassin:hunter",
+		"assassin:upgraded1/swift",
+		"assassin:swift_constants",
+		"ranger:upgraded1/bow_mastery",
+		"assassin:deforestation",
+		"assassin:upgraded1/night_vision",
+		"ranger:arrow_crafting",
+		"ranger:upgraded1/flash",
+		"ranger:flash_cd",
+		"ranger:flashbang",
+		"ranger:forest_spawn",
+		"ranger:blursed",
+		"ranger:dark_bad",
+		"ranger:light",
+		"ranger:upgraded1/crippled",
+		"ranger:arrogant"
+		
+    ],
+	"icon": "minecraft:spectral_arrow",
+	"order": 0,
+	"impact": 3,
+	"name": "High Light Elf",
+	"description": "You're now a High Light Elf, greatly enhancing your ranger related skills. Your connection to the light is stronger.",
+	"unchoosable": true,
+	"upgrades": [
+		{
+			"condition": "minecraft:adventure/kill_all_mobs",
+			"origin": "ranger:upgraded2",
+			"announcement": "You have evolved... Best check your Origin again."
+		}
+	]
+}

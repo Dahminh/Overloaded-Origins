@@ -1,0 +1,23 @@
+{
+    "type": "origins:inventory",
+    "title": "Shulker Inventory",
+    "container_type": "chest",
+    "drop_on_death": false,
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+	"name": "§d§nHoarder III",
+	"description": "You can store your valuable goods in another space.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/shulk/shulker_hoarder.png",
+			"text": [
+                "[§bPrimary Active ability§r], Pressing [",
+                {"keybind": "key.origins.primary_active"},
+                "] will open up Shulker Inventory.",
+                "\n\nShulker Inventory has §a27§r slots of inventory, which keep the items on death."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "powers": [
+		"assassin:hunter",
+		"assassin:swift",
+		"assassin:swift_constants",
+		"ranger:bow_mastery",
+		"assassin:deforestation",
+		"assassin:night_vision",
+		"ranger:arrow_crafting",
+		"ranger:flash_cd",
+		"ranger:flash",
+		"ranger:flashbang",
+		"ranger:forest_spawn",
+		"ranger:blursed",
+		"ranger:light_meter",
+		"ranger:dark_bad",
+		"ranger:light",
+		"ranger:crippled"
+    ],
+	"icon": "minecraft:spectral_arrow",
+	"order": 0,
+	"impact": 3,
+	"name": "Light Elf",
+	"description": "Embracing the light, Light Elves use their dexterity and agility to strike foes from afar.",
+	"upgrades": [ 
+		{
+			"condition": "minecraft:end/kill_dragon",
+			"origin": "ranger:upgraded1",
+			"announcement": "You have evolved... Best check your Origin again."
+		}
+	]
+}

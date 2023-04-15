@@ -1,0 +1,26 @@
+{
+	"powers": [
+	"snow:tundraspawn",
+	"snow:snow_eater",
+	"snow:fire_res_immune",
+	"snow:fire_damage2",
+	"snow:snow_health2",
+	"snow:size2",
+	"snow:durability1",
+	"snow:noeat",
+	"snow:reset2",
+	"snow:color",
+	"snow:particle"
+	],
+	"icon": "minecraft:snowball",
+	"order": 11,
+	"impact": 3,
+	"name": "Enhanced Snowball",
+	"description": "An ever-changing Snowball that gained sentience, somehow. You've felt a strange power calling out to you... and it says to explore the Nether.",
+	"unchoosable": true,
+		"upgrades": {
+		"condition": "minecraft:nether/explore_nether",
+		"origin": "snow:level_3_snowball",
+		"announcement": "You feel a wild energy converge into you, and with it brings great strength. (Check your origin!)"
+	}
+}
