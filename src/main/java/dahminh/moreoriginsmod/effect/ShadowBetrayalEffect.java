@@ -2,9 +2,6 @@ package dahminh.moreoriginsmod.effect;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffects;
@@ -27,12 +24,11 @@ public class ShadowBetrayalEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity e, int amplifier) {
         if (e.age % PARTICLE_TICK_INTERVAL == 0) {
-            final double GAUSSIAN = e.getRandom().nextGaussian() * 0.25;
             e.getWorld().addParticle(
                     LARGE_SMOKE,
-                    e.getX() + GAUSSIAN,
-                    e.getY() + GAUSSIAN + 1,
-                    e.getZ(),
+                    e.getX() + e.getRandom().nextGaussian() * 0.25,
+                    e.getY() + e.getRandom().nextGaussian() * 0.25 + 1,
+                    e.getZ() + e.getRandom().nextGaussian() * 0.25,
                     0,
                     0,
                     0);
