@@ -16,12 +16,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Random;
+
 @Environment(EnvType.CLIENT)
 @Mixin(LivingEntity.class)
 public abstract class EntityParticleMixin extends Entity {
 
     private final DustColorTransitionParticleEffect particleEffect = new DustColorTransitionParticleEffect(new Vector3f(0.0f, 0.0f, 0.0f), new Vector3f(0.15f, 0.15f, 0.15f), 2);
-
     public EntityParticleMixin(EntityType<?> type, World world) {
         super(type, world);
     }
@@ -33,14 +34,9 @@ public abstract class EntityParticleMixin extends Entity {
         if (livingEntity.hasStatusEffect(CustomEffects.SHADOWCLOAK)) {
             this.setInvisible(true);
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
-            if(player != null) {
-                boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
-                if (!firstPerson) {
-                    world.addParticle(particleEffect,
-                            this.getX() + this.random.nextGaussian() * 0.3,
-                            this.getY() + 0.1 + this.random.nextGaussian() * 0.1,
-                            this.getZ() + this.random.nextGaussian() * 0.3,
-                            0, 0, 0);
+            boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
+            if (((Object) this != player || (!firstPerson))) {
+                for (int i = 0; i<2; i++) {
                     world.addParticle(particleEffect,
                             this.getX() + this.random.nextGaussian() * 0.3,
                             this.getY() + 0.1 + this.random.nextGaussian() * 0.1,
@@ -50,5 +46,4 @@ public abstract class EntityParticleMixin extends Entity {
             }
         }
     }
-
 }
