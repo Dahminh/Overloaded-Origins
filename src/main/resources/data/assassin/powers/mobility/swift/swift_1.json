@@ -64,7 +64,7 @@
 				"You have a §a5%§r chance to completely dodge projectile attacks.",
 				"\n\nYou have a §a15%§r chance to partially dodge melee attacks, receiving §a75%§r of the damage instead.",
 				"\n\nYou have a §a5%§r chance to completely dodge melee\nattacks. Complete dodges will ignore the cripple effect.",
-				"\n\nThis passive will not be applied while in §d§nDeath's Shadow§r."
+				"\n\nThis passive will not be applied while you have §d§nShadow Cloak§r."
 			]
 		},
 		{

@@ -11,6 +11,8 @@ public class CustomEffects {
     public static StatusEffect SHADOWBETRAYAL;
     public static StatusEffect SHADOWCLOAK;
 
+    public static StatusEffect FEAR;
+
     public static StatusEffect registerShadowBetrayalEffect(String id){
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(MoreOriginsMod.MOD_ID, id),
             new ShadowBetrayalEffect(StatusEffectCategory.HARMFUL, 0x2A2727));
@@ -21,8 +23,14 @@ public class CustomEffects {
                 new ShadowCloakEffect(StatusEffectCategory.BENEFICIAL, 0x000000));
     }
 
+    public static StatusEffect registerFearEffect(String id){
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(MoreOriginsMod.MOD_ID, id),
+                new FearEffect(StatusEffectCategory.HARMFUL, 0x000000));
+    }
+
     public static void registerEffects(){
         SHADOWBETRAYAL = registerShadowBetrayalEffect("shadowbetrayal");
         SHADOWCLOAK = registerShadowCloakEffect("shadowcloak");
+        FEAR = registerFearEffect("fear");
     }
 }

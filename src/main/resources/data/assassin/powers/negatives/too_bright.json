@@ -101,7 +101,7 @@
 				"\n§c-§r Disables §a§nShadow Betrayal",
 				"\n§c-§r Disables §a§nConcealed Presence",
 				"\n§c-§r Disables §a§nDarkness Embraced",
-				"\n§c-§r Disables §d§nDeath's Shadow",
+				"\n§c-§r Disables §d§nShadow Cloak",
 				"\n§c-§r Weakens §d§nDash",
 				"\n§c-§r Disables §d§nDeceiving Shadow",
 				"\n\nYou will also receive §c2.5x§r more damage and deal §c25%§r less damage while under the §cGlowing§r effect.",
@@ -138,7 +138,7 @@
 				"\n\n§nExplanation§r:\n\n",
 				"You will take §c2x§r damage when struck by lightning.",
 				"\n\nIf lightning strikes near you in a §c5§r block radius, you will be debuffed with §cWeakness III§r §ffor §c30 seconds§r §fand §cGlowing§r §ffor §c1§r §fminute.",
-				"\n\nInvisibility will also be cleared and will go immediately to the disabling threshold (§c400§r Detection) of §c§nLight Meter§r. Any lightning strikes afterward will increase the meter by §c+100§r Detection."
+				"\n\n§d§nShadow Cloak§r will also be removed and will go immediately to the disabling threshold (§c400§r Detection) of §c§nLight Meter§r. Any lightning strikes afterward will increase the meter by §c+100§r Detection."
 			]
 		},
 		{
@@ -153,7 +153,7 @@
 				"\n§c-§r Disables §a§nShadow Betrayal",
 				"\n§c-§r Disables §a§nConcealed Presence",
 				"\n§c-§r Disables §a§nDarkness Embraced",
-				"\n§c-§r Disables §d§nDeath's Shadow",
+				"\n§c-§r Disables §d§nShadow Cloak",
 				"\n§c-§r Weakens §d§nDash",
 				"\n§c-§r Disables §d§nDeceiving Shadow",
 				"\n\nWhen staying on the disabling threshold and above (400 Detection or greater).",
@@ -166,7 +166,7 @@
 			"text": [
 				"§c§nLight Meter§r Continued",
 				"\nThe meter will work as follows per tick (1/20 second):",
-				"\n§a- -1§r Detection while in §d§nDeath's Shadow",
+				"\n§a- -1§r Detection while in §d§nShadow Cloak",
 				"\n§a- -1§r Detection while Sneaking",
 				"\n§c- +1§r Detection While under the Sun",
 				"\n§c- +1§r Detection While on a block with Light Level 10",

@@ -63,7 +63,7 @@
                 "§a§nAssassinate",
 				"\nThe first strike is always the deadliest...",
 				"\n\n§nExplanation§r:\n\n",
-				"While in §d§nDeath's Shadow§r and not under the §cGlowing§r effect, your first melee strike against a full health target will:",
+				"While you have §d§nShadow Cloak§r and not under the §cGlowing§r effect, your first melee strike against a full health target will:",
 				"\n§a-§r Be a §aCritical Attack§r, dealing max potential damage",
 				"\n§a-§r Deal §a1.75x§r damage",
 				"\n§a-§r Inflict §cShadow Betrayal§r for §c30§r seconds",
@@ -94,8 +94,8 @@
 				"\n§a-§r Inflict §cShadow Betrayal§r for §c30§r seconds",
 				"\n§a-§r Inflict §cBlindness§r for §c15§r seconds",
 				"\n\nBackstabable targets will glow red.\n\n",
-				"While §d§nDeath's Shadow§r is active and successfully backstabbing, you will reappear for §a1§r seconds and reactivate §d§nDeath's Shadow§r ","for §a15§r seconds.",
-				"\n\nIf you deal damage, receive damage, or receive the §cGlowing§r effect during this §a1§r second window, you will not reactivate §d§nDeath's Shadow§r§f."
+				"While you have §d§nShadow Cloak§r and successfully backstabbing, you will reappear for §a1§r seconds and receive §d§nShadow Cloak§r ","for §a15§r seconds.",
+				"\n\nIf you deal damage, receive damage, or receive the §cGlowing§r effect during this §a1§r second window, you will not receive §d§nShadow Cloak§r§f."
             ]
         }
     ]

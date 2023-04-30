@@ -28,7 +28,7 @@
 				},
 				{
 					"type": "origins:clear_effect",
-					"effect": "minecraft:invisibility"
+					"effect": "moreoriginsmod:shadowcloak"
 				},
 				{
 					"type": "origins:if_else",

@@ -15,7 +15,7 @@ import static net.minecraft.particle.ParticleTypes.LARGE_SMOKE;
 public class ShadowCloakEffect extends StatusEffect {
 
     private static final int SOUND_TICK_INTERVAL = 80;
-    private static Random rand = new Random();
+    private static final ThreadLocal<Random> rand = ThreadLocal.withInitial(Random::new);
     protected ShadowCloakEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
@@ -32,9 +32,9 @@ public class ShadowCloakEffect extends StatusEffect {
         for (int i = 0; i<25; i++) {
             MinecraftClient.getInstance().particleManager.addParticle(
                     LARGE_SMOKE,
-                    e.getX() + rand.nextGaussian() * 0.5,
+                    e.getX() + rand.get().nextGaussian() * 0.5,
                     e.getY(),
-                    e.getZ() + rand.nextGaussian() * 0.5,
+                    e.getZ() + rand.get().nextGaussian() * 0.5,
                     0,
                     0,
                     0);

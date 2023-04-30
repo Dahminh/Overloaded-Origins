@@ -22,20 +22,4 @@ public abstract class LivingEntityMixin {
         }
         return amount;
     }
-
-    @Inject(at = @At("HEAD"), method= "onAttacking")
-    private void onAttacking(Entity target, CallbackInfo ci) {
-        LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK)) {
-            self.removeStatusEffect(CustomEffects.SHADOWCLOAK);
-        }
-    }
-
-    @Inject(at = @At("HEAD"), method = "damage")
-    private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK)) {
-            self.removeStatusEffect(CustomEffects.SHADOWCLOAK);
-        }
-    }
 }

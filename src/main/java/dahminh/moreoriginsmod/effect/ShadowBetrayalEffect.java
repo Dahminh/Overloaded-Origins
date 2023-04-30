@@ -8,7 +8,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 
-import java.util.Map;
 import java.util.Random;
 
 import static net.minecraft.particle.ParticleTypes.LARGE_SMOKE;
@@ -18,7 +17,7 @@ public class ShadowBetrayalEffect extends StatusEffect {
     private static final int PARTICLE_TICK_INTERVAL = 5;
     private static final int SOUND_TICK_INTERVAL = 80;
 
-    private static Random rand = new Random();
+    private static final Random rand = new Random();
 
     protected ShadowBetrayalEffect(StatusEffectCategory category, int color) {
         super(category, color);

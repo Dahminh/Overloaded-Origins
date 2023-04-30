@@ -101,9 +101,9 @@ dependencies {
 	// Reach Entity Attributes by jamieswhiteshirt
 	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_version}"
 
-//	// Apoli by Apace100
-//	modImplementation "com.github.eggohito:apoli:${project.apoli_version}"
-//	include "com.github.eggohito:apoli:${project.apoli_version}"
+	// Apoli by Apace100
+	modImplementation "com.github.eggohito:apoli:${project.apoli_version}"
+	include "com.github.eggohito:apoli:${project.apoli_version}"
 
 	// Origins by Apace100
 	modImplementation "com.github.eggohito:origins-fabric:${project.origins_version}"

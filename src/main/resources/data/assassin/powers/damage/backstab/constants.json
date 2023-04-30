@@ -82,22 +82,11 @@
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:grant_power",
-                    "power": "assassin:shadow_abilities/shadow_betrayal/shadow_betrayal_debuff",
-                    "source": "apoli:command"
-                },
-                {
-                    "type": "origins:if_else",
-                    "condition": {
-                        "type": "origins:power",
-                        "power": "assassin:shadow_abilities/shadow_betrayal/shadow_betrayal_debuff",
-                        "source": "apoli:command"
-                    },
-                    "if_action": {
-                        "type": "origins:change_resource",
-                        "resource": "*:shadow_abilities/shadow_betrayal/shadow_betrayal_debuff_timer",
-                        "change": 0,
-                        "operation": "set"
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "moreoriginsmod:shadowbetrayal",
+                        "duration": 300,
+                        "show_particles": false
                     }
                 }
             ]
@@ -118,8 +107,7 @@
                     "type": "origins:if_else",
                     "condition": {
                         "type": "origins:status_effect",
-                        "effect": "minecraft:invisibility",
-                        "min_amplifier": 9
+                        "effect": "moreoriginsmod:shadowcloak"
                     },
                     "if_action": {
                         "type": "origins:and",

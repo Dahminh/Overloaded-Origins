@@ -11,9 +11,8 @@
 		"entity_action": {
 			"type": "origins:apply_effect",
 			"effect": {
-				"effect": "minecraft:invisibility",
+				"effect": "moreoriginsmod:shadowcloak",
 				"duration": 600,
-				"amplifier": 9,
 				"show_particles": false,
 				"show_icon": true
 			}
@@ -28,8 +27,7 @@
 				},
 				{	    
 					"type": "origins:status_effect",
-					"effect": "minecraft:invisibility",
-					"min_amplifier": 9,
+					"effect": "moreoriginsmod:shadowcloak",
 					"inverted": true
 				},
 				{
@@ -55,21 +53,29 @@
 		"type": "apoli:invisibility",
 		"render_outline": true,
 		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 4
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:status_effect",
+					"effect": "minecraft:invisibility",
+					"min_amplifier": 4
+				},
+				{
+					"type": "origins:status_effect",
+					"effect": "moreoriginsmod:shadowcloak"
+				}
+			]
 		}
 	},
 	"clear_invis_1": {
 		"type": "origins:self_action_on_hit",
 		"entity_action": {
 			"type": "origins:clear_effect",
-			"effect": "minecraft:invisibility"
+			"effect": "moreoriginsmod:shadowcloak"
 		},
 		"condition": {
 			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 9
+			"effect": "moreoriginsmod:shadowcloak"
 		},
 		"target_condition": {
 			"type": "origins:power",
@@ -83,42 +89,11 @@
 		"cooldown": 0,
 		"entity_action": {
 			"type": "origins:clear_effect",
-			"effect": "minecraft:invisibility"
+			"effect": "moreoriginsmod:shadowcloak"
 		},
 		"condition": {
 			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 9
-		}
-	},
-	"no_aggro": {
-		"type": "apugli:mobs_ignore",
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 4
-		}
-	},
-	"particles": {
-		"type": "origins:particle",
-		"particle": {
-			"type": "minecraft:dust_color_transition",
-			"params": "0.000 0.000 0.000 2 0.15 0.15 0.15"
-		},
-		"spread": {
-			"x": 0.3,
-			"y": 0.1, 
-			"z": 0.3
-			},
-		"count": 2,
-		"offset_y": 0.1,
-		"frequency": 1,
-		"visible_while_invisible": true,
-		"visible_in_first_person": false,
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 9
+			"effect": "moreoriginsmod:shadowcloak"
 		}
 	},
 	"tick_action": {
@@ -135,58 +110,12 @@
                 }
 			]
 		},
-		"falling_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.ghast.shoot",
-					"pitch": 2
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "particle minecraft:large_smoke ~ ~ ~ 0.5 0 0.5 0 25 normal",
-					"permission_level": 4
-				}
-			]
-		},
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.ghast.shoot",
-					"pitch": 2
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "particle minecraft:large_smoke ~ ~ ~ 0.5 0 0.5 0 25 normal",
-					"permission_level": 4
-				}
-			]
-		},
 		"condition": {
 			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 9
+			"effect": "moreoriginsmod:shadowcloak"
 		}
 	},
-	"sound_effect": {
-		"type": "origins:action_over_time",
-		"interval": 80,
-		"entity_action": {
-			"type": "origins:play_sound",
-			"sound": "minecraft:entity.phantom.ambient",
-			"pitch": 0,
-			"volume": 0.75
-		},
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "minecraft:invisibility",
-			"min_amplifier": 9
-		}
-	},
-	"name": "§d§nDeath's Shadow",
+	"name": "§d§nShadow Cloak",
 	"description": "You can cloak yourself with your shadow, making you nearly undetectable and deceiving your enemies.",
     "badges": [
 		{
@@ -196,15 +125,15 @@
 				"[§a1.5 Minute Cooldown§r]",
 				"\n[§bSecondary Active Ability§r], Pressing [",
 				{"keybind": "key.origins.secondary_active"},
-				"] will activate §d§nDeath's Shadow§r for §a30§r seconds.",
-				"\n\nYou will do the following when §d§nDeath's Shadow§r is active:",
+				"] will grant §d§nShadow Cloak§r for §a30§r seconds.",
+				"\n\nYou will do the following when §d§nShadow Cloak§r is active:",
 				"\n§a-§r Lose aggro from mobs",
 				"\n§a-§r Prevent receiving aggro from mobs",
 				"\n§a-§r Armor, items, and such become invisibile",
 				"\n§e-§r Emit a Shadow Trail",
 				"\n§c-§r Occasionally play a sound effect",
 				"\n§c-§r Particle effects and the §cGlowing§r effect outline will still be visible",
-				"\n\nGetting hit or hitting unless backstabbing, will result you to deactivate §d§nDeath's Shadow§r."
+				"\n\nReceiving damage or dealing damage with the exception of backstabbing and hitting Shadow Decoys, will result you to deactivate §d§nShadow Cloak§r."
 			]
 		}
     ]

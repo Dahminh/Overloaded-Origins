@@ -70,9 +70,8 @@
 					"if_action": {
 						"type": "origins:apply_effect",
 						"effect": {
-							"effect": "minecraft:invisibility",
+							"effect": "moreoriginsmod:shadowcloak",
 							"duration": 20,
-							"amplifier": 9,
 							"show_particles": false
 						}
 					}

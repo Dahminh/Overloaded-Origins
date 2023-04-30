@@ -49,8 +49,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "minecraft:invisibility",
-               "min_amplifier": 9,
+               "effect": "moreoriginsmod:shadowcloak",
                "inverted": true
             },
             {
@@ -164,8 +163,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "minecraft:invisibility",
-               "min_amplifier": 9,
+               "effect": "moreoriginsmod:shadowcloak",
                "inverted": true
             },
             {
@@ -267,8 +265,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "minecraft:invisibility",
-               "min_amplifier": 9,
+               "effect": "moreoriginsmod:shadowcloak",
                "inverted": true
             },
             {

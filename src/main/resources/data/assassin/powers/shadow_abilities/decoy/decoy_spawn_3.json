@@ -67,11 +67,11 @@
                 "[§a20 Second Cooldown Per Charge§r]",
                 "\n[§bTernary Active Ability§r], use with [",
                 {"keybind": "key.origins.ternary_active"},
-                "] will summon a Shadow Decoy that will imitate the effects of you while in §d§nDeath's Shadow§r.",
+                "] will summon a Shadow Decoy that will imitate the effects of you while you have §d§nShadow Cloak§r.",
                 "\n\nYou have §a3§r charges.",
                 "\n\nDecoys will lasts for §a15§r seconds. If the Decoy dies\nor expires, targets within a §a6§r block radius will receive §cBlindness§r for §c10§r seconds.",
                 "\n\nDark Elves and their evolutions will not receive these effects.",
-                "\n\nThis ability will only recharge when §d§nDeath's Shadow§r or §a§nDarkness Embraced§r is active. If both conditions are true, the cooldown rate will be §a2x§r faster.",
+                "\n\nThis ability will only recharge when you have §d§nShadow Cloak§r or §a§nDarkness Embraced§r is active. If both conditions are true, the cooldown rate will be §a2x§r faster.",
                 "\n\n§4CURRENTLY BUGGED",
                 "\nDue to a bug right now, the Shadow Decoys you spawn are visible when they have the Glowing Effect. They normally should not be visible."
             ]

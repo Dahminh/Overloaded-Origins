@@ -52,9 +52,8 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "minecraft:invisibility",
+                            "effect": "moreoriginsmod:shadowcloak",
                             "duration": 200,
-                            "amplifier": 9,
                             "show_particles": false,
                             "show_icon": true
                         }
@@ -92,9 +91,8 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "minecraft:invisibility",
+                            "effect": "moreoriginsmod:shadowcloak",
                             "duration": 250,
-                            "amplifier": 9,
                             "show_particles": false,
                             "show_icon": true
                         }
@@ -132,9 +130,8 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "minecraft:invisibility",
+                            "effect": "moreoriginsmod:shadowcloak",
                             "duration": 300,
-                            "amplifier": 9,
                             "show_particles": false,
                             "show_icon": true
                         }
