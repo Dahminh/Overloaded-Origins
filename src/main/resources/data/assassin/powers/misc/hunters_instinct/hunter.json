@@ -38,7 +38,7 @@
 				"§a§nHunter's Instinct",
 				"\nBeing raised in the dark for so long and training your senses to an extreme, you're able to see in the dark and sense nearby mobs.",
 				"\n\n§nExplanation§r:\n\n",
-				"You have permanent §anight vision§r.",
+				"You have permanent §anight vision§r§f.",
 				"\n\n[§bQuinary Toggleable Ability§r], Toggling with [",
 				{"keybind": "key.origins.quinary_active"},
 				"] will give any mob in a §a24 block§r §fradius the glowing effect. The glowing effect is only visible to you."

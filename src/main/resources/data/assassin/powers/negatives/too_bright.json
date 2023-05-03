@@ -137,7 +137,7 @@
 				"\nLightning is full of light and being near a bolt will be deadly to you.",
 				"\n\n§nExplanation§r:\n\n",
 				"You will take §c2x§r damage when struck by lightning.",
-				"\n\nIf lightning strikes near you in a §c5§r block radius, you will be debuffed with §cWeakness III§r §ffor §c30 seconds§r §fand §cGlowing§r §ffor §c1§r §fminute.",
+				"\n\nIf lightning strikes near you in a §c5§r block radius, you will be debuffed with §cWeakness III§r §ffor §c30§r seconds §fand §cGlowing§r §ffor §c1§r §fminute.",
 				"\n\n§d§nShadow Cloak§r will also be removed and will go immediately to the disabling threshold (§c400§r Detection) of §c§nLight Meter§r. Any lightning strikes afterward will increase the meter by §c+100§r Detection."
 			]
 		},

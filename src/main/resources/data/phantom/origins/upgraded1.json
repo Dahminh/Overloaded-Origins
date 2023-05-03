@@ -17,7 +17,8 @@
         "phantom:negatives/insomniac",
         "phantom:negatives/intimidation",
         "phantom:negatives/strange_anatomy",
-        "phantom:negatives/undead_nightmare"
+        "phantom:negatives/undead_nightmare",
+        "phantom:positives/fear_detection"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"

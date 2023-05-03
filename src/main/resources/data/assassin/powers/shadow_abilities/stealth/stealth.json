@@ -126,7 +126,7 @@
 				"\n[§bSecondary Active Ability§r], Pressing [",
 				{"keybind": "key.origins.secondary_active"},
 				"] will grant §d§nShadow Cloak§r for §a30§r seconds.",
-				"\n\nYou will do the following when §d§nShadow Cloak§r is active:",
+				"\n\nYou will do the following when §d§nShadow Cloak§r§f is active:",
 				"\n§a-§r Lose aggro from mobs",
 				"\n§a-§r Prevent receiving aggro from mobs",
 				"\n§a-§r Armor, items, and such become invisibile",

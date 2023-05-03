@@ -9,7 +9,8 @@
 		"MobEntityMixin"
 	],
 	"client": [
-		"client.InGameHudMixin"
+		"client.InGameHudMixin",
+		"LivingEntityRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

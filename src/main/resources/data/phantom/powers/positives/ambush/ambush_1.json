@@ -19,6 +19,15 @@
                     "effect": "minecraft:darkness",
                     "duration": 60
                 }
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 1,
+                "action": {
+                    "type": "origins:grant_power",
+                    "power": "*:positives/ambush/fear_reaction_1",
+                    "source": "*:positives/ambush/fear_reaction_1"
+                }
             }
         ]
     },

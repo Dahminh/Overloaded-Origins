@@ -1,0 +1,87 @@
+{
+    "type": "origins:multiple",
+    "hit": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:origin",
+                    "origin": "phantom:upgraded0"
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "phantom:upgraded1"
+                },
+                {
+                    "type": "origins:origin",
+                    "origin": "phantom:upgraded2"
+                }
+            ]
+        },
+        "target_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:weakness",
+                "duration": 600,
+                "amplifier": 0
+            }
+        },
+        "self_action": {
+            "type": "origins:execute_command",
+            "command": "power revokeall @s phantom:positives/ambush/fear_reaction_1"
+        }
+    },
+    "time_out": {
+        "type": "origins:action_over_time",
+        "interval": 59,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:on_block",
+                        "block_condition": {
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:light_level",
+                                    "light_type": "block",
+                                    "compare_to": 8,
+                                    "comparison": ">"
+                                },
+                                {
+                                    "type": "origins:light_level",
+                                    "light_type": "sky",
+                                    "compare_to": 8,
+                                    "comparison": ">"
+                                }
+                            ]
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "moreoriginsmod:fear",
+                            "duration": 300,
+                            "amplifier": 0
+                        }
+                    },
+                    "else_action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "moreoriginsmod:fear",
+                            "duration": 300,
+                            "amplifier": 1
+                        }
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "power revokeall @s phantom:positives/ambush/fear_reaction_1"
+                }
+            ]
+        }
+    }
+}
