@@ -5,6 +5,7 @@ import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 
@@ -17,26 +18,19 @@ public class ShadowBetrayalEffect extends StatusEffect {
     private static final int PARTICLE_TICK_INTERVAL = 5;
     private static final int SOUND_TICK_INTERVAL = 80;
 
-    private static final Random rand = new Random();
-
     protected ShadowBetrayalEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 
     @Override
     public void applyUpdateEffect(LivingEntity e, int amplifier) {
-        if (e.age % PARTICLE_TICK_INTERVAL == 0) {
-            e.getWorld().addParticle(
-                    LARGE_SMOKE,
-                    e.getX() + rand.nextGaussian() * 0.25,
-                    e.getY() + rand.nextGaussian() * 0.25 + 1,
-                    e.getZ() + rand.nextGaussian() * 0.25,
-                    0,
-                    0,
-                    0);
-        }
         if (!e.world.isClient && e.age % SOUND_TICK_INTERVAL == 0) {
-            e.world.playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
+            if (e.age % SOUND_TICK_INTERVAL == 0) {
+                e.world.playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
+            }
+            if (e.age % PARTICLE_TICK_INTERVAL == 0) {
+                ((ServerWorld) e.getWorld()).spawnParticles(LARGE_SMOKE, e.getX(), e.getY() + 1, e.getZ(), 1, 0.25, 0.25, 0.25, 0);
+            }
         }
     }
 

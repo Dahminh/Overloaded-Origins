@@ -67,48 +67,14 @@
 			]
 		}
 	},
-	"clear_invis_1": {
-		"type": "origins:self_action_on_hit",
-		"entity_action": {
-			"type": "origins:clear_effect",
-			"effect": "moreoriginsmod:shadowcloak"
-		},
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "moreoriginsmod:shadowcloak"
-		},
-		"target_condition": {
-			"type": "origins:power",
-			"power": "*:shadow_abilities/decoy/decoy_power",
-			"inverted": true
-		},
-		"cooldown": 0
-	},
-	"clear_invis_2": {
-		"type": "origins:self_action_when_hit",
-		"cooldown": 0,
-		"entity_action": {
-			"type": "origins:clear_effect",
-			"effect": "moreoriginsmod:shadowcloak"
-		},
-		"condition": {
-			"type": "origins:status_effect",
-			"effect": "moreoriginsmod:shadowcloak"
-		}
-	},
 	"tick_action": {
 		"type": "origins:action_over_time",
 		"interval": 1,
 		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-                {
-                    "type": "origins:change_resource",
-                    "resource": "*:shadow_abilities/decoy/decoy_charges",
-                    "operation": "add",
-                    "change": 1
-                }
-			]
+			"type": "origins:change_resource",
+			"resource": "*:shadow_abilities/decoy/decoy_charges",
+			"operation": "add",
+			"change": 1
 		},
 		"condition": {
 			"type": "origins:status_effect",

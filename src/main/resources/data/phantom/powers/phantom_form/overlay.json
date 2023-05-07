@@ -102,7 +102,7 @@
         },
         "entity_action": {
             "type": "origins:play_sound",
-            "sound": "minecraft:block.note_block.basedrum",
+            "sound": "minecraft:entity.warden.heartbeat",
             "pitch": 0
         }
     },

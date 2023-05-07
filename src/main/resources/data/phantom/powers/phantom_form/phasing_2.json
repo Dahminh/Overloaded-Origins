@@ -27,7 +27,12 @@
     },
     "fear_pulse": {
         "type": "origins:active_self",
-        "cooldown": 1,
+        "cooldown": 600,
+        "hud_render": {
+            "bar_index": 3,
+            "sprite_location": "origins:textures/gui/phantom.png",
+            "should_render": true
+        },
         "condition": {
             "type": "origins:power_active",
             "power": "*:phantom_form/constants_toggle",
@@ -37,6 +42,98 @@
             "type": "origins:and",
             "actions": [
                 {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function phantom:fear_pulse/1"
+                    },
+                    "ticks": 15
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 20,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 3.3,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "moreoriginsmod:fear",
+                                            "duration": 200,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 25,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 6.6,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "moreoriginsmod:fear",
+                                            "duration": 175,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/3"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 30,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 10,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "moreoriginsmod:fear",
+                                            "duration": 150,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/4"
+                            }
+                        ]
+                    }
+                },
+                {
                     "type": "origins:area_of_effect",
                     "radius": 10,
                     "bientity_action": {
@@ -44,18 +141,19 @@
                         "action": {
                             "type": "origins:apply_effect",
                             "effect": {
-                                "effect": "moreoriginsmod:fear",
-                                "duration": 200,
+                                "effect": "minecraft:darkness",
+                                "duration": 60,
                                 "amplifier": 0
                             }
                         }
                     }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.sculk_shrieker.shriek",
+                    "pitch": 0.25
                 }
             ]
-        },
-        "hud_render": {
-            "bar_index": 2,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png"
         }
     },
 	"name": "§d§nPhantom Form II",
