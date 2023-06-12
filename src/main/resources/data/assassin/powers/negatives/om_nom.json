@@ -9,6 +9,10 @@
 			"operation": "multiply_total",
 			"value": -0.5
 		},
+		"saturation_modifier": {
+			"operation": "multiply_total",
+			"value": 1
+		},
 		"entity_action": {
 			"type": "origins:and",
 			"actions": [

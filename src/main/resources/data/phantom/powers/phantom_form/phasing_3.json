@@ -1,26 +1,167 @@
 {
-    "type": "origins:phasing",
-    "blacklist": true,
-    "render_type": "blindness",
-    "view_distance": 64,
-    "block_condition": {
-        "type": "origins:in_tag",
-        "tag": "origins:unphasable"
-    },
-    "phase_down_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:sneaking"
-                },
-                {
-                    "type": "origins:on_block"
-                }
-            ]
+    "type": "origins:multiple",
+    "phasing": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 64,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "phase_down_condition": {
+            "type": "origins:sneaking"
         },
         "condition": {
-        "type": "origins:power_active",
-        "power": "*:phantom_form/constants_toggle"
+            "type": "origins:power_active",
+            "power": "*:phantom_form/constants_toggle"
+        }
+    },
+    "fear_pulse": {
+        "type": "origins:active_self",
+        "cooldown": 600,
+        "hud_render": {
+            "bar_index": 3,
+            "sprite_location": "origins:textures/gui/phantom.png",
+            "should_render": true
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom_form/constants_toggle"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function phantom:fear_pulse/1"
+                    },
+                    "ticks": 15
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function phantom:fear_pulse/2"
+                    },
+                    "ticks": 18
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 21,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 5,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "overloadedorigins:fear",
+                                            "duration": 250,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/3"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 24,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 10,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "overloadedorigins:fear",
+                                            "duration": 225,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/4"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function phantom:fear_pulse/5"
+                    },
+                    "ticks": 27
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 30,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 15,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:apply_effect",
+                                        "effect": {
+                                            "effect": "overloadedorigins:fear",
+                                            "duration": 200,
+                                            "amplifier": 0
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function phantom:fear_pulse/6"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 15,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:apply_effect",
+                            "effect": {
+                                "effect": "minecraft:darkness",
+                                "duration": 60,
+                                "amplifier": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.sculk_shrieker.shriek",
+                    "pitch": 0.25
+                }
+            ]
+        }
     },
 	"name": "§d§nPhantom Form III",
 	"description": "You can switch between human and Phantom form at will, but only while you are saturated enough to sprint.",
@@ -39,7 +180,7 @@
                 "\n§a-§r Be able to fly when it is night time in the Overworld",
                 "\n§e-§r Considered an undead",
                 "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
-                "\n§c-§r Not be able to attack unless §a§nAmbush§r is active",
+                "\n§c-§r Not be able to attack unless §a§nTerrify§r is active",
                 "\n\nYou cannot phase through the following blocks:",
                 "\n§c-§r Barrier",
                 "\n§c-§r Bedrock",

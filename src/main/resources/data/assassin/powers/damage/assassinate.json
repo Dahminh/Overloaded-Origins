@@ -17,7 +17,7 @@
 			"conditions": [
 				{
 					"type": "origins:status_effect",
-					"effect": "moreoriginsmod:shadowcloak"
+					"effect": "overloadedorigins:shadowcloak"
 				},
 				{
 					"type": "origins:status_effect",

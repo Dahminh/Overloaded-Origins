@@ -46,7 +46,7 @@
             },
             {
                 "type": "origins:status_effect",
-                "effect": "moreoriginsmod:shadowbetrayal"
+                "effect": "overloadedorigins:shadowbetrayal"
             }
         ]
     },

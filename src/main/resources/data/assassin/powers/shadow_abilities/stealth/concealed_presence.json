@@ -190,7 +190,7 @@
                 },
                 {
                     "type": "origins:status_effect",
-                    "effect": "moreoriginsmod:shadowcloak",
+                    "effect": "overloadedorigins:shadowcloak",
                     "inverted": true
                 }
             ]
@@ -219,7 +219,7 @@
                 },
                 {
                     "type": "origins:status_effect",
-                    "effect": "moreoriginsmod:shadowcloak",
+                    "effect": "overloadedorigins:shadowcloak",
                     "inverted": true
                 }
             ]

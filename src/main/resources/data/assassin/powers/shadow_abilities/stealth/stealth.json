@@ -11,7 +11,7 @@
 		"entity_action": {
 			"type": "origins:apply_effect",
 			"effect": {
-				"effect": "moreoriginsmod:shadowcloak",
+				"effect": "overloadedorigins:shadowcloak",
 				"duration": 600,
 				"show_particles": false,
 				"show_icon": true
@@ -27,12 +27,12 @@
 				},
 				{	    
 					"type": "origins:status_effect",
-					"effect": "moreoriginsmod:shadowcloak",
+					"effect": "overloadedorigins:shadowcloak",
 					"inverted": true
 				},
 				{
-					"type": "eggolib:has_tag",
-					"tag": "prevent_stealth",
+					"type": "origins:power",
+					"power": "*:shadow_abilities/stealth/stealth_reapply",
 					"inverted": true
 				},
 				{
@@ -62,7 +62,7 @@
 				},
 				{
 					"type": "origins:status_effect",
-					"effect": "moreoriginsmod:shadowcloak"
+					"effect": "overloadedorigins:shadowcloak"
 				}
 			]
 		}
@@ -78,7 +78,7 @@
 		},
 		"condition": {
 			"type": "origins:status_effect",
-			"effect": "moreoriginsmod:shadowcloak"
+			"effect": "overloadedorigins:shadowcloak"
 		}
 	},
 	"name": "§d§nShadow Cloak",

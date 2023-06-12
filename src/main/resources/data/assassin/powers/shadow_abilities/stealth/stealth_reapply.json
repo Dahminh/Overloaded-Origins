@@ -4,36 +4,18 @@
         "type": "origins:self_action_on_hit",
         "cooldown": 1,
         "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:execute_command",
-                    "command": "tag @s remove prevent_stealth"
-                },
-                {
-                    "type": "origins:revoke_power",
-                    "power": "*:shadow_abilities/stealth/stealth_reapply",
-                    "source": "apoli:command"
-                }
-            ]
+            "type": "origins:revoke_power",
+            "power": "*:shadow_abilities/stealth/stealth_reapply",
+            "source": "apoli:command"
         }
     },
     "got_hit": {
         "type": "origins:self_action_when_hit",
         "cooldown": 0,
         "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:execute_command",
-                    "command": "tag @s remove prevent_stealth"
-                },
-                {
-                    "type": "origins:revoke_power",
-                    "power": "*:shadow_abilities/stealth/stealth_reapply",
-                    "source": "apoli:command"
-                }
-            ]
+            "type": "origins:revoke_power",
+            "power": "*:shadow_abilities/stealth/stealth_reapply",
+            "source": "apoli:command"
         }
     },
     "tier_1": {
@@ -52,16 +34,12 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "moreoriginsmod:shadowcloak",
+                            "effect": "overloadedorigins:shadowcloak",
                             "duration": 200,
                             "show_particles": false,
                             "show_icon": true
                         }
                     }
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "tag @s remove prevent_stealth"
                 },
                 {
                     "type": "origins:revoke_power",
@@ -91,16 +69,12 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "moreoriginsmod:shadowcloak",
+                            "effect": "overloadedorigins:shadowcloak",
                             "duration": 250,
                             "show_particles": false,
                             "show_icon": true
                         }
                     }
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "tag @s remove prevent_stealth"
                 },
                 {
                     "type": "origins:revoke_power",
@@ -130,16 +104,12 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "moreoriginsmod:shadowcloak",
+                            "effect": "overloadedorigins:shadowcloak",
                             "duration": 300,
                             "show_particles": false,
                             "show_icon": true
                         }
                     }
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "tag @s remove prevent_stealth"
                 },
                 {
                     "type": "origins:revoke_power",

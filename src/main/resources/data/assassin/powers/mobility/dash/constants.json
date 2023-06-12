@@ -54,10 +54,9 @@
 								"inverted": true
 							},
 							{
-								"type": "origins:command",
-								"command": "power has @s *:shadow_abilities/stealth/stealth_reapply_hit",
-								"compare_to": 0,
-								"comparison": "=="
+								"type": "origins:power",
+								"power": "*:shadow_abilities/stealth/stealth_reapply",
+								"inverted": true
 							},
 							{
 								"type": "origins:resource",
@@ -70,7 +69,7 @@
 					"if_action": {
 						"type": "origins:apply_effect",
 						"effect": {
-							"effect": "moreoriginsmod:shadowcloak",
+							"effect": "overloadedorigins:shadowcloak",
 							"duration": 20,
 							"show_particles": false
 						}

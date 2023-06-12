@@ -72,11 +72,11 @@
 			"type": "minecraft:ash"
 		},
 		"spread": {
-			"x": 0.0,
+			"x": 0.25,
 			"y": 0.5, 
-			"z": 0.0
+			"z": 0.25
 			},
-		"count": 4,
+		"count": 8,
         "speed": 1.0,
 		"offset_y": 0.1,
 		"frequency": 5,
@@ -91,14 +91,14 @@
 		"type": "origins:particle",
 		"particle": {
             "type": "minecraft:dust_color_transition",
-            "params": "0.533 0.651 0.416 1 0.490 0.561 0.431"
+            "params": "0.46 0.62 0.24 1 0.17 0.22 0.07"
         },
 		"spread": {
-			"x": 0.1,
+			"x": 0.25,
 			"y": 0.5, 
-			"z": 0.1
+			"z": 0.25
 			},
-		"count": 6,
+		"count": 12,
         "speed": 1.0,
 		"offset_y": 1,
 		"frequency": 5,
@@ -148,27 +148,6 @@
             "power": "*:*_toggle"
 		}
 	},
-    "fall_immunity": {
-		"type": "origins:invulnerability",
-		"damage_condition": {
-			"type": "origins:name",
-			"name": "fall"
-		},
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:power_active",
-                    "power": "*:*_toggle"
-                },
-                {
-                    "type": "origins:fall_distance",
-                    "comparison": "<=",
-                    "compare_to": 20
-                }
-            ]
-        }
-	},
     "suffocation_immunity": {
         "type": "origins:modify_damage_taken",
         "modifier": {
@@ -216,9 +195,85 @@
                     "type": "origins:resource",
                     "comparison": ">",
                     "compare_to": 0,
-                    "resource": "*:positives/ambush/constants_cooldown"
+                    "resource": "*:terrify/constants_cooldown"
                 }
             ]
+        }
+    },
+    "rise": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:slow_falling",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.sneak",
+            "continuous": true
         }
     }
 }

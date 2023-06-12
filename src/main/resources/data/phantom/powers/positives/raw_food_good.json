@@ -12,7 +12,7 @@
     },
     "saturation_modifier": {
         "operation": "multiply_total",
-        "value": 3.0
+        "value": 1
     },
     "prevent_effects": true,
     "name": "§e§nOdd Physique",
@@ -25,7 +25,7 @@
                 "§a§nHybrid Stomach",
                 "\nDue to being part phantom, your stomach can effectively digest most foods that humans cannot.",
                 "\n\n§nExplanation§r:\n\n",
-                "You will receive §a2x§r the amount of food and §a4x§r the amount of saturation from the following foods:",
+                "You will receive §a2x§r the amount of food and §a2x§r the amount of saturation from the following foods:",
                 "\n§a-§r Raw Beef",
                 "\n§a-§r Raw Chicken",
                 "\n§a-§r Raw Rabbit",

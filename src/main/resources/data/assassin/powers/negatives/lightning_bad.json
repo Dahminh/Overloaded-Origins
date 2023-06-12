@@ -28,7 +28,7 @@
 				},
 				{
 					"type": "origins:clear_effect",
-					"effect": "moreoriginsmod:shadowcloak"
+					"effect": "overloadedorigins:shadowcloak"
 				},
 				{
 					"type": "origins:if_else",

@@ -55,6 +55,9 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+
+	maven { url "https://maven.ryanliptak.com/" }
+
 }
 
 loom {
@@ -65,13 +68,13 @@ loom {
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=moreoriginsmod"
+            vmArg "-Dfabric-api.datagen.modid=overloadedorigins"
  
             runDir "build/datagen"
         }
     }
 
-	accessWidenerPath = file("src/main/resources/moreoriginsmod.accesswidener")
+	accessWidenerPath = file("src/main/resources/overloadedorigins.accesswidener")
 }
 
 // Add the generated resources to the main source set
@@ -110,6 +113,8 @@ dependencies {
 
 	//modImplementation "com.github.thatrobin:extrakeybinds-origins:${project.extrakeybinds_version}"
 	modImplementation "curse.maven:extrakeybinds-474612:4031145"
+
+	modImplementation "squeek.appleskin:appleskin-fabric:mc1.19.3-2.4.2"
 
 }
 

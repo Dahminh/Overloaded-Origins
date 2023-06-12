@@ -10,19 +10,11 @@
             "tag": "origins:unphasable"
         },
         "phase_down_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:sneaking"
-                },
-                {
-                    "type": "origins:on_block"
-                }
-            ]
+            "type": "origins:sneaking"
         },
         "condition": {
-        "type": "origins:power_active",
-        "power": "*:phantom_form/constants_toggle"
+            "type": "origins:power_active",
+            "power": "*:phantom_form/constants_toggle"
         }
     },
     "fear_pulse": {
@@ -63,7 +55,7 @@
                                     "action": {
                                         "type": "origins:apply_effect",
                                         "effect": {
-                                            "effect": "moreoriginsmod:fear",
+                                            "effect": "overloadedorigins:fear",
                                             "duration": 200,
                                             "amplifier": 0
                                         }
@@ -91,7 +83,7 @@
                                     "action": {
                                         "type": "origins:apply_effect",
                                         "effect": {
-                                            "effect": "moreoriginsmod:fear",
+                                            "effect": "overloadedorigins:fear",
                                             "duration": 175,
                                             "amplifier": 0
                                         }
@@ -119,7 +111,7 @@
                                     "action": {
                                         "type": "origins:apply_effect",
                                         "effect": {
-                                            "effect": "moreoriginsmod:fear",
+                                            "effect": "overloadedorigins:fear",
                                             "duration": 150,
                                             "amplifier": 0
                                         }
@@ -173,7 +165,7 @@
                 "\n§a-§r Be able to fly when it is night time in the Overworld",
                 "\n§e-§r Considered an undead",
                 "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
-                "\n§c-§r Not be able to attack unless §a§nAmbush§r is active",
+                "\n§c-§r Not be able to attack unless §a§nTerrify§r is active",
                 "\n\nYou cannot phase through the following blocks:",
                 "\n§c-§r Barrier",
                 "\n§c-§r Bedrock",

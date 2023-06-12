@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "moreoriginsmod",
+	"id": "overloadedorigins",
 	"version": "${version}",
-	"name": "More Origins Mod",
+	"name": "Overloaded Origins",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Dahminh"
@@ -12,22 +12,22 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"accessWidener" : "moreoriginsmod.accesswidener",
-	"icon": "assets/moreoriginsmod/icon.png",
+	"accessWidener" : "overloadedorigins.accesswidener",
+	"icon": "assets/overloadedorigins/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dahminh.moreoriginsmod.MoreOriginsMod"
+          "dahminh.overloadedorigins.OverloadedOrigins"
 		],
 		"client": [
-			"dahminh.moreoriginsmod.MoreOriginsModClient"
+			"dahminh.overloadedorigins.OverloadedOriginsClient"
 		],
 		"fabric-datagen": [
-			"dahminh.moreoriginsmod.MoreOriginsModDataGenerator"
+			"dahminh.overloadedorigins.OverloadedOriginsDataGenerator"
 		]
 	},
 	"mixins": [
-		"moreoriginsmod.mixins.json"
+		"overloadedorigins.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.19",

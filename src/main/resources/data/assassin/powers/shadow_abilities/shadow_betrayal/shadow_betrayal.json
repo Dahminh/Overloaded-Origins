@@ -39,7 +39,7 @@
     "target_action": {
         "type": "origins:apply_effect",
         "effect": {
-            "effect": "moreoriginsmod:shadowbetrayal",
+            "effect": "overloadedorigins:shadowbetrayal",
             "duration": 300,
             "show_particles": false
         }
@@ -88,7 +88,7 @@
             },
             {
                 "type": "origins:status_effect",
-                "effect": "moreoriginsmod:shadowcloak"
+                "effect": "overloadedorigins:shadowcloak"
             }
         ]
     },

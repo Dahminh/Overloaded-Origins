@@ -84,7 +84,7 @@
                 {
                     "type": "origins:apply_effect",
                     "effect": {
-                        "effect": "moreoriginsmod:shadowbetrayal",
+                        "effect": "overloadedorigins:shadowbetrayal",
                         "duration": 300,
                         "show_particles": false
                     }
@@ -107,25 +107,16 @@
                     "type": "origins:if_else",
                     "condition": {
                         "type": "origins:status_effect",
-                        "effect": "moreoriginsmod:shadowcloak"
+                        "effect": "overloadedorigins:shadowcloak"
                     },
                     "if_action": {
-                        "type": "origins:and",
-                        "actions": [
-                            {
-                                "type": "origins:execute_command",
-                                "command": "tag @s add prevent_stealth"
-                            },
-                            {
-                                "type": "origins:delay",
-                                "action": {
-                                    "type": "origins:grant_power",
-                                    "power": "*:shadow_abilities/stealth/stealth_reapply",
-                                    "source": "apoli:command"
-                                },
-                                "ticks": 1
-                            }
-                        ]
+                        "type": "origins:delay",
+                        "action": {
+                            "type": "origins:grant_power",
+                            "power": "*:shadow_abilities/stealth/stealth_reapply",
+                            "source": "apoli:command"
+                        },
+                        "ticks": 1
                     }
                 }
             ]

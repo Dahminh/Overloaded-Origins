@@ -3,8 +3,8 @@
         "phantom:positives/weapon_concealment",
         "phantom:positives/ghost_touch",
         "phantom:positives/night_vision",
-        "phantom:positives/ambush/ambush_2",
-        "phantom:positives/ambush/constants",
+        "phantom:terrify/terrify_2",
+        "phantom:terrify/constants",
         "phantom:positives/raw_food_good",
         "phantom:phantom_form/constants",
         "phantom:phantom_form/overlay",
@@ -18,7 +18,7 @@
         "phantom:negatives/intimidation",
         "phantom:negatives/strange_anatomy",
         "phantom:negatives/undead_nightmare",
-        "phantom:positives/fear_detection"
+        "phantom:positives/fearmonger/fear_detection"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"

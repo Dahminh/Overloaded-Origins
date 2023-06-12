@@ -1,0 +1,18 @@
+{
+	"required": true,
+	"package": "dahminh.overloadedorigins.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin",
+		"LivingEntityMixin",
+		"EntityParticleMixin",
+		"MobEntityMixin"
+	],
+	"client": [
+		"client.InGameHudMixin",
+		"LivingEntityRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

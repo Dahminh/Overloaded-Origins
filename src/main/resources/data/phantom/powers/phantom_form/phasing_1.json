@@ -8,17 +8,9 @@
         "tag": "origins:unphasable"
     },
     "phase_down_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:sneaking"
-                },
-                {
-                    "type": "origins:on_block"
-                }
-            ]
-        },
-        "condition": {
+        "type": "origins:sneaking"
+    },
+    "condition": {
         "type": "origins:power_active",
         "power": "*:phantom_form/constants_toggle"
     },
@@ -38,7 +30,7 @@
                 "\n§a-§r Fall damage resistant up to §a20 blocks§r",
                 "\n§e-§r Considered an undead",
                 "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
-                "\n§c-§r Not be able to attack unless §a§nAmbush§r is active",
+                "\n§c-§r Not be able to attack unless §a§nTerrify§r is active",
                 "\n\nYou cannot phase through the following blocks:",
                 "\n§c-§r Barrier",
                 "\n§c-§r Bedrock",
