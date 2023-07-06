@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "overloadedorigins",
+	"version": "${version}",
+	"name": "Overloaded Origins",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Dahminh"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"accessWidener" : "overloadedorigins.accesswidener",
+	"icon": "assets/overloadedorigins/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "dahminh.overloadedorigins.OverloadedOrigins"
+		],
+		"client": [
+			"dahminh.overloadedorigins.OverloadedOriginsClient"
+		],
+		"fabric-datagen": [
+			"dahminh.overloadedorigins.OverloadedOriginsDataGenerator"
+		]
+	},
+	"mixins": [
+		"overloadedorigins.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

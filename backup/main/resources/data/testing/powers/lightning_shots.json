@@ -1,0 +1,35 @@
+{
+	"type": "origins:multiple",
+	"revoke": {
+		"type": "origins:action_on_callback",
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "tag @e[type=arrow,tag=lightning,nbt={inGround:1b}] remove lightning"
+		}
+	},
+	"add_tag": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "/execute as @e[type=spectral_arrow,distance=0..2,nbt=!{inGround:1b,LeftOwner:1b}] run tag @s add light"
+		}
+	},
+	"summon": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "execute at @e[type=spectral_arrow,tag=light,nbt={inGround:1b}] run summon minecraft:lightning_bolt"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "execute as @e[type=spectral_arrow,tag=light,nbt={inGround:1b},limit=1] run tag @s remove light"
+				}
+			]
+		}
+	}
+}

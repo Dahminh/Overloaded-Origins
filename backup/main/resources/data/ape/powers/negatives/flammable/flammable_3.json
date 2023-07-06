@@ -1,0 +1,41 @@
+{
+    "type": "origins:multiple",
+    "more_damage": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.4
+        },
+            "condition": {
+            "type": "origins:on_fire"
+        },
+        "damage_condition": {
+            "type": "origins:fire",
+            "inverted": true
+        }
+    },
+    "flammable": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "addition",
+            "value": 3.0
+        },
+        "damage_condition": {
+            "type": "origins:fire"
+        }
+    },
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/pyrophobia.png",
+            "text": [
+                "§c§nFlammable III",
+                "\nYour fur makes you more flammable and thus take more damage from fire.",
+                "\n\n§nExplanation§r:\n\n",
+                "You take §c+3§r damage from fire and while on fire, you take §c1.4x§r more damage."
+            ]
+        }
+	]
+}

@@ -1,0 +1,38 @@
+{
+    "powers": [
+        "phantom:positives/concealed_weapon",
+        "phantom:positives/ghost_touch",
+        "phantom:positives/night_vision",
+        "phantom:terrify/terrify_1",
+        "phantom:terrify/constants",
+        "phantom:positives/fearmonger/fearmonger_1",
+        "phantom:positives/raw_food_good",
+        "phantom:phantom_form/constants",
+        "phantom:phantom_form/overlay",
+        "phantom:phantom_form/phasing_1",
+        "phantom:neutral/transparent",
+        "phantom:negatives/burn_in_daylight",
+        "phantom:negatives/pyrophobia/constants",
+        "phantom:negatives/pyrophobia/pyrophobia_1",
+        "phantom:negatives/insomniac",
+        "phantom:negatives/intimidation",
+        "phantom:negatives/strange_anatomy",
+        "phantom:negatives/undead_nightmare",
+        "phantom:positives/fearmonger/fear_detection",
+        "phantom:positives/fearmonger/fear_meter"
+    ],
+    "icon": {
+        "item": "minecraft:phantom_membrane"
+    },
+    "order": 2,
+    "impact": 3,
+    "name": "Phantom",
+    "description": "As half-human and half-Phantom offspring, these creatures can switch between a Phantom and a normal form.",
+    "upgrades": [
+        {
+            "condition": "minecraft:end/kill_dragon",
+            "origin": "phantom:upgraded1",
+            "announcement": "You have evolved into a Phantom Haunter. But you still have more potential..."
+        }
+    ] 
+}

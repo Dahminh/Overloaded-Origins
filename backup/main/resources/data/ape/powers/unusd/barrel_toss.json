@@ -1,0 +1,85 @@
+{	"type": "origins:multiple",
+	"name": "§d§nBarrel Toss",
+	"description": "[§bLeft Click Ability§r] Gorillas can toss barrels to deal lethal damage.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/active.png",
+			"text": "Active ability, use with [§bLeft Click§r] with Barrel while Shifting."
+        },
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+            "text": "[§a1/2 Second Cooldown§r] \nYou can throw Barrels when they are in your \nmainhand and you are shifting. \n\nIf the barrel does not land on lava or water, \nthe barrel will explode. \n\nBarrels will be consumed on use."
+		}
+    ],
+	"barrel": {
+		"type": "origins:fire_projectile",
+		
+		"cooldown": 10,
+		"entity_type": "minecraft:zombie",
+		"hud_render": {
+			"bar_index": 1,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png"
+		},
+		"count": 1,
+		"interval": 0,
+		"start_delay": 0,
+		"speed": 2.5,
+		"divergence": 1.0,
+		"key": {
+			"key": "key.attack"
+		},
+		"sound": "minecraft:entity.arrow.shoot",
+		"pitch": 0,
+		"tag": "{cardinal_components:{\"apoli:powers\": {Powers: [{Type:\"ape:barrel\",Data: 1b, Sources:[\"apoli:command\"]}]}},Silent:1b,Invulnerable:1b,DeathLootTable:\"minecraft:empty\",ArmorItems:[{},{},{},{id:\"minecraft:barrel\",Count:1b}],Attributes:[{Name:generic.movement_speed,Base:0},{Name:generic.attack_damage,Base:0}]}",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:barrel"
+						}
+					}
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
+	},
+	"barrel_take": {
+		"type": "origins:active_self",
+		"cooldown": 10,
+		"key": {
+			"key": "key.attack"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "mainhand",
+					"item_condition": {
+						"type": "origins:ingredient",
+						"ingredient": {
+							"item": "minecraft:barrel"
+						}
+					}
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"entity_action": {
+			"type": "origins:equipped_item_action",
+			"equipment_slot": "mainhand",
+			"action": {
+				"type": "origins:consume"
+			}
+		}
+	}
+}

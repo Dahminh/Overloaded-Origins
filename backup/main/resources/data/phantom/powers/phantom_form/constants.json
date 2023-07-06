@@ -1,0 +1,304 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "temp_disable": {
+        "type": "origins:cooldown",
+        "cooldown": 60,
+        "hud_render": {
+            "bar_index": 2,
+            "sprite_location": "origins:textures/gui/phantom.png",
+            "should_render": true
+        }
+    },
+    "smite_disable": {
+        "type": "origins:cooldown",
+        "cooldown": 150,
+        "hud_render": {
+            "bar_index": 2,
+            "sprite_location": "origins:textures/gui/phantom.png",
+            "should_render": true
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "key": {
+          "key": "key.origins.primary_active",
+          "continuous": false
+        },
+        "active_by_default": true,
+        "retain_state": false,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "apoli:food_level",
+                    "comparison": ">",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "compare_to": 0,
+                    "resource": "*:*_temp_disable"
+                },
+                {
+                    "type": "origins:resource",
+                    "comparison": "==",
+                    "compare_to": 0,
+                    "resource": "*:*_smite_disable"
+                }
+            ]
+        }
+    },
+	"fall_damage_resistant": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "addition",
+			"value": -17
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
+		},
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+	},
+    "undead": {
+        "type": "origins:entity_group",
+        "group": "undead",
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+    "hunger_over_time": {
+        "type": "origins:exhaust",
+        "interval": 20,
+        "exhaustion": 0.812,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+	"particles_1": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:ash"
+		},
+		"spread": {
+			"x": 0.25,
+			"y": 0.5, 
+			"z": 0.25
+			},
+		"count": 8,
+        "speed": 1.0,
+		"offset_y": 0.1,
+		"frequency": 5,
+		"visible_while_invisible": true,
+		"visible_in_first_person": false,
+		"condition": {
+		  "type": "origins:power_active",
+		  "power": "*:*_toggle"
+		}
+	},
+    "particles_2": {
+		"type": "origins:particle",
+		"particle": {
+            "type": "minecraft:dust_color_transition",
+            "params": "0.46 0.62 0.24 1 0.17 0.22 0.07"
+        },
+		"spread": {
+			"x": 0.25,
+			"y": 0.5, 
+			"z": 0.25
+			},
+		"count": 12,
+        "speed": 1.0,
+		"offset_y": 1,
+		"frequency": 5,
+		"visible_while_invisible": true,
+		"visible_in_first_person": false,
+		"condition": {
+		  "type": "origins:power_active",
+		  "power": "*:*_toggle"
+		}
+	},
+    "sound": {
+		"type": "origins:action_over_time",
+		"interval": 120,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.husk.ambient",
+					"pitch": 1.1
+				}
+			]
+		},
+		"condition": {
+		  "type": "origins:power_active",
+		  "power": "*:*_toggle"
+		}
+	},
+	"prevent_block_selection": {
+		"type": "origins:prevent_block_selection",
+		"condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+          }
+	},
+	"prevent_item_use": {
+		"type": "origins:prevent_item_use",
+		"condition": {
+			"type": "origins:power_active",
+            "power": "*:*_toggle"
+		}
+	},
+  	"prevent_entity_use": {
+		"type": "origins:prevent_entity_use",
+		"condition": {
+			"type": "origins:power_active",
+            "power": "*:*_toggle"
+		}
+	},
+    "suffocation_immunity": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "inWall"
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+    "invisibility": {
+        "type": "origins:invisibility",
+        "render_outline": true,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+    "no_collision": {
+        "type": "origins:prevent_entity_collision",
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+    "no_damage": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "comparison": ">",
+                    "compare_to": 0,
+                    "resource": "*:terrify/constants_cooldown"
+                }
+            ]
+        }
+    },
+    "rise": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:slow_falling",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.sneak",
+            "continuous": true
+        }
+    }
+}

@@ -1,0 +1,244 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"kill": {
+		"type": "origins:self_action_on_kill",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scoreboard players add @s ckills 1"
+			}
+			]
+		},
+		"target_condition": {
+			"type": "origins:entity_type",
+    		"entity_type": "minecraft:zombified_piglin"
+		}
+	},
+	"contract_display": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "title @s actionbar [{\"text\":\"Contract Completion \",\"color\":\"gold\"},{\"score\":{\"name\":\"@s\",\"objective\":\"ckills\"},\"color\":\"gold\"},{\"text\":\"/15 Zombified Piglins\",\"color\":\"gold\"}]"
+			}
+			]
+		}
+	},
+	"completed": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_2/zombified_piglin"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.player.levelup",
+				"pitch": 0
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s 210 points"
+			},
+			{
+				"type": "origins:choice",
+				"actions": [
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:diamond",
+								"amount": 2
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"2 Diamonds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:iron_ingot",
+								"amount": 7
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"7 Iron Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 25
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gold_block",
+								"amount": 2
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"2 Gold Blocks\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:gold_ingot",
+								"amount": 13
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"13 Gold Ingots\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 20
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:emerald",
+								"amount": 6
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"6 Emeralds\",\"color\":\"white\"}]"
+						}
+						]
+					},
+					"weight": 10
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:player_head",
+								"amount": 1,
+								"tag": "{display:{Name:'{\"text\":\"Zombified Piglin Head\",\"color\":\"yellow\",\"italic\":false}'},SkullOwner:{Id:[I;1325481211,-2064102016,-2060901102,2137813230],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VhYmFlY2M1ZmFlNWE4YTQ5Yzg4NjNmZjQ4MzFhYWEyODQxOThmMWEyMzk4ODkwYzc2NWUwYThkZTE4ZGE4YyJ9fX0=\"}]}}}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Zombified Piglin Head\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				},
+				{
+					"element": {
+						"type": "origins:and",
+						"actions": [
+						{
+							"type": "origins:give",
+							"stack": {
+								"item": "minecraft:enchanted_book",
+								"amount": 1,
+								"tag": "{StoredEnchantments:[{id:\"minecraft:smite\",lvl:4s}]}"
+							}
+						},
+						{
+							"type": "origins:execute_command",
+							"command": "tellraw @s [{\"text\":\"Contract Complete! \",\"color\":\"gold\"},{\"text\":\"Reward: \",\"color\":\"gold\"},{\"text\":\"1 Smite IV Enchanted Book\",\"color\":\"yellow\"}]"
+						}
+						]
+					},
+					"weight": 5
+				}
+				]
+			}
+			]
+		},
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if score @s ckills matches 15..",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
+	"failure": {
+		"type": "origins:action_over_time",
+		"interval": 24000,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+			{
+				"type": "origins:delay",
+				"ticks": 20,
+				"action": {
+				"type": "origins:execute_command",
+				"command": "power revoke @s assassin:contracted_2/zombified_piglin"
+				}
+			},
+			{
+				"type": "origins:heal",
+				"amount": -10
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "xp add @s -1050 points"
+			},
+			{
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:health",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				"if_action": {
+					"type": "origins:and",
+					"actions": [
+					{
+						"type": "origins:execute_command",
+						"command": "/tellraw @s [{\"selector\":\"@s\"},{\"text\":\" failed to complete their Contract\"}]"
+					}
+					]
+				}
+			}
+			]
+		}
+	}
+}

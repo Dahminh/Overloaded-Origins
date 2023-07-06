@@ -1,0 +1,21 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "hidden": true,
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:projectile",
+                "projectile": "minecraft:arrow"
+            },
+            {
+                "type": "origins:projectile",
+                "projectile": "minecraft:spectral_arrow"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": -0.25
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "origins:multiple",
+    "damage": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "15% more damage in nether",
+            "attribute": "minecraft:generic.attack_damage",
+            "value": 0.15,
+            "operation": "multiply_total"
+        },
+        "tick_rate": 20,
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        }
+    },
+    "name": "Netherbound",
+    "description": "You spawn in the nether and the familiarity has strengthened your arms."
+}

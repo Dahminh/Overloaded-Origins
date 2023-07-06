@@ -1,0 +1,53 @@
+{
+    "powers": [
+		"assassin:misc/hunters_instinct/night_vision_1",
+		"assassin:misc/hunters_instinct/hunter",
+		"assassin:shadow_abilities/stealth/concealed_presence",
+		"assassin:mobility/swift/swift_1",
+		"assassin:mobility/swift/constants",
+		"assassin:damage/crit_attribute/crit_1",
+		"assassin:damage/attack_speed",
+		"assassin:misc/looting",
+		"assassin:shadow_abilities/shadow_betrayal/shadow_betrayal_detection",
+		"assassin:damage/backstab/constants",
+		"assassin:misc/dodge",
+		"assassin:misc/dark_oak_spawn",
+		"assassin:misc/deforestation",
+		"assassin:misc/improved_leather",
+		"assassin:shadow_abilities/dark_good",
+		"assassin:damage/backstab/backstab_1",
+		"assassin:shadow_abilities/shadow_betrayal/shadow_betrayal",
+		"assassin:shadow_abilities/shadow_arts_1",
+		"assassin:damage/assassinate",
+		"assassin:shadow_abilities/stealth/stealth",
+		"assassin:shadow_abilities/stealth/stealth_meter",
+		"assassin:mobility/dash/constants",
+		"assassin:mobility/dash/dash_1",
+		"assassin:shadow_abilities/decoy/decoy_spawn_1",
+		"assassin:shadow_abilities/decoy/decoy_charges",
+		"assassin:shadow_abilities/decoy/decoys_ignore",
+		"assassin:misc/poison_training",
+		"assassin:negatives/light",
+		"assassin:shadow_abilities/leave_no_trace/item_gone",
+		"assassin:negatives/ruthlessness",
+		"assassin:negatives/too_agile",
+		"assassin:negatives/light_body1",
+		"assassin:negatives/merciless",
+		"assassin:negatives/too_bright",
+		"assassin:negatives/om_nom",
+		"assassin:negatives/lightning_bad",
+		"assassin:damage/melee_attack"
+    ],
+	"icon": "minecraft:stone_sword",
+	"order": 0,
+	"impact": 3,
+	"name": "Dark Elf",
+	"description": "Embracing the shadows, Dark Elves use their stealth and agility to quickly assassinate targets.",
+	"upgrades": [ 
+		{
+			"condition": "minecraft:end/kill_dragon",
+			"origin": "assassin:upgraded1",
+			"announcement": "You have evolved into a High Dark Elf. But you still have more potential..."
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Frozen-Void Body",
+    "description": "You have 11 Hearts after adapting to both the Nether and the End.",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Max health increase",
+        "attribute": "minecraft:generic.max_health",
+        "value": 2,
+        "operation": "addition"
+    }
+}

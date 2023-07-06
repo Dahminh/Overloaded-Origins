@@ -1,0 +1,24 @@
+{
+	"powers": [
+	"snow:tundraspawn",
+	"snow:snow_eater2",
+    "snow:fire_res_immune",
+    "snow:snow_health4",
+	"snow:size3",
+	"snow:fire_damage3",
+	"snow:durability3",
+	"snow:ocean_damage2",
+	"snow:fbs2",
+	"snow:fbs3",
+	"snow:snowtrail",
+	"snow:color",
+	"snow:noeat2",
+	"snow:particle"
+	],
+	"icon": "minecraft:snowball",
+	"order": 11,
+	"impact": 3,
+	"name": "Adapted snowball",
+	"description": "An every-changing Snowball that gained sentience, somehow. Holding both the powers of the Nether and the Slain Dragon, you now hold incredible strength in your small body.",
+	"unchoosable": true
+}

@@ -1,0 +1,32 @@
+{
+    "type": "origins:simple",
+    "name": "§a§nFearmonger I",
+    "description": "You are fueled by fear and deliberately intend to spread fear wherever you go.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/fear_detection.png",
+            "text": [
+                "§e§nFear Detection",
+                "\nBeing an Origin empowered by fear, you can detect nearby terrified prey.",
+                "\n\n§nExplanation§r:\n\n",
+                "You can detect nearby entities that are under the §cFear§r debuff in a §a60§r block radius."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/fear_meter.png",
+            "text": [
+                "§e§nFear Usurper I",
+                "\nYou become stronger by absorbing the fear from your targets. However, you can also become weaker when your targets no longer fear you.",
+                "\n\n§nExplanation§r:\n\n",
+                "You have a Fear meter that determines how much Fear you have absorbed and lost. The meter ranges from -5 (§eYellow§r) to 5 (§aGreen§r)",
+                "\n\n§eYellow§r: Taking hits (with the Smite enchantmnet) will subtract §c1§r (§c2§r) from the meter.",
+                "\nAt §eMIN§r Stacks: targets that hit you will get rid of the §cFear§r debuff from themselves and you will lose §c2§r Hunger Points and Saturation per hit.",
+                "\n\n§aGreen§r: Dealing damage to targets (with the §cFear§r debuff) will add §a1§r (§a2§r) to the meter.",
+                "\nAt §aMAX§r Stacks: hitting targets will receive §cFear§r for §c5§r seconds and you will gain §a1§r Hunger Point and Saturation per hit.",
+                "\n\nStacks will decay when out of combat for 15 seconds, decaying at a rate of §e1§r every §e2§r seconds."
+            ]
+        }
+    ]
+}

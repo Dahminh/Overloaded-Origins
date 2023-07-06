@@ -1,0 +1,94 @@
+{
+	"type": "origins:multiple",
+	"wide": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:width 1.5"
+		},
+		"entity_action_respawned": {
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:width 1.5"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset @s"
+		}
+	},
+	"default_stats": {
+		"type": "origins:attribute",
+		"modifiers": [
+			{
+				"attribute": "minecraft:generic.max_health",
+				"value": 0.5,
+				"operation": "multiply_total"
+			},
+			{
+				"attribute": "minecraft:generic.armor",
+				"value": 11,
+				"operation": "addition"
+			},
+			{
+				"attribute": "minecraft:generic.knockback_resistance",
+				"value": 0.5,
+				"operation": "addition"
+			},
+			{
+				"attribute": "minecraft:generic.attack_speed",
+				"value": -0.5,
+				"operation": "multiply_total"
+			},
+			{
+				"attribute": "minecraft:generic.luck",
+				"value": 1024,
+				"operation": "addition"
+			}
+		]
+	},
+	"fisting": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"value": 5,
+			"operation": "addition"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition":	{
+				"type": "origins:ingredient",
+				"ingredient":
+				{
+					"tag": "ape:no_tools"
+				}
+			},
+			"inverted": true
+		}
+	},
+	"heavy": {
+		"type": "origins:modify_falling",
+		"velocity": 0.10
+	},
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
+			"text": [
+				"§e§nGorilla Genes",
+				"\nGorillas are naturally stronger and bigger than humans.",
+				"\n\n§nExplanation§r:\n\n",
+				"You gain the following stats:",
+				"\n§a-§r MAX Luck",
+				"\n§a- +5§r Hearts",
+				"\n§a- +11§r Armor Points",
+				"\n§a- +50§r% Knockback Resistance",
+				"\n§a- +5§r Base Attack Damage when not holding Tools or Weapons",
+				"\n§e- 1.5x§r Wider than a Human",
+				"\n§e- 1.10x§r Heavier than a Human",
+				"\n§c- -50§r% Attack Speed"
+			]
+		}
+	]
+}

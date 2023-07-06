@@ -1,0 +1,7 @@
+{
+    "type": "origins:prevent_entity_collision",
+    "condition": {
+        "type": "origins:sprinting"
+    },
+    "hidden": true
+}

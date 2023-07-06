@@ -1,0 +1,61 @@
+{
+    "type": "origins:target_action_on_hit",
+    "cooldown": 300,
+    "hud_render": {
+        "bar_index": 1,
+        "sprite_location": "overloadedorigins:textures/gui/ape.png"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.player.attack.crit",
+                "pitch": 0
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:crit ~ ~1 ~ 0.5 0.1 0.5 0 15 normal"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:weakness",
+                        "duration": 100,
+                        "amplifier": 0
+                    },
+                    {
+                        "effect": "minecraft:slowness",
+                        "duration": 100,
+                        "amplifier": 1
+                    },
+                    {
+                        "effect": "minecraft:mining_fatigue",
+                        "duration": 100,
+                        "amplifier": 2
+                    }
+                ]
+            }
+        ]
+	},
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/blunt_trauma.png",
+            "text": [
+                "§a§nBlunt Trauma II",
+                "\nYour attacks have so much weight into them, you can briefly stun your targets.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a15 Second Cooldown§r]",
+                "\nThe target will receive the following when hit:",
+                "\n§c- Weakness I§r",
+                "\n§c- Slowness II§r",
+                "\n§c- Mining Fatigue III§r",
+                "\nAll for §c5§r seconds."
+            ]
+		}
+	]
+}

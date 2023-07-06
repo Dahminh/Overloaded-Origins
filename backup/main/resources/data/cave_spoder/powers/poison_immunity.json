@@ -1,0 +1,18 @@
+{
+    "type": "origins:action_over_time",
+	"entity_action": {
+		"type": "origins:delay",
+		"ticks": 60,
+		"action": {
+			"type": "origins:clear_effect",
+			"effect": "minecraft:poison"
+		}
+	},
+    "interval": 1,
+    "condition": {
+		"type": "origins:status_effect",
+		"effect": "minecraft:poison"
+	},
+	"name": "§a§nPoison Immunity",
+	"description": "You are immune to poison, however it takes a little bit for the immunity to kick in."
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Oceanic Nightmares",
+    "description": "You can't stand being near water, or rather, you can't stand being IN water. (You take unblockable damage while in water/rain unless you have Water Protection.)",
+    "type": "origins:damage_over_time",
+    "interval": 20,
+    "onset_delay": 1,
+    "damage": 2,
+    "damage_source": {
+        "name": "hurt_by_water",
+        "unblockable": true,
+        "bypasses_armor": true
+    },
+    "protection_enchantment": "origins:water_protection",
+    "protection_effectiveness": 1000.0,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0.0
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    }
+}

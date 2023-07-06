@@ -1,0 +1,61 @@
+{
+    "type": "origins:multiple",
+	"base_stats": {
+		"type": "origins:attribute",
+		"type": "origins:attribute",
+		"modifiers": [
+		{
+		"attribute": "minecraft:generic.max_health",
+		"value": -6.0,
+		"operation": "addition"
+		},
+		{
+		"attribute": "minecraft:generic.movement_speed",
+		"value": 0.03,
+		"operation": "addition"
+		}
+		]
+	},
+	"smol": {
+		"type": "origins:action_on_callback",
+		"entity_action_chosen": {
+			"type": "origins:and",
+			"actions": [
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 0.75"
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 2"
+		}
+		]
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 0.75"
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:motion 2"
+		}
+		]
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "scale reset @s"
+		}
+	},
+	"jump": {
+	    "type": "origins:modify_jump",
+		"modifier": {
+			"operation": "addition",
+			"value": 0.3
+    }
+	},
+	"name": "§e§nNot So Small Sized",
+	"description": "You're larger than a Cave Arachnid, allowing you to have more reach and some more health"
+}

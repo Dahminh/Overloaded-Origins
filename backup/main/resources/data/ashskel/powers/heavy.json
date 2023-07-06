@@ -1,0 +1,51 @@
+{
+    "hidden": false,
+    "name": "Heavy",
+    "description": "Skeletons are heavy and sluggish in water especially with armor on.",
+    "type": "origins:multiple",
+    "withering": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:weakness",
+                "duration": 200,
+                "amplifier": 0,
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": true
+            }
+        },
+        "interval": 10,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "water": {
+        "type": "origins:ignore_water",
+        "inverted": false,
+        "condition": {
+            "type": "origins:attribute",
+            "attribute": "minecraft:generic.armor",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    },
+    "slow": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.5
+        },
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">=",
+            "compare_to": 0.3
+        }
+    }
+}

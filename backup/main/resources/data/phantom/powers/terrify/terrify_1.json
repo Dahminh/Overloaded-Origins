@@ -1,0 +1,88 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.25
+    },
+    "target_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:darkness",
+                    "duration": 60
+                }
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 1,
+                "action": {
+                    "type": "origins:grant_power",
+                    "power": "*:terrify/fight_or_flight_1",
+                    "source": "*:terrify/fight_or_flight_1"
+                }
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "*:phantom_form/constants_toggle"
+            },
+            {
+                "type": "origins:resource",
+                "comparison": "==",
+                "compare_to": 0,
+                "resource": "*:terrify/constants_cooldown"
+            }
+        ]
+    },
+    "name": "§a§nHaunt I",
+    "description": "You can easily haunt your enemies with your Ghostly abilities",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/weapon_concealment.png",
+            "text": [
+                "§a§nConcealed Weapon",
+                "\nYou can make your melee weapons appear invisible, making it hard for your enemies to know what hit them.",
+                "\n\n§nExplanation§r:\n\n",
+                "Any held melee weapons in your mainhand will not be rendered and thus appear invisible."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/ghost_touch.png",
+            "text": [
+                "§a§nSpectral Touch",
+                "\nYou can weaken your enemies as if a Ghost walked right through them.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a30 Second Cooldown§r]",
+                "\nWhen hitting a mob with your bare hands, you will heal for §a1§r heart and apply §cWeakness II§r and §cSlowness II§r for §c15§r seconds to the mob."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/phantom/terrify.png",
+            "text": [
+                "§a§nTerrify I",
+                "\nYou can terrify your targets, weakening them and giving you the chance to terrorize them even more. However, this may backfire depending on how courageous your target is.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a30 Second Cooldown§r]",
+                "\nWhen hitting a mob in §d§nPhantom Form§r, you will:",
+                "\n§a-§r Deal §a1.25x§r damage",
+                "\n§a-§r Apply §cDarkness§r for §c3§r seconds",
+                "\n§e-§r Apply §eFight or Flight§r, and targets will have §e3§r seconds to hit a Phantom Origin",
+                "\n§c-§r Deactivate, and disable §d§nPhantom Form§r§f for §c3§r§f seconds",
+                "\n\n§eFight or Flight§r:",
+                "\nIf the target successfully hit a Phantom Origin within §e3§r seconds, the Phantom Origin will gain §cWeakness§r for §c30§r seconds.",
+                "\n\nIf they fail to hit a Phantom Origin within §e3§r seconds, the target will receive §cFear§r for §c15§r seconds. If the target is in a light level of 7 or lower, they will receive §cFear II§r for the same duration instead.\n\n",
+                "§d§nPhantom Form§r will be temporarily disabled for §e3§r seconds.\n\n",
+                "§4WARNING§r: §a§nTerrify§r will try to jumpscare players."
+            ]
+        }
+    ]
+}

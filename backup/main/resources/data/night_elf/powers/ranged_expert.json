@@ -1,0 +1,19 @@
+{
+	"type": "origins:multiple",
+	"ranged":	{
+	"type": "origins:modify_projectile_damage",
+	"modifier": {
+		"name": "extra bow damage",
+		"operation": "addition",
+		"value": 2.0
+	}
+	},
+  "name": "§a§nRanged Proficiency",
+  "description": "You deal more damage with projectiles.",
+  "badges": [
+	  {
+		  "sprite": "origins:textures/gui/badge/info.png",
+		  "text": "You deal §a+2§r damage \nwith projectiles."
+	  }
+  ]
+}

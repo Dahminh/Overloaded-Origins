@@ -1,0 +1,14 @@
+{
+    "type": "origins:self_action_on_hit",
+    "cooldown": 0,
+    "entity_action": {
+        "type": "origins:area_of_effect",
+        "radius": 10,
+        "bientity_action": {
+            "type": "origins:damage",
+            "amount": 20,
+            "damage_type": "minecraft:fall"
+        },
+        "include_target": true
+    }
+}

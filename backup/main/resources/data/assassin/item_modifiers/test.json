@@ -1,0 +1,14 @@
+[
+    {
+        "function": "apoli:add_power",
+        "power": "origins:arcane_skin",
+        "slot": "chest",
+        "negative": true
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "origins:fire_immunity",
+        "slot": "chest",
+        "negative": true
+    }
+]

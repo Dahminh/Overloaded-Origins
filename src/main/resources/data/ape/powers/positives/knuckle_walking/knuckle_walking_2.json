@@ -1,0 +1,35 @@
+{
+    "type": "origins:conditioned_attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 2.25
+        },
+        {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 2
+        }
+    ],
+    "condition": {
+        "type": "origins:sneaking"
+    },
+    "tick_rate": 5,
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/knuckle_walking.png",
+            "text": [
+                "§a§nKnuckle Walking II",
+                "\nYou move much faster and are more protected while Knuckle Walking compared to normal walking.",
+                "\n\n§nExplanation§r:\n\n",
+                "While sneaking you gain the following:",
+                "\n§a- +225§r% Movement Speed",
+                "\n§a- +2§r Armor Point"
+            ]
+        }
+	]
+}

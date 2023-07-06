@@ -1,0 +1,97 @@
+{
+	"type": "origins:multiple",
+	"charges": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 900,
+        "hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/dark_elf.png",
+			"bar_index": 0
+		},
+		"start_value": 900
+	},
+	"death": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+			"type": "origins:change_resource",
+			"resource": "*:*_charges",
+			"change": 900,
+			"operation": "set"
+		}
+	},
+	"effects": {
+		"type": "origins:active_self",
+		"cooldown": 0,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:set_fall_distance",
+					"fall_distance": 0
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.bat.takeoff"
+				},
+				{
+					"type": "origins:delay",
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:*_charges",
+						"change": -300
+					},
+					"ticks": 1
+				},
+				{
+					"type": "origins:if_else",
+					"condition": {
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:status_effect",
+								"effect": "minecraft:glowing",
+								"inverted": true
+							},
+							{
+								"type": "origins:power",
+								"power": "*:shadow_abilities/stealth/stealth_reapply",
+								"inverted": true
+							},
+							{
+								"type": "origins:resource",
+								"resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+								"comparison": "<",
+								"compare_to": 400
+							}
+						]
+					},
+					"if_action": {
+						"type": "origins:apply_effect",
+						"effect": {
+							"effect": "overloadedorigins:shadowcloak",
+							"duration": 20,
+							"show_particles": false
+						}
+					}
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fall_flying",
+					"inverted": true
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_charges",
+					"comparison": ">=",
+					"compare_to": 300
+				}
+			]
+		}
+	},
+	"hidden": true
+}

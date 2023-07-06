@@ -1,0 +1,27 @@
+{
+	"powers": [
+	"snow:tundraspawn",
+	"snow:snow_eater",
+	"snow:fire_res_immune",
+	"snow:melt",
+	"snow:fire_damage",
+	"snow:snow_health",
+	"snow:ocean_damage",
+	"snow:size1",
+	"snow:noeat",
+	"snow:reset1",
+	"snow:color",
+	"snow:particle"
+	],
+	"icon": "minecraft:snowball",
+	"order": 11,
+	"impact": 3,
+	"name": "Snowball",
+	"description": "An ever-changing Snowball that gained sentience, somehow. You posess a level of growth that others lack, but you must put in more effort to achieve it. Your first goal will be to survive and find some Obsidian.",
+	"unchoosable": false,
+		"upgrades": {
+		"condition": "minecraft:story/form_obsidian",
+		"origin": "snow:level_2_snowball",
+		"announcement": "As you grasp the piece of Obsidian, you feel a strange energy calling out to you... (Check your origin!)"
+	}
+}

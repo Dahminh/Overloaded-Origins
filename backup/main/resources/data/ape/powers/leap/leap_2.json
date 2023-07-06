@@ -1,0 +1,60 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 350,
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/ape.png",
+		"bar_index": 0
+	},
+    "entity_action": {
+        "type": "origins:if_else",
+        "if_action": {
+            "type": "origins:add_velocity",
+            "y": 1,
+            "z": 3.25,
+            "space": "local",
+            "set": true
+        },
+        "else_action": {
+            "type": "origins:add_velocity",
+            "y": 1,
+            "z": 1.75,
+            "space": "local",
+            "set": true
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": "<=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "<=",
+                    "compare_to": 1
+                }
+            ]
+        }
+    },
+	"name": "§d§nLeap II",
+	"description": "You are able to leap a great distance similar to your Gorilla-like relatives.",
+    "badges": [
+        {
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/ape/leap.png",
+            "text": [
+				"[§a17.5 Second Cooldown§r]",
+				"\n[§bPrimary Active Ability§r], Pressing [",
+				{"keybind": "key.origins.primary_active"},
+				"] will launch yourself towards where you are looking at.",
+                "\n\nYour leap will be weaker if you are in a block or greater of lava or water.",
+                "\n\nUpon landing, you will take no fall damage and slam the ground, knocking up all mobs in a §a7 block§r§f radius. This effect will not occur if you leaped from lava or water.",
+                "\n\nUpon landing or after 5 seconds of not landing, you will gain §cSlowness V§r for §c4§r seconds.",
+                "\n\n§cCannot§r be used while in elytra flight."
+			]
+		}
+    ]
+}

@@ -1,0 +1,33 @@
+{
+	"type": "origins:multiple",
+	"fisting": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.attack_damage",
+			"value": 2,
+			"operation": "addition"
+		},
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition":	{
+				"type": "origins:ingredient",
+				"ingredient":
+				{
+					"item": "minecraft:air"
+				}
+			}
+		}
+	},
+	"no_shield": {
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+		  "type": "origins:ingredient",
+		  "ingredient": {
+			"tag": "origins:shields"
+		  }
+		}
+	},
+  "name": "§e§nMartial Artist",
+  "description": "You are able to do more damage with your fist but strangely enough you cannot use a shield."
+}

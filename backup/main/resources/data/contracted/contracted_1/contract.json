@@ -1,0 +1,140 @@
+{
+	"type": "origins:multiple",
+	"contract": {
+	"type": "origins:action_over_time",
+	"interval": 20,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+		{
+			"type": "origins:execute_command",
+			"command": "title @s actionbar {\"text\":\"New Contract!\",\"color\":\"gold\"}"
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "minecraft:entity.experience_orb.pickup",
+			"pitch": 0
+		},
+		{
+			"type": "origins:execute_command",
+			"command": "scoreboard players set @s ckills 0"
+		},
+		{
+			"type": "origins:trigger_cooldown",
+			"power": "assassin:contract_cd"
+		},
+		{
+			"type": "origins:choice",
+			"actions": [
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/zombie"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/zombie_villager"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/slime"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/husk"
+				},
+				"weight": 10
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/spider"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/witch"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/iron_golem"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/guardian"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/skeleton"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/enderman"
+				},
+				"weight": 10
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/stray"
+				},
+				"weight": 10
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/cave_spider"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/creeper"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"type": "origins:execute_command",
+					"command": "power grant @s assassin:contracted_1/drowned"
+				},
+				"weight": 10
+			}
+			]
+		}
+		]
+	},
+	"condition": {
+		"type": "origins:resource",
+		"resource": "assassin:contract_cd",
+		"comparison": "==",
+		"compare_to": 0
+	}
+	},
+	"name": "§e§nContracted Killer I",
+	"description": "Every 20 minutes you are given an assassination contract and you will have 20 minutes to complete it. Completeting it will reward you while failing will penalize you greatly."
+}

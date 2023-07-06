@@ -1,0 +1,31 @@
+{
+    "name": "Infernal protector",
+    "description": "Blazes protect you +4 armor near blazes(also procs heavy)",
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "name": "+4 armor near blazes and blazeborns",
+        "attribute": "minecraft:generic.armor",
+        "value": 4,
+        "operation": "addition"
+    },
+    "tick_rate": 20,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[type=minecraft:blaze,distance=..5]",
+                "compare_to": 0,
+                "comparison": ">",
+                "inverted": false
+            },
+            {
+                "type": "origins:command",
+                "command": "execute if entity @e[type=#roubar:blazeborn,distance=..5]",
+                "compare_to": 0,
+                "comparison": ">",
+                "inverted": false
+            }
+        ]
+    }
+}

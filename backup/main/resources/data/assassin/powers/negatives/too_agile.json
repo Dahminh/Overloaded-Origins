@@ -1,0 +1,71 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 0,
+	"damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:amount",
+                "compare_to": 0,
+                "comparison": ">"
+            },
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:living"
+                }
+            }
+        ]
+    },
+    "hidden": true,
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "assassin:upgraded2"
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slowness",
+                        "amplifier": 5,
+                        "duration": 80,
+                        "show_icon": true
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "assassin:upgraded1"
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slowness",
+                        "amplifier": 5,
+                        "duration": 107,
+                        "show_icon": true
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:origin",
+                    "origin": "assassin:upgraded0"
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slowness",
+                        "amplifier": 5,
+                        "duration": 133,
+                        "show_icon": true
+                    }
+                }
+            }
+        ]
+    }
+}

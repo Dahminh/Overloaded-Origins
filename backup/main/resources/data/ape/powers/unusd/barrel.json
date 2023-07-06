@@ -1,0 +1,86 @@
+{
+	"type": "origins:multiple",
+	"hidden": true,
+	"invisible": {
+		"type": "origins:invisibility",
+		"render_armor": true
+	},
+    "landing": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:explode",
+                    "power": 3
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "setblock ~ ~ ~ minecraft:barrel"
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "tp @s ~ ~-1000 ~"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "kill @s"
+                            }
+                        ]
+                    },
+                    "ticks": 1
+                }
+            ]
+        }
+    },
+    "water_or_lava": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command", 
+                    "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:barrel\",Count:1b}}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @s ~ ~-1000 ~"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @s"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:in_block_anywhere",
+            "compare_to": 1,
+            "comparison": ">=",
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "minecraft:water"
+                        }
+                    },
+                    {
+                        "type": "origins:fluid",
+                        "fluid_condition": {
+                            "type": "origins:in_tag",
+                            "tag": "minecraft:lava"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

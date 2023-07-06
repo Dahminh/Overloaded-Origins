@@ -1,0 +1,22 @@
+{
+    "powers": [
+		"cave_spoder:shafted",
+		"cave_spoder:nimble_legs",
+		"origins:arthropod",
+		"cave_spoder:spiderman",
+		"cave_spoder:upgraded/leaping_atk",
+		"cave_spoder:upgraded/venomous",
+		"cave_spoder:poison_immunity",
+		"origins:master_of_webs",
+		"cave_spoder:upgraded/default_stuff",
+		"cave_spoder:blinded",
+		"cave_spoder:icindark",
+		"cave_spoder:carnivore"
+    ],
+	"icon": "minecraft:cave_spider_spawn_egg",
+	"order": 0,
+	"impact": 2,
+	"name": "Cave Broodmother",
+	"description": "Cave Broodmothers are a lot stronger compared to the Cave Arachnid and they can summon in their own cave spiders to attack enemies.",
+	"unchoosable": true	
+}

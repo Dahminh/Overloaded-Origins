@@ -1,0 +1,141 @@
+{
+	"type": "origins:multiple",
+	"jump_boost_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:jump_boost",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"jump_boost_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:jump_boost",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.67
+		}
+	},
+	"night_vision_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:night_vision",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.75
+		}
+	},
+	"fire_resistance_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:fire_resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.75
+		}
+	},
+	"speed_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:speed",
+		"modifier": {
+			"operation": "addition",
+			"value": -1
+		}
+	},
+	"speed_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:speed",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.83
+		}
+	},
+	"resistance_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "addition",
+			"value": -3
+		}
+	},
+	"resistance_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:resistance",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.75
+		}
+	},
+	"water_breathing_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:water_breathing",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.75
+		}
+	},
+	"regeneration_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:regeneration",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"regeneration_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:regeneration",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.67
+		}
+	},
+	"strength_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:strength",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"strength_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:strength",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.83
+		}
+	},
+	"slowness_amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effect": "minecraft:slowness",
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"slowness_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slowness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"weakness_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:weakness",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"slow_falling_duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effect": "minecraft:slow_falling",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		}
+	},
+	"name": "§e§nBlessed & Cursed",
+	"description": "The light in your body has made many positive and negative status effects stronger."
+}

@@ -1,0 +1,97 @@
+{
+    "type": "origins:multiple",
+    "damage_boost": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.25
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "comparison": "<",
+                        "compare_to": 9
+                    }
+                },
+                {
+                    "type": "origins:exposed_to_sun",
+                    "inverted": true
+                },
+                {
+					"type": "origins:status_effect",
+					"effect": "minecraft:glowing",
+					"inverted": true
+				},
+                {
+                    "type": "origins:resource",
+                    "resource": "*:shadow_abilities/stealth/stealth_meter_meter",
+                    "comparison": "<",
+                    "compare_to": 400
+                }
+            ]
+        },
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "player"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "player.item"
+                }
+            ]
+        }
+    },
+    "tick_actions": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shadow_abilities/stealth/stealth_stealth",
+                    "operation": "add",
+                    "change": -2
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:shadow_abilities/decoy/decoy_charges",
+                    "operation": "add",
+                    "change": 1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "comparison": "<",
+                        "compare_to": 9
+                    }
+                },
+                {
+                    "type": "origins:exposed_to_sun",
+                    "inverted": true
+                },
+                {
+					"type": "origins:status_effect",
+					"effect": "minecraft:glowing",
+					"inverted": true
+				}
+            ]
+        }
+    },
+    "hidden": true
+}

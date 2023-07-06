@@ -1,0 +1,8 @@
+{
+    "name": "Frozen Beginnings",
+    "description": "You begin in a Tundra, it's where you belong, after all.",
+    "type": "origins:modify_player_spawn",
+    "dimension": "minecraft:overworld",
+    "biome": "snowy_tundra",
+    "spawn_strategy": "center"
+}

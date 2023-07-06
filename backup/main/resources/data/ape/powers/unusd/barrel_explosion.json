@@ -1,0 +1,16 @@
+{
+	"type": "origins:action_on_land",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "summon tnt"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "kill @s"
+			}
+		]
+	}
+}

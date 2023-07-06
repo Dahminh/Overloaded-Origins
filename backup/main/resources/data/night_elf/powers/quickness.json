@@ -1,0 +1,72 @@
+{
+   "type": "origins:multiple",
+   "dodge": {
+      "type":"origins:modify_damage_taken",
+         "self_action":{
+         "type":"origins:and",
+         "actions":[
+            {
+			      "type": "origins:execute_command",
+			      "command": "particle dust 0.886 0.349 0.969 1.7 ~ ~1 ~ 0.4 0.5 0.4 0.1 50 normal"
+            },
+		      {
+               "type":"origins:play_sound",
+               "sound":"minecraft:entity.bat.takeoff"
+            }
+         ] 
+         },
+    "modifier":{
+       "operation":"multiply_total",
+       "value":-1
+    },
+    "damage_condition":{
+       "type":"origins:or",
+       "conditions":[
+          {
+             "type":"origins:name",
+             "name":"generic"
+          },
+          {
+             "type":"origins:name",
+             "name":"arrow"
+          },
+          {
+             "type":"origins:name",
+             "name":"mob"
+          },
+		   {
+             "type":"origins:name",
+             "name":"trident"
+          },
+          {
+             "type":"origins:name",
+             "name":"player"
+          },
+          {
+             "type":"origins:name",
+             "name":"sting"
+          }
+       ]
+    },
+    "condition":{
+      "type":"origins:predicate",
+      "predicate":"*:crit"
+    }
+   },
+   "speed": {
+      "type": "origins:attribute",
+      "modifier": {
+         "attribute": "minecraft:generic.movement_speed",
+         "value": 0.025,
+         "operation": "addition"
+      }
+   },
+	"name": "§a§nQuickness",
+	"description": "You move faster and have a chance to dodge attacks.",
+   "badges": [
+      {
+         "sprite": "origins:textures/gui/badge/info.png",
+         "text": "You have §a+25%§r Movement Speed \n\nYou have a §a20%§c chance of \ndodging all attacks."
+      }
+   ]
+}

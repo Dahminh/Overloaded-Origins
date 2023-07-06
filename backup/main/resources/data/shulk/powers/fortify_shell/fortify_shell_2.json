@@ -1,0 +1,142 @@
+{
+    "type": "origins:multiple",
+    "dr_1": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.3
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "<",
+                    "compare_to": 3
+                }
+            ]
+        }
+    },
+    "dr_2": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.24
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 3
+                }
+            ]
+        }
+    },
+    "dr_3": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.18
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 4
+                }
+            ]
+        }
+    },
+    "dr_4": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.12
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 5
+                }
+            ]
+        }
+    },
+    "dr_5": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": -0.06
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "comparison": "==",
+                    "compare_to": 6
+                }
+            ]
+        }
+    },
+    "explosion": {
+        "type": "origins:modify_damage_dealt",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "explosion.player"
+        },
+        "modifiers": [
+            {
+                "resource": "*:fortify_shell/constants_resource",
+                "operation": "set_base",
+                "value": 0,
+                "modifier": {
+                    "operation": "multiply_total_multiplicative",
+                    "value": -0.85
+                }
+            }
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "eggolib:has_tag",
+                    "tag": "explosionDmg"
+                }
+            ]
+        }
+    },
+    "name": "§d§nFortified Shell II",
+    "description": "You can close your shell to fortify yourself and return a surprise for your enemies."
+}

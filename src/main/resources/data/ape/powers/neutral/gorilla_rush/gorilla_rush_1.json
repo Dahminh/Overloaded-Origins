@@ -1,0 +1,125 @@
+{
+	"type": "origins:multiple",
+	"movement_speed": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_total",
+			"value": 1.3
+		},
+		"tick_rate": 1,
+		"condition": {
+			"type": "origins:sprinting"
+		}
+	},
+	"exhaustion": {
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 16
+		},
+		"condition": {
+			"type": "origins:sprinting"
+		}
+	},
+	"deal_damage": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:area_of_effect",
+					"radius": 2,
+					"bientity_action": {
+						"type": "origins:add_velocity",
+						"y": 0.1
+					}
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 2,
+					"bientity_action": {
+						"type": "origins:damage",
+						"amount": 1,
+						"damage_type": "ape:gorilla_rush_entity"
+					},
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:living"
+						}
+					}
+				},
+				{
+					"type": "origins:if_else_list",
+					"actions": [
+						{
+							"action": {
+								"type": "origins:and",
+								"actions": [
+									{
+										"type": "origins:damage",
+										"amount": 1,
+										"damage_type": "ape:gorilla_rush_wall"
+									},
+									{
+										"type": "origins:play_sound",
+										"sound": "minecraft:item.shield.block",
+										"pitch": 0,
+										"volume": 0.5
+									}
+								]
+							},
+							"condition": {
+								"type": "origins:or",
+								"conditions": [
+									{
+										"type": "origins:block_collision",
+										"offset_x": 0.1,
+										"offset_y": 0,
+										"offset_z": 0.1
+									},
+									{
+										"type": "origins:block_collision",
+										"offset_x": -0.1,
+										"offset_y": 0,
+										"offset_z": -0.1
+									}
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sprinting"
+				},
+				{
+					"type": "origins:moving"
+				}
+			]
+			
+		}
+	},
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/gorilla_rush.png",
+			"text": [
+				"§e§nGorilla Rush I",
+				"\nWhenever you sprint, you can damage nearby entities due to how heavy you are and how fast you are going. However, this comes with the cost of being highly exhaustive and has the potential of doing self harm.",
+				"\n\n§nExplanation§r:\n\n",
+				"While sprinting you have §a1.3x§r movement speed but you exhaust §c16x§r faster",
+				"\n\nWhile sprinting into mobs, you will deal §a1§r armor ignoring damage and knock them back.",
+				"\n\nIf you collide into a block while sprinting, you will receive §c1§r armor ignoring damage."
+			]
+        }
+	]
+}

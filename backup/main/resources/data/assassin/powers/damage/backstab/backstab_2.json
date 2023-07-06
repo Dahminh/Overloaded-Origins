@@ -1,0 +1,102 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "value": 0.3
+    },
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:distance",
+                "comparison": "<=",
+                "compare_to": 6
+            },
+            {
+                "type": "origins:relative_rotation",
+                "actor_rotation": "head",
+                "target_rotation": "body",
+                "comparison": ">",
+                "compare_to": 0.125
+            }
+        ]
+    },
+    "target_condition": {
+        "type": "origins:power",
+        "power": "*:shadow_abilities/decoy/decoy_power",
+        "inverted": true
+    },
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "player"
+            },
+            {
+                "type": "origins:name",
+                "name": "player.item"
+            }
+        ]
+    },
+    "self_action": {
+        "type": "origins:change_resource",
+        "resource": "*:shadow_abilities/decoy/decoy_charges",
+        "operation": "add",
+        "change": 600
+    },
+    "target_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:blindness",
+            "duration": 250,
+            "amplifier": 0
+        }
+    },
+	"name": "§a§nCovert Methods II",
+	"description": "You've learned multiple assassination techniques to kill your targets.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/assassinate.png",
+            "text": [
+                "§a§nAssassinate",
+				"\nThe first strike is always the deadliest...",
+				"\n\n§nExplanation§r:\n\n",
+				"While you have §d§nShadow Cloak§r and not under the §cGlowing§r effect, your first melee strike against a full health target will:",
+				"\n§a-§r Be a §aCritical Attack§r, dealing max potential damage",
+				"\n§a-§r Deal §a1.75x§r damage",
+				"\n§a-§r Inflict §cShadow Betrayal§r for §c30§r seconds",
+				"\n§a-§r Inflict §cBlindness§r for §c15§r seconds",
+				"\n§a-§r Inflict §cSlowness§r for §c5§r seconds"
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/crit.png",
+            "text": [
+                "§a§nCritical Connoisseur II",
+                "\nYou can quickly detect your target's weak points and deal lethal amounts of damage.",
+                "\n\n§nExplanation§r:\n\n",
+                "You deal §a1.75x§r damage on Critical Attacks."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/dark_elf/backstab.png",
+            "text": [
+                "§a§nBackstab II",
+                "\nYou have greater mastery in backstabbing.",
+                "\n\n§nExplanation§r:\n\n",
+                "Melee Attacks from the target's back will:",
+                "\n§a-§r Deal §a1.3x§r damage",
+                "\n§a-§r Recharge §a1§r Decoy Charge",
+                "\n§a-§r Inflict §cShadow Betrayal§r for §c30§r seconds",
+                "\n§a-§r Inflict §cBlindness§r for §c12.5§r seconds",
+                "\n\nBackstabable targets will glow red.\n\n",
+                "While you have §d§nShadow Cloak§r§f and successfully backstabbing, you will reappear for §a1.5§r seconds and receive §d§nShadow Cloak§r ","for §a15§r seconds.",
+                "\n\nIf you deal damage, receive damage, or receive the §cGlowing§r effect during this §a1.5§r second window, you will not receive §d§nShadow Cloak§r."
+            ]
+        }
+    ]
+}

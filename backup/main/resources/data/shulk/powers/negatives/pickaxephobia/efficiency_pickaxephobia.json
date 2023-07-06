@@ -1,0 +1,159 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "efficiency_1": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "add_base_late",
+            "value": 1
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "shulk:pickaxes"
+                            }
+                        },
+                        {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:efficiency",
+                            "compare_to": 1,
+                            "comparison": "=="
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "efficiency_2": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "add_base_late",
+            "value": 1.5
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "shulk:pickaxes"
+                            }
+                        },
+                        {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:efficiency",
+                            "compare_to": 2,
+                            "comparison": "=="
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "efficiency_3": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "add_base_late",
+            "value": 2
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "shulk:pickaxes"
+                            }
+                        },
+                        {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:efficiency",
+                            "compare_to": 3,
+                            "comparison": "=="
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "efficiency_4": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "add_base_late",
+            "value": 2.5
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "shulk:pickaxes"
+                            }
+                        },
+                        {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:efficiency",
+                            "compare_to": 4,
+                            "comparison": "=="
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "efficiency_5": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "add_base_late",
+            "value": 3 
+        },
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "shulk:pickaxes"
+                            }
+                        },
+                        {
+                            "type": "origins:enchantment",
+                            "enchantment": "minecraft:efficiency",
+                            "compare_to": 5,
+                            "comparison": ">="
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

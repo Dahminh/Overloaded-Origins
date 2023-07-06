@@ -1,0 +1,48 @@
+{
+    "type": "origins:multiple",
+    "tall": {
+        "type": "origins:action_on_callback",
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1",
+                    "permission_level": 4
+                    }
+                ]
+            },
+            "entity_action_added": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1.25",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1.05",
+                    "permission_level": 4
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true
+    },
+        "knockback": {
+            "type": "origins:attribute",
+            "modifier": {
+                "name": "10%less knocback",
+                "attribute": "minecraft:generic.knockback_resistance",
+                "value": 0.1,
+                "operation": "addition"
+            }
+    },
+    "name": "Necrotic height",
+    "description": "2.5 blocks tall with 10% less knockback."
+}

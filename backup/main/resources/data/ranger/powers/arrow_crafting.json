@@ -1,0 +1,21 @@
+{
+	"type": "origins:multiple",
+	"arrow": {
+		"type": "origins:modify_crafting",
+		"recipe": "minecraft:arrow",
+		"result": {
+			"item": "minecraft:arrow",
+			"amount": 8
+		}
+	},
+	"spectral_arrow": {
+		"type": "origins:modify_crafting",
+		"recipe": "minecraft:spectral_arrow",
+		"result": {
+			"item": "minecraft:spectral_arrow",
+			"amount": 4
+		}
+	},
+    "name": "§a§nDexterous",
+    "description": "The amount of arrows you craft are doubled."
+}

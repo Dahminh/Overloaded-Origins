@@ -1,0 +1,58 @@
+{
+	"type": "origins:multiple",
+	"dark_oak_spawn": {
+		"type": "origins:modify_player_spawn",
+		"dimension": "minecraft:overworld",
+		"biome": "minecraft:forest"
+	},
+	"home_buff": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": 0.005
+		},
+		"condition": {
+			"type": "origins:biome",
+			"condition": {
+				"type": "origins:category",
+				"category": "forest"
+			}
+		}
+	},
+	"not_home_debuff": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": -0.015
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "nether"
+					}
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:category",
+						"category": "the_end"
+					}
+				}
+			]
+		}
+	},
+	"name": "§e§nNatural Inhabitant",
+	"description": "You spawn in a Forest and are familiar with your territory but not other dimensions.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "While inside a Forest Type biome, you will \ngain §a5%§r movement speed. \n\nWhile inside the End or Nether, you will \nlose §c15%§r movement speed."
+		}
+	]
+}

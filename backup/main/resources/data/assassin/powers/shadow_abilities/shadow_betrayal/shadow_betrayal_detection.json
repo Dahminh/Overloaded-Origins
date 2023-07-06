@@ -1,0 +1,58 @@
+{
+    "type": "origins:entity_glow",
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:distance",
+                "comparison": "<=",
+                "compare_to": 60
+            },
+            {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:living"
+                }
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:distance",
+                        "comparison": "<=",
+                        "compare_to": 6
+                    },
+                    {
+                        "type": "origins:relative_rotation",
+                        "actor_rotation": "head",
+                        "target_rotation": "body",
+                        "comparison": ">",
+                        "compare_to": 0.125
+                    },
+                    {
+                        "type": "origins:can_see",
+                        "shape_type": "visual"
+                    }
+                ],
+                "inverted": true
+            }
+        ]
+    },
+    "entity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:living"
+            },
+            {
+                "type": "origins:status_effect",
+                "effect": "overloadedorigins:shadowbetrayal"
+            }
+        ]
+    },
+	"hidden": true,
+    "use_teams": false,
+    "red": 0,
+    "green": 0,
+    "blue": 0
+}

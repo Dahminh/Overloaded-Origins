@@ -1,0 +1,95 @@
+{
+	"type": "origins:active_self",
+	"key": {
+		"key": "key.origins.ternary_active"
+	},
+	"hud_render": {
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"bar_index": 22
+	},
+	"cooldown": 1800,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:apply_effect",
+				"effects": [
+					{
+						"effect": "minecraft:strength",
+						"duration": 800,
+						"amplifier": 1
+					},
+					{
+						"effect": "minecraft:resistance",
+						"duration": 800,
+						"amplifier": 1
+					}
+				]
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 33,
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effects": [
+									{
+										"effect": "minecraft:slowness",
+										"duration": 400,
+										"amplifier": 3
+									},
+									{
+										"effect": "minecraft:weakness",
+										"duration": 400,
+										"amplifier": 2
+									},
+									{
+										"effect": "minecraft:mining_fatigue",
+										"duration": 400,
+										"amplifier": 3
+									}
+								]
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.ravager.roar",
+								"pitch": 0
+							}
+						]
+					}
+				}
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.ravager.roar",
+				"pitch": 0
+			},
+			{
+				"type": "origins:grant_power",
+				"power": "ape:upgraded2/primal_fury",
+				"source": "ape:upgraded2/primal_fury"
+			},
+			{
+				"type": "origins:grant_power",
+				"power": "ape:primal_fury_constants",
+				"source": "ape:primal_fury_constants"
+			}
+		]
+	},
+	"name": "§d§nIntimidating Roar III",
+	"description": "[§bTernary Ability§r] You roar, intimidating all mobs around you, make yourself stronger and enrage.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/active.png",
+			"text": "Active ability, use with [§bTernary Key§r]."
+        },
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+            "text": "[§a1.5 Minute Cooldown§r] \nYou intimidate everything except Gorillas in a \n§a33 block§r radius. Intimidated mobs will receive: \n§c- Weakness III§r for §c20 seconds§r \n§c- Slowness IV§r for §c20 seconds§r \n§c- Mining Fatigue IV§r for §c20 seconds§r \n\nYou will also receive the following: \n§a- Strength II§r \n§a- Resistance II§r \n§a- 1.75x§r Attack Speed \n§a-§r Attacks will apply §cSlowness II§r for §c3 seconds§r \n§a-§r Your attacks are explosive \n§a-§r You exhaust §a75%§r slower \n§a-§r You are immune to §cSlowness§r \n§e-§r You see red \n§c-§r You take §c50%§r more damage while on fire \n\nThese effects will last §d40 seconds§r."
+		}
+    ]
+}

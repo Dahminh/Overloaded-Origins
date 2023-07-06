@@ -1,0 +1,19 @@
+{
+    "name": "Calcium",
+    "description": "Drinking milk gives you resistance I for 90 seconds.",
+    "type": "origins:action_on_item_use",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:resistance",
+            "duration": 1800,
+            "amplifier": 0
+        }
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:milk_bucket"
+        }
+    }
+}

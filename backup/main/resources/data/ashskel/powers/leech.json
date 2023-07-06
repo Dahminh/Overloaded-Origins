@@ -1,0 +1,52 @@
+{
+    "hidden": false,
+    "name": "Leech",
+    "description": " Due to your deathly nature you have to attack the inhabitants to restore your structure. Foods are an quarter effective in hunger and saturation.",
+    "type": "origins:multiple",
+    "feed": {
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 4,
+            "saturation": 1
+        },
+        "cooldown": 100,
+        "damage_condition": {
+            "type": "origins:amount",
+            "comparison": ">=",
+            "compare_to": 3
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "heal": {
+            "type": "origins:self_action_on_kill",
+            "entity_action": {
+                "type": "origins:heal",
+                "amount": 5
+            },
+            "cooldown": 100,
+            "damage_condition": {
+                "type": "origins:amount",
+                "compare_to": 3,
+                "comparison": ">="
+            }
+        }
+    },
+    "hungy": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:food"
+        },
+        "food_modifier": {
+            "name": "1/4th all foods",
+            "operation": "multiply_total",
+            "value": -0.75
+        },
+        "saturation_modifier": {
+            "name": "1/4th all foods",
+            "operation": "multiply_total",
+            "value": -0.75
+        }
+    }
+}

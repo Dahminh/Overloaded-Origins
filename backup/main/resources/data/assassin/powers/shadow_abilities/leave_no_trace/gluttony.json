@@ -1,0 +1,96 @@
+{
+	"type": "origins:multiple",
+	"invis": {
+		"type": "apoli:invisibility",
+		"render_outline": true
+	},
+	"particles": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:dust_color_transition",
+			"params": "0.000 0.000 0.000 2 0.15 0.15 0.15"
+		},
+		"spread": {
+			"x": 0.3,
+			"y": 0.1, 
+			"z": 0.3
+			},
+		"count": 1,
+		"offset_y": 0.1,
+		"frequency": 1,
+		"visible_while_invisible": true
+	},
+	"tick": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:delay",
+					"ticks": 10,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "kill @e[type=#assassin:eat,distance=..1.25]"
+					}
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 2,
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:apply_effect",
+							"effects": [
+								{
+									"effect": "minecraft:wither",
+									"duration": 60,
+									"amplifier": 4
+								},
+								{
+									"effect": "minecraft:slowness",
+									"duration": 60,
+									"amplifier": 1
+								}
+							]
+						}
+					}
+				}
+				
+			]
+		}
+	},
+	"sound_effect": {
+		"type": "origins:action_over_time",
+		"interval": 25,
+		"entity_action": {
+			"type": "origins:play_sound",
+			"sound": "minecraft:entity.phantom.bite",
+			"pitch": 0,
+			"volume": 0.75
+		}
+	},
+	"disappear": {
+		"type": "origins:action_over_time",
+		"interval": 200,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.phantom.death",
+					"pitch": 0
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 2,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "tp @s ~ ~-1000 ~"
+					}
+				}
+			]
+		}
+	},
+	"hidden": true
+}

@@ -1,0 +1,11 @@
+{
+		"type": "origins:prevent_item_use",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "ape:bows"
+			}
+		},
+		"name": "§c§nPrimitive Knowledge",
+		"description": "You do not have the knowledge to use bows."
+}

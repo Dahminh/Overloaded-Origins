@@ -1,0 +1,10 @@
+{
+    "name": "Durability",
+    "description": "A faint energy flows throughout your body... (You have 1 natural armor.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.armor",
+        "value": 2,
+        "operation": "addition"
+    }
+}

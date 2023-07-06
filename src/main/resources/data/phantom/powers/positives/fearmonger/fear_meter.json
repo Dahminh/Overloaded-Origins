@@ -1,0 +1,289 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "meter": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 10,
+        "start_value": 5,
+        "hud_render": {
+            "bar_index": 0,
+            "sprite_location": "overloadedorigins:textures/gui/phantom_fear_meter.png",
+            "should_render": true
+        }
+    },
+    "combat_timer": {
+        "type": "origins:cooldown",
+        "cooldown": 300
+    },
+    "normal_hit": {
+        "type": "origins:self_action_on_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:amount",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_meter",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "compare_to": 10,
+                        "comparison": "==",
+                        "resource": "*:*_meter"
+                    },
+                    "if_action": {
+                        "type": "origins:feed",
+                        "food": 1,
+                        "saturation": 0.5
+                    }
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_combat_timer"
+                }
+            ]
+        }
+    },
+    "fear_hit": {
+        "type": "origins:self_action_on_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:amount",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_meter",
+                    "change": 1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 10,
+                                "comparison": "==",
+                                "resource": "*:*_meter"
+                            },
+                            {
+                                "type": "origins:power",
+                                "power": "*:positives/fearmonger/hysteria"
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "change": -5,
+                        "operation": "add",
+                        "resource": "*:positives/fearmonger/hysteria"
+                    }
+                }
+            ]
+        },
+        "target_condition": {
+            "type": "origins:status_effect",
+            "effect": "overloadedorigins:fear"
+        }
+    },
+    "apply_fear": {
+        "type": "origins:target_action_on_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:amount",
+            "compare_to": 0,
+            "comparison": ">"
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "overloadedorigins:fear",
+                "duration": 100
+            }
+        },
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 10,
+            "comparison": "==",
+            "resource": "*:*_meter"
+        }
+    },
+    "smite_got_hit": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "compare_to": 0,
+                    "comparison": ">"
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:enchantment",
+                            "compare_to": 0,
+                            "comparison": ">",
+                            "enchantment": "minecraft:smite"
+                        }
+                    }
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_meter",
+            "change": -1,
+            "operation": "add"
+        }
+    },
+    "normal_got_hit": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:amount",
+                    "compare_to": 0,
+                    "comparison": ">"
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:living"
+                    }
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_combat_timer"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_meter",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "*:*_meter"
+                    },
+                    "if_action": {
+                        "type": "origins:feed",
+                        "food": -2,
+                        "saturation": 0.5
+                    }
+                }
+            ]
+        }
+    },
+    "remove_fear": {
+        "type": "origins:attacker_action_when_hit",
+        "cooldown": 0,
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 0,
+            "comparison": "==",
+            "resource": "*:*_meter"
+        },
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:status_effect",
+                "effect": "overloadedorigins:fear"
+            },
+            "if_action": {
+                "type": "origins:clear_effect",
+                "effect": "overloadedorigins:fear"
+            }
+        },
+        "damage_condition": {
+            "type": "origins:amount",
+            "compare_to": 0,
+            "comparison": ">"
+        }
+    },
+    "meter_decay": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_meter",
+                    "compare_to": 5,
+                    "comparison": "!="
+                },
+                {
+                    "type": "origins:resource",
+                    "compare_to": 0,
+                    "comparison": "==",
+                    "resource": "*:*_combat_timer"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "action": {
+                        "type": "origins:change_resource",
+                        "change": 1,
+                        "operation": "add",
+                        "resource": "*:*_meter"
+                    },
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_meter",
+                        "compare_to": 5,
+                        "comparison": "<"
+                    }
+                },
+                {
+                    "action": {
+                        "type": "origins:change_resource",
+                        "change": -1,
+                        "operation": "add",
+                        "resource": "*:*_meter"
+                    },
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_meter",
+                        "compare_to": 5,
+                        "comparison": ">"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "powers": [
+        "origins:elytra",
+        "origins:launch_into_air",
+        "origins:aerial_combatant",
+        "origins:light_armor",
+        "origins:claustrophobia",
+        "origins:more_kinetic_damage",
+        "roubar:reset",
+        "roubar:scalereset"
+    ],
+    "icon": {
+        "item": "minecraft:elytra"
+    },
+    "order": 3,
+    "impact": 1,
+    "name": "Elytrian",
+    "description": "Often flying around in the winds, Elytrians are uncomfortable when they don't have enough space above their head.",
+    "upgrades": {
+        "condition": "minecraft:end/kill_dragon",
+        "origin": "upgraded:adapted_elytrian",
+        "announcement": "You have evolved... Best check your origin again..."
+    }
+}

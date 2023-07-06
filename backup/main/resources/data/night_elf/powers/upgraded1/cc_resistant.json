@@ -1,0 +1,37 @@
+{
+    "type": "origins:multiple",
+    "slowness": {
+        "type": "origins:modify_status_effect_duration",
+        "status_effect": "minecraft:slowness",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "mining_fatigue": {
+        "type": "origins:modify_status_effect_duration",
+        "status_effect": "minecraft:mining_fatigue",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "weakness": {
+        "type": "origins:modify_status_effect_duration",
+        "status_effect": "minecraft:weakness",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "blindness": {
+        "type": "origins:modify_status_effect_duration",
+        "status_effect": "minecraft:blindness",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "name": "§a§nCC Resistant",
+	"description": "You resist cc harder [remind me to change this later + come up with better name]"
+}
