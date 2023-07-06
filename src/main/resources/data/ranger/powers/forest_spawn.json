@@ -51,7 +51,7 @@
 	"description": "You spawn in a Forest and are familiar with your territory but not other dimensions.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "While inside a Forest Type biome, you will \ngain §a5%§r movement speed. \n\nWhile inside the End or Nether, you will \nlose §c15%§r movement speed."
 		}
 	]

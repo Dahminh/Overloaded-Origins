@@ -22,7 +22,7 @@
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": [
                 "§c§nLarge Appetite",
                 "\nYou exhaust much quicker than others, thus requiring you to eat more.",
@@ -32,7 +32,7 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/shulk/shulker_pickaxephobia.png",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/shulker_pickaxephobia.png",
             "text": [
                 "§c§nPickaxephobia III",
                 "\nYou are afraid of Pickaxes as they can easily penetrate through your armored skin.",
@@ -44,7 +44,7 @@
         },
         {
             "type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": [
                 "§c§nUnwieldy",
                 "\nThe way your hands are formed provide no way of holding a shield upright.",

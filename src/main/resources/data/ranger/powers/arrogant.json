@@ -23,7 +23,7 @@
 	"description": "You've become arrogant and prideful, believing that you are the superior race.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "You can no longer trade \nwith villagers anymore."
 		}
 	]

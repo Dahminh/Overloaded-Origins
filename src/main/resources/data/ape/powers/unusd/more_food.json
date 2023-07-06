@@ -126,7 +126,7 @@
     "description": "You're experienced at foraging due to living off of melons and berries.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "You gain §a+1§r glow berry when harvesting glow \nberries. \n\nYou gain §a+2§r sweet berries when harvesting \nsweet berries. \n\nYou gain §a+2§r melon slices when harvesting \nmelons."
         }
 	]

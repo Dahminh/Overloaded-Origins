@@ -16,7 +16,7 @@
     "cooldown": 300,
     "hud_render": {
         "should_render": true,
-        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_01.png",
         "bar_index": 13
     },
     "entity_action": {
@@ -31,7 +31,7 @@
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": [
                 "§e§nTatical Retreat",
                 "\nYou have the ability to teleport like Shulkers, teleporting to a nearby but safer location when in dangerous situations.",
@@ -46,7 +46,7 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": [
                 "§e§nShulker Bullet Imitation",
                 "\nYou can imitate the Shulker Bullets from the Shulkers through archery but because your hands are weirdly formed, you cannot effectively shoot a bow or crossbow.",

@@ -66,12 +66,12 @@
 	},
     "energy_swirl": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/broken.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/broken.png",
         "size": 1.15
     },
     "status_bar": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/broken.png"
+        "texture": "overloadedorigins:textures/gui/shulk/broken.png"
     },
     "hidden": true
 }

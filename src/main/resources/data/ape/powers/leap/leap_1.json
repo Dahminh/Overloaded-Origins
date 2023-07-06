@@ -2,7 +2,7 @@
     "type": "origins:active_self",
     "cooldown": 400,
 	"hud_render": {
-		"sprite_location": "origins:textures/gui/ape.png",
+		"sprite_location": "overloadedorigins:textures/gui/ape.png",
 		"bar_index": 0
 	},
     "entity_action": {
@@ -44,7 +44,7 @@
     "badges": [
         {
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/ape/leap.png",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/leap.png",
             "text": [
 				"[§a20 Second Cooldown§r]",
 				"\n[§bPrimary Active Ability§r], Pressing [",

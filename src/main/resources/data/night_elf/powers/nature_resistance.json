@@ -43,7 +43,7 @@
 	"description": "You feel stronger when you are surrounded by nature.",
    "badges": [
       {
-         "sprite": "origins:textures/gui/badge/info.png",
+         "sprite": "overloadedorigins:textures/gui/badge/info.png",
          "text": "When nearby Overworld Logs and Leaves, you \nwill gain §aResistance I§r.\n\nThe §cPoison§r Status Effect has §a-1§r Amplifier and \n§a-50%§r Duration."
       }
    ]

@@ -5,7 +5,7 @@
 	"badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/crippled.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/crippled.png",
 			"text": [
 				"§c§nToo Agile III",
 				"\nDue to having a heavy agility based build, you had to give up defence and risk the possibility of getting crippled.",
@@ -16,7 +16,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/exhaustion.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/exhaustion.png",
 			"text": [
 				"§c§nExhaustive Assassinations",
 				"\nDespite having all the stamina required to assassinate a target, you exhaust quicker and need to eat more due to the large amounts of energy being used up for assassinations.",

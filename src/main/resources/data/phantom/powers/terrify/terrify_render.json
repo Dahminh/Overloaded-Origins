@@ -1,6 +1,6 @@
 {
     "type": "origins:overlay",
-    "texture": "overloadedorigins:textures/mob_effect/terrify.png",
+    "texture": "overloadedoverloadedorigins:textures/mob_effect/terrify.png",
     "draw_mode": "texture",
     "draw_phase": "below_hud",
     "visible_in_third_person": true,

@@ -1,6 +1,6 @@
 {
     "type": "apugli:energy_swirl",
-    "texture_location": "origins:textures/entity/shulk/shulk_5.png",
+    "texture_location": "overloadedorigins:textures/entity/shulk/shulk_5.png",
     "speed": 0.01,
     "size": 1.15
 }

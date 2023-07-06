@@ -17,7 +17,7 @@
         "max": 600,
         "hud_render": {
             "bar_index": 23,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png",
             "condition": {
                 "type": "origins:resource",
                 "compare_to": 0,

@@ -6,7 +6,7 @@
     },
     "hud_render": {
         "bar_index": 22,
-        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png"
+        "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_02.png"
     },
     "entity_action": {
         "type": "origins:and",

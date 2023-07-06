@@ -26,15 +26,15 @@ public abstract class LivingEntityMixin {
     @Inject(at = @At("HEAD"), method= "onAttacking")
     private void onAttacking(Entity target, CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK) & !target.getScoreboardTags().contains("Decoy")) {
+        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK) & !target.getCommandTags().contains("Decoy")) {
             self.removeStatusEffect(CustomEffects.SHADOWCLOAK);
         }
     }
 
-    @Inject(at = @At("HEAD"), method = "damage")
+    @Inject(at = @At("TAIL"), method = "damage")
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK)) {
+        if (self.hasStatusEffect(CustomEffects.SHADOWCLOAK) && amount > 0) {
             self.removeStatusEffect(CustomEffects.SHADOWCLOAK);
         }
     }

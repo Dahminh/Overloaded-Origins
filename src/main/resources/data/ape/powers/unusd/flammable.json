@@ -11,7 +11,7 @@
 	"description": "Your fur has made you take more damage from fire.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "You take §c+1§r damage from fire."
         }
 	]

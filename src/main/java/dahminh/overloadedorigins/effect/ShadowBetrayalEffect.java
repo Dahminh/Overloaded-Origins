@@ -22,9 +22,9 @@ public class ShadowBetrayalEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity e, int amplifier) {
-        if (!e.world.isClient && e.age % SOUND_TICK_INTERVAL == 0) {
+        if (!e.getWorld().isClient && e.age % SOUND_TICK_INTERVAL == 0) {
             if (e.age % SOUND_TICK_INTERVAL == 0) {
-                e.world.playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
+                e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
             }
             if (e.age % PARTICLE_TICK_INTERVAL == 0) {
                 ((ServerWorld) e.getWorld()).spawnParticles(LARGE_SMOKE, e.getX(), e.getY() + 1, e.getZ(), 1, 0.25, 0.25, 0.25, 0);

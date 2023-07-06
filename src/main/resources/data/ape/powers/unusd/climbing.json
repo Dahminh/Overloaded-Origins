@@ -52,7 +52,7 @@
 	"description": "Your grip strength allows you to climb.",
     "badges": [
         {
-            "sprite": "origins:textures/gui/badge/toggle.png",
+            "sprite": "overloadedorigins:textures/gui/badge/toggle.png",
 			"text": "Toggle with [§bSecondary Key§r]."
         }
     ]

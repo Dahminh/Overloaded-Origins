@@ -5,11 +5,11 @@
 	"mixins": [
 		"ExampleMixin",
 		"LivingEntityMixin",
-		"EntityParticleMixin",
 		"MobEntityMixin"
 	],
 	"client": [
 		"client.InGameHudMixin",
+		"EntityParticleMixin",
 		"LivingEntityRendererMixin"
 	],
 	"injectors": {

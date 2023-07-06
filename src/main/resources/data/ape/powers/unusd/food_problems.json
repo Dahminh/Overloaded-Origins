@@ -38,7 +38,7 @@
 	"description": "You can eat meat but you prefer melons and berries.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "Meats and foods that contain sugar are §c75%§r less \neffective. \n\nBerries and Melons are §a3x§r effective in the food \nbar and §a2x§r effective in the saturation bar."
 		}
 	]

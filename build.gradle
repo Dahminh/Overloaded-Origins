@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.1-SNAPSHOT'
+	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
 	
 }
@@ -36,12 +36,14 @@ repositories {
 			includeGroup 'com.jamieswhiteshirt'
 		}
 	}
-	maven {
-		url = 'https://maven.shedaniel.me'
-	}
-	maven {
-		url = 'https://maven.terraformersmc.com'
-	}
+    maven {
+        name = "Shedaniel"
+        url "https://maven.shedaniel.me/"
+    }
+    maven {
+        name = "TerraformersMC"
+        url "https://maven.terraformersmc.com/"
+    }
 	maven {
 		name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
@@ -93,28 +95,20 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Apugli by MerchantPug
-	modImplementation "net.merchantpug:apugli:${project.apugli_version}"
-	include "net.merchantpug:apugli:${project.apugli_version}"
-
 	// Eggolib by Eggohito
-	modImplementation "com.github.eggohito:eggolib:${project.eggolib_version}"
-	include "com.github.eggohito:eggolib:${project.eggolib_version}"
+//	modImplementation "com.github.eggohito:eggolib:${project.eggolib_version}"
+//	include "com.github.eggohito:eggolib:${project.eggolib_version}"
 
-	// Reach Entity Attributes by jamieswhiteshirt
-	modImplementation "com.jamieswhiteshirt:reach-entity-attributes:${project.reach_version}"
+	modImplementation "com.github.apace100:apoli:${project.apoli_version}"
+	include "com.github.apace100:apoli:${project.apoli_version}"
 
-	// Apoli by Apace100
-	modImplementation "com.github.eggohito:apoli:${project.apoli_version}"
-	include "com.github.eggohito:apoli:${project.apoli_version}"
+	//Origins
+	//modImplementation files("libs/Origins-1.20.1-1.10.0.jar")
+	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+	include "com.github.apace100:origins-fabric:${project.origins_version}"
 
-	// Origins by Apace100
-	modImplementation "com.github.eggohito:origins-fabric:${project.origins_version}"
-
-	//modImplementation "com.github.thatrobin:extrakeybinds-origins:${project.extrakeybinds_version}"
+	//Origins Extra Keybinds
 	modImplementation "curse.maven:extrakeybinds-474612:4031145"
-
-	modImplementation "squeek.appleskin:appleskin-fabric:mc1.19.3-2.4.2"
 
 }
 

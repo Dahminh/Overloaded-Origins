@@ -131,11 +131,11 @@
     "description": "[§bPrimary Ability§r] Your body becomes light particles, allowing you to flash quickly.",
     "badges": [
         {
-            "sprite": "origins:textures/gui/badge/active.png",
+            "sprite": "overloadedorigins:textures/gui/badge/active.png",
 			"text": "Active ability, use with [§bPrimary Key§r]."
         },
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "[§a7.5 Second Cooldown Per Charge§r] \nEach flash will travel at most §a10 blocks§r. \n\nYou can flash up to §a6§r times in one setting. "
 		}
     ]

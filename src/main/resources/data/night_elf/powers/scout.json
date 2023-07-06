@@ -38,7 +38,7 @@
     "cooldown": 60,
 	"hud_render": {
 		"bar_index": 7,
-		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png"
+		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_02.png"
 	},
 	"name": "§d§nScout",
 	"description": "[Primary Ability] Holding your primary ability will allow you to get a bird's eye view of your surroundings. [WARNING] Using this ability under a ceiling may not give you a bird's eye view."

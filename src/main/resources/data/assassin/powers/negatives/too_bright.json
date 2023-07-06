@@ -91,7 +91,7 @@
 	"badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/too_bright.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/too_bright.png",
 			"text": [
 				"§c§nToo Bright",
 				"\nUnnatural light will weaken your Shadow Arts.",
@@ -111,7 +111,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/lethal_light.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/lethal_light.png",
 			"text": [
 				"§c§nLethal Light",
 				"\nItems that emit light can be detrimental to your Shadow Arts if used correctly.",
@@ -131,7 +131,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/lightning.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/lightning.png",
 			"text": [
 				"§c§nAstraphobia",
 				"\nLightning is full of light and being near a bolt will be deadly to you.",
@@ -143,7 +143,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/stealth_meter.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/stealth_meter.png",
 			"text": [
 				"§c§nLight Meter",
 				"\nWhen there is too much exposure to the light, your Shadow Arts become disabled.",
@@ -162,7 +162,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/stealth_meter.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/stealth_meter.png",
 			"text": [
 				"§c§nLight Meter§r Continued",
 				"\nThe meter will work as follows per tick (1/20 second):",

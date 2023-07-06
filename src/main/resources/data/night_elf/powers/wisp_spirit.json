@@ -28,7 +28,7 @@
 	"description": "You gain a burst of movement speed when in dangerous situations.",
    "badges": [
       {
-         "sprite": "origins:textures/gui/badge/info.png",
+         "sprite": "overloadedorigins:textures/gui/badge/info.png",
          "text": "You gain §aSpeed II§r while \nunder §c20%§r health."
       }
    ]

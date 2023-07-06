@@ -43,7 +43,7 @@
 	"description": "No mob would dare try to fight you in your Jungle.",
     "badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "All mobs will be passive towards you while you \nare in a Jungle."
 		}
     ]

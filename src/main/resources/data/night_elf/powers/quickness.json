@@ -65,7 +65,7 @@
 	"description": "You move faster and have a chance to dodge attacks.",
    "badges": [
       {
-         "sprite": "origins:textures/gui/badge/info.png",
+         "sprite": "overloadedorigins:textures/gui/badge/info.png",
          "text": "You have §a+25%§r Movement Speed \n\nYou have a §a20%§c chance of \ndodging all attacks."
       }
    ]

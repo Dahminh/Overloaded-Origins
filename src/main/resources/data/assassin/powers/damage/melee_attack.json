@@ -7,9 +7,7 @@
         "bientity_action": {
             "type": "origins:damage",
             "amount": 0,
-            "source": {
-                "name": "generic"
-            }
+            "damage_type": "generic"
         },
         "bientity_condition": {
             "type": "origins:target_condition",

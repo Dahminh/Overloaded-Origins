@@ -2,7 +2,7 @@
     "type": "origins:multiple",
     "hud_display_1": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/shell_effectiveness_1.png",
+        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_1.png",
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -21,7 +21,7 @@
     },
     "hud_display_2": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/shell_effectiveness_2.png",
+        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_2.png",
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -40,7 +40,7 @@
     },
     "hud_display_3": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/shell_effectiveness_3.png",
+        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_3.png",
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -59,7 +59,7 @@
     },
     "hud_display_4": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/shell_effectiveness_4.png",
+        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_4.png",
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -78,7 +78,7 @@
     },
     "hud_display_5": {
         "type": "origins:status_bar_texture",
-        "texture": "origins:textures/gui/shulk/shell_effectiveness_5.png",
+        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_5.png",
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -97,7 +97,7 @@
     },
     "energy_swirl_1": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/shulk_1.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_1.png",
         "size": 1.15,
         "condition": {
             "type": "origins:and",
@@ -117,7 +117,7 @@
     },
     "energy_swirl_2": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/shulk_2.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_2.png",
         "size": 1.15,
         "condition": {
             "type": "origins:and",
@@ -137,7 +137,7 @@
     },
     "energy_swirl_3": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/shulk_3.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_3.png",
         "size": 1.15,
         "condition": {
             "type": "origins:and",
@@ -157,7 +157,7 @@
     },
     "energy_swirl_4": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/shulk_4.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_4.png",
         "size": 1.15,
         "condition": {
             "type": "origins:and",
@@ -177,7 +177,7 @@
     },
     "energy_swirl_5": {
         "type": "apugli:energy_swirl",
-        "texture_location": "origins:textures/entity/shulk/shulk_5.png",
+        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_5.png",
         "size": 1.15,
         "condition": {
             "type": "origins:and",

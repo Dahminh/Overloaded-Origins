@@ -45,9 +45,9 @@
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/phantom/weapon_concealment.png",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/weapon_concealment.png",
             "text": [
-                "§a§nWeapon Concealment",
+                "§a§nConcealed Weapon",
                 "\nYou can make your melee weapons appear invisible, making it hard for your enemies to know what hit them.",
                 "\n\n§nExplanation§r:\n\n",
                 "Any held melee weapons in your mainhand will not be rendered and thus appear invisible."
@@ -55,7 +55,7 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/phantom/ghost_touch.png",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/ghost_touch.png",
             "text": [
                 "§a§nSpectral Touch",
                 "\nYou can weaken your enemies as if a Ghost walked right through them.",
@@ -66,15 +66,20 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/phantom/terrify.png",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/terrify.png",
             "text": [
                 "§a§nTerrify II",
-                "\nYou can terrify your targets, giving them an immediate scare",
+                "\nYou can terrify your targets, weakening them and giving you the chance to terrorize them even more. However, this may backfire depending on how courageous your target is.",
                 "\n\n§nExplanation§r:\n\n",
                 "[§a30 Second Cooldown§r]",
-                "\nWhen hitting a mob in §d§nPhantom Form§r, you will deal §a1.5x§r damage, apply §cDarkness§r for §c4§r seconds, and deactivate §d§nPhantom Form§r. Targets that are hit will enter §eFight or Flight§r, and will have §e3§r seconds to hit a Phantom Origin.\n\n",
-                "If they successfully hit a Phantom Origin within §e3§r seconds, the Phantom Origin will gain §cWeakness§r for §c35§r seconds.\n\n",
-                "If they fail to hit a Phantom Origin within §e3§r seconds, the target will gain §cFear§r for §c20§r seconds. If the target is in a light level of 7 or lower, they will receive §cFear II§r for the same duration.\n\n",
+                "\nWhen hitting a mob in §d§nPhantom Form§r, you will:",
+                "\n§a-§r Deal §a1.5x§r damage",
+                "\n§a-§r Apply §cDarkness§r for §c4§r seconds",
+                "\n§e-§r Apply §eFight or Flight§r, and targets will have §e3§r seconds to hit a Phantom Origin",
+                "\n§c-§r Deactivate, and disable §d§nPhantom Form§r§f for §c3§r§f seconds",
+                "\n\n§eFight or Flight§r:",
+                "\nIf the target successfully hit a Phantom Origin within §e3§r seconds, the Phantom Origin will gain §cWeakness§r for §c20§r seconds.",
+                "\n\nIf they fail to hit a Phantom Origin within §e3§r seconds, the target will receive §cFear§r for §c15§r seconds. If the target is in a light level of 7 or lower, they will receive §cFear II§r for the same duration instead.\n\n",
                 "§d§nPhantom Form§r will be temporarily disabled for §e3§r seconds.\n\n",
                 "§4WARNING§r: §a§nTerrify§r will try to jumpscare players."
             ]

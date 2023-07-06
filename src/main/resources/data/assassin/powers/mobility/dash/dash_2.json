@@ -63,7 +63,7 @@
     "badges": [
         {
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/dash.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/dash.png",
             "text": [
 				"[§a7.5 Second Cooldown Per Charge§r]",
 				"\n[§bPrimary Active Ability§r], use with [",

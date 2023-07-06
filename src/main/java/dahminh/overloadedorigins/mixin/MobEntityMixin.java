@@ -18,7 +18,7 @@ public abstract class MobEntityMixin extends LivingEntity {
 
     @ModifyVariable(method = "setTarget", at = @At("HEAD"))
     private LivingEntity modifyTarget(LivingEntity target) {
-        if (world.isClient() || !(target instanceof PlayerEntity)) {
+        if (getWorld().isClient() || !(target instanceof PlayerEntity)) {
             return target;
         }
 

@@ -8,7 +8,7 @@
         "hud_render":
         {
             "should_render": true,
-            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_02.png",
             "bar_index": 15
         },
         "count": 1,

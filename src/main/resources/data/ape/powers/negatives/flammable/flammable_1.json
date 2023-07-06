@@ -12,7 +12,7 @@
 	"badges": [
 		{
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/phantom/pyrophobia.png",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/pyrophobia.png",
             "text": [
                 "§c§nFlammable I",
                 "\nYour fur makes you more flammable and thus take more damage from fire.",

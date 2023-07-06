@@ -3,7 +3,7 @@
     "hud_render": {
         "should_render": true,
         "bar_index": 1,
-        "sprite_location": "origins:textures/gui/dark_elf.png"
+        "sprite_location": "overloadedorigins:textures/gui/dark_elf.png"
     },
     "min": 0,
     "max": 1200,

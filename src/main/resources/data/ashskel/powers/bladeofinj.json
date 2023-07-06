@@ -9,7 +9,7 @@
         "hud_render": {
             "should_render": true,
             "bar_index": 19,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png"
+            "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_02.png"
         }
     },
     "drain": {
@@ -35,7 +35,7 @@
         "hud_render": {
             "should_render": true,
             "bar_index": 9,
-            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png"
+            "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png"
         }
     },
     "hits": {

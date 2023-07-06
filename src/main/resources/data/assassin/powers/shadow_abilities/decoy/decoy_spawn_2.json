@@ -62,7 +62,7 @@
     "badges": [
         {
             "type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/decoy.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/decoy.png",
             "text": [
                 "[§a30 Second Cooldown Per Charge§r]",
                 "\n[§bTernary Active Ability§r], use with [",
@@ -71,9 +71,7 @@
                 "\n\nYou have §a2§r charges.",
                 "\n\nDecoys will lasts for §a15§r seconds. If the Decoy dies or expires, targets within a §a6§r block radius will receive §cBlindness§r for §c10§r seconds.",
                 "\n\nDark Elves and their evolutions will not receive these effects.",
-                "\n\nThis ability will only recharge when you have §d§nShadow Cloak§r or §a§nDarkness Embraced§r §fis active. If both conditions are true, the cooldown rate will be §a2x§r faster.",
-                "\n\n§4CURRENTLY BUGGED",
-                "\nDue to a bug right now, the Shadow Decoys you spawn are visible when they have the Glowing Effect. They normally should not be visible."
+                "\n\nThis ability will only recharge when you have §d§nShadow Cloak§r or §a§nDarkness Embraced§r §fis active. If both conditions are true, the cooldown rate will be §a2x§r faster."
             ]
 		}
     ]

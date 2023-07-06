@@ -6,7 +6,7 @@
         "cooldown": 60,
         "hud_render": {
             "bar_index": 2,
-            "sprite_location": "origins:textures/gui/phantom.png",
+            "sprite_location": "overloadedorigins:textures/gui/phantom.png",
             "should_render": true
         }
     },
@@ -15,7 +15,7 @@
         "cooldown": 150,
         "hud_render": {
             "bar_index": 2,
-            "sprite_location": "origins:textures/gui/phantom.png",
+            "sprite_location": "overloadedorigins:textures/gui/phantom.png",
             "should_render": true
         }
     },
@@ -25,6 +25,7 @@
           "key": "key.origins.primary_active",
           "continuous": false
         },
+        "active_by_default": true,
         "retain_state": false,
         "condition": {
             "type": "origins:and",
@@ -49,6 +50,30 @@
             ]
         }
     },
+	"fall_damage_resistant": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "addition",
+			"value": -17
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
+		},
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+	},
     "undead": {
         "type": "origins:entity_group",
         "group": "undead",

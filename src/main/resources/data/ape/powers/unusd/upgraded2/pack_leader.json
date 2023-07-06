@@ -116,7 +116,7 @@
     "description": "All neutral animals are at your command.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "Neutral Animals in a §a30 block§r radius will gain \nbuffs and fight for you when you deal damage \nor get hit. \n\nNeutral Animals are: \n§a-§r Pandas \n§a-§r Polar Bears \n§a-§r Llamas \n§a-§r Wolves \n\nThey will gain the following buffs: \n§a- Resistance I§r for §a15 seconds§r \n§a- Speed I§r for §a15 seconds§r \n§a- StrengthI§r for §a15 seconds§r"
         }
 	]

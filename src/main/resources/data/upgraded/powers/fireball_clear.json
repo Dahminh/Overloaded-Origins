@@ -4,7 +4,7 @@
         "key": "key.origins.secondary_active"
     },
     "hud_render": {
-        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar.png",
         "bar_index": 7,
         "should_render": false
     },

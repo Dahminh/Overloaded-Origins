@@ -5,7 +5,7 @@
     "cooldown": 1,
     "count": 1,
     "hud_render": {
-        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+        "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_01.png",
         "bar_index": 11
     },
     "continuous": true,

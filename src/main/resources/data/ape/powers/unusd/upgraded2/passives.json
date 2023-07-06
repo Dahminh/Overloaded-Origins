@@ -99,7 +99,7 @@
 	"description": "King Kong are naturally stronger and bigger than Kongs.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "You gain the following stats: \n§a-§r You have §a2.5x§r health \n§a- +15§r Armor Points \n§a- +70%§r Knockback Resistance \n§a- +10§r Base Attack Damage when not holding Tools or Weapons \n§e-§r You are §e2x§r wider than a human \n§e-§r You are §e1.5x§r taller than a human \n§e-§r You are §e2x§r heavier than a human \n§c-§r You have §c80%§r less attack speed"
 		}
 	]

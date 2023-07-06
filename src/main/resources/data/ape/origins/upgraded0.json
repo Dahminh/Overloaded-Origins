@@ -2,6 +2,12 @@
     "powers": [
 		"ape:leap/constants",
 		"ape:leap/leap_1",
+		"ape:positives/blunt_trauma/blunt_trauma_1",
+		"ape:positives/knuckle_walking/knuckle_walking_1",
+		"ape:positives/knuckle_walking/knuckle_walking_sound",
+		"ape:neutral/innate_traits/passives_1",
+		"ape:neutral/gorilla_rush/gorilla_rush_1",
+		"ape:neutral/gorilla_rush/gorilla_rush_constants",
 		"ape:negatives/flammable/flammable_1"
     ],
 	"icon": {

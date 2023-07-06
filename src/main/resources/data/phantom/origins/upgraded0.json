@@ -1,8 +1,9 @@
 {
     "powers": [
-        "phantom:positives/weapon_concealment",
+        "phantom:positives/concealed_weapon",
         "phantom:positives/ghost_touch",
         "phantom:positives/night_vision",
+        "phantom:positives/fearmonger/fearmonger_1",
         "phantom:terrify/terrify_1",
         "phantom:terrify/constants",
         "phantom:positives/raw_food_good",
@@ -18,7 +19,7 @@
         "phantom:negatives/strange_anatomy",
         "phantom:negatives/undead_nightmare",
         "phantom:positives/fearmonger/fear_detection",
-        "phantom:positives/fearmonger/fear_siphon"
+        "phantom:positives/fearmonger/fear_meter"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"

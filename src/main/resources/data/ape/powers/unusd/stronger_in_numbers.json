@@ -40,7 +40,7 @@
 	"description": "Gorillas become stronger when around other Gorillas.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "When near 1 Gorilla in a §a10 block§r radius, \nyou gain §aResistance I§r. \n\nWhen near than more than 1 Gorilla in a \n§a10 block radius§r, you gain §aResistance II§r. \n\nEnemy Gorillas will also receive these buffs."
 		}
 	]

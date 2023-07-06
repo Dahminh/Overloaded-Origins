@@ -33,7 +33,7 @@
     "badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/hunter.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/hunter.png",
 			"text": [
 				"§a§nHunter's Instinct",
 				"\nBeing raised in the dark for so long and training your senses to an extreme, you're able to see in the dark and sense nearby mobs.",
@@ -45,7 +45,7 @@
 			]
 		},
 		{
-			"sprite": "origins:textures/gui/badge/dark_elf/looting.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/looting.png",
 			"text": [
 				"§a§nHead Hunter",
 				"\nThe training has taught you to be resourceful, allowing you to effectively scavenge your dead target's loot and use that loot for future targets.",
@@ -55,7 +55,7 @@
 			"type": "origins:tooltip"
 		},
 		{
-			"sprite": "origins:textures/gui/badge/dark_elf/leather.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/leather.png",
 			"text": [
 				"§a§nImproved Leather Armor",
 				"\nBeing forced to wear leather for so long, you have learned how to maintain and keep it in peak conditions.",
@@ -66,7 +66,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/poison_training.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/poison_training.png",
             "text": [
 				"§e§nPoison Tolerance",
 				"\nAs an assassin, you were forced to build tolerance against all status effects, even positive ones.",

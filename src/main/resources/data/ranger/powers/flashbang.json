@@ -3,7 +3,7 @@
     "cooldown": 240,
     "hud_render": {
         "bar_index": 24,
-        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png"
+        "sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_02.png"
     },
     "key": {
         "key": "key.origins.secondary_active"
@@ -15,11 +15,11 @@
     "description": "[§bSecondary Ability§r] You throw out a Ball of Light that will blind all targets in a certain radius.",
     "badges": [
         {
-            "sprite": "origins:textures/gui/badge/active.png",
+            "sprite": "overloadedorigins:textures/gui/badge/active.png",
 			"text": "Active ability, use with [§bSecondary Key§r]."
         },
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "[§a12 Second Cooldown§r] \nThe §d§nBall of Light§r will blind all mobs in a §a12 block§r \nradius in 3 seconds. The blind will last §a4.5 seconds§r. \n\nThe §d§nBall of Light§r will blind sooner if hit by an \narrow or spectral arrow. \n\nThe §d§nBall of Light§r will disappear if killed by any \ndamage besides arrows. The §d§nBall of Light§r has §a10§r \n§ahealth§r."
 		}
     ],

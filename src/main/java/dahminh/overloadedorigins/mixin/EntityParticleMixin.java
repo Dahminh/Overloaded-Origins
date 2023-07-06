@@ -35,7 +35,7 @@ public abstract class EntityParticleMixin extends Entity {
             boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
             if (((Object) this != player || (!firstPerson))) {
                 for (int i = 0; i<2; i++) {
-                    world.addParticle(particleEffect,
+                    getWorld().addParticle(particleEffect,
                             this.getX() + this.random.nextGaussian() * 0.3,
                             this.getY() + 0.1 + this.random.nextGaussian() * 0.1,
                             this.getZ() + this.random.nextGaussian() * 0.3,

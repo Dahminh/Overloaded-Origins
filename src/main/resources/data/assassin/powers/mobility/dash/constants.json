@@ -6,7 +6,7 @@
 		"max": 900,
         "hud_render": {
 			"should_render": true,
-			"sprite_location": "origins:textures/gui/dark_elf.png",
+			"sprite_location": "overloadedorigins:textures/gui/dark_elf.png",
 			"bar_index": 0
 		},
 		"start_value": 900

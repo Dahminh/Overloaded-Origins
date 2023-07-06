@@ -142,7 +142,7 @@
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": [
 				"[§a1 Minute Cooldown§r]",
 				"\n[§bSecondary Toggleable Ability§r], Toggling with [",
@@ -160,7 +160,7 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": [
                 "§d§nFortified Shell§r Continued:",
                 "\nThere are 7 Shell Durabilities, starting at §2Green§r. Each Shell Durability requires §a1.25§r hearts of damage to go down a tier",

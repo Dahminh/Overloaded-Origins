@@ -26,7 +26,7 @@
 	"description": "You are an expert at using the bow.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "You deal §a+4§r damage with spectral arrows. \n\nYou deal §a+3§r damage with normal arrows. "
 		}
 	]

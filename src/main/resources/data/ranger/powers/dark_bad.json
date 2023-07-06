@@ -4,7 +4,7 @@
     "description": "Darkness related attacks will effect you greatly.",
     "badges": [
         {
-            "sprite": "origins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/info.png",
             "text": "The Wither effect and Blindness effect will \ndisable your flash and flashbang ability."
         }
     ]

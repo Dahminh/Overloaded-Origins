@@ -10,7 +10,7 @@
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/shulk/shulker_strongarms.png",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/shulker_strongarms.png",
             "text": [
                 "§a§nStrong Arms",
                 "\nYou are strong enough to break natural stones without using a pickaxe.",
@@ -34,7 +34,7 @@
         },
         {
             "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/shulk/shulker_heavyweight.png",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/shulker_heavyweight.png",
             "text": [
                 "§e§nHeavyweight",
                 "\nYour defensive body has made you denser and thus heavier.",

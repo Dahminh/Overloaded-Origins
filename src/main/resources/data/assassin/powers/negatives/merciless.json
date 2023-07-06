@@ -11,7 +11,7 @@
 	"badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/restricted.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/restricted.png",
 			"text": [
 				"§c§nMerciless",
 				"\nYou hunt down your targets with only melee attacks, refusing to use certain items.",
@@ -25,7 +25,7 @@
 		},
 		{
 			"type": "origins:tooltip",
-			"sprite": "origins:textures/gui/badge/dark_elf/no_trade.png",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/no_trade.png",
 			"text": [
 				"§c§nRuthlessness",
 				"\nYour ruthless attitude terrifies villagers. resulting in them refusing to trade with you and calling for Iron Golems out of fear.",

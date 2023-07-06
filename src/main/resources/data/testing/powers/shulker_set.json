@@ -121,7 +121,7 @@
 		"sound": "minecraft:entity.shulker_bullet.hit",
 		"hud_render": {
 			"should_render": true,
-			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_02.png",
 			"bar_index": 23
 		},
 		"key": {

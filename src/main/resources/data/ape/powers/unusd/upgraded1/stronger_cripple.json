@@ -36,7 +36,7 @@
 	"description": "Your size makes slowness and mining fatigue effects stronger and longer.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "Slowness and Mining Fatigue are more effective \non you. \n\nSlowness: §c+25%§r Duration, §c+1§r Amplifier \n\nMining Fatigue: §c+25%§r Duration, §c+1§r Amplifier"
 		}
 	]

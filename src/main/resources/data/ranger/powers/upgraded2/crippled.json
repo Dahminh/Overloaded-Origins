@@ -19,7 +19,7 @@
 	"description": "Your agility based build comes with some consequences.",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
+			"sprite": "overloadedorigins:textures/gui/badge/info.png",
 			"text": "You cannot wear any armor stronger than \nchainmail armor. \n\nWhenever you get hit, you will be crippled, \nreceiving §cSlowness V§r for §c1 second§r."
 		}
 	]

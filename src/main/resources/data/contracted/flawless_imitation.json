@@ -183,7 +183,7 @@
 		"cooldown": 600,
 		"hud_render": {
 			"bar_index": 2,
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+			"sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_02.png"
 		},
 		"key": {
 			"key": "key.origins.quinary_active"
@@ -388,7 +388,7 @@
 		"cooldown": 200,
 		"entity_type": "minecraft:trident",
 		"hud_render": {
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_02.png",
 			"bar_index": 16
 		},
 		"tag": "{pickup:0b,life:1000}",
@@ -468,7 +468,7 @@
 		"hud_render": {
 			"should_render": true,
 			"bar_index": 6,
-			"sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png"
+			"sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_02.png"
 		},
 	"condition": {
 		"type": "origins:equipped_item",
@@ -708,7 +708,7 @@
 		"key": "key.origins.senary_active"
 	},
 	"hud_render": {
-		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png",
 		"bar_index": 7
 	}
 	},
@@ -793,7 +793,7 @@
 		"key": "key.origins.septenary_active"
 	},
 	"hud_render": {
-		"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+		"sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_01.png",
 		"bar_index": 13
 	}
 	},
@@ -837,7 +837,7 @@
 			"key": "key.origins.quinary_active"
 		},
 		"hud_render": {
-		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"sprite_location": "overloadedorigins:textures/gui/resource_bar.png",
 		"bar_index": 6
 		},
 		"entity_action": {
