@@ -1,0 +1,13 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "entity_action": {
+        "type": "overloadedorigins:random_teleport",
+        "radius": 16.0,
+        "particles": true,
+        "fail_action": {
+            "type": "origins:execute_command",
+            "command": "say FAIL"
+        }
+    }
+}

@@ -1,8 +1,10 @@
 package dahminh.overloadedorigins;
 
 import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.registry.factory.OverloadedOriginsEntityActions;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,5 +16,10 @@ public class OverloadedOrigins implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		CustomEffects.registerEffects();
+		OverloadedOriginsEntityActions.register();
+	}
+
+	public static Identifier identifier(String path) {
+		return new Identifier(MOD_ID, path);
 	}
 }
