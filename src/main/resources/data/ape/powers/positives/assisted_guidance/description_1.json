@@ -1,0 +1,26 @@
+{
+    "type": "origins:simple",
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/ape/assisted_guidance.png",
+            "text": [
+                "§a§nAssisted Guidance I",
+                "\nSome Villagers are willing to teach you how to use certain blocks that are prevented due to your §c§nPrimitive Knowledge§r trait. Unfortunately you won't be able to retain the knowledge or experience from their teachings.",
+                "\n\n§nExplanation§r:\n\n",
+                "While in a §a5§r block radius of Villagers that are at the Master trade level, you will be able to use the following blocks.",
+                "\n\n§aCrafting Table§r: Requires 1 Master Level Villager",
+                "\n§aFurnaces§r: Requires 1 Armorer or Butcher",
+                "\n§aSmoker§r: Requires 1 Butcher",
+                "\n§aBlast Furnace§r: Requires 1 Armorer",
+                "\n§aSmithing Table§r: Requires 2 Toolsmiths",
+                "\n§aGrindstone§r: Requires 1 Weaponsmith",
+                "\n§aStonecutter§r: Requires 1 Mason",
+                "\n§aLoom§r: Requires 1 Shepherd",
+                "\n§aCartography Table§r: Requires 1 Cartographer"
+            ]
+        }
+    ]
+}

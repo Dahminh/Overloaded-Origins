@@ -1,6 +1,8 @@
 {
-	"type": "origins:modify_player_spawn",
+	"type": "apoli:modify_player_spawn",
 	"dimension": "minecraft:overworld",
+    "biome": "minecraft:dark_forest",
+    "spawn_strategy": "default",
 	"name": "§a§nElven Roots",
 	"description": "Elven blood still runs in your veins.",
     "badges": [
@@ -12,8 +14,8 @@
                 "\nInstead of being raised in Oak Forests like your Light Elven counterparts, you are raised in Dark Oak Forests.",
                 "\n\n§nExplanation§r:\n\n",
                 "You spawn in a Dark Oak Forest.",
-                "\n\n§4CURRENTLY BUGGED",
-                "\nDue to a bug right now, this will softlock your game. This power has been disabled meaning you will not spawn in a Dark Oak Forest."
+                "\n\n§4NOTE:",
+                "\nIt may take a lot longer than usual for you to spawn in a Dark Oak Biome."
             ]
         },
         {

@@ -1,0 +1,85 @@
+{
+	"type": "origins:multiple",
+	"ape_food_only_one": {
+		"type": "origins:modify_food",
+		"item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                            "tag": "ape:sugar"
+                        }
+                },
+                {
+                    "type": "origins:meat"
+                }
+            ]
+        },
+		"food_modifier": {
+			"operation": "multiply_total",
+			"value": -0.75
+		}
+	},
+	"ape_food_only_two": {
+		"type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                    "tag": "ape:ape_food"
+                }
+			},
+		"food_modifier": {
+			"operation": "multiply_total",
+			"value": 2
+		},
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 0.25
+        }
+	},
+    "edible_items": {
+        "type": "apugli:edible_item",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "ape:edible_items"
+            }
+        },
+        "food_component": {
+            "hunger": 4,
+            "saturation": 0.25
+        },
+        "use_action": "eat",
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 4,
+            "saturation": 0.25
+        }
+    },
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/vegetarianish.png",
+            "text": [
+                "§e§nMainly Vegetarian",
+                "\nGorillas are capable of eating a variety of foods, however they get the majority of the nutrients needed from a diet consisting of vegetation and fruits.",
+				"\n\n§nExplanation§r:\n\n",
+                "Meats and foods that contain sugar are §c75%§r less effective.",
+                "\n\nThe following foods will be §a3x§r effective and gives an additional §a0.25§r Saturation:",
+                "\n§a-§r Sweet Berries",
+                "\n§a-§r Glow Berries",
+                "\n§a-§r Melon Slices",
+                "\n§a-§r Apples",
+                "\n§a-§r Golden Apples",
+                "\n§a-§r Enchanted Golden Apples",
+                "\n\nYou will also be able to eat the following items for §a2§r Food Points and §a1§r Saturation:",
+                "\n§a-§r All Vanilla Overworld Leaves",
+                "\n§a-§r Bamboo",
+                "\n§a-§r Sugar Cane"
+            ]
+		}
+	]
+}

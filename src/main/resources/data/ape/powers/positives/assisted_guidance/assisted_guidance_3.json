@@ -1,0 +1,41 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "librarian": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:enchanting_table"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:librarian'}}]",
+            "compare_to": 3,
+            "comparison": "<"
+        }
+    },
+    "beacon": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:beacon"
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:cleric'}}]",
+                    "compare_to": 1,
+                    "comparison": "<"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:librarian'}}]",
+                    "compare_to": 1,
+                    "comparison": "<"
+                }
+            ]
+        }
+    }
+}

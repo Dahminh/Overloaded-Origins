@@ -48,13 +48,21 @@
 		]
 	  }
 	},
-	"name": "§a§nGorilla Grip",
-	"description": "Your grip strength allows you to climb.",
+	"name": "...",
+	"description": "...",
     "badges": [
-        {
-            "sprite": "overloadedorigins:textures/gui/badge/toggle.png",
-			"text": "Toggle with [§bSecondary Key§r]."
-        }
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/climbing.png",
+            "text": [
+				"§d§nGorilla Grip",
+				"\nLiving in the Jungle for so long, you had to climb around to get to places often. This allowed you to develop your grip strength and in turn develop your ability to climb.",
+				"\n\n§nExplanation§r:\n\n",
+				"[§bSecondary Toggleable Ability§r§f], Toggling with [",
+				{"keybind": "key.origins.secondary_active"},
+				"] will allow you to climb."
+			]
+		}
     ]
 
 }

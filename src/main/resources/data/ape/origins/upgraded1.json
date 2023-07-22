@@ -5,9 +5,18 @@
 		"ape:positives/blunt_trauma/blunt_trauma_2",
 		"ape:positives/knuckle_walking/knuckle_walking_2",
 		"ape:positives/knuckle_walking/knuckle_walking_sound",
+		"ape:positives/assisted_guidance/assisted_guidance_1",
+		"ape:positives/assisted_guidance/assisted_guidance_2",
+		"ape:positives/assisted_guidance/description_2",
+		"ape:positives/climbing",
+		"ape:positives/natural_habitat",
+		"ape:neutral/vegetarianish",
+		"ape:neutral/innate_traits/passives_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_constants",
-		"ape:negatives/flammable/flammable_2"
+		"ape:negatives/flammable/flammable_2",
+		"ape:negatives/cant_swim",
+		"ape:negatives/primitive_knowledge/primitive_knowledge_2"
     ],
 	"icon": {
 		"item": "minecraft:player_head",
@@ -16,13 +25,13 @@
 	"order": 0,
 	"impact": 3,
 	"unchoosable": true,
-	"name": "Kong",
+	"name": "Greater Gorilla",
 	"description": "You've become stronger and smarter than a normal Gorilla. Almost the King of the Jungle but also not.",
 	"upgrades": [
 		{
 			"condition": "minecraft:adventure/kill_all_mobs",
 			"origin": "ape:upgraded2",
-			"announcement": "You have evolved into a King Kong. You are now at the pinnacle of your Origin."
+			"announcement": "You have evolved into a Apex Gorilla. You are now at the pinnacle of your Origin."
 		}
 	]
 }

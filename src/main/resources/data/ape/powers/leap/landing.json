@@ -1,5 +1,12 @@
 {
     "type": "origins:multiple",
+    "fall_resist": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        }
+    },
     "timeout": {
         "type": "origins:action_over_time",
         "interval": 100,
@@ -55,11 +62,6 @@
                             }
                         }
                     ]
-                },
-                {
-                    "type": "origins:revoke_power",
-                    "source": "apoli:command",
-                    "power": "*:leap/fall_resist"
                 },
                 {
                     "type": "origins:revoke_power",
@@ -294,11 +296,6 @@
                     "action": {
                         "type": "origins:and",
                         "actions": [
-                            {
-                                "type": "origins:revoke_power",
-                                "source": "apoli:command",
-                                "power": "*:leap/fall_resist"
-                            },
                             {
                                 "type": "origins:revoke_power",
                                 "source": "apoli:command",

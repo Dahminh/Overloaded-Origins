@@ -1,0 +1,33 @@
+{
+    "type": "origins:simple",
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/ape/primitive_knowledge.png",
+            "text": [
+                "§c§nPrimitive Knowledge III",
+                "\nYou don't have the intelligence to use certain items and blocks",
+                "\n\n§nExplanation§r:\n\n",
+                "You cannot use the following blocks unless under a certain condition:",
+                "\n\n§cCrafting Table§r",
+                "\n§cFurnaces",
+                "\n§cSmoker",
+                "\n§cBlast Furnace",
+                "\n§cSmithing Table",
+                "\n§cGrindstone",
+                "\n§cAnvil",
+                "\n§cStonecutter",
+                "\n§cLoom",
+                "\n§cCartography Table",
+                "\n§cEnchanting Table",
+                "\n§cBrewing Stand",
+                "\n§cBeacon",
+                "\n\nYou cannot use the following items:",
+                "\n§cBow",
+                "\n§cCrossbow"
+            ]
+        }
+    ]
+}

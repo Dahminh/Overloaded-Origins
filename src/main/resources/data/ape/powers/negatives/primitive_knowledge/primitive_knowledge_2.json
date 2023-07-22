@@ -1,0 +1,54 @@
+{
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:block",
+                "block": "minecraft:beacon"
+            },
+            {
+                "type": "origins:block",
+                "block": "minecraft:enchanting_table"
+            }
+        ]
+    },
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/ape/primitive_knowledge.png",
+            "text": [
+                "§c§nPrimitive Knowledge II",
+                "\nYou don't have the intelligence to use certain items and blocks",
+                "\n\n§nExplanation§r:\n\n",
+                "You cannot use the following blocks unless under a certain condition:",
+                "\n\n§cCrafting Table",
+                "\n§cFurnaces",
+                "\n§cSmoker",
+                "\n§cBlast Furnace",
+                "\n§cSmithing Table",
+                "\n§cGrindstone",
+                "\n§cAnvil",
+                "\n§cStonecutter",
+                "\n§cLoom",
+                "\n§cCartography Table",
+                "\n§cBrewing Stand"
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/ape/primitive_knowledge.png",
+            "text": [
+                "§c§nPrimitive Knowledge§r Continued",
+                "\nYou cannot use the following blocks no matter what:",
+                "\n§cEnchanting Table",
+                "\n§cBeacon",
+                "\n\nYou cannot use the following items:",
+                "\n§cBow",
+                "\n§cCrossbow"
+            ]
+        }
+    ]
+}

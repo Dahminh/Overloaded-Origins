@@ -12,16 +12,22 @@
                 "type": "origins:or",
                 "conditions": [
                     {
-                        "type": "origins:power_active",
-                        "power": "*:leap/leap_1"
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "*:leap/leap_1"
                     },
                     {
-                        "type": "origins:power_active",
-                        "power": "*:leap/leap_2"
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "*:leap/leap_2"
                     },
                     {
-                        "type": "origins:power_active",
-                        "power": "*:leap/leap_3"
+                        "type": "origins:resource",
+                        "compare_to": 0,
+                        "comparison": "==",
+                        "resource": "*:leap/leap_3"
                     }
                 ]
             }
@@ -43,11 +49,6 @@
                 "type": "origins:grant_power",
                 "source": "apoli:command",
                 "power": "*:leap/landing"
-            },
-            {
-                "type": "origins:grant_power",
-                "source": "apoli:command",
-                "power": "*:leap/fall_resist"
             }
         ]
     },

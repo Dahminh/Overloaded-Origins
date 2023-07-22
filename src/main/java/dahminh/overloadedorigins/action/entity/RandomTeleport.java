@@ -19,13 +19,16 @@ public class RandomTeleport {
             boolean tpSuccess = false;
             while (i < 10 && !tpSuccess) {
                 double x = living.getX() + (living.getRandom().nextDouble() - 0.5) * radius;
-                double y = living.getY() + (double)(living.getRandom().nextInt((int) radius) - (radius / 2));
+                double y = living.getY() + (living.getRandom().nextInt((int) radius) - (radius / 2));
                 double z = living.getZ() + (living.getRandom().nextDouble() - 0.5) * radius;
                 tpSuccess = living.teleport(x,y,z, particles);
-                if (tpSuccess) return;
                 i++;
             }
-            data.<Consumer<Entity>>ifPresent("fail_action", entityAction -> entityAction.accept(entity));
+            if (tpSuccess) {
+                data.<Consumer<Entity>>ifPresent("success_action", entityAction -> entityAction.accept(living));
+                return;
+            }
+            data.<Consumer<Entity>>ifPresent("fail_action", entityAction -> entityAction.accept(living));
         }
     }
 
@@ -35,6 +38,7 @@ public class RandomTeleport {
             new SerializableData()
                 .add("radius", SerializableDataTypes.DOUBLE, 32D)
                 .add("particles", SerializableDataTypes.BOOLEAN, false)
+                .add("success_action", ApoliDataTypes.ENTITY_ACTION, null)
                 .add("fail_action", ApoliDataTypes.ENTITY_ACTION, null),
             RandomTeleport::action
         );

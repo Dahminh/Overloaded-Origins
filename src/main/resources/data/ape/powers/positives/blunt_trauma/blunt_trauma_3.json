@@ -5,6 +5,19 @@
         "bar_index": 1,
         "sprite_location": "overloadedorigins:textures/gui/ape.png"
     },
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "player"
+            },
+            {
+                "type": "origins:name",
+                "name": "player.item"
+            }
+        ]
+    },
     "entity_action": {
         "type": "origins:and",
         "actions": [
@@ -47,7 +60,7 @@
 			"sprite": "overloadedorigins:textures/gui/badge/ape/blunt_trauma.png",
             "text": [
                 "§a§nBlunt Trauma III",
-                "\nYour attacks have so much weight into them, you can briefly stun your targets.",
+                "\nYour melee attacks have so much weight into them, you can briefly stun your targets.",
                 "\n\n§nExplanation§r:\n\n",
                 "[§a10 Second Cooldown§r]",
                 "\nThe target will receive the following when hit:",

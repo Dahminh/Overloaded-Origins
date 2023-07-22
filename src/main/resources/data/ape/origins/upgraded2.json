@@ -5,9 +5,19 @@
 		"ape:positives/blunt_trauma/blunt_trauma_3",
 		"ape:positives/knuckle_walking/knuckle_walking_3",
 		"ape:positives/knuckle_walking/knuckle_walking_sound",
+		"ape:positives/assisted_guidance/assisted_guidance_1",
+		"ape:positives/assisted_guidance/assisted_guidance_2",
+		"ape:positives/assisted_guidance/assisted_guidance_3",
+		"ape:positives/assisted_guidance/description_3",
+		"ape:positives/climbing",
+		"ape:positives/natural_habitat",
+		"ape:neutral/vegetarianish",
+		"ape:neutral/innate_traits/passives_3",
 		"ape:neutral/gorilla_rush/gorilla_rush_3",
 		"ape:neutral/gorilla_rush/gorilla_rush_constants",
-		"ape:negatives/flammable/flammable_3"
+		"ape:negatives/flammable/flammable_3",
+		"ape:negatives/cant_swim",
+		"ape:negatives/primitive_knowledge/primitive_knowledge_3"
     ],
 	"icon": {
 		"item": "minecraft:player_head",
@@ -16,6 +26,6 @@
 	"order": 0,
 	"impact": 3,
 	"unchoosable": true,
-	"name": "King Kong",
-	"description": "You're now at the pinnacle of the Gorillas, becoming the King of the Jungle. No one can come for your throne..."
+	"name": "Apex Gorilla",
+	"description": "You're now the pinnacle of the Gorillas, becoming the King of the Jungle. No one can come for your throne..."
 }

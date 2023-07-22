@@ -1,0 +1,17 @@
+{
+    "type": "origins:ignore_water",
+	"name": "...",
+	"description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/cant_swim.png",
+            "text": [
+                "§c§nLand Dweller",
+                "\nYou have never learned how to swim, therefore you cannot swim.",
+                "\n\n§nExplanation§r:\n\n",
+                "You ignore water as if it is air and your leap is weaker when used in water."
+            ]
+        }
+    ]
+}

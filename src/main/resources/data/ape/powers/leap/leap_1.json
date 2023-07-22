@@ -5,39 +5,62 @@
 		"sprite_location": "overloadedorigins:textures/gui/ape.png",
 		"bar_index": 0
 	},
+    "condition": {
+        "type": "origins:fall_flying",
+        "inverted": true
+    },
     "entity_action": {
-        "type": "origins:if_else",
-        "if_action": {
-            "type": "origins:add_velocity",
-            "y": 1,
-            "z": 3,
-            "space": "local",
-            "set": true
-        },
-        "else_action": {
-            "type": "origins:add_velocity",
-            "y": 1,
-            "z": 1,
-            "space": "local",
-            "set": true
-        },
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:fluid_height",
-                    "fluid": "minecraft:lava",
-                    "comparison": "<=",
-                    "compare_to": 1
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else",
+                "if_action": {
+                    "type": "origins:add_velocity",
+                    "y": 1,
+                    "z": 3,
+                    "space": "local",
+                    "set": true
                 },
-                {
-                    "type": "origins:fluid_height",
-                    "fluid": "minecraft:water",
-                    "comparison": "<=",
-                    "compare_to": 1
+                "else_action": {
+                    "type": "origins:add_velocity",
+                    "y": 1,
+                    "z": 1,
+                    "space": "local",
+                    "set": true
+                },
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:lava",
+                            "comparison": "<=",
+                            "compare_to": 1
+                        },
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:water",
+                            "comparison": "<=",
+                            "compare_to": 1
+                        }
+                    ]
                 }
-            ]
-        }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:explosion ~ ~ ~ 0 0 0 1 3 normal"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.generic.explode",
+                "pitch": 1.3
+            },
+            {
+                "type": "origins:grant_power",
+                "source": "apoli:command",
+                "power": "*:leap/landing"
+            }
+        ]
     },
 	"name": "§d§nLeap I",
 	"description": "You are able to leap a great distance similar to your Gorilla-like relatives.",

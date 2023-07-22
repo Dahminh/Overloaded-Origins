@@ -1,0 +1,132 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "cartographer": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:cartography_table"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:cartographer'}}]",
+            "compare_to": 0,
+            "comparison": "=="
+        }
+    },
+    "toolsmith": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:smithing_table"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:toolsmith'}}]",
+            "compare_to": 2,
+            "comparison": "<"
+        }
+    },
+    "weaponsmith": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:grindstone"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:weaponsmith'}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    },
+    "armorer": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:blast_furnace"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:armorer'}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    },
+    "furnace": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:furnace"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:armorer'}}]",
+                    "compare_to": 1,
+                    "comparison": "<"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:butcher'}}]",
+                    "compare_to": 1,
+                    "comparison": "<"
+                }
+            ]
+        }
+    },
+    "shepherd": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:loom"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:shepherd'}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    },
+    "mason": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:stonecutter"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:mason'}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    },
+    "butcher": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:smoker"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:butcher'}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    },
+    "crafting_table": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:crafting_table"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5}}]",
+            "compare_to": 1,
+            "comparison": "<"
+        }
+    }
+}

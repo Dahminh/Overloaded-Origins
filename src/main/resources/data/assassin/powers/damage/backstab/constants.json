@@ -96,7 +96,7 @@
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "playsound minecraft:entity.arrow.hit_player ambient @s ~ ~ ~ 0.25 0.25"
+                    "command": "playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 0.25 0.25"
                 },
                 {
                     "type": "origins:play_sound",

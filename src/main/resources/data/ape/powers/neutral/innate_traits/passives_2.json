@@ -3,12 +3,30 @@
 	"wide": {
 		"type": "origins:action_on_callback",
 		"entity_action_chosen": {
-			"type": "origins:execute_command",
-			"command": "scale set pehkui:width 1.5"
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 1.6"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 1.1"
+				}
+			]
 		},
 		"entity_action_respawned": {
-			"type": "origins:execute_command",
-			"command": "scale set pehkui:width 1.5"
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:width 1.6"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:height 1.1"
+				}
+			]
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
@@ -20,22 +38,22 @@
 		"modifiers": [
 			{
 				"attribute": "minecraft:generic.max_health",
-				"value": 10,
+				"value": 20,
 				"operation": "addition"
 			},
 			{
 				"attribute": "minecraft:generic.armor",
-				"value": 11,
+				"value": 13,
 				"operation": "addition"
 			},
 			{
 				"attribute": "minecraft:generic.knockback_resistance",
-				"value": 0.5,
+				"value": 0.6,
 				"operation": "addition"
 			},
 			{
 				"attribute": "minecraft:generic.attack_speed",
-				"value": -0.5,
+				"value": -0.7,
 				"operation": "multiply_total"
 			},
 			{
@@ -45,14 +63,14 @@
 			},
 			{
 				"attribute": "minecraft:generic.attack_damage",
-				"value": 5,
+				"value": 7,
 				"operation": "addition"
 			}
 		]
 	},
 	"heavy": {
 		"type": "origins:modify_falling",
-		"velocity": 0.10
+		"velocity": 0.12
 	},
 	"name": "...",
 	"description": "...",
@@ -61,18 +79,19 @@
 			"type": "origins:tooltip",
 			"sprite": "overloadedorigins:textures/gui/badge/ape/gorilla_genes.png",
 			"text": [
-				"§e§nGorilla Genes I",
+				"§e§nGorilla Genes II",
 				"\nInsert Better Description",
 				"\n\n§nExplanation§r:\n\n",
 				"You gain the following stats:",
 				"\n§a-§r MAX Luck",
-				"\n§a- +5§r Hearts",
-				"\n§a- +11§r Armor Points",
-				"\n§a- +50§r% Knockback Resistance",
-				"\n§a- +5§r Base Attack Damage when not holding Tools or Weapons",
-				"\n§e- 1.10x§r Heavier than a Human",
-				"\n§c- 1.5x§r Wider than a Human",
-				"\n§c- -50§r% Attack Speed"
+				"\n§a- +10§r Hearts",
+				"\n§a- +13§r Armor Points",
+				"\n§a- +60§r% Knockback Resistance",
+				"\n§a- +7§r Attack Damage",
+				"\n§e- 1.12x§r Heavier than a Human",
+				"\n§c- 1.6x§r Wider than a Human",
+				"\n§c- 1.1x§r Taller than a Human",
+				"\n§c- -70§r% Attack Speed"
 			]
 		}
 	]

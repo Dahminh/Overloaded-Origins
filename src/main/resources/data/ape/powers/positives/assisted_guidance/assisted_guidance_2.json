@@ -1,0 +1,47 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "cleric": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:brewing_stand"
+        },
+        "condition": {
+            "type": "origins:command",
+            "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:cleric'}}]",
+            "compare_to": 2,
+            "comparison": "<"
+        }
+    },
+    "anvil": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:anvil"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:armorer'}}]",
+                    "compare_to": 2,
+                    "comparison": "<"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:weaponsmith'}}]",
+                    "compare_to": 2,
+                    "comparison": "<"
+                },
+                {
+                    "type": "origins:command",
+                    "command": "/execute if entity @e[distance=..5,type=minecraft:villager,nbt={VillagerData:{level:5,profession:'minecraft:toolsmith'}}]",
+                    "compare_to": 2,
+                    "comparison": "<"
+                }
+            ]
+        }
+    }
+}

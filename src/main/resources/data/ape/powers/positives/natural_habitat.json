@@ -1,7 +1,7 @@
 {
 	"type": "origins:multiple",
 	"jungle_spawn": {
-		"type": "origins:modify_player_spawn",
+		"type": "apoli:modify_player_spawn",
 		"biome": "minecraft:jungle",
 		"dimension": "minecraft:overworld"
 	},
@@ -32,12 +32,21 @@
 			]
 		}
 	},
-	"name": "§a§nNatural Habitat",
+	"name": "...",
 	"description": "As a Gorilla, you spawn in the Jungle.",
     "badges": [
 		{
-			"sprite": "overloadedorigins:textures/gui/badge/info.png",
-			"text": "While in the Jungle, on leaves, and sneaking, \nyou will become slightly transparent."
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/natural_habitat.png",
+			"text": [
+				"§a§nNatural Inhabitant",
+				"\nYou live in the Jungle and living in the Jungle for so long has given you some stealth advantages.",
+				"\n\n§nExplanation§r:\n\n",
+				"You spawn in a Jungle Biome.",
+				"\n\nWhile in a Vanilla Jungle and sneaking on any Vanilla leaves, you will become slightly transparent",
+                "\n\n§4NOTE:",
+                "\nIt may take a lot longer than usual for you to spawn in a Jungle Biome."
+			]
 		}
     ]
 }

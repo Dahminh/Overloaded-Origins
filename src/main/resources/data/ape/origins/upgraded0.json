@@ -5,10 +5,17 @@
 		"ape:positives/blunt_trauma/blunt_trauma_1",
 		"ape:positives/knuckle_walking/knuckle_walking_1",
 		"ape:positives/knuckle_walking/knuckle_walking_sound",
+		"ape:positives/assisted_guidance/assisted_guidance_1",
+		"ape:positives/assisted_guidance/description_1",
+		"ape:positives/climbing",
+		"ape:positives/natural_habitat",
+		"ape:neutral/vegetarianish",
 		"ape:neutral/innate_traits/passives_1",
 		"ape:neutral/gorilla_rush/gorilla_rush_1",
 		"ape:neutral/gorilla_rush/gorilla_rush_constants",
-		"ape:negatives/flammable/flammable_1"
+		"ape:negatives/flammable/flammable_1",
+		"ape:negatives/cant_swim",
+		"ape:negatives/primitive_knowledge/primitive_knowledge_1"
     ],
 	"icon": {
 		"item": "minecraft:player_head",
@@ -17,12 +24,12 @@
 	"order": 0,
 	"impact": 3,
 	"name": "Gorilla",
-	"description": "Ground-dwelling, predominantly herbivorous great apes that inhabit the tropical forests of central Sub-Saharan Africa.",
+	"description": "Gorillas are known to be gentle giants, but if provoked, beware of their melee capabilities.",
 	"upgrades": [
 		{
 			"condition": "minecraft:end/kill_dragon",
 			"origin": "ape:upgraded1",
-			"announcement": "You have evolved into a Kong. But you still have more potential..."
+			"announcement": "You have evolved into a Greater Gorilla. But you still have more potential..."
 		}
 	]
 }

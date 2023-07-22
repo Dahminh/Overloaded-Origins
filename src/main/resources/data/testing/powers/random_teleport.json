@@ -5,6 +5,10 @@
         "type": "overloadedorigins:random_teleport",
         "radius": 16.0,
         "particles": true,
+        "success_action": {
+            "type": "origins:execute_command",
+            "command": "say SUCCESS"
+        },
         "fail_action": {
             "type": "origins:execute_command",
             "command": "say FAIL"
