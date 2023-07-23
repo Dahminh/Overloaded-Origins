@@ -1,6 +1,18 @@
 {
-	"name": "§a§nLarger Lungs",
-	"description": "Your lungs are larger, allowing you to stay underwater for longer.",
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/larger_lungs.png",
+			"text": [
+				"§a§nLarger Lungs",
+				"\nYou've become larger which resulted in your lungs also becoming larger, allowing you to stay underwater for longer.",
+				"\n\n§nExplanation§r:\n\n"
+
+			]
+		}
+	],
 	"condition": {
 		"type": "origins:air",
 		"comparison": ">",

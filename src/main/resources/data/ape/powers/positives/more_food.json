@@ -122,12 +122,20 @@
             "block": "minecraft:melon"
         }
     },
-    "name": "§a§nExperienced Forager",
-    "description": "You're experienced at foraging due to living off of melons and berries.",
+    "name": "...",
+    "description": "...",
 	"badges": [
-		{
-			"sprite": "overloadedorigins:textures/gui/badge/info.png",
-            "text": "You gain §a+1§r glow berry when harvesting glow \nberries. \n\nYou gain §a+2§r sweet berries when harvesting \nsweet berries. \n\nYou gain §a+3§r melon slices when harvesting \nmelons."
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/natural_habitat.png",
+            "text": [
+                "§a§nExperienced Forager",
+                "\nYou're experienced at foraging due to living off of melons and berries.",
+                "\n\n§nExplanation§r:\n\n",
+                "You gain §a+1§r Glow Berry when harvesting Glow Berries.",
+                "\n\nYou gain §a+2§r Sweet Berries when harvesting Sweet Berries.",
+                "\n\nYou gain §a+3§r Melon Slices when harvesting Melons."
+            ]
         }
 	]
 }

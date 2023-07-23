@@ -1,0 +1,41 @@
+{
+	"type": "origins:multiple",
+	"duration": {
+		"type": "origins:modify_status_effect_duration",
+		"status_effects": [
+			"minecraft:mining_fatigue",
+			"minecraft:slowness"
+		],
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.25
+		}
+	},
+	"amplifier": {
+		"type": "origins:modify_status_effect_amplifier",
+		"status_effects": [
+			"minecraft:mining_fatigue",
+			"minecraft:slowness"
+		],
+		"modifier": {
+			"operation": "addition",
+			"value": 1
+		}
+	},
+	"name": "...",
+	"description": "...",
+	"badges": [
+		{
+			"sprite": "overloadedorigins:textures/gui/badge/ape/stronger_cripple.png",
+			"type": "origins:tooltip",
+			"text": [
+				"§c§nThe Bigger The Slower I",
+				"\nYour size makes slowness and mining fatigue effects stronger and longer.",
+				"\n\n§nExplanation§r:\n\n",
+				"Slowness and Mining Fatigue effects are more effective on you.",
+				"\n\nSlowness: §c+25%§r Duration, §c+1§r Amplifier",
+				"\n\nMining Fatigue: §c+25%§r Duration, §c+1§r Amplifier"
+			]
+		}
+	]
+}

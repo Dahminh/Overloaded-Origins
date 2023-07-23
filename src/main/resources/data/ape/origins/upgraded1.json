@@ -10,13 +10,16 @@
 		"ape:positives/assisted_guidance/description_2",
 		"ape:positives/climbing",
 		"ape:positives/natural_habitat",
+		"ape:positives/larger_lungs",
+		"ape:positives/more_food",
 		"ape:neutral/vegetarianish",
 		"ape:neutral/innate_traits/passives_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_constants",
 		"ape:negatives/flammable/flammable_2",
 		"ape:negatives/cant_swim",
-		"ape:negatives/primitive_knowledge/primitive_knowledge_2"
+		"ape:negatives/primitive_knowledge/primitive_knowledge_2",
+		"ape:negatives/stronger_cripple/stronger_cripple_1"
     ],
 	"icon": {
 		"item": "minecraft:player_head",
