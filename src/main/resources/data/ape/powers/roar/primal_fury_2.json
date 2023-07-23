@@ -6,25 +6,25 @@
             {
                 "attribute": "minecraft:generic.attack_speed",
                 "operation": "multiply_total",
-                "value": 0.5
+                "value": 0.75
             }
         ]
     },
     "removal": {
         "type": "origins:action_over_time",
-        "interval": 600,
+        "interval": 800,
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
                     "type": "origins:revoke_power",
-                    "power": "ape:upgraded1/primal_fury",
-                    "source": "ape:upgraded1/primal_fury"
+                    "power": "ape:roar/primal_fury_2",
+                    "source": "ape:roar/primal_fury_2"
                 },
                 {
                     "type": "origins:revoke_power",
-                    "power": "ape:primal_fury_constants",
-                    "source": "ape:primal_fury_constants"
+                    "power": "ape:roar/primal_fury_constants",
+                    "source": "ape:roar/primal_fury_constants"
                 }
             ] 
         }
@@ -40,9 +40,14 @@
                     "effect": {
                         "effect": "minecraft:slowness",
                         "duration": 60,
-                        "amplifier": 0,
+                        "amplifier": 1,
                         "show_particles": false
                     }
+                },
+                {
+                    "type": "origins:explode",
+                    "destruction_type": "none",
+                    "power": 1
                 }
             ]
             
@@ -52,7 +57,7 @@
         "type": "origins:modify_damage_taken",
         "modifier": {
             "operation": "multiply_total",
-            "value": 0.25
+            "value": 0.5
         },
         "condition": {
             "type": "origins:on_fire"

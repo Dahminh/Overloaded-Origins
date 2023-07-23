@@ -86,15 +86,23 @@
 		]
 	},
 	"name": "§d§nIntimidating Roar I",
-	"description": "[§bTernary Ability§r] You roar, intimidating all mobs around you and make yourself stronger",
+	"description": "You can roar, intimidating all mobs around you and make yourself stronger",
     "badges": [
-        {
-            "sprite": "overloadedorigins:textures/gui/badge/active.png",
-			"text": "Active ability, use with [§bTernary Key§r]."
-        },
 		{
-			"sprite": "overloadedorigins:textures/gui/badge/info.png",
-            "text": "[§a1 Minute Cooldown§r] \nYou intimidate everything except Gorillas in a \n§a18 block§r radius. Intimidated mobs will receive: \n§c- Weakness III§r for §c10 seconds§r \n§c- Slowness III§r for §c10 seconds§r \n§c- Mining Fatigue III§r for §c10 seconds§r \n\nYou will also receive the following: \n§a- Strength II§r for §a20 seconds§r"
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/leap.png",
+            "text": [
+				"[§a1 Minute Cooldown§r]",
+				"\n[§bTernary Active Ability§r], Pressing [",
+				{"keybind": "key.origins.ternary_active"},
+				"] will make you roar, intimadating everything except other Gorillas in an §a18 block§r radius.",
+				"\n\nIntimidating mobs will receive:",
+				"\n§c- Weakness III§r for §c10 seconds§r",
+				"\n§c- Slowness III§r for §c10 seconds§r",
+				"\n§c- Mining Fatigue III§r for §c10 seconds§r",
+				"\n\nYou will also receive the following:",
+				"\n§a- Strength II§r for §a20 seconds§r"
+			]
 		}
     ]
 }

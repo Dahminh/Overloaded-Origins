@@ -2,6 +2,7 @@
     "powers": [
 		"ape:leap/constants",
 		"ape:leap/leap_2",
+		"ape:roar/roar_2",
 		"ape:positives/blunt_trauma/blunt_trauma_2",
 		"ape:positives/knuckle_walking/knuckle_walking_2",
 		"ape:positives/knuckle_walking/knuckle_walking_sound",
