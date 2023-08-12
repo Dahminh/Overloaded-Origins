@@ -16,6 +16,7 @@
         "type": "origins:sneaking"
     },
     "tick_rate": 5,
+    "hidden": true,
 	"name": "...",
 	"description": "...",
 	"badges": [

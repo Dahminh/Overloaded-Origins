@@ -1,0 +1,15 @@
+{
+    "type": "apugli:projectile_action_over_time",
+    "interval": 20,
+    "bientity_action": {
+        "type": "origins:add_velocity",
+        "z": 0.1
+    },
+    "bientity_condition": {
+        "type": "apoli:target_condition",
+        "condition": {
+            "type": "apoli:in_tag",
+            "tag": "minecraft:arrows"
+        }
+    }
+}

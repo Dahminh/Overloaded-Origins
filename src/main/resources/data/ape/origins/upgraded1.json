@@ -1,26 +1,26 @@
 {
     "powers": [
 		"ape:leap/constants",
-		"ape:leap/leap_2",
-		"ape:roar/roar_2",
+		"ape:neutral/innate_traits/passives_2",
+		"ape:positives/natural_habitat",
 		"ape:positives/blunt_trauma/blunt_trauma_2",
+		"ape:negatives/primitive_knowledge/primitive_knowledge_2",
 		"ape:positives/knuckle_walking/knuckle_walking_2",
 		"ape:positives/knuckle_walking/knuckle_walking_sound",
 		"ape:positives/assisted_guidance/assisted_guidance_1",
 		"ape:positives/assisted_guidance/assisted_guidance_2",
-		"ape:positives/assisted_guidance/description_2",
 		"ape:positives/climbing",
-		"ape:positives/natural_habitat",
 		"ape:positives/larger_lungs",
 		"ape:positives/more_food",
 		"ape:neutral/vegetarianish",
-		"ape:neutral/innate_traits/passives_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_2",
 		"ape:neutral/gorilla_rush/gorilla_rush_constants",
 		"ape:negatives/flammable/flammable_2",
 		"ape:negatives/cant_swim",
-		"ape:negatives/primitive_knowledge/primitive_knowledge_2",
-		"ape:negatives/stronger_cripple/stronger_cripple_1"
+		"ape:negatives/stronger_cripple/stronger_cripple_1",
+		"ape:leap/leap_2",
+		"ape:roar/roar_2",
+		"ape:barrel_toss/barrel_toss"
     ],
 	"icon": {
 		"item": "minecraft:player_head",

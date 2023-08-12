@@ -4,85 +4,95 @@
 		"key": "key.origins.ternary_active"
 	},
 	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png",
-		"bar_index": 22
+		"sprite_location": "overloadedorigins:textures/gui/ape.png",
+		"bar_index": 2
 	},
 	"cooldown": 1200,
 	"entity_action": {
 		"type": "origins:and",
 		"actions": [
-		{
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:strength",
-				"duration": 400,
-				"amplifier": 1
-			}
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "minecraft:entity.ravager.roar",
-			"pitch": 0
-		},
-		{
-			"type": "origins:area_of_effect",
-			"radius": 18,
-			"bientity_action": {
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:and",
-					"actions": [
-						{
-							"type": "origins:apply_effect",
-							"effects": [
-								{
-									"effect": "minecraft:slowness",
-									"duration": 200,
-									"amplifier": 3
-								},
-								{
-									"effect": "minecraft:weakness",
-									"duration": 200,
-									"amplifier": 2
-								},
-								{
-									"effect": "minecraft:mining_fatigue",
-									"duration": 200,
-									"amplifier": 3
-								}
-							]
-						},
-						{
-							"type": "origins:play_sound",
-							"sound": "minecraft:entity.ravager.roar",
-							"pitch": 0
-						}
-					]
+			{
+				"type": "origins:apply_effect",
+				"effect": {
+					"effect": "minecraft:strength",
+					"duration": 400,
+					"amplifier": 1
 				}
 			},
-			"bientity_condition": {
-				"type": "origins:target_condition",
-				"condition": {
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:origin",
-							"origin": "ape:ape"
-						},
-						{
-							"type": "origins:origin",
-							"origin": "ape:upgraded1"
-						}
-					]
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.ravager.roar",
+				"pitch": 0
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 18,
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:apply_effect",
+								"effects": [
+									{
+										"effect": "minecraft:slowness",
+										"duration": 200,
+										"amplifier": 3
+									},
+									{
+										"effect": "minecraft:weakness",
+										"duration": 200,
+										"amplifier": 2
+									},
+									{
+										"effect": "minecraft:mining_fatigue",
+										"duration": 200,
+										"amplifier": 3
+									}
+								]
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.ravager.roar",
+								"pitch": 0
+							}
+						]
+					}
 				},
-				"inverted": true
+				"bientity_condition": {
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:origin",
+								"origin": "ape:ape"
+							},
+							{
+								"type": "origins:origin",
+								"origin": "ape:upgraded1"
+							}
+						]
+					},
+					"inverted": true
+				}
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.ravager.roar",
+				"pitch": 0
+			},
+			{
+				"type": "origins:grant_power",
+				"power": "ape:roar/primal_fury_1",
+				"source": "ape:roar/primal_fury_1"
+			},
+			{
+				"type": "origins:grant_power",
+				"power": "ape:roar/primal_fury_constants",
+				"source": "ape:roar/primal_fury_constants"
 			}
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "minecraft:entity.ravager.roar",
-			"pitch": 0
-		}
 		]
 	},
 	"name": "§d§nIntimidating Roar I",
@@ -90,7 +100,7 @@
     "badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "overloadedorigins:textures/gui/badge/ape/leap.png",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/roar.png",
             "text": [
 				"[§a1 Minute Cooldown§r]",
 				"\n[§bTernary Active Ability§r], Pressing [",
@@ -101,7 +111,13 @@
 				"\n§c- Slowness III§r for §c10 seconds§r",
 				"\n§c- Mining Fatigue III§r for §c10 seconds§r",
 				"\n\nYou will also receive the following:",
-				"\n§a- Strength II§r for §a20 seconds§r"
+				"\n§a- Strength II§r",
+				"\n§a- 1.25x§r Attack Speed",
+				"\n§a-§r You exhaust §a75%§r slower",
+				"\n§a-§r You are immune to §cSlowness§r",
+				"\n§e-§r You see red",
+				"\n§c-§r You take §c15%§r more damage while on fire",
+				"\n\nThese effects will last §d20§r seconds."
 			]
 		}
     ]

@@ -1,0 +1,26 @@
+{
+    "powers": [
+        "origins:water_breathing",
+        "merling:wet_eyes",
+        "merling:aqua_affinity",
+        "merling:swim_speed",
+		"merling:air_from_potions/air_from_potions_2",
+        "origins:like_water",
+        "merling:aquatic",
+        "origins:conduit_power_on_land"
+    ],
+    "icon": {
+        "item": "minecraft:cod"
+    },
+    "order": 2,
+    "impact": 3,
+    "name": "Merling",
+    "description": "These natural inhabitants of the ocean are not used to being out of the water for too long.",
+    "upgrades": [
+        {
+            "condition": "minecraft:end/kill_dragon",
+            "origin": "merling:upgraded1",
+            "announcement": "You have evolved into a Placeholder Name Here. But you still have more potential..."
+        }
+    ] 
+}

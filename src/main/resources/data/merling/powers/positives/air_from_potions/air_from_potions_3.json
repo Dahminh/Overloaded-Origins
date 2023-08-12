@@ -1,0 +1,51 @@
+{
+    "type": "origins:action_on_item_use",
+    "hidden": true,
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:potion"
+        }
+    },
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 100
+    },
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": [
+                "§a§nGills",
+                "\nYou can only survive by breathing underwater, thus preventing you from naturally breathing on land.",
+                "\n\n§nExplanation§r:\n\n",
+                "You can breathe perfectly fine underwater, but cannot breathe on land. However, everything which helps humans to breathe in water, helps you to breathe on land."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": [
+                "§a§nHydration III",
+                "\nDrinking potions can help you stay on land for longer.",
+                "\n\n§nExplanation§r:\n\n",
+                "You can gain §a5§r seconds of air when drinking potions."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": [
+                "§a§nControllable Density",
+                "\nWhen underwater, you do not sink to the ground unless you want to.",
+                "\n\n§nExplanation§r:\n\n",
+                "You will only sink in water if you have downwards velocity. Pressing",
+                "[",
+				{"keybind": "key.jump"},
+				"] will prevent sinking."
+            ]
+        }
+    ]
+}

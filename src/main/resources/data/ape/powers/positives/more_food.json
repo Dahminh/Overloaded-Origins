@@ -122,12 +122,13 @@
             "block": "minecraft:melon"
         }
     },
+    "hidden": true,
     "name": "...",
     "description": "...",
 	"badges": [
         {
             "type": "origins:tooltip",
-			"sprite": "overloadedorigins:textures/gui/badge/ape/natural_habitat.png",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/more_food.png",
             "text": [
                 "§a§nExperienced Forager",
                 "\nYou're experienced at foraging due to living off of melons and berries.",

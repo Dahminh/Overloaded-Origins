@@ -57,6 +57,7 @@
             "saturation": 0.25
         }
     },
+    "hidden": true,
 	"name": "...",
 	"description": "...",
 	"badges": [

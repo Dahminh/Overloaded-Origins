@@ -32,8 +32,8 @@
 			]
 		}
 	},
-	"name": "...",
-	"description": "...",
+	"name": "§e§nJungle Habitant",
+	"description": "You are extremely adapted to living in the Jungle, which comes with many positive and negative effects.",
     "badges": [
 		{
 			"type": "origins:tooltip",
@@ -47,6 +47,49 @@
                 "\n\n§4NOTE:",
                 "\nIt may take a lot longer than usual for you to spawn in a Jungle Biome."
 			]
-		}
+		},
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/more_food.png",
+            "text": [
+                "§a§nExperienced Forager",
+                "\nYou're experienced at foraging due to living off of melons and berries.",
+                "\n\n§nExplanation§r:\n\n",
+                "You gain §a+1§r Glow Berry when harvesting Glow Berries.",
+                "\n\nYou gain §a+2§r Sweet Berries when harvesting Sweet Berries.",
+                "\n\nYou gain §a+3§r Melon Slices when harvesting Melons."
+            ]
+        },
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/vegetarianish.png",
+            "text": [
+                "§e§nMainly Vegetarian",
+                "\nGorillas are capable of eating a variety of foods, however they get the majority of the nutrients needed from a diet consisting of vegetation and fruits.",
+				"\n\n§nExplanation§r:\n\n",
+                "Meats and foods that contain sugar are §c75%§r less effective.",
+                "\n\nThe following foods will be §a3x§r effective and gives an additional §a0.25§r Saturation:",
+                "\n§a-§r Sweet Berries",
+                "\n§a-§r Glow Berries",
+                "\n§a-§r Melon Slices",
+                "\n§a-§r Apples",
+                "\n§a-§r Golden Apples",
+                "\n§a-§r Enchanted Golden Apples",
+                "\n\nYou will also be able to eat the following items for §a2§r Food Points and §a1§r Saturation:",
+                "\n§a-§r All Vanilla Overworld Leaves",
+                "\n§a-§r Bamboo",
+                "\n§a-§r Sugar Cane"
+            ]
+		},
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/cant_swim.png",
+            "text": [
+                "§c§nLand Dweller",
+                "\nYou have never learned how to swim, therefore you cannot swim.",
+                "\n\n§nExplanation§r:\n\n",
+                "You ignore water as if it is air and your leap is weaker when used in water."
+            ]
+        }
     ]
 }

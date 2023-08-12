@@ -13,5 +13,6 @@
                 "You ignore water as if it is air and your leap is weaker when used in water."
             ]
         }
-    ]
+    ],
+    "hidden": true
 }

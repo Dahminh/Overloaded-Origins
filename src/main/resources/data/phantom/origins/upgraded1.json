@@ -9,7 +9,6 @@
         "phantom:positives/raw_food_good",
         "phantom:phantom_form/constants",
         "phantom:phantom_form/overlay",
-        "phantom:phantom_form/phasing_2",
         "phantom:phantom_form/phantom_flight",
         "phantom:neutral/transparent",
         "phantom:negatives/burn_in_daylight",
@@ -21,7 +20,8 @@
         "phantom:negatives/undead_nightmare",
         "phantom:positives/fearmonger/fear_detection",
         "phantom:positives/fearmonger/hysteria",
-        "phantom:positives/fearmonger/fear_meter"
+        "phantom:positives/fearmonger/fear_meter",
+        "phantom:phantom_form/phasing_2"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"

@@ -1,0 +1,30 @@
+{
+    "type": "origins:toggle_night_vision",
+    "strength": 1.0,
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    },
+    "active_by_default": true,
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": false
+    },
+    "hidden": false,
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": [
+                "§d§nWet Eyes",
+                "\nYour vision underwater is perfect.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§bPrimary Toggleable Ability§r§f], Toggling with [",
+                {"keybind": "key.origins.primary_active"},
+				"] will allow you to switch from being able to see perfectly underwater to not being able to see perfectly underwater."
+            ]
+        }
+    ]
+}

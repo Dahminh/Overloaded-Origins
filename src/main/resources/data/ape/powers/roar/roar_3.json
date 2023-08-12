@@ -4,8 +4,8 @@
 		"key": "key.origins.ternary_active"
 	},
 	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png",
-		"bar_index": 22
+		"sprite_location": "overloadedorigins:textures/gui/ape.png",
+		"bar_index": 2
 	},
 	"cooldown": 1800,
 	"entity_action": {
@@ -70,8 +70,8 @@
 			},
 			{
 				"type": "origins:grant_power",
-				"power": "ape:roar/primal_fury_2",
-				"source": "ape:roar/primal_fury_2"
+				"power": "ape:roar/primal_fury_3",
+				"source": "ape:roar/primal_fury_3"
 			},
 			{
 				"type": "origins:grant_power",
@@ -81,11 +81,11 @@
 		]
 	},
 	"name": "§d§nIntimidating Roar III",
-	"description": "[§bTernary Ability§r] You roar, intimidating all mobs around you, make yourself stronger and enrage.",
+	"description": "You roar, intimidating all mobs around you, make yourself stronger and enrage.",
     "badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "overloadedorigins:textures/gui/badge/ape/leap.png",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/roar.png",
             "text": [
 				"[§a1.5 Minute Cooldown§r]",
 				"\n[§bTernary Active Ability§r], Pressing [",

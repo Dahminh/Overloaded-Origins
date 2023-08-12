@@ -72,15 +72,27 @@
 		"type": "origins:modify_falling",
 		"velocity": 0.16
 	},
-	"name": "...",
-	"description": "...",
+	"name": "§e§nGorilla Traits III",
+	"description": "You have many traits that any other Gorilla would have.",
 	"badges": [
+		{
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/knuckle_walking.png",
+            "text": [
+                "§a§nKnuckle Walking III",
+                "\nYou move much faster and are more protected while Knuckle Walking compared to normal walking.",
+                "\n\n§nExplanation§r:\n\n",
+                "While sneaking you gain the following:",
+                "\n§a- +250§r% Movement Speed",
+                "\n§a- +3§r Armor Point"
+            ]
+        },
 		{
 			"type": "origins:tooltip",
 			"sprite": "overloadedorigins:textures/gui/badge/ape/gorilla_genes.png",
 			"text": [
 				"§e§nGorilla Genes III",
-				"\nInsert Better Description",
+				"\nYou are much stronger and larger compared to your Human counterparts but it also comes with the cost of being slower and heavier.",
 				"\n\n§nExplanation§r:\n\n",
 				"You gain the following stats:",
 				"\n§a-§r MAX Luck",
@@ -93,6 +105,16 @@
 				"\n§c- 1.25x§r Taller than a Human",
 				"\n§c- -80§r% Attack Speed"
 			]
-		}
+		},
+		{
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/pyrophobia.png",
+            "text": [
+                "§c§nFlammable III",
+                "\nYour fur makes you more flammable and thus take more damage from fire.",
+                "\n\n§nExplanation§r:\n\n",
+                "You take §c+3§r damage from fire and while on fire, you take §c1.4x§r more damage."
+            ]
+        }
 	]
 }

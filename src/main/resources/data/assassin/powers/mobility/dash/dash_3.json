@@ -7,6 +7,12 @@
 			"type": "origins:change_resource",
 			"resource": "*:mobility/dash/constants_charges",
 			"change": 15
+		},
+		"condition": {
+			"type": "origins:resource",
+			"compare_to": 900,
+			"comparison": "!=",
+			"resource": "*:mobility/dash/constants_charges"
 		}
 	},
 	"dash": {

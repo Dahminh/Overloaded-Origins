@@ -6,13 +6,13 @@
             {
                 "attribute": "minecraft:generic.attack_speed",
                 "operation": "multiply_total",
-                "value": 0.5
+                "value": 0.25
             }
         ]
     },
     "removal": {
         "type": "origins:action_over_time",
-        "interval": 600,
+        "interval": 400,
         "entity_action": {
             "type": "origins:and",
             "actions": [
@@ -29,30 +29,11 @@
             ] 
         }
     },
-    "crippling_hits": {
-        "type": "origins:target_action_on_hit",
-        "cooldown": 0,
-        "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:apply_effect",
-                    "effect": {
-                        "effect": "minecraft:slowness",
-                        "duration": 60,
-                        "amplifier": 0,
-                        "show_particles": false
-                    }
-                }
-            ]
-            
-        }
-    },
     "more_fire_damage": {
         "type": "origins:modify_damage_taken",
         "modifier": {
             "operation": "multiply_total",
-            "value": 0.25
+            "value": 0.15
         },
         "condition": {
             "type": "origins:on_fire"

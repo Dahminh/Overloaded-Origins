@@ -4,8 +4,8 @@
 		"key": "key.origins.ternary_active"
 	},
 	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_03.png",
-		"bar_index": 22
+		"sprite_location": "overloadedorigins:textures/gui/ape.png",
+		"bar_index": 2
 	},
 	"cooldown": 1500,
 	"entity_action": {
@@ -70,8 +70,8 @@
 			},
 			{
 				"type": "origins:grant_power",
-				"power": "ape:roar/primal_fury_1",
-				"source": "ape:roar/primal_fury_1"
+				"power": "ape:roar/primal_fury_2",
+				"source": "ape:roar/primal_fury_2"
 			},
 			{
 				"type": "origins:grant_power",
@@ -85,26 +85,26 @@
     "badges": [
 		{
 			"type": "origins:tooltip",
-			"sprite": "overloadedorigins:textures/gui/badge/ape/leap.png",
+			"sprite": "overloadedorigins:textures/gui/badge/ape/roar.png",
             "text": [
 				"[§a1.5 Minute Cooldown§r]",
 				"\n[§bTernary Active Ability§r], Pressing [",
 				{"keybind": "key.origins.ternary_active"},
 				"] will make you roar, intimadating everything except other Gorillas in an §a28 block§r radius.",
 				"\n\nIntimidating mobs will receive:",
-				"\n§c- Weakness III§r for §c15 seconds§r",
-				"\n§c- Slowness IV§r for §c15 seconds§r",
-				"\n§c- Mining Fatigue IV§r for §c15 seconds§r",
+				"\n§c- Weakness III§r for §c15§r seconds",
+				"\n§c- Slowness IV§r for §c15§r seconds",
+				"\n§c- Mining Fatigue IV§r for §c15§r seconds",
 				"\n\nYou will also receive the following:",
 				"\n§a- Strength I§r",
 				"\n§a- Resistance II§r",
 				"\n§a- 1.5x§r Attack Speed",
-				"\n§a-§r Attacks will apply §cSlowness I§r for §c3 seconds§r",
+				"\n§a-§r Attacks will apply §cSlowness I§r for §c3§r seconds",
 				"\n§a-§r You exhaust §a75%§r slower",
 				"\n§a-§r You are immune to §cSlowness§r",
 				"\n§e-§r You see red",
 				"\n§c-§r You take §c25%§r more damage while on fire",
-				"\n\nThese effects will last §d30 seconds§r."
+				"\n\nThese effects will last §d30§r seconds."
 			]
 		}
     ]

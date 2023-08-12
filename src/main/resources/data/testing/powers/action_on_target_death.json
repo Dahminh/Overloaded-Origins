@@ -1,0 +1,11 @@
+{
+    "type": "apugli:action_on_target_death",
+    "bientity_action": {
+    "type": "apoli:actor_action",
+    "action": {
+            "type": "apugli:fire_projectile",
+            "entity_type": "minecraft:small_fireball"
+        }
+    },
+    "includes_prime_adversary": false
+}

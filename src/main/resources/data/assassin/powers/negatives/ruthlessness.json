@@ -20,13 +20,19 @@
 		}
 	},
 	"angry_golem": {
-	"type": "origins:action_over_time",
-  	"entity_action": {
-    	"type": "origins:execute_command",
-    	"command": "execute as @p at @s run data modify entity @e[type=minecraft:iron_golem,limit=1,sort=random,distance=..64] AngryAt set from entity @s UUID",
-    	"permission_level": 4
-  	},
-  	"interval": 20
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "execute as @p at @s run data modify entity @e[type=minecraft:iron_golem,limit=1,sort=random,distance=..64] AngryAt set from entity @s UUID",
+			"permission_level": 4
+		},
+		"condition": {
+			"type": "origins:command",
+			"command": "execute if entity @e[type=minecraft:iron_golem,distance=..64]",
+			"compare_to": 1,
+			"comparison": "=="
+		},
+		"interval": 20
 	},
 	"hidden": true
 }

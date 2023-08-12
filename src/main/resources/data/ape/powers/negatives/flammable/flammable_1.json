@@ -7,6 +7,7 @@
     "damage_condition": {
         "type": "origins:fire"
     },
+    "hidden": true,
 	"name": "...",
 	"description": "...",
 	"badges": [

@@ -1,0 +1,10 @@
+{
+    "type": "apugli:modify_enchantment_level",
+    "enchantment": "minecraft:looting",
+    "modifiers": [
+        {
+            "operation": "addition",
+            "value": 3
+        }
+    ]
+}
