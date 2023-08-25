@@ -1,0 +1,58 @@
+{
+    "type": "origins:multiple",
+    "lure": {
+        "type": "apugli:modify_enchantment_level",
+        "enchantment": "minecraft:lure",
+        "modifiers": [
+            {
+                "operation": "addition",
+                "value": 2
+            }
+        ]
+    },
+    "luck_of_the_sea": {
+        "type": "apugli:modify_enchantment_level",
+        "enchantment": "minecraft:luck_of_the_sea",
+        "modifiers": [
+            {
+                "operation": "addition",
+                "value": 3
+            }
+        ]
+    },
+    "name": "§a§nLost Methods III",
+    "description": "Merlings have learned how to make the most out of their aquatic environment and tools available to them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/fishing.png",
+            "text": [
+                "§a§nFishing Expert",
+                "\nIn your free time, you like to fish and as a result from all that fishing, you've become an expert at fishing.",
+                "\n\n§nExplanation§r:\n\n",
+                "You have passive §aLure II§r and §aLuck of the Sea III§r."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/nautilus_shell.png",
+            "text": [
+                "§a§nShell Harvester",
+                "\nMerlings are able to dig up buried Nautilus Shells from the Oceans.",
+                "\n\n§nExplanation§r:\n\n",
+                "You have a §a1%§r chance of getting a Nautilus Shell instead of the actual block drop when mining sand or gravel and while submerged in water.",
+                "\n\nThis also applies to live coral blocks but instead you have a §a3%§r chance of getting a Nautilus Shell."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/conduit.png",
+            "text": [
+                "§a§nEnhanced Conduit",
+                "\nMerlings are able to utilize a Conduit even outside of water due to their secret knowledge and methods.",
+                "\n\n§nExplanation§r:\n\n",
+                "You gain the §aConduit Power§r effect even when outside of water."
+            ]
+        }
+    ]
+}

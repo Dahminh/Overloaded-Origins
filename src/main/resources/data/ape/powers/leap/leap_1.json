@@ -2,8 +2,8 @@
     "type": "origins:active_self",
     "cooldown": 400,
 	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/ape.png",
-		"bar_index": 0
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+		"bar_index": 4
 	},
     "condition": {
         "type": "origins:fall_flying",

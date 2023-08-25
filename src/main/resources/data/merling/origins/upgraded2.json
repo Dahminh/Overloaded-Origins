@@ -1,20 +1,33 @@
 {
     "powers": [
         "origins:water_breathing",
-        "merling:wet_eyes",
-        "merling:aqua_affinity",
-        "merling:swim_speed",
-		"merling:air_from_potions/air_from_potions_3",
+        "merling:positives/wet_eyes",
+        "merling:positives/aqua_affinity",
+        "merling:positives/swim_speed",
+		"merling:positives/air_from_potions/air_from_potions_3",
         "origins:like_water",
-        "merling:aquatic",
-        "origins:conduit_power_on_land"
+        "merling:neutral/aquatic",
+        "origins:conduit_power_on_land",
+		"merling:positives/beach_spawn",
+        "merling:positives/high_intelligence/desc_2",
+        "merling:positives/trident_enchants",
+        "merling:neutral/better_food",
+        "merling:positives/better_fishing/better_fishing_3",
+        "merling:positives/water_breathing_technique/water_breathing_technique_3",
+        "merling:positives/nautilus_shell_harvest",
+        "merling:positives/more_hearts",
+        "merling:neutral/special_fish",
+        "merling:negatives/dehydration/dehydration_3",
+        "merling:negatives/impaled/impaling_3",
+		"merling:positives/bedrock_impaling/constants",
+		"merling:positives/bedrock_impaling/bedrock_impaling_3"
     ],
 	"icon": {
 		"item": "minecraft:cod"
 	},
 	"order": 0,
 	"impact": 3,
-	"name": "Name",
-	"description": "Description.",
+	"name": "Merling Centurion",
+	"description": "You're now the pinnacle of the Merlings, having the ability to become a Tsunami level threat. The Ocean is your domain...",
 	"unchoosable": true	
 }

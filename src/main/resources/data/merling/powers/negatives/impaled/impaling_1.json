@@ -1,0 +1,63 @@
+{
+    "type": "origins:self_action_when_hit",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:projectile",
+                "projectile": "minecraft:trident",
+                "projectile_condition": {
+                    "type": "origins:nbt",
+                    "nbt": "{Trident:{tag:{Enchantments:[{id:\"minecraft:impaling\"}]}}}"
+                }
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:attacker",
+                        "entity_condition": {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:enchantment",
+                                "enchantment": "minecraft:impaling",
+                                "compare_to": 0,
+                                "comparison": ">"
+                            }
+                        }
+                    },
+                    {
+                        "type":"origins:or",
+                        "conditions":[
+                            {
+                                "type":"origins:name",
+                                "name":"generic"
+                            },
+                            {
+                                "type":"origins:name",
+                                "name":"mob"
+                            },
+                            {
+                                "type":"origins:name",
+                                "name":"player"
+                            },
+                            {
+                                "type": "origins:name",
+                                "name": "player.item"
+                            }
+                        ]
+                     }
+                ]
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:slowness",
+            "duration": 100
+        }
+    },
+    "hidden": true
+}

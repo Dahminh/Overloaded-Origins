@@ -1,0 +1,36 @@
+{
+    "type": "origins:multiple",
+    "fish": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "merling:fish"
+            }
+        },
+        "food_modifier": {
+            "operation": "multiply_total",
+            "value": 1
+        },
+        "saturation_modifier": {
+            "operation": "addition",
+            "value": 0.25
+        },
+        "prevent_effects": true
+    },
+    "not_fish": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "merling:fish"
+            },
+            "inverted": true
+        },
+        "food_modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "hidden": true
+}

@@ -1,0 +1,98 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2147483647
+    },
+    "toggle_bar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 300,
+        "hud_render": {
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "bar_index": 12
+        }
+    },
+    "toggle_button": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": "key.origins.secondary_active",
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 0,
+            "comparison": ">",
+            "resource": "*:*_toggle_bar"
+        },
+        "retain_state": false
+    },
+    "action_over_time": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:power_active",
+                "power": "*:*_toggle_button"
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_toggle_bar",
+                "operation": "add",
+                "change": -5
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_toggle_bar",
+                "operation": "add",
+                "change": 1
+            }
+        }
+    },
+    "hit_regain": {
+        "type": "origins:self_action_on_hit",
+        "cooldown": 20,
+        "hud_render": {
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "bar_index": 13
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "change": 5,
+            "operation": "add",
+            "resource": "*:*_toggle_bar"
+        },
+        "target_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle_button",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:resource",
+                    "compare_to": 300,
+                    "comparison": "!=",
+                    "resource": "*:*_toggle_bar"
+                }
+            ]
+        }
+    }
+}

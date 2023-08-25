@@ -1,0 +1,37 @@
+{
+    "type": "origins:multiple",
+    "fire_tick": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": -5
+        }
+    },
+    "actual_dehydration": {
+        "type": "origins:self_action_when_hit",
+        "damage_condition": {
+            "type": "origins:fire",
+            "inverted": true
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_nether"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": -20
+        }
+    },
+    "hidden": true
+}

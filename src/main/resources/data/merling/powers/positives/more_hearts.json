@@ -1,0 +1,16 @@
+{
+    "type": "origins:multiple",
+    "guardians": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:entities/guardian": "merling:entities/guardian_heart"
+        }
+    },
+    "elder_guardians": {
+        "type": "origins:replace_loot_table",
+        "replace": {
+            "minecraft:entities/elder_guardian": "merling:entities/elder_guardian_heart"
+        }
+    },
+    "hidden": true
+}

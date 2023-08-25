@@ -4,8 +4,8 @@
 		"key": "key.origins.ternary_active"
 	},
 	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/ape.png",
-		"bar_index": 2
+        "bar_index": 6,
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png"
 	},
 	"cooldown": 1500,
 	"entity_action": {

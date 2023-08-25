@@ -2,8 +2,8 @@
     "type": "origins:target_action_on_hit",
     "cooldown": 300,
     "hud_render": {
-        "bar_index": 1,
-        "sprite_location": "overloadedorigins:textures/gui/ape.png"
+        "bar_index": 5,
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png"
     },
     "damage_condition": {
         "type": "origins:or",
@@ -93,18 +93,6 @@
 			]
         },
         {
-			"type": "origins:tooltip",
-			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/climbing.png",
-            "text": [
-				"§d§nGorilla Grip",
-				"\nLiving in the Jungle for so long, you had to climb around to get to places often. This allowed you to develop your grip strength and in turn develop your ability to climb.",
-				"\n\n§nExplanation§r:\n\n",
-				"[§bSecondary Toggleable Ability§r§f], Toggling with [",
-				{"keybind": "key.origins.secondary_active"},
-				"] will allow you to climb."
-			]
-		},
-        {
 			"sprite": "overloadedorigins:textures/gui/badge/ape/stronger_cripple.png",
 			"type": "origins:tooltip",
 			"text": [
@@ -114,6 +102,18 @@
 				"Slowness and Mining Fatigue effects are more effective on you.",
 				"\n\nSlowness: §c+25%§r Duration, §c+1§r Amplifier",
 				"\n\nMining Fatigue: §c+25%§r Duration, §c+1§r Amplifier"
+			]
+		},
+        {
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/climbing.png",
+            "text": [
+				"§d§nGorilla Grip",
+				"\nLiving in the Jungle for so long, you had to climb around to get to places often. This allowed you to develop your grip strength and in turn develop your ability to climb.",
+				"\n\n§nExplanation§r:\n\n",
+				"[§bSecondary Toggleable Ability§r§f], Toggling with [",
+				{"keybind": "key.origins.secondary_active"},
+				"] will allow you to climb."
 			]
 		}
 	]

@@ -1,0 +1,19 @@
+{
+    "type": "origins:simple",
+    "name": "§a§nHigh Intelligence I",
+    "description": "Merlings are naturally intelligent due to having to adapt to a constantly changing environment.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/beach.png",
+            "text": [
+                "§a§nSemi-Rough Start",
+                "\nJust like Sea Turtles, you don't get to start in the water but rather on a Beach and you have to rush over to the waters in order to survive. Just think of it as Survival of the Fittest.",
+                "\n\n§nExplanation§r:\n\n",
+                "You spawn on a Beach.",
+                "\n\n§4NOTE:",
+                "\nIt may take a lot longer than usual for you to spawn in a Beach."
+            ]
+        }
+    ]
+}

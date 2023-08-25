@@ -1,0 +1,61 @@
+{
+    "type": "origins:multiple",
+    "not_coral": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "data merge entity @e[type=item,limit=1,nbt={Item:{Count:1b},Age:0s},distance=..1] {Item:{id:\"minecraft:nautilus_shell\",Count:1b}}"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type":"origins:predicate",
+                    "predicate":"*:not_coral"
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:sand"
+                },
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:gravel"
+                }
+            ]
+        }
+    },
+    "coral": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "data merge entity @e[type=item,limit=1,nbt={Item:{Count:1b},Age:0s},distance=..1] {Item:{id:\"minecraft:nautilus_shell\",Count:1b}}"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type":"origins:predicate",
+                    "predicate":"*:coral"
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:coral_blocks"
+        }
+    },
+    "hidden": true
+}

@@ -1,0 +1,30 @@
+{
+    "type": "origins:simple",
+    "name": "§a§nHigh Intelligence II",
+    "description": "Merlings are naturally intelligent due to having to adapt to a constantly changing environment.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/beach.png",
+            "text": [
+                "§a§nSemi-Rough Start",
+                "\nJust like Sea Turtles, you don't get to start in the water but rather on a Beach and you have to rush over to the waters in order to survive. Just think of it as Survival of the Fittest.",
+                "\n\n§nExplanation§r:\n\n",
+                "You spawn on a Beach.",
+                "\n\n§4NOTE:",
+                "\nIt may take a lot longer than usual for you to spawn in a Beach."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/heart.png",
+            "text": [
+                "§a§nRepurposed Guardians",
+                "\nMerlings are able to extract the \"hearts\" from Guardians and reuse them for other purposes.",
+                "\n\n§nExplanation§r:\n\n",
+                "You have a §a2§r chance of getting a Heart of the Sea from a Guardian. §aLooting§r does affect this drop rate by §a1%§r per §aLooting§r level.",
+                "\n\nYou have a §a70§r chance of getting a Heart of the Sea from an Elder Guardian. §aLooting§r does affect this drop rate by §a10%§r per §aLooting§r level."
+            ]
+        }
+    ]
+}

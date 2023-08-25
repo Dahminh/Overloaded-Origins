@@ -1,0 +1,105 @@
+{
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:water_breathing",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 1
+    },
+    "name": "§e§nAdapted III",
+    "description": "Living in the Ocean for so long, you've adapted many traits, both positive and negative.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/merling/aqua_affinity.png",
+            "text": [
+                "§a§nAqua Affinity",
+                "\nYou may break blocks underwater as others do on land.",
+                "\n\n§nExplanation§r:\n\n",
+                "You can break blocks underwater without any problems as if you have passive §aAqua Affinity§r."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/ape/larger_lungs.png",
+            "text": [
+                "§a§nWater Breathing Technique III",
+                "\nMerlings have a special technique that allow them to breath longer on land.",
+                "\n\n§nExplanation§r:\n\n",
+                "The §aWater Breathing§r effect lasts §a100%§r longer."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/better_food.png",
+            "text": [
+                "§e§nPescatarian",
+                "\nAs an Origin that lives in the Ocean, your diet mainly consists of fish, which in turn allows you to gain more nutrients from fish. Unfortunately this comes with the price of being unable to properly digest any foods that is not fish.",
+                "\n\n§nExplanation§r:\n\n",
+                "The following foods will be §a2x§r effective and gives an additional §a0.25§r Saturation:",
+                "\n§a-§r Cod",
+                "\n§a-§r Cooked Cod",
+                "\n§a-§r Salmon",
+                "\n§a-§r Cooked Salmon",
+                "\n§a-§r Tropical Fish",
+                "\n§a-§r Pufferfish",
+                "\n\nEating any other food that is not part of this list will be §c50%§r less effective."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/special_fish.png",
+            "text": [
+                "§e§nSuspicious Fish",
+                "\nWhen eating raw fish, you can gain a special effect that may or may not aid you.",
+                "\n\n§nExplanation§r:\n\n",
+                "When eating the following fish, you will gain the following:",
+                "\n§a-§r Salmon: §aJump Boost II§r for §a1.5§r minutes",
+                "\n§a-§r Cod: ???",
+                "\n§a-§r Pufferfish: §aResistance II§r for §a15§r seconds",
+                "\n§e-§r Tropical Fish: Equally have a chance to gain one of the following:",
+                "\n§a-§r Regeneration for §a8§r seconds",
+                "\n§a-§r Jump Boost for §a6§r seconds",
+                "\n§a-§r Night Vision for §a5§r seconds",
+                "\n§a-§r Fire Resistance for §a4§r seconds",
+                "\n§a-§r Saturation for §a0.35§r seconds",
+                "\n§c-§r Poison for §c12§r seconds",
+                "\n§c-§r Weakness for §c9§r seconds",
+                "\n§c-§r Wither for §c8§r seconds",
+                "\n§c-§r Blindness for §c8§r seconds"
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/impaled.png",
+            "text": [
+                "§c§nAquatics Bane III",
+                "\nBeing an Aquatic Type naturally results in a weakness to Impaling. However, as a Merling, Impaling affects you even more as it can immobolize your movements.",
+                "\n\n§nExplanation§r:\n\n",
+                "When hit with the §cImpaling§r enchantment, you will receive §cSlowness III§r for §c3§r seconds."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/dehydration.png",
+            "text": [
+                "§c§nDehydration III",
+                "\nBeing in the Nether or being on fire reduces your breathing time greatly as you are losing a lot of moisture.",
+                "\n\n§nExplanation§r:\n\n",
+                "If you are taking fire damage, you will lose §1§r second (§c1§r Air Bubbles) of air per damage tick.",
+                "\n\nIf you are taking damage while on fire or in the Nether, you will lose §c2§r seconds (§c2§r Air Bubbles) of air per damage instance."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/merling/wet_eyes.png",
+            "text": [
+                "§d§nWet Eyes",
+                "\nYour vision underwater is perfect.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§bPrimary Toggleable Ability§r§f], Toggling with [",
+                {"keybind": "key.origins.primary_active"},
+				"] will allow you to switch from being able to see and being unable to see perfectly underwater."
+            ]
+        }
+    ]
+}

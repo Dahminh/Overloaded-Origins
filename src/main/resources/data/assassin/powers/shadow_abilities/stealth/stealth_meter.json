@@ -5,7 +5,7 @@
         "min": 0,
         "max": 600,
         "hud_render": {
-            "sprite_location": "overloadedorigins:textures/gui/dark_elf.png",
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
             "bar_index": 3
         },
         "max_action": {

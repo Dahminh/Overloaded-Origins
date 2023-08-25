@@ -1,19 +1,5 @@
 {
     "type": "origins:entity_group",
     "group": "aquatic",
-    "hidden": false,
-    "name": "...",
-    "description": "...",
-    "badges": [
-        {
-            "type": "origins:tooltip",
-            "sprite": "origins:textures/gui/badge/toggle.png",
-            "text": [
-                "§e§nAquatic Origin",
-                "\nAs an Origin that thrives and lives in the water, you are naturally classified as an Aquatic type.",
-                "\n\n§nExplanation§r:\n\n",
-                "You belong to the aquatic entity group, hence you receive more damage from impaling and cannot inflate or take damage from the Pufferfish entity."
-            ]
-        }
-    ]
-  }
+    "hidden": true
+}

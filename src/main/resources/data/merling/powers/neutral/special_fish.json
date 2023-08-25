@@ -1,0 +1,145 @@
+{
+    "type": "origins:multiple",
+    "salmon": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:salmon"
+            }
+        },
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:jump_boost",
+                "amplifier": 1,
+                "duration": 1800
+            }
+        },
+        "always_edible": true
+    },
+    "pufferfish": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:pufferfish"
+            }
+        },
+        "always_edible": true,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:resistance",
+                "duration": 300,
+                "amplifier": 1
+            }
+        }
+    },
+    "tropical_fish": {
+        "type": "origins:modify_food",
+        "always_edible": true,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:tropical_fish"
+            }
+        },
+        "entity_action": {
+            "type": "origins:choice",
+            "actions": [
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:fire_resistance",
+                            "duration": 80
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:saturation",
+                            "duration": 7
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:blindness",
+                            "duration": 160
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:jump_boost",
+                            "duration": 120
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:poison",
+                            "duration": 240
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:regeneration",
+                            "duration": 160
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:night_vision",
+                            "duration": 100
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:weakness",
+                            "duration": 180
+                        }
+                    }
+                },
+                {
+                    "weight": 1,
+                    "element": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:wither",
+                            "duration": 160
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "hidden": true
+}

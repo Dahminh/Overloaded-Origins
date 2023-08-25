@@ -1,0 +1,27 @@
+{
+    "type": "apugli:allow_anvil_enchant",
+    "enchantments": [
+        "minecraft:knockback",
+        "minecraft:looting"
+    ],
+    "item_condition": {
+        "type": "apoli:ingredient",
+        "ingredient": {
+            "item": "minecraft:trident"
+        }
+    },
+    "name": "§a§nTridents",
+    "description": "Merlings have learned how to make the most out of their aquatic environment and tools available to them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/enchant.png",
+            "text": [
+                "§a§nImproved Tridents",
+                "\nMerlings know how to apply certain enchantments to Tridents that are normally not available through normal means.",
+                "\n\n§nExplanation§r:\n\n",
+                "You can apply the §aLooting§r and §aKnockback§r enchantment to the Trident."
+            ]
+        }
+    ]
+}

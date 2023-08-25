@@ -1,0 +1,142 @@
+{
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2147483647
+    },
+    "melee": {
+        "type": "origins:modify_damage_dealt",
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:entity_group",
+                    "group": "aquatic",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:submerged_in",
+                            "fluid": "minecraft:water"
+                        },
+                        {
+                            "type": "origins:in_rain"
+                        }
+                    ]
+                }
+            ]
+        },
+        "self_action": {
+            "type": "origins:execute_command",
+            "command": "function merling:impaling_maths"
+        },
+        "modifier": {
+            "operation": "add_base_late",
+            "resource": "*:positives/bedrock_impaling/constants_resource",
+            "value": 0,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.9
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:impaling",
+                        "compare_to": 0,
+                        "comparison": ">"
+                    }
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:positives/bedrock_impaling/constants_toggle_button"
+                }
+            ]
+        }
+    },
+    "projectile_detection": {
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function merling:impaling_maths"
+        },
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:enchantment",
+                    "enchantment": "minecraft:impaling",
+                    "compare_to": 0,
+                    "comparison": ">"
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:trident"
+                    }
+                }
+            ]
+        },
+        "trigger": "stop"
+    },
+    "projectile": {
+        "type": "origins:modify_projectile_damage",
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:entity_group",
+                    "group": "aquatic",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:submerged_in",
+                            "fluid": "minecraft:water"
+                        },
+                        {
+                            "type": "origins:in_rain"
+                        }
+                    ]
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "add_base_late",
+            "resource": "*:positives/bedrock_impaling/constants_resource",
+            "value": 0,
+            "modifier": {
+                "operation": "multiply_total_multiplicative",
+                "value": -0.9
+            }
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:positives/bedrock_impaling/constants_toggle_button"
+        }
+    },
+    "name": "§d§nEmpowered Tridents I",
+    "description": "Merlings have the ability to momentarily empower their tridents, making it more effective against wet foes.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/tridents.png",
+            "text": [
+                "§d§nImproved Tridents I",
+                "\nMerlings know how to maximize and apply certain enchantments to Tridents.",
+                "\n\n§nExplanation§r:\n\n",
+                "Tridents gain the Impaling effect from Bedrock Edition / Combat Tests. This means Tridents can do an extra §a1§r hearts per enchantment level to entities that are submerged in water or in the rain."
+            ]
+        }
+    ]
+}

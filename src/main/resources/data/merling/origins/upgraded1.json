@@ -1,25 +1,38 @@
 {
     "powers": [
         "origins:water_breathing",
-        "merling:wet_eyes",
-        "merling:aqua_affinity",
-        "merling:swim_speed",
-		"merling:air_from_potions/air_from_potions_2",
+        "merling:positives/wet_eyes",
+        "merling:positives/aqua_affinity",
+        "merling:positives/swim_speed",
+		"merling:positives/air_from_potions/air_from_potions_2",
         "origins:like_water",
-        "merling:aquatic",
-        "origins:conduit_power_on_land"
+        "merling:neutral/aquatic",
+        "origins:conduit_power_on_land",
+		"merling:positives/beach_spawn",
+        "merling:positives/high_intelligence/desc_2",
+        "merling:positives/trident_enchants",
+        "merling:neutral/better_food",
+        "merling:positives/better_fishing/better_fishing_2",
+        "merling:positives/water_breathing_technique/water_breathing_technique_2",
+        "merling:positives/nautilus_shell_harvest",
+        "merling:positives/more_hearts",
+        "merling:neutral/special_fish",
+        "merling:negatives/dehydration/dehydration_2",
+        "merling:negatives/impaled/impaling_2",
+		"merling:positives/bedrock_impaling/constants",
+		"merling:positives/bedrock_impaling/bedrock_impaling_2"
     ],
 	"icon": "minecraft:cod",
 	"order": 0,
 	"impact": 3,
-	"name": "Name",
-	"description": "Description.",
+	"name": "Merling Warrior",
+	"description": "You're now a Merling Warrior, being able to display a higher mastery of combat and knowledge in the depths.",
 	"unchoosable": true,
 	"upgrades": [
 		{
 			"condition": "minecraft:adventure/kill_all_mobs",
 			"origin": "merling:upgraded2",
-			"announcement": "You have evolved into a Name. You are now at the pinnacle of your Origin."
+			"announcement": "You have evolved into a Merling Centurion. You are now at the pinnacle of your Origin."
 		}
 	]
 }

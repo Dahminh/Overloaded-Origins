@@ -41,6 +41,10 @@
             {
                "type":"origins:name",
                "name":"thorns"
+            },
+            {
+                "type": "origins:name",
+                "name": "player.item"
             }
          ]
       },
@@ -155,6 +159,10 @@
             {
                "type":"origins:name",
                "name":"thorns"
+            },
+            {
+                "type": "origins:name",
+                "name": "player.item"
             }
          ]
       },

@@ -5,8 +5,8 @@
         "type": "origins:cooldown",
         "cooldown": 600,
         "hud_render": {
-            "bar_index": 0,
-            "sprite_location": "overloadedorigins:textures/gui/phantom.png",
+            "bar_index": 8,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
             "should_render": true
         }
     },
