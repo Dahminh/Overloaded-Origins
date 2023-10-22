@@ -65,6 +65,11 @@
 				"operation": "add",
 				"change": 20
 			}
+		},
+		"damage_condition": {
+			"type": "origins:amount",
+			"compare_to": 0,
+			"comparison": ">"
 		}
 	},
 	"glowing_weakens": {

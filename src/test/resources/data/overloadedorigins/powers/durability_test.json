@@ -1,0 +1,25 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 0,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:modify_inventory",
+                "item_action": {
+                    "type": "origins:damage",
+                    "amount": -10
+                }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "say HIT"
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:bypasses_armor",
+        "inverted": true
+    }
+}
