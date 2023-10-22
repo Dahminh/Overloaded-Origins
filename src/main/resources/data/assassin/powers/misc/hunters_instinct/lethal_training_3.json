@@ -1,0 +1,63 @@
+{
+    "type": "origins:simple",
+    "badges": [
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/hunter.png",
+			"text": [
+				"§a§nHunter's Instinct",
+				"\nBeing raised in the dark for so long and training your senses to an extreme, you're able to see in the dark and sense nearby mobs.",
+				"\n\n§nExplanation§r:\n\n",
+				"You have permanent §anight vision§r§f.",
+				"\n\n[§bQuinary Toggleable Ability§r], Toggling with [",
+				{"keybind": "key.origins.quinary_active"},
+				"] will give any mob in a §a24 block§r §fradius the glowing effect. The glowing effect is only visible to you."
+			]
+		},
+		{
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/looting.png",
+			"text": [
+				"§a§nHead Hunter",
+				"\nThe training has taught you to be resourceful, allowing you to effectively scavenge your dead target's loot and use that loot for future targets.",
+				"\n\n§nExplanation§r:\n\n",
+				"You have passive §aLooting III§r and gain §a2x§r experience."
+			],
+			"type": "origins:tooltip"
+		},
+		{
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/leather.png",
+			"text": [
+				"§a§nImproved Leather Armor III",
+				"\nBeing forced to wear leather for so long, you have learned how to maintain and keep it in peak conditions.",
+				"\n\n§nExplanation§r:\n\n",
+                "You will take §a-5§r damage durability for any equipped leather armor when taking durability damage",
+				"\n\nAny leather armor in your inventory will repair itself by §a10%§r of its durability every §a5§r seconds."
+			],
+			"type": "origins:tooltip"
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/poison_training.png",
+            "text": [
+				"§e§nPoison Tolerance",
+				"\nAs an assassin, you were forced to build tolerance against all status effects, even positive ones.",
+				"\n\n§nExplanation§r:\n\n",
+				"The following effects will have their amplifier and duration changed:",
+				"\n§a-§r Slowness: §a-25%§r Duration, §a-1§r Amplifier",
+				"\n§a-§r Poison: §a-33%§r Duration, §a-1§r Amplifier",
+				"\n§a-§r Weakness: §a-25%§r Duration",
+				"\n§c-§r Jump Boost: §c-50%§r Duration, §c-1§r Amplifier",
+				"\n§c-§r Night Vision: §c-50%§r Duration",
+				"\n§c-§r Fire Resistance: §c-50%§r Duration",
+				"\n§c-§r Speed: §c-50%§r Duration, §c-1§r Amplifier",
+				"\n§c-§r Resistance: §c-50%§r Duration, §c-3§r Amplifier",
+				"\n§c-§r Water Breathing: §c-50%§r Duration",
+				"\n§c-§r Regeneration: §c-50%§r Duration, §c-1§r Amplifier",
+				"\n§c-§r Strength: §c-50%§r Duration, §c-1§r Amplifier",
+				"\n§c-§r Slow Falling: §c-75%§r Duration"
+			]
+		}
+    ],
+	"name": "§a§nLethal Training III",
+	"description": "You've gone through many cruel and harsh experiences to become the perfect assassin."
+}
