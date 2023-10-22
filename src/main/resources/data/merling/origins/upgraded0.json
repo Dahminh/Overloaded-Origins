@@ -20,6 +20,7 @@
         "merling:negatives/impaled/impaling_1",
 		"merling:positives/bedrock_impaling/constants",
 		"merling:positives/bedrock_impaling/bedrock_impaling_1",
+        "merling:negatives/sponge_bad/constants",
         "merling:negatives/sponge_bad/sponge_bad_1"
     ],
     "icon": {

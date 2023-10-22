@@ -1,6 +1,7 @@
 package dahminh.overloadedorigins;
 
 import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.item.Items;
 import dahminh.overloadedorigins.registry.factory.OverloadedOriginsEntityActions;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,6 +17,7 @@ public class OverloadedOrigins implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		CustomEffects.registerEffects();
+		Items.registerItems();
 		OverloadedOriginsEntityActions.register();
 	}
 

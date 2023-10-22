@@ -2,7 +2,11 @@
     "type": "origins:multiple",
     "hud_display_1": {
         "type": "origins:status_bar_texture",
-        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_1.png",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/1_armor_full",
+            "hud/armor_half": "hud/shulk/1_armor_half",
+            "hud/armor_empty": "hud/shulk/1_armor_empty"
+        },
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -21,7 +25,11 @@
     },
     "hud_display_2": {
         "type": "origins:status_bar_texture",
-        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_2.png",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/2_armor_full",
+            "hud/armor_half": "hud/shulk/2_armor_half",
+            "hud/armor_empty": "hud/shulk/2_armor_empty"
+        },
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -40,7 +48,11 @@
     },
     "hud_display_3": {
         "type": "origins:status_bar_texture",
-        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_3.png",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/3_armor_full",
+            "hud/armor_half": "hud/shulk/3_armor_half",
+            "hud/armor_empty": "hud/shulk/3_armor_empty"
+        },
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -59,7 +71,11 @@
     },
     "hud_display_4": {
         "type": "origins:status_bar_texture",
-        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_4.png",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/4_armor_full",
+            "hud/armor_half": "hud/shulk/4_armor_half",
+            "hud/armor_empty": "hud/shulk/4_armor_empty"
+        },
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -78,7 +94,11 @@
     },
     "hud_display_5": {
         "type": "origins:status_bar_texture",
-        "texture": "overloadedorigins:textures/gui/shulk/shell_effectiveness_5.png",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/5_armor_full",
+            "hud/armor_half": "hud/shulk/5_armor_half",
+            "hud/armor_empty": "hud/shulk/5_armor_empty"
+        },
         "condition": {
             "type": "origins:and",
             "conditions": [

@@ -23,29 +23,24 @@ public class ShadowCloakEffect extends StatusEffect {
             e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
         }
     }
-
     @Override
-    public void onRemoved(LivingEntity e, AttributeContainer attributes, int amplifier) {
+    public void onApplied(LivingEntity e, int amplifier) {
         if (e.getWorld().isClient) {
             return;
         }
         e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_GHAST_SHOOT, SoundCategory.HOSTILE, 1.0f, 2.0f);
         ((ServerWorld) e.getWorld()).spawnParticles(
-            LARGE_SMOKE,
-            e.getX(),
-            e.getY(),
-            e.getZ(),
-            25,
-            0.5,
-            0,
-            0.5,
-            0
+                LARGE_SMOKE,
+                e.getX(),
+                e.getY(),
+                e.getZ(),
+                25,
+                0.5,
+                0,
+                0.5,
+                0
         );
-    }
 
-    @Override
-    public void onApplied(LivingEntity e, AttributeContainer attributes, int amplifier) {
-        this.onRemoved(e, attributes, amplifier);
     }
 
     @Override

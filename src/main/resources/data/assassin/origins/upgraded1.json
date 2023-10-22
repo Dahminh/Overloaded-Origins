@@ -38,7 +38,7 @@
 		"assassin:shadow_abilities/decoy/decoy_charges",
 		"assassin:shadow_abilities/decoy/decoys_ignore"
     ],
-	"icon": "minecraft:iron_sword",
+	"icon": "overloadedorigins:high_dark_elf_dagger",
 	"order": 0,
 	"impact": 3,
 	"name": "High Dark Elf",

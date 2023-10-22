@@ -1,0 +1,6 @@
+{
+  "parent": "overloadedorigins:item/daggers",
+  "textures": {
+    "layer0": "overloadedorigins:item/dark_elf_dagger"
+  }
+}

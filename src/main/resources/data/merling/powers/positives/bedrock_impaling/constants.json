@@ -94,5 +94,19 @@
                 }
             ]
         }
+    },
+    "particles_1": {
+        "type": "origins:particle",
+        "particle": {
+            "type": "minecraft:dust",
+            "params": "0.298 0.569 0.510 1.5"
+        },
+        "frequency": 15,
+        "count": 5,
+        "visible_while_invisible": true,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle_button"
+        }
     }
 }

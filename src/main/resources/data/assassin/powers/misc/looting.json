@@ -1,15 +1,15 @@
 {
     "type": "origins:multiple",
-        "looting_remove": {
-            "type": "apugli:modify_enchantment_level",
-            "enchantment": "minecraft:looting",
-            "modifiers": [
-                {
-                    "operation": "addition",
-                    "value": 3
-                }
-            ]
-        },
+    "looting": {
+        "type": "origins:modify_enchantment_level",
+        "enchantment": "minecraft:looting",
+        "modifiers": [
+            {
+                "operation": "addition",
+                "value": 3
+            }
+        ]
+    },
     "more_xp": {
         "type": "origins:modify_xp_gain",
         "modifier": {

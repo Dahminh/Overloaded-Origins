@@ -1,0 +1,60 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 99,
+        "hud_render": {
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "bar_index": 14
+        }
+    },
+    "attacker_action": {
+        "type": "origins:attacker_action_when_hit",
+        "cooldown": 0,
+        "damage_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "item": "minecraft:sponge"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:equipped_item_action",
+                    "equipment_slot": "mainhand",
+                    "action": {
+                        "type": "origins:consume",
+                        "amount": 1
+                    }
+                },
+                {
+                    "type": "origins:give",
+                    "preferred_slot": "mainhand",
+                    "stack": {
+                        "item": "minecraft:wet_sponge"
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cooldown",
+            "compare_to": 0,
+            "comparison": "=="
+        }
+    }
+}

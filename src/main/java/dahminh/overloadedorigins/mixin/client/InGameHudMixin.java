@@ -25,20 +25,18 @@ import java.util.Map;
 @Mixin(InGameHud.class)
 @Environment(EnvType.CLIENT)
 public abstract class InGameHudMixin {
-    private static final Identifier HEARTS = new Identifier(OverloadedOrigins.MOD_ID, "textures/gui/shadow_betrayal_heart.png");
+    private static final Identifier SHADOW_BETRAYAL_HEARTS = new Identifier(OverloadedOrigins.MOD_ID, "textures/gui/sprites/hud/heart/shadow_betrayal_heart.png");
 
     @Final
     @Shadow private MinecraftClient client;
 
     @Inject(method = "drawHeart", at = @At("TAIL"), cancellable = true)
-    private void drawHeart(DrawContext context, InGameHud.HeartType type, int x, int y, int v, boolean blinking, boolean halfHeart, CallbackInfo ci) {
+    private void drawHeart(DrawContext context, InGameHud.HeartType type, int x, int y, boolean hardcore, boolean blinking, boolean half, CallbackInfo ci) {
         if (type == InGameHud.HeartType.CONTAINER) return;
         if (client.getCameraEntity() instanceof PlayerEntity player) {
             for (Map.Entry<StatusEffect, StatusEffectInstance> entry : player.getActiveStatusEffects().entrySet()) {
                 if (entry.getKey() == CustomEffects.SHADOWBETRAYAL) {
-                    RenderSystem.setShaderTexture(0, HEARTS);
-                    context.drawTexture(HEARTS, x, y, halfHeart ? 9 : 0, v == 45 ? 9 : 0, 9, 9);
-                    RenderSystem.setShaderTexture(0, HEARTS);
+                    context.drawTexture(SHADOW_BETRAYAL_HEARTS, x, y, half ? 9 : 0, hardcore ? 9 : 0, 9, 9);
                 }
             }
         }

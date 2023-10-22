@@ -4,5 +4,9 @@
   "effect.overloadedorigins.fear": "Fear",
   "death.attack.gorilla_rush_entity": "%1$s was ran over by %2$s",
   "death.attack.gorilla_rush_entity.item": "%1$s was ran over by %2$s while holding %3$s",
-  "death.attack.gorilla_rush_wall": "%1$s ran into the wall too hard"
+  "death.attack.gorilla_rush_wall": "%1$s ran into the wall too hard",
+  "item.overloadedorigins.elder_dark_elf_dagger": "Elder Dark Elf Dagger",
+  "item.overloadedorigins.high_dark_elf_dagger": "High Dark Elf Dagger",
+  "item.overloadedorigins.dark_elf_dagger": "Dark Elf Dagger",
+  "itemgroup.overloaded_origins": "Overloaded Origins Fake Items"
 }

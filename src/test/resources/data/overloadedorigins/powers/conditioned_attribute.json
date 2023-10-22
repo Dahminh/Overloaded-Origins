@@ -1,0 +1,31 @@
+{
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle"
+    },
+    "conditioned_attribute": {
+        "type": "origins:conditioned_attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.knockback_resistance",
+                "operation": "addition",
+                "value": 1
+            },
+            {
+                "attribute": "minecraft:generic.movement_speed",
+                "operation": "multiply_total",
+                "value": -1
+            },
+            {
+                "attribute": "minecraft:generic.attack_damage",
+                "operation": "multiply_total",
+                "value": -1
+            }
+        ],
+        "tick_rate": 20,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    }
+}

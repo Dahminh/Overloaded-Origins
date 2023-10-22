@@ -38,7 +38,7 @@
 		"assassin:shadow_abilities/decoy/decoy_charges",
 		"assassin:shadow_abilities/decoy/decoys_ignore"
     ],
-	"icon": "minecraft:stone_sword",
+	"icon": "overloadedorigins:dark_elf_dagger",
 	"order": 0,
 	"impact": 3,
 	"name": "Dark Elf",

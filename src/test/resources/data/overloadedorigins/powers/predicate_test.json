@@ -1,0 +1,15 @@
+{
+    "type": "origins:modify_damage_taken",
+    "self_action": {
+        "type": "origins:execute_command",
+        "command": "say DODGE"
+    },
+    "modifier": {
+        "operation": "multiply_total",
+        "value": -1
+    },
+    "condition": {
+        "type": "origins:predicate",
+        "predicate": "*:chance"
+    }
+}

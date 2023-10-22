@@ -164,7 +164,11 @@
 		"condition": {
 			"type": "origins:power_active",
             "power": "*:*_toggle"
-		}
+		},
+        "name": {
+            "text": "Phantom Form",
+            "color": "green"
+        }
 	},
   	"prevent_entity_use": {
 		"type": "origins:prevent_entity_use",

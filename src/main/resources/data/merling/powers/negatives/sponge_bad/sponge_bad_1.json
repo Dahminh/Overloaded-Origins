@@ -1,82 +1,74 @@
 {
-    "name": "AH",
-    "description": "AH",
-    "type": "origins:multiple",
-    "cooldown": {
-        "type": "origins:cooldown",
-        "cooldown": 100,
-        "hud_render": {
-            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
-            "bar_index": 3
-        }
-    },
-    "effect": {
-        "type": "origins:modify_damage_taken",
-        "self_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:clear_effect",
-                    "effect": "minecraft:water_breathing"
-                },
-                {
-                    "type": "origins:apply_effect",
-                    "effects": [
-                        {
-                            "effect": "minecraft:slowness",
-                            "amplifier": 0,
-                            "duration": 100
-                        },
-                        {
-                            "effect": "minecraft:weakness",
-                            "amplifier": 0,
-                            "duration": 100
-                        }
-                    ]
-                },
-                {
+    "type": "origins:self_action_when_hit",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:clear_effect",
+                "effect": "minecraft:water_breathing"
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:slowness",
+                        "amplifier": 0,
+                        "duration": 100
+                    },
+                    {
+                        "effect": "minecraft:weakness",
+                        "amplifier": 0,
+                        "duration": 100
+                    }
+                ]
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 1,
+                "action": {
                     "type": "origins:trigger_cooldown",
-                    "power": "*:*_cooldown"
+                    "power": "*:negatives/sponge_bad/constants_cooldown"
                 }
-            ]
-        },
-        "attacker_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:equipped_item_action",
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:attacker",
+                "entity_condition": {
+                    "type": "origins:equipped_item",
                     "equipment_slot": "mainhand",
-                    "action": {
-                        "type": "origins:consume",
-                        "amount": 1
-                    }
-                },
-                {
-                    "type": "origins:give",
-                    "preferred_slot": "mainhand",
-                    "stack": {
-                        "item": "minecraft:wet_sponge"
-                    }
-                }
-            ]
-        },
-        "damage_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:attacker",
-                    "entity_condition": {
-                        "type": "origins:equipped_item",
-                        "equipment_slot": "mainhand",
-                        "item_condition": {
-                            "type": "origins:ingredient",
-                            "ingredient": {
-                                "item": "minecraft:sponge"
-                            }
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:sponge"
                         }
                     }
                 }
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:resource",
+        "resource": "*:negatives/sponge_bad/constants_cooldown",
+        "compare_to": 0,
+        "comparison": "=="
+    },
+    "cooldown": 0,
+    "name": "...",
+    "description": "...",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/merling/sponge_bad.png",
+            "text": [
+                "§c§nSpongephobic",
+                "\nMerlings require moisture to thrive and sponges would completely absorb their moisture, rendering them much more vulnerable to other threats.",
+                "\n\n§nExplanation§r:\n\n",
+                "Tridents gain the Impaling effect from Bedrock Edition / Combat Tests. This means Tridents can do an extra §a1§r hearts per enchantment level to entities that are submerged in water or in the rain."
             ]
         }
-    }
+    ]
 }

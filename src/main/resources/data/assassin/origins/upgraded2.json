@@ -39,7 +39,7 @@
 		"assassin:shadow_abilities/decoy/decoys_ignore"
     ],
 	"icon": {
-		"item": "minecraft:netherite_sword"
+		"item": "overloadedorigins:elder_dark_elf_dagger"
 	},
 	"order": 0,
 	"impact": 3,

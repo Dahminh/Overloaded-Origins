@@ -1,0 +1,8 @@
+{
+    "type": "origins:status_bar_texture",
+    "texture_map": {
+        "hud/armor_full": "hud/shulk/1_armor_full",
+        "hud/armor_half": "hud/shulk/1_armor_half",
+        "hud/armor_empty": "hud/shulk/1_armor_empty"
+    }
+}
