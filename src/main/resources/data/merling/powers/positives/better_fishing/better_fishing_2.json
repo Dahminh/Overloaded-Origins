@@ -1,7 +1,7 @@
 {
     "type": "origins:multiple",
     "lure": {
-        "type": "apugli:modify_enchantment_level",
+        "type": "origins:modify_enchantment_level",
         "enchantment": "minecraft:lure",
         "modifiers": [
             {
@@ -11,7 +11,7 @@
         ]
     },
     "luck_of_the_sea": {
-        "type": "apugli:modify_enchantment_level",
+        "type": "origins:modify_enchantment_level",
         "enchantment": "minecraft:luck_of_the_sea",
         "modifiers": [
             {
