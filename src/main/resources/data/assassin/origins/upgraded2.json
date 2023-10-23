@@ -36,8 +36,7 @@
 		"assassin:mobility/dash/constants",
 		"assassin:mobility/dash/dash_3",
 		"assassin:shadow_abilities/decoy/decoy_spawn_3",
-		"assassin:shadow_abilities/decoy/decoy_charges",
-		"assassin:shadow_abilities/decoy/decoys_ignore"
+		"assassin:shadow_abilities/decoy/decoy_charges"
     ],
 	"icon": {
 		"item": "overloadedorigins:elder_dark_elf_dagger"

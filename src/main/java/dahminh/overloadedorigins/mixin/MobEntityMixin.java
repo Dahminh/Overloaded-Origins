@@ -1,10 +1,17 @@
 package dahminh.overloadedorigins.mixin;
 
+import dahminh.overloadedorigins.OverloadedOrigins;
 import dahminh.overloadedorigins.effect.CustomEffects;
+import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.origins.origin.Origin;
+import io.github.apace100.origins.origin.OriginLayer;
+import io.github.apace100.origins.origin.OriginLayers;
+import io.github.apace100.origins.registry.ModComponents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,6 +19,9 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(MobEntity.class)
 public abstract class MobEntityMixin extends LivingEntity {
+    private static final Identifier assassinT0 = new Identifier("assassin:upgraded0");
+    private static final Identifier assassinT1 = new Identifier("assassin:upgraded1");
+    private static final Identifier assassinT2 = new Identifier("assassin:upgraded2");
     protected MobEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -21,7 +31,17 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (getWorld().isClient() || !(target instanceof PlayerEntity)) {
             return target;
         }
+        if (target.hasStatusEffect(CustomEffects.SHADOWCLOAK)) return null;
+        if (this.getCommandTags().contains("Decoy") && assassinOriginCheck(target)) return null;
+        return target;
+    }
 
-        return target.hasStatusEffect(CustomEffects.SHADOWCLOAK) ? null : target;
+    private Boolean assassinOriginCheck(LivingEntity target) {
+        if (!(target instanceof PlayerEntity)) return false;
+        OriginComponent component = ModComponents.ORIGIN.get(target);
+        return component.getOrigins().values().stream().anyMatch(o ->
+                o.getIdentifier().equals(assassinT0) ||
+                o.getIdentifier().equals(assassinT1) ||
+                o.getIdentifier().equals(assassinT2));
     }
 }
