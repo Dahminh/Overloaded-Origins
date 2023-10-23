@@ -1,11 +1,7 @@
 package dahminh.overloadedorigins.mixin;
 
-import dahminh.overloadedorigins.OverloadedOrigins;
 import dahminh.overloadedorigins.effect.CustomEffects;
 import io.github.apace100.origins.component.OriginComponent;
-import io.github.apace100.origins.origin.Origin;
-import io.github.apace100.origins.origin.OriginLayer;
-import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.registry.ModComponents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
