@@ -39,7 +39,7 @@
         }
 	},
     "edible_items": {
-        "type": "apugli:edible_item",
+        "type": "origins:edible_item",
         "item_condition": {
             "type": "origins:ingredient",
             "ingredient": {
@@ -50,12 +50,7 @@
             "hunger": 4,
             "saturation": 0.25
         },
-        "use_action": "eat",
-        "entity_action": {
-            "type": "origins:feed",
-            "food": 4,
-            "saturation": 0.25
-        }
+        "consume_action": "eat"
     },
     "hidden": true,
 	"name": "...",
