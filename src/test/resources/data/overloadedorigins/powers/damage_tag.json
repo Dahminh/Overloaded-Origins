@@ -1,0 +1,18 @@
+{
+    "type": "origins:multiple",
+    "projectile": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:fireball"
+    },
+    "dmg_immunity": {
+        "type": "origins:modify_damage_taken",
+        "self_action": {
+            "type": "origins:execute_command",
+            "command": "say HIT"
+        },
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:is_projectile"
+        }
+    }
+}

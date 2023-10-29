@@ -1,0 +1,9 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 0,
+    "entity_action": {
+        "type": "origins:revoke_power",
+        "power": "overloadedorigins:self_action_when_hit",
+        "source": "apoli:command"
+    }
+}

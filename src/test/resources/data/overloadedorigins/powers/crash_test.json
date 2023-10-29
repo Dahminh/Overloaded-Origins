@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_damage_taken",
+    "self_action": {
+        "type": "origins:revoke_power",
+        "power": "overloadedorigins:crash_test",
+        "source": "apoli:command"
+    },
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">",
+        "compare_to": 0
+    }
+}
