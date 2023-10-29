@@ -35,7 +35,8 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"origins": ">=1.11.3",
-		"extrakeybinds": ">=0.4.0"
+		"extrakeybinds": ">=0.4.0",
+		"pehkui": ">=3.7.9"
 	},
 	"suggests": {
 		"another-mod": "*"
