@@ -11,11 +11,15 @@
     },
     "got_hit": {
         "type": "origins:self_action_when_hit",
-        "cooldown": 0,
+        "cooldown": 1,
         "entity_action": {
-            "type": "origins:revoke_power",
-            "power": "*:shadow_abilities/stealth/stealth_reapply",
-            "source": "apoli:command"
+            "type": "origins:delay",
+            "ticks": 1,
+            "action": {
+                "type": "origins:revoke_power",
+                "power": "*:shadow_abilities/stealth/stealth_reapply",
+                "source": "apoli:command"
+            }
         }
     },
     "tier_1": {

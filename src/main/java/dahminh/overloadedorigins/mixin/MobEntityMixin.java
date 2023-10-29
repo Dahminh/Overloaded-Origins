@@ -5,6 +5,7 @@ import io.github.apace100.origins.component.OriginComponent;
 import io.github.apace100.origins.registry.ModComponents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
@@ -27,11 +28,10 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (getWorld().isClient() || !(target instanceof PlayerEntity)) {
             return target;
         }
-        if (target.hasStatusEffect(CustomEffects.SHADOWCLOAK)) return null;
+        if (target.hasStatusEffect(CustomEffects.SHADOWCLOAK) || assassinInvisibilityCheck(target)) return null;
         if (this.getCommandTags().contains("Decoy") && assassinOriginCheck(target)) return null;
         return target;
     }
-
     private Boolean assassinOriginCheck(LivingEntity target) {
         if (!(target instanceof PlayerEntity)) return false;
         OriginComponent component = ModComponents.ORIGIN.get(target);
@@ -39,5 +39,12 @@ public abstract class MobEntityMixin extends LivingEntity {
                 o.getIdentifier().equals(assassinT0) ||
                 o.getIdentifier().equals(assassinT1) ||
                 o.getIdentifier().equals(assassinT2));
+    }
+
+    private Boolean assassinInvisibilityCheck(LivingEntity target) {
+        if (!(target instanceof PlayerEntity)) return false;
+        return     assassinOriginCheck(target)
+                && target.hasStatusEffect(StatusEffects.INVISIBILITY)
+                && target.getStatusEffect(StatusEffects.INVISIBILITY).getAmplifier() >= 4;
     }
 }

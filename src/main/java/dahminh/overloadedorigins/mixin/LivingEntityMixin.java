@@ -23,9 +23,7 @@ public abstract class LivingEntityMixin {
     @ModifyVariable(method = "heal", at = @At("HEAD"), index = 1)
     private float modifyHealing(float amount){
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(CustomEffects.SHADOWBETRAYAL)) {
-            return (float) (amount * 0.5);
-        }
+        if (self.hasStatusEffect(CustomEffects.SHADOWBETRAYAL)) return (float) (amount * 0.5);
         return amount;
     }
 
@@ -46,7 +44,7 @@ public abstract class LivingEntityMixin {
     }
 
     @Inject(at = @At("TAIL"), method = "onStatusEffectRemoved")
-    public void onStatusEffectRemoved(StatusEffectInstance effect, CallbackInfo ci) {
+    private void onStatusEffectRemoved(StatusEffectInstance effect, CallbackInfo ci) {
         LivingEntity e = (LivingEntity) (Object) this;
         if (e.getWorld().isClient) {
             return;
