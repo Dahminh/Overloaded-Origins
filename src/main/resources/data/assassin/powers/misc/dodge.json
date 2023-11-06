@@ -11,7 +11,7 @@
             },
             {
                "type":"origins:play_sound",
-               "sound":"minecraft:entity.bat.takeoff"
+					"sound": "overloadedorigins:dark_elf_dodge"
             }
          ]
       },
@@ -129,7 +129,7 @@
             },
             {
                "type":"origins:play_sound",
-               "sound":"minecraft:entity.bat.takeoff"
+					"sound": "overloadedorigins:dark_elf_dodge"
             }
          ]
       },
@@ -247,7 +247,7 @@
             },
             {
                "type":"origins:play_sound",
-               "sound":"minecraft:entity.bat.takeoff"
+					"sound": "overloadedorigins:dark_elf_dodge"
             }
          ]
       },

@@ -1,6 +1,6 @@
 package dahminh.overloadedorigins.mixin;
 
-import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.effect.OOEffects;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -29,7 +29,7 @@ public abstract class EntityParticleMixin extends Entity {
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
-        if (livingEntity.hasStatusEffect(CustomEffects.SHADOWCLOAK)) {
+        if (livingEntity.hasStatusEffect(OOEffects.SHADOWCLOAK)) {
             this.setInvisible(true);
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
             boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();

@@ -1,7 +1,7 @@
 package dahminh.overloadedorigins.effect;
 
+import dahminh.overloadedorigins.sound.OOSounds;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.server.world.ServerWorld;
@@ -20,7 +20,7 @@ public class ShadowCloakEffect extends StatusEffect {
 
     public void applyUpdateEffect(LivingEntity e, int amplifier) {
         if (!e.getWorld().isClient && e.age % SOUND_TICK_INTERVAL == 0) {
-            e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_PHANTOM_AMBIENT, SoundCategory.HOSTILE, 0.75f, 0.0f);
+            e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), OOSounds.DARK_ELF_AMBIENT, SoundCategory.PLAYERS, 0.75f, 0.0f);
         }
     }
     @Override
@@ -28,7 +28,7 @@ public class ShadowCloakEffect extends StatusEffect {
         if (e.getWorld().isClient) {
             return;
         }
-        e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), SoundEvents.ENTITY_GHAST_SHOOT, SoundCategory.HOSTILE, 1.0f, 2.0f);
+        e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), OOSounds.DARK_ELF_VANISHES, SoundCategory.PLAYERS, 1.0f, 2.0f);
         ((ServerWorld) e.getWorld()).spawnParticles(
                 LARGE_SMOKE,
                 e.getX(),

@@ -1,14 +1,12 @@
 package dahminh.overloadedorigins.mixin.client;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import dahminh.overloadedorigins.OverloadedOrigins;
-import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.effect.OOEffects;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,7 +33,7 @@ public abstract class InGameHudMixin {
         if (type == InGameHud.HeartType.CONTAINER) return;
         if (client.getCameraEntity() instanceof PlayerEntity player) {
             for (Map.Entry<StatusEffect, StatusEffectInstance> entry : player.getActiveStatusEffects().entrySet()) {
-                if (entry.getKey() == CustomEffects.SHADOWBETRAYAL) {
+                if (entry.getKey() == OOEffects.SHADOWBETRAYAL) {
                     context.drawTexture(SHADOW_BETRAYAL_HEARTS, x, y, half ? 9 : 0, hardcore ? 9 : 0, 9, 9);
                 }
             }

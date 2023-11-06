@@ -32,7 +32,7 @@
 			"actions": [
 				{
 					"type": "origins:play_sound",
-					"sound": "minecraft:entity.phantom.ambient",
+                    "sound": "overloadedorigins:dark_elf_ambient",
 					"pitch": 0,
                     "volume": 0.75
 				},
@@ -41,14 +41,14 @@
 					"chance": 0.6,
 					"action": {
 						"type": "origins:play_sound",
-						"sound": "minecraft:entity.bat.takeoff"
+						"sound": "overloadedorigins:dark_elf_dash"
 					},
 					"fail_action": {
 						"type": "origins:chance",
 						"chance": 0.5,
 						"action": {
 							"type": "origins:play_sound",
-							"sound": "minecraft:entity.ghast.shoot",
+							"sound": "overloadedorigins:dark_elf_appears",
 							"pitch": 2
 						}
 						
@@ -64,7 +64,7 @@
 			"actions": [
 				{
                     "type": "origins:play_sound",
-                    "sound": "minecraft:entity.ghast.shoot",
+                    "sound": "overloadedorigins:dark_elf_appears",
                     "pitch": 2
                 },
 				{
@@ -163,7 +163,7 @@
 			"actions": [
 				{
                     "type": "origins:play_sound",
-                    "sound": "minecraft:entity.ghast.shoot",
+                    "sound": "overloadedorigins:dark_elf_appears",
                     "pitch": 2
                 },
 				{

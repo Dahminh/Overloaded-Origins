@@ -77,7 +77,7 @@
 				"] will make you to dash in the direction you are looking at.",
 				"\n\nYou have §a3§r charges.",
 				"\n\nYou can dash in the direction you are looking at.",
-				"\n\nIf you do not have §d§nShadow Cloak§r and not under the §cGlowing§r effect, you will receive §d§nShadow Cloak§r§f for §a1 §fsecond, otherwise, you will dash normally.",
+				"\n\nIf you do not have §d§nShadow Cloak§r and are not under the §cGlowing§r effect, you will receive §d§nShadow Cloak§r§f for §a1 §fsecond, otherwise, you will dash normally.",
 				"\n\nWhen you have the §cGlowing§r effect or the §cSlowness§r effect, the dash will be weaker.",
 				"\n\n§cCannot§r be used while in elytra flight."
 			]

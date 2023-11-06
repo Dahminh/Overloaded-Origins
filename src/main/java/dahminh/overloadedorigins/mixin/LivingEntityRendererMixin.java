@@ -1,6 +1,6 @@
 package dahminh.overloadedorigins.mixin;
 
-import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.effect.OOEffects;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
@@ -18,7 +18,7 @@ public abstract class LivingEntityRendererMixin extends EntityRenderer<LivingEnt
 
     @Inject(method = "isShaking", at = @At("HEAD"), cancellable = true)
     private void letPlayersShakeTheirBodies(LivingEntity entity, CallbackInfoReturnable<Boolean> cir) {
-        if(entity.hasStatusEffect(CustomEffects.FEAR)) {
+        if(entity.hasStatusEffect(OOEffects.FEAR)) {
             cir.setReturnValue(true);
         }
     }

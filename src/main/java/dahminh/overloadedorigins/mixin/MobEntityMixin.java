@@ -1,6 +1,6 @@
 package dahminh.overloadedorigins.mixin;
 
-import dahminh.overloadedorigins.effect.CustomEffects;
+import dahminh.overloadedorigins.effect.OOEffects;
 import io.github.apace100.origins.component.OriginComponent;
 import io.github.apace100.origins.registry.ModComponents;
 import net.minecraft.entity.EntityType;
@@ -28,7 +28,7 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (getWorld().isClient() || !(target instanceof PlayerEntity)) {
             return target;
         }
-        if (target.hasStatusEffect(CustomEffects.SHADOWCLOAK) || assassinInvisibilityCheck(target)) return null;
+        if (target.hasStatusEffect(OOEffects.SHADOWCLOAK) || assassinInvisibilityCheck(target)) return null;
         if (this.getCommandTags().contains("Decoy") && assassinOriginCheck(target)) return null;
         return target;
     }
