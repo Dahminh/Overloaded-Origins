@@ -1,6 +1,6 @@
 {
     "type": "origins:inventory",
-    "title": "Shulker Inventory",
+    "title": "Shulk Inventory",
     "container_type": "hopper",
     "drop_on_death": false,
     "key": {

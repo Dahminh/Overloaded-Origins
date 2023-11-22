@@ -1,6 +1,6 @@
 {
     "type": "origins:inventory",
-    "title": "Shulker Inventory",
+    "title": "Shulk Inventory",
     "drop_on_death": false,
     "key": {
         "key": "key.origins.primary_active"
