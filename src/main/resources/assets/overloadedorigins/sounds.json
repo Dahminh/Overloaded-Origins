@@ -1,0 +1,40 @@
+{
+  "dark_elf_dash": {
+    "subtitle": "sounds.overloadedorigins.dark_elf_dash",
+    "category": "players",
+    "sounds": [
+      "overloadedorigins:dark_elf_mobility"
+    ]
+  },
+  "dark_elf_ambient": {
+    "subtitle": "sounds.overloadedorigins.dark_elf_ambient",
+    "category": "players",
+    "sounds": [
+      "overloadedorigins:dark_elf_ambient_1",
+      "overloadedorigins:dark_elf_ambient_2",
+      "overloadedorigins:dark_elf_ambient_3",
+      "overloadedorigins:dark_elf_ambient_4"
+    ]
+  },
+  "dark_elf_dodge": {
+    "subtitle": "sounds.overloadedorigins.dark_elf_dodge",
+    "category": "players",
+    "sounds": [
+      "overloadedorigins:dark_elf_mobility"
+    ]
+  },
+  "dark_elf_vanishes": {
+    "subtitle": "sounds.overloadedorigins.dark_elf_vanishes",
+    "category": "players",
+    "sounds": [
+      "overloadedorigins:dark_elf_shadow_cloak"
+    ]
+  },
+  "dark_elf_appears": {
+    "subtitle": "sounds.overloadedorigins.dark_elf_appears",
+    "category": "players",
+    "sounds": [
+      "overloadedorigins:dark_elf_shadow_cloak"
+    ]
+  }
+}
