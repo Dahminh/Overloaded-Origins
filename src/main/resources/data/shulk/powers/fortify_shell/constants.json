@@ -1,7 +1,7 @@
 {
     "type": "origins:multiple",
     "hidden": false,
-    "name": "ASS",
+    "name": "...",
     "toggle": {
         "type": "origins:toggle",
         "retain_state": false,
@@ -40,86 +40,420 @@
             "bar_index": 13
         }
     },
-    "projectile_immunity": {
-        "type": "origins:modify_damage_taken",
-        "damage_condition": {
+    "explosion": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "max_action": {
             "type": "origins:and",
-            "conditions": [
+            "actions": [
                 {
-                    "type": "origins:projectile"
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.tnt.primed",
+                    "pitch": 0,
+                    "volume": 1.25,
+                    "category": "players"
                 },
                 {
-                    "type": "origins:explosive",
-                    "inverted": true
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_cooldown"
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 60,
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_explosion",
+                                "change": 0,
+                                "operation": "set"
+                            },
+                            {
+                                "type": "origins:if_else",
+                                "condition": {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:resource",
+                                            "resource": "*:*_dmg_detection",
+                                            "compare_to": 7,
+                                            "comparison": "<"
+                                        },
+                                        {
+                                            "type": "origins:power",
+                                            "power": "*:discard_shell/discard_shell_effect",
+                                            "source": "apoli:command",
+                                            "inverted": true
+                                        }
+                                    ]
+                                },
+                                "else_action": {
+                                    "type": "origins:execute_command",
+                                    "command": "say resource explosion fail"
+                                },
+                                "if_action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:if_else_list",
+                                            "actions": [
+                                                {
+                                                    "action": {
+                                                        "type": "origins:area_of_effect",
+                                                        "radius": 6,
+                                                        "bientity_condition": {
+                                                            "type": "origins:target_condition",
+                                                            "condition": {
+                                                                "type": "origins:living"
+                                                            }
+                                                        },
+                                                        "bientity_action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:target_action",
+                                                                    "action": {
+                                                                        "type": "origins:apply_effect",
+                                                                        "effect": {
+                                                                            "effect": "minecraft:levitation",
+                                                                            "duration": 200
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "origins:damage",
+                                                                    "amount": 1,
+                                                                    "damage_type": "shulk:shulk_explosion",
+                                                                    "modifier": {
+                                                                        "resource": "*:*_resource",
+                                                                        "operation": "set_base",
+                                                                        "value": 0,
+                                                                        "modifier": {
+                                                                            "operation": "multiply_total_multiplicative",
+                                                                            "value": -0.90
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "condition": {
+                                                        "type": "origins:origin",
+                                                        "origin": "shulk:upgraded0"
+                                                    }
+                                                },
+                                                {
+                                                    "action": {
+                                                        "type": "origins:area_of_effect",
+                                                        "radius": 7,
+                                                        "bientity_condition": {
+                                                            "type": "origins:target_condition",
+                                                            "condition": {
+                                                                "type": "origins:living"
+                                                            }
+                                                        },
+                                                        "bientity_action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:target_action",
+                                                                    "action": {
+                                                                        "type": "origins:apply_effect",
+                                                                        "effect": {
+                                                                            "effect": "minecraft:levitation",
+                                                                            "duration": 200
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "origins:damage",
+                                                                    "amount": 1,
+                                                                    "damage_type": "shulk:shulk_explosion",
+                                                                    "modifier": {
+                                                                        "resource": "*:*_resource",
+                                                                        "operation": "set_base",
+                                                                        "value": 0,
+                                                                        "modifier": {
+                                                                            "operation": "multiply_total_multiplicative",
+                                                                            "value": -0.70
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "condition": {
+                                                        "type": "origins:origin",
+                                                        "origin": "shulk:upgraded1"
+                                                    }
+                                                },
+                                                {
+                                                    "action": {
+                                                        "type": "origins:area_of_effect",
+                                                        "radius": 8,
+                                                        "bientity_condition": {
+                                                            "type": "origins:target_condition",
+                                                            "condition": {
+                                                                "type": "origins:living"
+                                                            }
+                                                        },
+                                                        "bientity_action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:target_action",
+                                                                    "action": {
+                                                                        "type": "origins:apply_effect",
+                                                                        "effect": {
+                                                                            "effect": "minecraft:levitation",
+                                                                            "duration": 200
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "origins:damage",
+                                                                    "amount": 1,
+                                                                    "damage_type": "shulk:shulk_explosion",
+                                                                    "modifier": {
+                                                                        "resource": "*:*_resource",
+                                                                        "operation": "set_base",
+                                                                        "value": 0,
+                                                                        "modifier": {
+                                                                            "operation": "multiply_total_multiplicative",
+                                                                            "value": -0.50
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "condition": {
+                                                        "type": "origins:origin",
+                                                        "origin": "shulk:upgraded2"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:spawn_particles",
+                                            "particle": {
+                                                "type": "minecraft:explosion_emitter"
+                                            },
+                                            "count": 1
+                        
+                                        },
+                                        {
+                                            "type": "origins:play_sound",
+                                            "sound": "minecraft:entity.generic.explode",
+                                            "category": "players"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 61,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "function shulk:reset_resources"
+                    }
                 }
             ]
-        },
-        "modifier": {
-            "operation": "multiply_total",
-            "value": -1
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
         }
     },
-    "disable_jump": {
-        "type": "origins:modify_jump",
-        "modifier": {
-            "operation": "multiply_total",
-            "value": -1
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-    },
-	"no_block_selection": {
-		"type": "origins:prevent_block_selection",
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-	},
-	"prevent_item_use": {
-		"type": "origins:prevent_item_use",
-        "item_condition": {
-            "type": "origins:food",
-            "inverted": true
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-	},
-    "prevent_entity_use": {
-		"type": "origins:prevent_entity_use",
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-	},
-    "levitation_immunity": {
-        "type": "origins:effect_immunity",
-        "effects": [
-            "minecraft:levitation"
-        ],
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-    },
-    "no_pushing": {
-        "type": "origins:prevent_entity_collision",
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2147483647
     },
     "dmg_detection": {
         "type": "origins:resource",
         "min": 0,
-        "max": 2147483647
+        "max": 8,
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:spawn_entity",
+                    "entity_type": "minecraft:item",
+                    "tag": "{PickupDelay:30,Item:{id:\"minecraft:shulker_shell\",Count:1b,tag:{display:{Name:'{\"text\":\"Shulk Shell\",\"italic\":false}'}}}}"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.shield.break",
+                    "category": "players",
+                    "pitch": 0.8
+                },
+                {
+                    "type": "origins:grant_power",
+                    "power": "*:discard_shell/discard_shell_effect",
+                    "source": "apoli:command"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "*:*_cooldown"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.shulker.open",
+                    "category": "players"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function shulk:reset_resources"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_explosion",
+                    "change": 0,
+                    "operation": "set"
+                }
+            ]
+        }
+    },
+    "projectile_immunity": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:projectile",
+            "projectile_condition": {
+                "type": "origins:in_tag",
+                "tag": "shulk:persistent_projectile_types"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+	"death": {
+		"type": "origins:action_on_callback",
+		"entity_action_respawned": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_cooldown",
+                    "change": 1200,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "change": 0,
+                    "operation": "set",
+                    "resource": "*:*_dmg_detection"
+                }
+            ]
+        }
+	},
+    "active_self": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "cooldown": 0,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:power",
+                    "power": "shulk:discard_shell/discard_shell_effect",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:health",
+                    "compare_to": 0,
+                    "comparison": ">"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:power_active",
+                "power": "*:*_toggle"
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.shulker.close",
+                        "category": "players"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "function shulk:reset_resources"
+                    },
+                    {
+                        "type": "origins:dismount"
+                    }
+                ]
+            },
+            "else_action": {  
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.shulker.open",
+                        "category": "players"
+                    },
+                    {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:resource",
+                                    "resource": "*:*_dmg_detection",
+                                    "compare_to": 7,
+                                    "comparison": "<"
+                                },
+                                {
+                                    "type": "origins:resource",
+                                    "resource": "*:*_resource",
+                                    "compare_to": 0,
+                                    "comparison": ">"
+                                }
+                            ]
+                        },
+                        "else_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function shulk:reset_resources"
+                                },
+                                {
+                                    "type": "origins:trigger_cooldown",
+                                    "power": "*:*_cooldown"
+                                }
+                            ]
+                        },
+                        "if_action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_explosion",
+                            "change": 1,
+                            "operation": "set"
+                        }
+                    }
+                ]
+            }
+        }
     },
     "self_action_when_hit": {
         "type": "origins:self_action_when_hit",
@@ -129,29 +463,158 @@
             "actions": [
                 {
                     "type": "origins:play_sound",
-                    "sound": "minecraft:item.shield.block"
+                    "sound": "minecraft:item.shield.block",
+                    "category": "players"
                 },
                 {
                     "type": "origins:exhaust",
                     "amount": 0.5
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "resource operation @s shulk:fortify_shell/constants_resource = @s dmgTaken"
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "resource operation @s shulk:fortify_shell/constants_dmg_detection = @s dmgTaken"
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "resource operation @s shulk:fortify_shell/constants_dmg_detection /= .Shulk dmgTaken"
                 }
             ]
         },
         "condition": {
             "type": "origins:power_active",
             "power": "shulk:*_toggle"
+        }
+    },
+    "storing_damage": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 0,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource operation @s shulk:fortify_shell/constants_resource = @s dmgTaken"
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "*:*_dmg_detection",
+                    "modifier": {
+                        "operation": "set_total",
+                        "resource": "*:*_resource",
+                        "value": 0,
+                        "modifier": {
+                            "operation": "multiply_total",
+                            "value": -0.96
+                        }
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "shulk:*_toggle"
+                },
+                {
+                    "type": "origins:resource",
+                    "compare_to": 1,
+                    "comparison": "==",
+                    "resource": "*:*_explosion"
+                }
+            ]
+        }
+    },
+    "canceled_explosion": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 0,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "compare_to": 1,
+                    "comparison": "==",
+                    "resource": "*:*_explosion"
+                },
+                {
+                    "type": "origins:scoreboard",
+                    "objective": "dmgTaken",
+                    "compare_to": 175,
+                    "comparison": ">="
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_explosion",
+                    "change": 0,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.anvil.place"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "say EXPLOSION FAILED"
+                }
+            ]
+        }
+    },
+    "action_over_time": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "minecraft:blindness",
+                            "duration": 40,
+                            "show_particles": false
+                        },
+                        {
+                            "effect": "minecraft:resistance",
+                            "duration": 40,
+                            "amplifier": 1,
+                            "show_particles": false
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:fluid_height",
+                                "fluid": "minecraft:lava",
+                                "comparison": ">",
+                                "compare_to": 0
+                            },
+                            {
+                                "type": "origins:fluid_height",
+                                "fluid": "minecraft:water",
+                                "comparison": ">",
+                                "compare_to": 0
+                            }
+                        ]
+                    },
+                    "if_action": {
+                        "type": "overloadedorigins:random_teleport",
+                        "radius": 20,
+                        "particles": false,
+                        "success_action": {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:entity.shulker.teleport",
+                            "category": "players"
+                        }
+                    }
+                }
+            ]
         }
     }
 }

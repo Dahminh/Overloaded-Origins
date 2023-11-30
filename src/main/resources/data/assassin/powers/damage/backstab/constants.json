@@ -84,7 +84,7 @@
                 {
                     "type": "origins:apply_effect",
                     "effect": {
-                        "effect": "overloadedorigins:shadowbetrayal",
+                        "effect": "overloadedorigins:shadow_betrayal",
                         "duration": 300,
                         "show_particles": false
                     }
@@ -107,7 +107,7 @@
                     "type": "origins:if_else",
                     "condition": {
                         "type": "origins:status_effect",
-                        "effect": "overloadedorigins:shadowcloak"
+                        "effect": "overloadedorigins:shadow_cloak"
                     },
                     "if_action": {
                         "type": "origins:delay",

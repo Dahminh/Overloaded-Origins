@@ -45,7 +45,7 @@
             },
             {
                 "type": "origins:status_effect",
-                "effect": "overloadedorigins:shadowbetrayal",
+                "effect": "overloadedorigins:shadow_betrayal",
                 "inverted": true
             }
         ]

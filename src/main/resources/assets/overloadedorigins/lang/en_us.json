@@ -1,6 +1,6 @@
 {
-  "effect.overloadedorigins.shadowbetrayal": "Shadow Betrayal",
-  "effect.overloadedorigins.shadowcloak": "Shadow Cloak",
+  "effect.overloadedorigins.shadow_betrayal": "Shadow Betrayal",
+  "effect.overloadedorigins.shadow_cloak": "Shadow Cloak",
   "effect.overloadedorigins.fear": "Fear",
   "death.attack.gorilla_rush_entity": "%1$s was ran over by %2$s",
   "death.attack.gorilla_rush_entity.item": "%1$s was ran over by %2$s while holding %3$s",

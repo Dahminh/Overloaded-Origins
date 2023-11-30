@@ -1,6 +1,7 @@
 package dahminh.overloadedorigins.effect;
 
 import dahminh.overloadedorigins.OverloadedOrigins;
+import jdk.jshell.Snippet;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
@@ -9,10 +10,10 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class OOEffects {
-    public static StatusEffect SHADOWBETRAYAL;
-    public static StatusEffect SHADOWCLOAK;
-
+    public static StatusEffect SHADOW_BETRAYAL;
+    public static StatusEffect SHADOW_CLOAK;
     public static StatusEffect FEAR;
+    public static StatusEffect BROKEN_SHELL;
 
     public static StatusEffect registerShadowBetrayalEffect(String id){
         return Registry.register(Registries.STATUS_EFFECT, OverloadedOrigins.identifier(id),
@@ -27,14 +28,22 @@ public class OOEffects {
     public static StatusEffect registerFearEffect(String id){
         return Registry.register(Registries.STATUS_EFFECT, OverloadedOrigins.identifier(id),
                 new FearEffect(StatusEffectCategory.HARMFUL, 0x36460A)
-                        .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "00397168-e904-4710-9a8b-4f539b9c133c", -1.0, EntityAttributeModifier.Operation.ADDITION)
-                        .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "95e5f202-9bff-415f-81b7-420735e73c64", -0.15f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                        .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "eb68921d-ac51-4c2b-9e8b-c6bb12cc623e", -1.0, EntityAttributeModifier.Operation.ADDITION)
+                        .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "eb68921d-ac51-4c2b-9e8b-c6bb12cc623e", -0.15f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
                         .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED, "eb68921d-ac51-4c2b-9e8b-c6bb12cc623e", -0.1f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     }
 
+    public static StatusEffect registerBrokenShellEffect(String id){
+        return Registry.register(Registries.STATUS_EFFECT, OverloadedOrigins.identifier(id),
+                new BrokenShellEffect(StatusEffectCategory.NEUTRAL, 0x86708A)
+                        .addAttributeModifier(EntityAttributes.GENERIC_ARMOR, "247c6f57-757e-43a8-8410-ad2b6deef89a", -0.33f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                        .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "247c6f57-757e-43a8-8410-ad2b6deef89a", 0.005f, EntityAttributeModifier.Operation.ADDITION));
+    }
+
     public static void registerEffects(){
-        SHADOWBETRAYAL = registerShadowBetrayalEffect("shadowbetrayal");
-        SHADOWCLOAK = registerShadowCloakEffect("shadowcloak");
+        SHADOW_BETRAYAL = registerShadowBetrayalEffect("shadow_betrayal");
+        SHADOW_CLOAK = registerShadowCloakEffect("shadow_cloak");
         FEAR = registerFearEffect("fear");
+        BROKEN_SHELL = registerBrokenShellEffect("broken_shell");
     }
 }

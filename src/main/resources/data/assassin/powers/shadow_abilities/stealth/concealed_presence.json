@@ -190,7 +190,7 @@
                 },
                 {
                     "type": "origins:status_effect",
-                    "effect": "overloadedorigins:shadowcloak",
+                    "effect": "overloadedorigins:shadow_cloak",
                     "inverted": true
                 }
             ]
@@ -219,7 +219,7 @@
                 },
                 {
                     "type": "origins:status_effect",
-                    "effect": "overloadedorigins:shadowcloak",
+                    "effect": "overloadedorigins:shadow_cloak",
                     "inverted": true
                 }
             ]

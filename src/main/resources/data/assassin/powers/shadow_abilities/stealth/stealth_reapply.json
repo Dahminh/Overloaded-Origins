@@ -38,7 +38,7 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "overloadedorigins:shadowcloak",
+                            "effect": "overloadedorigins:shadow_cloak",
                             "duration": 200,
                             "show_particles": false,
                             "show_icon": true
@@ -73,7 +73,7 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "overloadedorigins:shadowcloak",
+                            "effect": "overloadedorigins:shadow_cloak",
                             "duration": 250,
                             "show_particles": false,
                             "show_icon": true
@@ -108,7 +108,7 @@
                     "if_action": {
                         "type": "origins:apply_effect",
                         "effect": {
-                            "effect": "overloadedorigins:shadowcloak",
+                            "effect": "overloadedorigins:shadow_cloak",
                             "duration": 300,
                             "show_particles": false,
                             "show_icon": true

@@ -28,7 +28,7 @@ public abstract class MobEntityMixin extends LivingEntity {
         if (getWorld().isClient() || !(target instanceof PlayerEntity)) {
             return target;
         }
-        if (target.hasStatusEffect(OOEffects.SHADOWCLOAK) || assassinInvisibilityCheck(target)) return null;
+        if (target.hasStatusEffect(OOEffects.SHADOW_CLOAK) || assassinInvisibilityCheck(target)) return null;
         if (this.getCommandTags().contains("Decoy") && assassinOriginCheck(target)) return null;
         return target;
     }

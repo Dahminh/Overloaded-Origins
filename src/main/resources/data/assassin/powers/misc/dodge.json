@@ -53,7 +53,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "overloadedorigins:shadowcloak",
+               "effect": "overloadedorigins:shadow_cloak",
                "inverted": true
             },
             {
@@ -171,7 +171,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "overloadedorigins:shadowcloak",
+               "effect": "overloadedorigins:shadow_cloak",
                "inverted": true
             },
             {
@@ -273,7 +273,7 @@
          "conditions": [
             {
                "type": "origins:status_effect",
-               "effect": "overloadedorigins:shadowcloak",
+               "effect": "overloadedorigins:shadow_cloak",
                "inverted": true
             },
             {

@@ -11,7 +11,7 @@
 		"entity_action": {
 			"type": "origins:apply_effect",
 			"effect": {
-				"effect": "overloadedorigins:shadowcloak",
+				"effect": "overloadedorigins:shadow_cloak",
 				"duration": 600,
 				"show_particles": false,
 				"show_icon": true
@@ -27,7 +27,7 @@
 				},
 				{	    
 					"type": "origins:status_effect",
-					"effect": "overloadedorigins:shadowcloak",
+					"effect": "overloadedorigins:shadow_cloak",
 					"inverted": true
 				},
 				{
@@ -62,7 +62,7 @@
 				},
 				{
 					"type": "origins:status_effect",
-					"effect": "overloadedorigins:shadowcloak"
+					"effect": "overloadedorigins:shadow_cloak"
 				}
 			]
 		}
@@ -78,7 +78,7 @@
 		},
 		"condition": {
 			"type": "origins:status_effect",
-			"effect": "overloadedorigins:shadowcloak"
+			"effect": "overloadedorigins:shadow_cloak"
 		}
 	},
 	"name": "§d§nShadow Cloak",

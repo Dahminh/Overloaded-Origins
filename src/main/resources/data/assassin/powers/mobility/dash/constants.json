@@ -74,7 +74,7 @@
 					"if_action": {
 						"type": "origins:apply_effect",
 						"effect": {
-							"effect": "overloadedorigins:shadowcloak",
+							"effect": "overloadedorigins:shadow_cloak",
 							"duration": 20,
 							"show_particles": false
 						}

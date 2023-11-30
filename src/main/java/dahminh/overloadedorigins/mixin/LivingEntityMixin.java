@@ -24,23 +24,23 @@ public abstract class LivingEntityMixin {
     @ModifyVariable(method = "heal", at = @At("HEAD"), index = 1)
     private float modifyHealing(float amount){
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(OOEffects.SHADOWBETRAYAL)) return (float) (amount * 0.5);
+        if (self.hasStatusEffect(OOEffects.SHADOW_BETRAYAL)) return (float) (amount * 0.5);
         return amount;
     }
 
     @Inject(at = @At("HEAD"), method= "onAttacking")
     private void onAttacking(Entity target, CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(OOEffects.SHADOWCLOAK) & !target.getCommandTags().contains("Decoy")) {
-            self.removeStatusEffect(OOEffects.SHADOWCLOAK);
+        if (self.hasStatusEffect(OOEffects.SHADOW_CLOAK) & !target.getCommandTags().contains("Decoy")) {
+            self.removeStatusEffect(OOEffects.SHADOW_CLOAK);
         }
     }
 
     @Inject(at = @At("TAIL"), method = "damage")
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(OOEffects.SHADOWCLOAK) && amount > 0) {
-            self.removeStatusEffect(OOEffects.SHADOWCLOAK);
+        if (self.hasStatusEffect(OOEffects.SHADOW_CLOAK) && amount > 0) {
+            self.removeStatusEffect(OOEffects.SHADOW_CLOAK);
         }
     }
 
@@ -50,7 +50,7 @@ public abstract class LivingEntityMixin {
         if (e.getWorld().isClient) {
             return;
         }
-        if (effect.getEffectType().equals(OOEffects.SHADOWCLOAK)) {
+        if (effect.getEffectType().equals(OOEffects.SHADOW_CLOAK)) {
             e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), OOSounds.DARK_ELF_APPEARS, SoundCategory.HOSTILE, 1.0f, 2.0f);
             ((ServerWorld) e.getWorld()).spawnParticles(
                     LARGE_SMOKE,

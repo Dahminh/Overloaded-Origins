@@ -33,7 +33,7 @@ public abstract class InGameHudMixin {
         if (type == InGameHud.HeartType.CONTAINER) return;
         if (client.getCameraEntity() instanceof PlayerEntity player) {
             for (Map.Entry<StatusEffect, StatusEffectInstance> entry : player.getActiveStatusEffects().entrySet()) {
-                if (entry.getKey() == OOEffects.SHADOWBETRAYAL) {
+                if (entry.getKey() == OOEffects.SHADOW_BETRAYAL) {
                     context.drawTexture(SHADOW_BETRAYAL_HEARTS, x, y, half ? 9 : 0, hardcore ? 9 : 0, 9, 9);
                 }
             }

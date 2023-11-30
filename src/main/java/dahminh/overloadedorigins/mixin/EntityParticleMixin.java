@@ -29,7 +29,7 @@ public abstract class EntityParticleMixin extends Entity {
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
-        if (livingEntity.hasStatusEffect(OOEffects.SHADOWCLOAK)) {
+        if (livingEntity.hasStatusEffect(OOEffects.SHADOW_CLOAK)) {
             this.setInvisible(true);
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
             boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();

@@ -11,12 +11,23 @@
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
-                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "resource": "shulk:fortify_shell/constants_dmg_detection",
                     "comparison": "<",
                     "compare_to": 3
                 }
@@ -34,12 +45,23 @@
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
-                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "resource": "shulk:fortify_shell/constants_dmg_detection",
                     "comparison": "==",
                     "compare_to": 3
                 }
@@ -57,8 +79,19 @@
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
@@ -80,8 +113,19 @@
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
@@ -103,8 +147,19 @@
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
@@ -115,104 +170,209 @@
             ]
         }
     },
-    "energy_swirl_1": {
-        "type": "apugli:energy_swirl",
-        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_1.png",
-        "size": 1.15,
+    "glowing_1": {
+        "type": "origins:self_glow",
+        "use_teams": false,
+        "red": 0.184,
+        "green": 0.617,
+        "blue": 0.0,
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
-                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "resource": "shulk:fortify_shell/constants_dmg_detection",
                     "comparison": "<",
                     "compare_to": 3
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "inverted": true
                 }
             ]
+        },
+        "bientity_condition": {
+            "type": "origins:can_see"
         }
     },
-    "energy_swirl_2": {
-        "type": "apugli:energy_swirl",
-        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_2.png",
-        "size": 1.15,
+    "glowing_2": {
+        "type": "origins:self_glow",
+        "use_teams": false,
+        "red": 0.445,
+        "green": 0.598,
+        "blue": 0.0,
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
-                    "resource": "*:fortify_shell/constants_dmg_detection",
+                    "resource": "shulk:fortify_shell/constants_dmg_detection",
                     "comparison": "==",
                     "compare_to": 3
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "inverted": true
                 }
             ]
+        },
+        "bientity_condition": {
+            "type": "origins:can_see"
         }
     },
-    "energy_swirl_3": {
-        "type": "apugli:energy_swirl",
-        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_3.png",
-        "size": 1.15,
+    "glowing_3": {
+        "type": "origins:self_glow",
+        "use_teams": false,
+        "red": 0.598,
+        "green": 0.496,
+        "blue": 0.0,
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
                     "resource": "*:fortify_shell/constants_dmg_detection",
                     "comparison": "==",
                     "compare_to": 4
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "inverted": true
                 }
             ]
+        },
+        "bientity_condition": {
+            "type": "origins:can_see"
         }
     },
-    "energy_swirl_4": {
-        "type": "apugli:energy_swirl",
-        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_4.png",
-        "size": 1.15,
+    "glowing_4": {
+        "type": "origins:self_glow",
+        "use_teams": false,
+        "red": 0.598,
+        "green": 0.246,
+        "blue": 0.0,
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
                     "resource": "*:fortify_shell/constants_dmg_detection",
                     "comparison": "==",
                     "compare_to": 5
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "inverted": true
                 }
             ]
+        },
+        "bientity_condition": {
+            "type": "origins:can_see"
         }
     },
-    "energy_swirl_5": {
-        "type": "apugli:energy_swirl",
-        "texture_location": "overloadedorigins:textures/entity/shulk/shulk_5.png",
-        "size": 1.15,
+    "glowing_5": {
+        "type": "origins:self_glow",
+        "use_teams": false,
+        "red": 0.598,
+        "green": 0.0,
+        "blue": 0.0,
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
-                    "type": "origins:power_active",
-                    "power": "*:fortify_shell/constants_toggle"
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:power_active",
+                            "power": "*:fortify_shell/constants_toggle"
+                        },
+                        {
+                            "type": "origins:resource",
+                            "compare_to": 1,
+                            "comparison": "==",
+                            "resource": "*:fortify_shell/constants_explosion"
+                        }
+                    ]
                 },
                 {
                     "type": "origins:resource",
                     "resource": "*:fortify_shell/constants_dmg_detection",
                     "comparison": "==",
                     "compare_to": 6
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:invisibility",
+                    "inverted": true
                 }
             ]
+        },
+        "bientity_condition": {
+            "type": "origins:can_see"
         }
     },
     "hidden": true
