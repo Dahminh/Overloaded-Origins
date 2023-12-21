@@ -19,7 +19,7 @@
          "operation":"multiply_total",
          "value":-1
       },
-      "damage_condition":{
+      "damage_condition": {
          "type":"origins:or",
          "conditions":[
             {
