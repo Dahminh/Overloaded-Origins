@@ -39,7 +39,8 @@
                 "§e§nHeavyweight",
                 "\nYour defensive body has made you denser and thus heavier.",
                 "\n\n§nExplanation§r:\n\n",
-                "The following effects will have their amplifier and duration changed:",
+                "You have §c75%§r attack speed.",
+                "\n\nThe following effects will have their amplifier and duration changed:",
                 "\n§a-§r Levitation: §a-50%§r Duration, §a-5§r Amplifier.",
                 "\n§c-§r Slowness: §c+50%§r Duration, §c+1§r Amplifier.",
                 "\n§c-§r Speed: §c-50%§r Duration, §c-1§r Amplifier."
