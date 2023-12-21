@@ -79,18 +79,9 @@
             ]
         },
         "damage_condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:name",
-                    "name": "player"
-                },
-                {
-                    "type": "origins:name",
-                    "name": "player.item"
-                }
-            ]
-        }
+			"type": "origins:type",
+			"damage_type": "minecraft:player_attack"
+		}
 	},
 	"hidden": true
 }
