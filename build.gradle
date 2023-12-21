@@ -12,21 +12,27 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven {
-		name = "Pug's Maven"
-		url = 'https://maven.merchantpug.net/releases/'
+	exclusiveContent {
+
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+
+		filter {
+			includeGroup "maven.modrinth"
+		}
+
 	}
 	maven {
 		name = "QuiltMC"
 		url = "https://maven.quiltmc.org/repository/release"
 	}
 	maven {
-		name = "Ladysnake Libs"
+		name = 'Ladysnake Mods'
 		url = 'https://maven.ladysnake.org/releases'
-	}
-	maven {
-		name = "JitPack"
-		url = 'https://jitpack.io'
 	}
 	maven {
 		url = 'https://maven.cafeteria.dev'
@@ -35,25 +41,22 @@ repositories {
 		}
 	}
 	maven {
-		url = 'https://maven.jamieswhiteshirt.com/libs-release'
+		url "https://maven.jamieswhiteshirt.com/libs-release"
 		content {
-			includeGroup 'com.jamieswhiteshirt'
+			includeGroup "com.jamieswhiteshirt"
 		}
 	}
-    maven {
-        name = "Shedaniel"
-        url "https://maven.shedaniel.me/"
-    }
-    maven {
-        name = "TerraformersMC"
-        url "https://maven.terraformersmc.com/"
-    }
 	maven {
-		name = "Modrinth"
-		url = "https://api.modrinth.com/maven"
-		content {
-			includeGroup "maven.modrinth"
-		}
+		url "https://masa.dy.fi/maven"
+	}
+	maven {
+		url "https://jitpack.io"
+	}
+	maven {
+		url "https://maven.shedaniel.me/"
+	}
+	maven {
+		url "https://maven.terraformersmc.com/"
 	}
 	maven {
 		url "https://cursemaven.com"
@@ -62,7 +65,7 @@ repositories {
 		}
 	}
 
-	maven { url "https://maven.ryanliptak.com/" }
+	mavenLocal()
 
 }
 
@@ -118,17 +121,10 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// Eggolib by Eggohito
-//	modImplementation "com.github.eggohito:eggolib:${project.eggolib_version}"
-//	include "com.github.eggohito:eggolib:${project.eggolib_version}"
-
-//	modApi "com.github.apace100:apoli:${project.apoli_version}"
-//	include "com.github.apace100:apoli:${project.apoli_version}"
-
 	//Origins
-	//modImplementation files("libs/Origins-1.20.1-1.10.0.jar")
+//	modImplementation fileTree(include: ['*.jar'], dir: 'libs')
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
-	include "com.github.apace100:origins-fabric:${project.origins_version}"
+	// include "com.github.apace100:origins-fabric:${project.origins_version}"
 
 	//Origins Extra Keybinds
 	modImplementation "curse.maven:extrakeybinds-474612:4031145"
