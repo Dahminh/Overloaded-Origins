@@ -1,0 +1,6 @@
+{
+    "type": "origins:fire_projectile",
+    "entity_type": "minecraft:shulker_bullet",
+    "speed": 3.5,
+    "tag": "{NoGravity:1b}"
+}
