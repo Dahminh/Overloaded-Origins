@@ -36,8 +36,7 @@ public class OOEffects {
     public static StatusEffect registerBrokenShellEffect(String id){
         return Registry.register(Registries.STATUS_EFFECT, OverloadedOrigins.identifier(id),
                 new BrokenShellEffect(StatusEffectCategory.NEUTRAL, 0x86708A)
-                        .addAttributeModifier(EntityAttributes.GENERIC_ARMOR, "247c6f57-757e-43a8-8410-ad2b6deef89a", -0.33f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-                        .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "247c6f57-757e-43a8-8410-ad2b6deef89a", 0.005f, EntityAttributeModifier.Operation.ADDITION));
+                        .addAttributeModifier(EntityAttributes.GENERIC_ARMOR, "247c6f57-757e-43a8-8410-ad2b6deef89a", -0.33f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     }
 
     public static void registerEffects(){

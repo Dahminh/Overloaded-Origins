@@ -13,12 +13,12 @@
             "operation": "addition"
         }
     ],
-	"name": "...",
-	"description": "...",
+	"name": "§e§nBulwarked Body II",
+	"description": "As a Shulk, you are well known for your physical defensive traits.",
     "badges": [
         {
             "type": "origins:tooltip",
-            "sprite": "overloadedorigins:textures/gui/badge/info.png",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/sturdy_skin.png",
             "text": [
                 "§a§nSturdy Skin II",
                 "\nEven without wearing armor, your skin provides natural protection.",
@@ -27,6 +27,21 @@
                 "\n§a- +11§r Armor Points",
                 "\n§a- +1§r Knockback Resistance"
             ]
-        }
+        },
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/shulk/broken_shell.png",
+			"text": [
+                "§c§nBroken Shell II",
+                "\nAlthough your shell is extremely durable, it is weak to armor piercing attacks.",
+                "\n\n§nExplanation§r:\n\n",
+                "[§a1 Minute Cooldown§r]",
+                "\nWhen taking §e5§r hearts of damage or more from any damage that is in the bypasses armor tag, you will gain the §cBroken Shell II§r debuff for §c15§r seconds.",
+                "\n\n§cBroken Shell§r will do the following:",
+                "\n§a-§r Initally drop a §bShulk Ironclad Shell§r",
+                "\n§c-§r Lose §c33%§r per level of current armor points",
+                "\n\n§bShulk Ironclad Shells§r are a usable item that has a §a30§r second cooldown, §a3§r second usetime, and restores the user's armor's durability by §a10%§r."
+            ]
+		}
     ]
 }

@@ -1,0 +1,94 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 1200,
+    "hud_render": {
+        "should_render": true,
+        "bar_index": 18,
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else_list",
+                "actions": [
+                    {
+                        "action": {
+                            "type": "origins:spawn_entity",
+                            "entity_type": "minecraft:item",
+                            "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_shell\",Count:1b}}"
+                        },
+                        "condition": {
+                            "type": "origins:origin",
+                            "origin": "shulk:upgraded0"
+                        }
+                    },
+                    {
+                        "action": {
+                            "type": "origins:spawn_entity",
+                            "entity_type": "minecraft:item",
+                            "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_ironclad_shell\",Count:1b}}"
+                        },
+                        "condition": {
+                            "type": "origins:origin",
+                            "origin": "shulk:upgraded1"
+                        }
+                    },
+                    {
+                        "action": {
+                            "type": "origins:spawn_entity",
+                            "entity_type": "minecraft:item",
+                            "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_monolith_shell\",Count:1b}}"
+                        },
+                        "condition": {
+                            "type": "origins:origin",
+                            "origin": "shulk:upgraded2"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:item.shield.break",
+                "pitch": 0.8
+            },
+            {
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "overloadedorigins:broken_shell",
+                    "duration": 300,
+                    "amplifier": 1
+                }
+            }
+        ]
+    },
+    "damage_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:bypasses_armor"
+            },
+            {
+                "type": "origins:amount",
+                "comparison": ">=",
+                "compare_to": 5
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "*:fortify_shell/constants_toggle"
+            },
+            {
+                "type": "origins:status_effect",
+                "effect": "overloadedorigins:broken_shell"
+            }
+        ],
+        "inverted": true
+    },
+    "hidden": true
+}

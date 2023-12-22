@@ -5,20 +5,19 @@
         "shulk:positives/sturdy_skin/sturdy_skin_3",
         "shulk:shulker_qualities/teleport",
         "shulk:shulker_qualities/shulker_bullet/shulker_bullet_3",
-        "shulk:fortify_shell/constants",
-        "shulk:fortify_shell/passives",
-        "shulk:fortify_shell/visual_effects",
-        "shulk:fortify_shell/fortify_shell_3",
-        "shulk:hoarder/hoarder_3",
-        "shulk:negatives/pickaxephobia/efficiency_pickaxephobia",
         "shulk:negatives/pickaxephobia/pickaxephobia_3",
-        "shulk:discard_shell/discard_shell",
+        "shulk:negatives/broken_shell",
         "shulk:neutral/heavyweight",
         "shulk:negatives/more_exhaustion",
         "shulk:negatives/no_shield",
         "shulk:negatives/weak_offense",
         "shulk:shulker_qualities/shulker_bullet/constants",
-        "shulk:shulker_qualities/block_sized"
+        "shulk:shulker_qualities/block_sized",
+        "shulk:fortify_shell/constants",
+        "shulk:fortify_shell/passives",
+        "shulk:fortify_shell/visual_effects",
+        "shulk:fortify_shell/fortify_shell_3",
+        "shulk:hoarder/hoarder_3"
     ],
     "icon": {
         "item": "overloadedorigins:shulk_monolith_shell"
