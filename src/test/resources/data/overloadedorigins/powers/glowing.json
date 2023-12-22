@@ -1,0 +1,20 @@
+{
+    "type": "origins:self_glow",
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:can_see"
+            },
+            {
+                "type": "origins:distance",
+                "compare_to": 24,
+                "comparison": "<="
+            }
+        ]
+    },
+    "use_teams": false,
+    "red": 0.598,
+    "green": 0.496,
+    "blue": 0.0
+}

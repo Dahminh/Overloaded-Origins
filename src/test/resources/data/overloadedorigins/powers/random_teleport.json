@@ -2,16 +2,12 @@
     "type": "origins:active_self",
     "cooldown": 1,
     "entity_action": {
-        "type": "overloadedorigins:random_teleport",
-        "radius": 16.0,
-        "particles": true,
+        "type": "origins:random_teleport",
+        "area_width": 16.0,
+        "area_height": 16.0,
         "success_action": {
-            "type": "origins:execute_command",
-            "command": "say SUCCESS"
-        },
-        "fail_action": {
-            "type": "origins:execute_command",
-            "command": "say FAIL"
+            "type": "origins:play_sound",
+            "sound": "minecraft:entity.shulker.teleport"
         }
     }
 }

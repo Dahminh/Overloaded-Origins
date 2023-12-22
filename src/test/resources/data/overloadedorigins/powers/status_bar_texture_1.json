@@ -1,8 +1,75 @@
 {
-    "type": "origins:status_bar_texture",
-    "texture_map": {
-        "hud/armor_full": "hud/shulk/1_armor_full",
-        "hud/armor_half": "hud/shulk/1_armor_half",
-        "hud/armor_empty": "hud/shulk/1_armor_empty"
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2147483647
+    },
+    "test": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2147483647
+    },
+    "self_action_when_hit": {
+        "type": "origins:self_action_when_hit",
+        "cooldown": 0,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.shield.block"
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 0.5
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource operation @s overloadedorigins:status_bar_texture_1_test = @s dmgTaken"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource operation @s overloadedorigins:status_bar_texture_1_test /= .Shulk dmgTaken"
+                },
+                {
+                    "type": "origins:modify_resource",
+                    "resource": "*:*_resource",
+                    "modifier": {
+                        "operation": "set_total",
+                        "value": 0,
+                        "resource": "*:*_test"
+                    }
+                }
+            ]
+        }
+    },
+    "hud_display_1": {
+        "type": "origins:status_bar_texture",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/1_armor_full",
+            "hud/armor_half": "hud/shulk/1_armor_half",
+            "hud/armor_empty": "hud/shulk/1_armor_empty"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "hud_display_2": {
+        "type": "origins:status_bar_texture",
+        "texture_map": {
+            "hud/armor_full": "hud/shulk/2_armor_full",
+            "hud/armor_half": "hud/shulk/2_armor_half",
+            "hud/armor_empty": "hud/shulk/2_armor_empty"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": "==",
+            "compare_to": 1
+        }
     }
 }
