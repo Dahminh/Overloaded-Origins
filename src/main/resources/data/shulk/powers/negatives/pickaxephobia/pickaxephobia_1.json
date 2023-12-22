@@ -2,7 +2,7 @@
     "type": "origins:modify_damage_taken",
     "modifier": {
         "operation": "multiply_base_multiplicative",
-        "value": 0.5
+        "value": 0.75
     },
     "damage_condition": {
         "type": "origins:attacker",
@@ -16,5 +16,39 @@
                 }
             }
         }
-    }
+    },
+    "name": "§c§nBig Tradeoffs I",
+    "description": "Your highly defensive body comes at a cost.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/dark_elf/exhaustion.png",
+            "text": [
+                "§c§nLarge Appetite",
+                "\nYou exhaust much quicker than others, thus requiring you to eat more.",
+                "\n\n§nExplanation§r:\n\n",
+                "You exhaust §c60%§r faster."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/shulker_pickaxephobia.png",
+            "text": [
+                "§c§nPickaxephobia I",
+                "\nYou are afraid of Pickaxes as they can easily penetrate through your armored skin.",
+                "\n\n§nExplanation§r:\n\n",
+                "Pickaxes deal §c1.75x§r damage to you."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+			"sprite": "overloadedorigins:textures/gui/badge/shulk/unwieldy.png",
+			"text": [
+                "§c§nUnwieldy",
+                "\nThe way your hands are formed provide no way of holding a shield upright.",
+                "\n\n§nExplanation§r:\n\n",
+                "You cannot use Shields."
+            ]
+        }
+    ]
 }
