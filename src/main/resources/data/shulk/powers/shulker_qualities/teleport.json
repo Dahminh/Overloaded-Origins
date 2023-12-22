@@ -1,0 +1,176 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "prevent_item_use": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:ender_pearl"
+                    }
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:chorus_fruit"
+                    }
+                }
+            ]
+        },
+        "name": "Shulker Adaptation"
+    },
+    "teleport_count": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "max_action": {
+            "type": "origins:change_resource",
+            "change": 600,
+            "resource": "*:*_teleport_cd"
+        }
+    },
+    "teleport_cd": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "hud_render": {
+            "bar_index": 16,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "condition": {
+                "type": "origins:resource",
+                "compare_to": 0,
+                "comparison": ">",
+                "resource": "*:*_teleport_cd"
+            }
+        },
+        "min_action": {
+            "type": "origins:change_resource",
+            "change": 0,
+            "operation": "set",
+            "resource": "*:*_teleport_count"
+        }
+    },
+    "cd": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "change": -1,
+            "resource": "*:*_teleport_cd"
+        }
+    },
+    "teleport": {
+        "type": "origins:self_action_when_hit",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:relative_health",
+                    "comparison": "<=",
+                    "compare_to": 0.5
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:fortify_shell/constants_toggle",
+                    "inverted": true
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_teleport_count",
+                                "change": 1
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_teleport_cd",
+                                "change": 300
+                            },
+                            {
+                                "type": "origins:random_teleport",
+                                "area_width": 24.0,
+                                "area_height": 24.0,
+                                "success_action": {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:entity.shulker.teleport"
+                                }
+                            }
+                        ]
+                    },
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type":"origins:predicate",
+                                "predicate":"*:teleport_1"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 0,
+                                "comparison": "==",
+                                "resource": "*:*_teleport_cd"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 0,
+                                "comparison": "==",
+                                "resource": "*:*_teleport_count"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_teleport_count",
+                                "change": 1
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_teleport_cd",
+                                "change": 600
+                            },
+                            {
+                                "type": "origins:random_teleport",
+                                "area_width": 24.0,
+                                "area_height": 24.0,
+                                "success_action": {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:entity.shulker.teleport"
+                                }
+                            }
+                        ]
+                    },
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type":"origins:predicate",
+                                "predicate":"*:teleport_2"
+                            },
+                            {
+                                "type": "origins:resource",
+                                "compare_to": 1,
+                                "comparison": "==",
+                                "resource": "*:*_teleport_count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

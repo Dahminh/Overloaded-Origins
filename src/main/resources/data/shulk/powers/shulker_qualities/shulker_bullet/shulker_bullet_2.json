@@ -13,11 +13,11 @@
             }
         ]
     },
-    "cooldown": 600,
+    "cooldown": 900,
     "hud_render": {
         "should_render": true,
-        "sprite_location": "overloadedorigins:textures/gui/community/huang/resource_bar_01.png",
-        "bar_index": 13
+        "bar_index": 15,
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png"
     },
     "entity_action": {
         "type": "origins:apply_effect",
@@ -25,5 +25,36 @@
             "effect": "minecraft:levitation",
             "duration": 300
         }
-    }
+    },
+    "name": "§e§nShulker Qualities II",
+    "description": "Being related to Shulkers, you have inherited some of their traits.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/teleport.png",
+            "text": [
+                "§e§nTatical Retreat",
+                "\nYou have the ability to teleport like Shulkers, teleporting to a nearby but safer location when in dangerous situations. Unfortunately because of this adaptation, you've lost the ability to use other teleportation items.",
+                "\n\n§nExplanation§r:\n\n",
+                "You cannot use Ender Pearls and Chorus Fruits.",
+                "\n\n[§a30 Second Cooldown (For 2 Teleports)§r]",
+                "\n[§a15 Second Cooldown (For 1 Teleport)§r]",
+                "\n\nWhile under §e50%§r health and taking damage, you have a §e30%§r chance to teleport once. This will set your teleport cooldown to §a15§r seconds.",
+                "\n\nIf you are hit again after you teleported, you have a §e60%§r chance to teleport again. This will set your teleport cooldown to §a30§r seconds.",
+                "\n\nThis passive is disabled when §d§nFortified Shell§r is active."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/shulker_bullet.png",
+            "text": [
+                "§e§nShulker Bullet Imitation II",
+                "\nYou can imitate the Shulker Bullets from the Shulkers through archery but because your hands are weirdly formed, you cannot effectively shoot a bow or crossbow.",
+                "\n\n§nExplanation§r:\n\n",
+                "Your arrows deal §c75%§r damage.",
+                "\n\n[§a45 Second Cooldown§r]",
+                "\nWhenever you hit a target with an arrow, they will receive the §cLevitation§r effect for §c15§r seconds."
+            ]
+        }
+    ]
 }
