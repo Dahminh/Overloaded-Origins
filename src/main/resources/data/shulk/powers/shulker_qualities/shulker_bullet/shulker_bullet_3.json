@@ -31,6 +31,16 @@
     "badges": [
         {
             "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/shulk/block_sized.png",
+            "text": [
+                "§e§nBlock Sized",
+                "\nSimilar to your Shulker cousins, you are about the size of a block. Fortunately, you have legs so you have more mobility than your cousins.",
+                "\n\n§nExplanation§r:\n\n",
+                "You are §e45%§r smaller and §e40%§r wider than a human."
+            ]
+        },
+        {
+            "type": "origins:tooltip",
             "sprite": "overloadedorigins:textures/gui/badge/shulk/teleport.png",
             "text": [
                 "§e§nTatical Retreat",
