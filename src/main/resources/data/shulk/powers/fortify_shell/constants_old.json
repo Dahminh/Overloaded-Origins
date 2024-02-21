@@ -153,13 +153,6 @@
                                     "type": "origins:and",
                                     "actions": [
                                         {
-                                            "type": "origins:damage",
-                                            "amount": 1,
-                                            "source": {
-                                                "name": "explosion.player"
-                                            }
-                                        },
-                                        {
                                             "type": "origins:target_action",
                                             "action": {
                                                 "type": "origins:apply_effect",
@@ -168,6 +161,34 @@
                                                     "duration": 200
                                                 }
                                             }
+                                        },
+                                        {
+                                            "type": "origins:if_else_list",
+                                            "actions": [
+                                                {
+                                                    "action": {
+                                                        "type": "origins:damage",
+                                                        "amount": 1,
+                                                        "damage_type": "shulk:shulk_explosion",
+                                                        "modifier": {
+                                                            "resource": "*:*_resource",
+                                                            "operation": "set_base",
+                                                            "value": 0,
+                                                            "modifier": {
+                                                                "operation": "multiply_total_multiplicative",
+                                                                "value": -0.90
+                                                            }
+                                                        }
+                                                    },
+                                                    "condition": {
+                                                        "type": "origins:actor_condition",
+                                                        "condition": {
+                                                            "type": "origins:origin",
+                                                            "origin": "shulk:upgraded0"
+                                                        }
+                                                    }
+                                                }
+                                            ]
                                         }
                                     ]
                                 }

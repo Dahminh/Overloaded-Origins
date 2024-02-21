@@ -1,6 +1,6 @@
 {
     "type": "origins:multiple",
-    "hidden": false,
+    "hidden": true,
     "name": "...",
     "toggle": {
         "type": "origins:toggle",
@@ -16,8 +16,8 @@
                     "compare_to": 0
                 },
                 {
-                    "type": "origins:power",
-                    "power": "shulk:discard_shell/discard_shell_effect",
+                    "type": "origins:status_effect",
+                    "effect": "overloadedorigins:broken_shell",
                     "inverted": true
                 },
                 {
@@ -36,8 +36,8 @@
         "cooldown": 1200,
         "hud_render": {
             "should_render": true,
-            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
-            "bar_index": 13
+            "bar_index": 17,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png"
         }
     },
     "explosion": {
@@ -82,9 +82,8 @@
                                             "comparison": "<"
                                         },
                                         {
-                                            "type": "origins:power",
-                                            "power": "*:discard_shell/discard_shell_effect",
-                                            "source": "apoli:command",
+                                            "type": "origins:status_effect",
+                                            "effect": "overloadedorigins:broken_shell",
                                             "inverted": true
                                         }
                                     ]
@@ -279,9 +278,42 @@
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:spawn_entity",
-                    "entity_type": "minecraft:item",
-                    "tag": "{PickupDelay:30,Item:{id:\"minecraft:shulker_shell\",Count:1b,tag:{display:{Name:'{\"text\":\"Shulk Shell\",\"italic\":false}'}}}}"
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "action": {
+                                "type": "origins:spawn_entity",
+                                "entity_type": "minecraft:item",
+                                "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_shell\",Count:1b}}"
+                            },
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "shulk:upgraded0"
+                            }
+                        },
+                        {
+                            "action": {
+                                "type": "origins:spawn_entity",
+                                "entity_type": "minecraft:item",
+                                "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_ironclad_shell\",Count:1b}}"
+                            },
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "shulk:upgraded1"
+                            }
+                        },
+                        {
+                            "action": {
+                                "type": "origins:spawn_entity",
+                                "entity_type": "minecraft:item",
+                                "tag": "{PickupDelay:30,Item:{id:\"overloadedorigins:shulk_monolith_shell\",Count:1b}}"
+                            },
+                            "condition": {
+                                "type": "origins:origin",
+                                "origin": "shulk:upgraded2"
+                            }
+                        }
+                    ]
                 },
                 {
                     "type": "origins:play_sound",
@@ -290,9 +322,12 @@
                     "pitch": 0.8
                 },
                 {
-                    "type": "origins:grant_power",
-                    "power": "*:discard_shell/discard_shell_effect",
-                    "source": "apoli:command"
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "overloadedorigins:broken_shell",
+                        "duration": 300,
+                        "amplifier": 1
+                    }
                 },
                 {
                     "type": "origins:trigger_cooldown",
@@ -314,24 +349,6 @@
                     "operation": "set"
                 }
             ]
-        }
-    },
-    "projectile_immunity": {
-        "type": "origins:modify_damage_taken",
-        "damage_condition": {
-            "type": "origins:projectile",
-            "projectile_condition": {
-                "type": "origins:in_tag",
-                "tag": "shulk:persistent_projectile_types"
-            }
-        },
-        "modifier": {
-            "operation": "multiply_total",
-            "value": -1
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
         }
     },
 	"death": {
@@ -370,8 +387,8 @@
                     "compare_to": 0
                 },
                 {
-                    "type": "origins:power",
-                    "power": "shulk:discard_shell/discard_shell_effect",
+                    "type": "origins:status_effect",
+                    "effect": "overloadedorigins:broken_shell",
                     "inverted": true
                 },
                 {
