@@ -17,7 +17,7 @@ public class RandomTeleport {
             boolean particles = data.get("particles");
             int i = 0;
             boolean tpSuccess = false;
-            while (i < 10 && !tpSuccess) {
+            while (i < 64 && !tpSuccess) {
                 double x = living.getX() + (living.getRandom().nextDouble() - 0.5) * radius;
                 double y = living.getY() + (living.getRandom().nextInt((int) radius) - (radius / 2));
                 double z = living.getZ() + (living.getRandom().nextDouble() - 0.5) * radius;

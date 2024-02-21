@@ -20,6 +20,11 @@
                     "compare_to": 3
                 }
             ]
+        },
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_armor",
+            "inverted": true
         }
     },
     "dr_2": {
@@ -42,6 +47,11 @@
                     "compare_to": 3
                 }
             ]
+        },
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_armor",
+            "inverted": true
         }
     },
     "dr_3": {
@@ -64,6 +74,11 @@
                     "compare_to": 4
                 }
             ]
+        },
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_armor",
+            "inverted": true
         }
     },
     "dr_4": {
@@ -86,6 +101,11 @@
                     "compare_to": 5
                 }
             ]
+        },
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_armor",
+            "inverted": true
         }
     },
     "dr_5": {
@@ -108,33 +128,11 @@
                     "compare_to": 6
                 }
             ]
-        }
-    },
-    "explosion": {
-        "type": "origins:modify_damage_dealt",
-        "damage_condition": {
-            "type": "origins:name",
-            "name": "explosion.player"
         },
-        "modifiers": [
-            {
-                "resource": "*:fortify_shell/constants_resource",
-                "operation": "set_base",
-                "value": 0,
-                "modifier": {
-                    "operation": "multiply_total_multiplicative",
-                    "value": -0.90
-                }
-            }
-        ],
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "eggolib:has_tag",
-                    "tag": "explosionDmg"
-                }
-            ]
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_armor",
+            "inverted": true
         }
     },
     "name": "§d§nFortified Shell I",

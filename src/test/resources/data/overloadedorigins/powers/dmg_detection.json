@@ -1,0 +1,21 @@
+{
+    "type": "origins:self_action_when_hit",
+    "cooldown": 0,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "tellraw @a {\"score\":{\"name\":\"@s\",\"objective\":\"dmgTaken\"}}"
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 20,
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @a {\"score\":{\"name\":\"@s\",\"objective\":\"dmgTaken\"}}"
+                }
+            }
+        ]
+    }
+}

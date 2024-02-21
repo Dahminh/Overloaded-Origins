@@ -9,5 +9,10 @@
             "type": "origins:play_sound",
             "sound": "minecraft:entity.shulker.teleport"
         }
+    },
+    "condition": {
+        "type": "origins:status_effect",
+        "effect": "minecraft:slowness",
+        "inverted": true
     }
 }
