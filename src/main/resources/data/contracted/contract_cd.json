@@ -1,9 +1,0 @@
-{
-	"type": "origins:cooldown",
-	"cooldown": 24000,
-	"hud_render": {
-		"sprite_location": "overloadedorigins:textures/gui/community/spiderkolo/resource_bar_01.png",
-		"bar_index": 1
-	},
-	"hidden": true
-}
