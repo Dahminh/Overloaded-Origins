@@ -3,14 +3,17 @@
   "effect.overloadedorigins.shadow_cloak": "Shadow Cloak",
   "effect.overloadedorigins.fear": "Fear",
   "effect.overloadedorigins.broken_shell": "Broken Shell",
+
   "death.attack.gorilla_rush_entity": "%1$s was ran over by %2$s",
   "death.attack.gorilla_rush_entity.item": "%1$s was ran over by %2$s while holding %3$s",
   "death.attack.gorilla_rush_wall": "%1$s ran into the wall too hard",
+
   "death.attack.shulk_explosion": "%1$s experienced %2$s's potential energy",
 
   "item.overloadedorigins.elder_dark_elf_dagger": "Elder Dark Elf Dagger",
   "item.overloadedorigins.high_dark_elf_dagger": "High Dark Elf Dagger",
   "item.overloadedorigins.dark_elf_dagger": "Dark Elf Dagger",
+
   "item.overloadedorigins.shulk_monolith_shell": "Shulk Monolith Shell",
   "item.overloadedorigins.shulk_ironclad_shell": "Shulk Ironclad Shell",
   "item.overloadedorigins.shulk_shell": "Shulk Shell",
@@ -20,5 +23,11 @@
   "sounds.overloadedorigins.dark_elf_ambient": "Dark Elf breathes",
   "sounds.overloadedorigins.dark_elf_appears": "Dark Elf appears",
   "sounds.overloadedorigins.dark_elf_vanishes": "Dark Elf vanishes",
-  "sounds.overloadedorigins.dark_elf_dodge": "Dark Elf dodges"
+  "sounds.overloadedorigins.dark_elf_dodge": "Dark Elf dodges",
+
+  "power.assassin.mobility/dash.name": "Dash",
+  "power.assassin.mobility/dash.description": "You have the ability to become enveloped by your shadow and quickly dash.",
+
+  "power.assassin.misc/lethal_training.name": "Lethal Training",
+  "power.assassin.misc/lethal_training.description": "You've gone through many cruel and harsh experiences to become the perfect assassin."
 }

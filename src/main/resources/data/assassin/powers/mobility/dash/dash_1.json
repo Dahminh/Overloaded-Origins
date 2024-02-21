@@ -64,8 +64,13 @@
 			]
 		}
 	},
-    "name": "§d§nDash I",
-    "description": "You have the ability to become enveloped by your shadow and quickly dash.",
+	"name": [
+		{"translate": "power.assassin.mobility/dash.name", "color": "light_purple"},
+		{"text": " I"}
+	],
+	"description": {
+		"translate": "power.assassin.mobility/dash.description"
+	},
     "badges": [
         {
 			"type": "origins:tooltip",

@@ -28,7 +28,7 @@
 						"effect": "minecraft:glowing",
 						"inverted": true
 					},	
-					{	    
+					{
 						"type": "origins:status_effect",
 						"effect": "minecraft:slowness",
 						"inverted": true
@@ -60,8 +60,13 @@
 			]
 		}
 	},
-    "name": "§d§nDash III",
-    "description": "You have the ability to become enveloped by your shadow and quickly dash.",
+	"name": [
+		{"translate": "power.assassin.mobility/dash.name", "color": "light_purple"},
+		{"text": " III"}
+	],
+	"description": {
+		"translate": "power.assassin.mobility/dash.description"
+	},
     "badges": [
 		{
 			"type": "origins:tooltip",

@@ -54,10 +54,16 @@
 				"\n§c-§r Water Breathing: §c-50%§r Duration",
 				"\n§c-§r Regeneration: §c-50%§r Duration, §c-1§r Amplifier",
 				"\n§c-§r Strength: §c-50%§r Duration, §c-1§r Amplifier",
-				"\n§c-§r Slow Falling: §c-75%§r Duration"
+				"\n§c-§r Slow Falling: §c-75%§r Duration",
+				"\n\nAny amplifiers that go below 0 will be considered an amplifier of 0."
 			]
 		}
     ],
-	"name": "§a§nLethal Training I",
-	"description": "You've gone through many cruel and harsh experiences to become the perfect assassin."
+	"name": [
+		{"translate": "power.assassin.misc/lethal_training.name", "color": "green"},
+		{"text": " I"}
+	],
+	"description": {
+		"translate": "power.assassin.misc/lethal_training.description"
+	}
 }
