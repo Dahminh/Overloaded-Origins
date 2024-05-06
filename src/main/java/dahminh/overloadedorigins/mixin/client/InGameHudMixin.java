@@ -1,6 +1,7 @@
 package dahminh.overloadedorigins.mixin.client;
 
 import dahminh.overloadedorigins.OverloadedOrigins;
+import dahminh.overloadedorigins.client.gui.hud.OOHeartType;
 import dahminh.overloadedorigins.effect.OOEffects;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -23,7 +24,15 @@ import java.util.Map;
 @Mixin(InGameHud.class)
 @Environment(EnvType.CLIENT)
 public abstract class InGameHudMixin {
-    private static final Identifier SHADOW_BETRAYAL_HEARTS = new Identifier(OverloadedOrigins.MOD_ID, "textures/gui/sprites/hud/heart/shadow_betrayal_heart.png");
+    private static final OOHeartType SHADOW_BETRAYAL_HEARTS = new OOHeartType(
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_full"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_full_blinking"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_half"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_half_blinking"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_hardcore_full"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_hardcore_full_blinking"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_hardcore_half"),
+            new Identifier(OverloadedOrigins.MOD_ID, "hud/heart/shadow_betrayal_hardcore_half_blinking"));
 
     @Final
     @Shadow private MinecraftClient client;
@@ -34,7 +43,7 @@ public abstract class InGameHudMixin {
         if (client.getCameraEntity() instanceof PlayerEntity player) {
             for (Map.Entry<StatusEffect, StatusEffectInstance> entry : player.getActiveStatusEffects().entrySet()) {
                 if (entry.getKey() == OOEffects.SHADOW_BETRAYAL) {
-                    context.drawTexture(SHADOW_BETRAYAL_HEARTS, x, y, half ? 9 : 0, hardcore ? 9 : 0, 9, 9);
+                    context.drawGuiTexture(SHADOW_BETRAYAL_HEARTS.getTexture(hardcore, half, blinking), x, y, 9, 9);
                 }
             }
         }
