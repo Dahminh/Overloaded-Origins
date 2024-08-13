@@ -56,7 +56,7 @@
 				"\n\n§nExplanation§r:\n\n",
 				"While you have §d§nShadow Cloak§r and not under the §cGlowing§r effect, your first melee strike against a full health target will:",
 				"\n§a-§r Be a §aCritical Attack§r, dealing max potential damage",
-				"\n§a-§r Deal §a1.75x§r damage",
+				"\n§a-§r Deal §a1.5x§r damage",
 				"\n§a-§r Inflict §cShadow Betrayal§r for §c30§r seconds",
 				"\n§a-§r Inflict §cBlindness§r for §c15§r seconds",
 				"\n§a-§r Inflict §cSlowness§r for §c5§r seconds"

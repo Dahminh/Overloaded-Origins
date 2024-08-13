@@ -40,7 +40,7 @@
 			{
 				"name": "Assassinate",
 				"operation": "multiply_total_multiplicative",
-				"value": 0.75
+				"value": 0.5
 			}
 			
 		],
