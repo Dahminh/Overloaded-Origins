@@ -67,6 +67,23 @@
 			]
 		}
 	},
+	"feature_render": {
+		"type": "origins:prevent_feature_render",
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:status_effect",
+					"effect": "minecraft:invisibility",
+					"min_amplifier": 4
+				},
+				{
+					"type": "origins:status_effect",
+					"effect": "overloadedorigins:shadow_cloak"
+				}
+			]
+		}
+	},
 	"tick_action": {
 		"type": "origins:action_over_time",
 		"interval": 1,

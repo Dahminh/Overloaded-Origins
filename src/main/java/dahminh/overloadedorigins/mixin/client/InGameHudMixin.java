@@ -41,10 +41,8 @@ public abstract class InGameHudMixin {
     private void drawHeart(DrawContext context, InGameHud.HeartType type, int x, int y, boolean hardcore, boolean blinking, boolean half, CallbackInfo ci) {
         if (type == InGameHud.HeartType.CONTAINER) return;
         if (client.getCameraEntity() instanceof PlayerEntity player) {
-            for (Map.Entry<StatusEffect, StatusEffectInstance> entry : player.getActiveStatusEffects().entrySet()) {
-                if (entry.getKey() == OOEffects.SHADOW_BETRAYAL) {
-                    context.drawGuiTexture(SHADOW_BETRAYAL_HEARTS.getTexture(hardcore, half, blinking), x, y, 9, 9);
-                }
+            if (player.hasStatusEffect(OOEffects.SHADOW_BETRAYAL)) {
+                context.drawGuiTexture(SHADOW_BETRAYAL_HEARTS.getTexture(hardcore, half, blinking), x, y, 9, 9);
             }
         }
     }

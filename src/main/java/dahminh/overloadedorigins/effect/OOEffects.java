@@ -1,6 +1,10 @@
 package dahminh.overloadedorigins.effect;
 
 import dahminh.overloadedorigins.OverloadedOrigins;
+import dahminh.overloadedorigins.effect.BrokenShellEffect;
+import dahminh.overloadedorigins.effect.FearEffect;
+import dahminh.overloadedorigins.effect.ShadowBetrayalEffect;
+import dahminh.overloadedorigins.effect.ShadowCloakEffect;
 import jdk.jshell.Snippet;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;

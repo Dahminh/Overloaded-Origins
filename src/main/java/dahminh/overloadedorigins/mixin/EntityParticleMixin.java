@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(LivingEntity.class)
 public abstract class EntityParticleMixin extends Entity {
 
-    private final DustColorTransitionParticleEffect particleEffect = new DustColorTransitionParticleEffect(new Vector3f(0.0f, 0.0f, 0.0f), new Vector3f(0.15f, 0.15f, 0.15f), 2);
+    private final DustColorTransitionParticleEffect PARTICLE_EFFECT = new DustColorTransitionParticleEffect(new Vector3f(0.0f, 0.0f, 0.0f), new Vector3f(0.15f, 0.15f, 0.15f), 2);
     public EntityParticleMixin(EntityType<?> type, World world) {
         super(type, world);
     }
@@ -35,7 +35,7 @@ public abstract class EntityParticleMixin extends Entity {
             boolean firstPerson = MinecraftClient.getInstance().options.getPerspective().isFirstPerson();
             if (((Object) this != player || (!firstPerson))) {
                 for (int i = 0; i<2; i++) {
-                    getWorld().addParticle(particleEffect,
+                    getWorld().addParticle(PARTICLE_EFFECT,
                             this.getX() + this.random.nextGaussian() * 0.3,
                             this.getY() + 0.1 + this.random.nextGaussian() * 0.1,
                             this.getZ() + this.random.nextGaussian() * 0.3,
