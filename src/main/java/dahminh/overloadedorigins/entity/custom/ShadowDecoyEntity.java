@@ -236,9 +236,7 @@ public class ShadowDecoyEntity extends HostileEntity implements Ownable {
             LivingEntity attacking = livingEntityOwner.getAttacking();
             this.attacking = attacking;
 
-            return livingEntityOwner != null &&
-                    attacking != null &&
-                    this.canTrack(attacking, this.targetPredicate);
+            return attacking != null && this.canTrack(attacking, this.targetPredicate);
         }
 
         public void start() {
