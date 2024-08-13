@@ -45,7 +45,7 @@
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "summon spider ^ ^ ^30 {\"pehkui:scale_data_types\":{\"pehkui:width\":{scale:0.75f},\"pehkui:height\":{scale:0.75f}},Tags:[\"Decoy\"],Health:1f,Attributes:[{Name:generic.knockback_resistance,Base:1},{Name:generic.max_health,Base:0},{Name:generic.attack_damage,Base:0},{Name:generic.movement_speed,Base:0.3}],DeathLootTable:\"minecraft:empty\",Silent:1b,cardinal_components:{\"apoli:powers\": {Powers: [{Type:\"assassin:shadow_abilities/decoy/decoy_power\",Data: 1b, Sources:[\"apoli:command\"]}]}}}"		
+                    "command": "function assassin:decoy_spawn_1 with entity @s"		
                 },
                 {
                     "type": "origins:change_resource",
@@ -55,7 +55,7 @@
                 }
             ]
         },
-        "command_at_hit": "summon spider ~ ~ ~ {\"pehkui:scale_data_types\":{\"pehkui:width\":{scale:0.75f},\"pehkui:height\":{scale:0.75f}},Tags:[\"Decoy\"],Health:1f,Attributes:[{Name:generic.knockback_resistance,Base:1},{Name:generic.max_health,Base:0},{Name:generic.attack_damage,Base:0},{Name:generic.movement_speed,Base:0.3}],DeathLootTable:\"minecraft:empty\",Silent:1b,cardinal_components:{\"apoli:powers\": {Powers: [{Type:\"assassin:shadow_abilities/decoy/decoy_power\",Data: 1b, Sources:[\"apoli:command\"]}]}}}"		
+        "command_at_hit": "function assassin:decoy_spawn_2 with entity @s"	
     },
 	"name": "§d§nDeceiving Shadow II",
 	"description": "You can summon a Shadow Decoy to deceive your targets.",

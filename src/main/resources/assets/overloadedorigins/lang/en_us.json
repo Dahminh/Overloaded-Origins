@@ -19,11 +19,25 @@
   "item.overloadedorigins.shulk_shell": "Shulk Shell",
   "item.overloadedorigins.joke_shell": "Lil Guy",
 
+  "item.overloadedorigins.web_expansion": "Web Expansion",
+
+  "entity.overloadedorigins.spectre": "Spectre",
+  "entity.overloadedorigins.shadow_decoy": "Shadow Decoy",
+
   "sounds.overloadedorigins.dark_elf_dash": "Dark Elf dashes",
   "sounds.overloadedorigins.dark_elf_ambient": "Dark Elf breathes",
   "sounds.overloadedorigins.dark_elf_appears": "Dark Elf appears",
   "sounds.overloadedorigins.dark_elf_vanishes": "Dark Elf vanishes",
   "sounds.overloadedorigins.dark_elf_dodge": "Dark Elf dodges",
+
+  "origin.arachnid.upgraded0.name": "Arachnid",
+  "origin.arachnid.upgraded0.description": "Their climbing abilities and the ability to trap their foes in spiderweb make the Arachnid perfect hunters.",
+
+  "origin.arachnid.upgraded1.name": "PLACEHOLDER Arachnid",
+  "origin.arachnid.upgraded1.description": "PLACEHOLDER",
+
+  "origin.arachnid.upgraded2.name": "PLACEHOLDER Arachnid",
+  "origin.arachnid.upgraded2.description": "PLACEHOLDER",
 
   "power.assassin.mobility/dash.name": "Dash",
   "power.assassin.mobility/dash.description": "You have the ability to become enveloped by your shadow and quickly dash.",

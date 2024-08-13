@@ -1,14 +1,16 @@
 package dahminh.overloadedorigins.mixin;
 
 import dahminh.overloadedorigins.effect.OOEffects;
+import dahminh.overloadedorigins.entity.custom.ShadowDecoyEntity;
 import dahminh.overloadedorigins.sound.OOSounds;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -31,7 +33,8 @@ public abstract class LivingEntityMixin {
     @Inject(at = @At("HEAD"), method= "onAttacking")
     private void onAttacking(Entity target, CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
-        if (self.hasStatusEffect(OOEffects.SHADOW_CLOAK) & !target.getCommandTags().contains("Decoy")) {
+
+        if (self.hasStatusEffect(OOEffects.SHADOW_CLOAK) && (!(target instanceof ShadowDecoyEntity) || !((ShadowDecoyEntity) target).isOwner(self))) {
             self.removeStatusEffect(OOEffects.SHADOW_CLOAK);
         }
     }
@@ -46,17 +49,17 @@ public abstract class LivingEntityMixin {
 
     @Inject(at = @At("TAIL"), method = "onStatusEffectRemoved")
     private void onStatusEffectRemoved(StatusEffectInstance effect, CallbackInfo ci) {
-        LivingEntity e = (LivingEntity) (Object) this;
-        if (e.getWorld().isClient) {
+        LivingEntity currentEntity = (LivingEntity) (Object) this;
+        if (currentEntity.getWorld().isClient) {
             return;
         }
         if (effect.getEffectType().equals(OOEffects.SHADOW_CLOAK)) {
-            e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), OOSounds.DARK_ELF_APPEARS, SoundCategory.HOSTILE, 1.0f, 2.0f);
-            ((ServerWorld) e.getWorld()).spawnParticles(
+            currentEntity.getWorld().playSound(null, currentEntity.getX(), currentEntity.getY(), currentEntity.getZ(), OOSounds.DARK_ELF_APPEARS, SoundCategory.HOSTILE, 1.0f, 2.0f);
+            ((ServerWorld) currentEntity.getWorld()).spawnParticles(
                     LARGE_SMOKE,
-                    e.getX(),
-                    e.getY(),
-                    e.getZ(),
+                    currentEntity.getX(),
+                    currentEntity.getY(),
+                    currentEntity.getZ(),
                     25,
                     0.5,
                     0,

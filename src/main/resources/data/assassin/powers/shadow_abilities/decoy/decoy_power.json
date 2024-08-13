@@ -24,6 +24,9 @@
         "render_armor": false,
 		"render_outline": false
     },
+	"no_features_rendered": {
+		"type": "origins:prevent_feature_render"
+	},
 	"sound_effect": {
 		"type": "origins:action_over_time",
 		"interval": 80,
@@ -64,7 +67,7 @@
 			"actions": [
 				{
                     "type": "origins:play_sound",
-                    "sound": "overloadedorigins:dark_elf_appears",
+                    "sound": "overloadedorigins:dark_elf_vanishes",
                     "pitch": 2
                 },
 				{
@@ -163,7 +166,7 @@
 			"actions": [
 				{
                     "type": "origins:play_sound",
-                    "sound": "overloadedorigins:dark_elf_appears",
+                    "sound": "overloadedorigins:dark_elf_vanishes",
                     "pitch": 2
                 },
 				{

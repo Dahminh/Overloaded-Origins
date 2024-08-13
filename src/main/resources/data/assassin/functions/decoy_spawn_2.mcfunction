@@ -1,0 +1,1 @@
+$summon overloadedorigins:shadow_decoy ~ ~ ~ {Owner:$(UUID)}
