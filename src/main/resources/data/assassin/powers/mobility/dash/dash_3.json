@@ -52,6 +52,10 @@
 			"type": "origins:and",
 			"conditions": [
 				{
+					"type": "origins:fall_flying",
+					"inverted": true
+				},
+				{
 					"type": "origins:resource",
 					"resource": "*:mobility/dash/constants_charges",
 					"comparison": ">=",
