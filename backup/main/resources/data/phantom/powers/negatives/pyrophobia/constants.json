@@ -1,9 +1,0 @@
-{
-    "type": "origins:modify_status_effect_duration",
-    "status_effect": "minecraft:fire_resistance",
-    "modifier": {
-        "operation": "multiply_total",
-        "value": -0.75
-    },
-    "hidden": true
-}

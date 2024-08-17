@@ -1,9 +1,0 @@
-{
-    "type": "origins:overlay",
-    "texture": "overloadedorigins:textures/mob_effect/terrify.png",
-    "draw_mode": "texture",
-    "draw_phase": "below_hud",
-    "visible_in_third_person": true,
-    "hide_with_hud": false,
-    "strength": 0.90
-}

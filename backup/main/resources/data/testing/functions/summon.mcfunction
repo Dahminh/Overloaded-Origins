@@ -1,1 +1,0 @@
-summon minecraft:armor_stand ~ ~1 ~ {CustomName:"\"teleport\"",CustomNameVisible:0b,NoAI:1b,PersistenceRequired:0b,NoGravity:0b,Invulnerable:1b,Invisible:1b}

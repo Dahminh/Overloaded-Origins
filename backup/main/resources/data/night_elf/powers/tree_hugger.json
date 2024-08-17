@@ -1,9 +1,0 @@
-{
-   "type": "origins:prevent_block_selection",
-   "block_condition": {
-      "type": "origins:in_tag",
-      "tag": "night_elf:more_trees"
-   },
-	"name": "§e§nTree Hugger",
-	"description": "You love trees so much that you refuse to destroy them. However, your interactions can go through the tree related blocks."
-}

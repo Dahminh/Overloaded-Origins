@@ -1,6 +1,0 @@
-{
-    "type": "origins:prevent_sleep",
-    "message": "Phantoms do not sleep",
-    "set_spawn_point": true,
-    "hidden": true
-}

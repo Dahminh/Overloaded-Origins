@@ -1,9 +1,0 @@
-{
-  "type": "origins:invulnerability",
-  "damage_condition": {
-    "type": "origins:name",
-    "name": "fall"
-  },
-  "name": "§a§nNimble Legs",
-  "description": "Your legs allow you to be faster and jump higher. It also grants you the ability to be immune to fall damage."
-}
