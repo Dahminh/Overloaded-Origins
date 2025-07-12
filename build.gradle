@@ -64,6 +64,7 @@ repositories {
 			includeGroup "curse.maven"
 		}
 	}
+	mavenCentral()
 
 	//mavenLocal()
 
@@ -127,6 +128,9 @@ dependencies {
 
 	//Origins Extra Keybinds
 	modImplementation "curse.maven:extrakeybinds-474612:4031145"
+
+	//DevLogin
+	modImplementation "com.ptsmods:devlogin:3.5" // For Fabric and Quilt
 
 }
 
