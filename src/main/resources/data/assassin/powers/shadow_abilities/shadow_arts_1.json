@@ -27,13 +27,13 @@
                 "§a§nShadow Betrayal I",
                 "\nYou can make your target's shadow betray themselves.",
                 "\n\n§nExplanation§r:\n\n",
-                "Your melee attacks have a §a30%§r to inflict §cShadow Betrayal§r §ffor §c30§r §fseconds. Successful backstabs or using assassinate will always guarantee §cShadow Betrayal§r §ffor §c30§r §fseconds.",
+                "Your melee attacks have a §a30%§r to inflict §cShadow Betrayal§r §ffor §c15§r §fseconds. Successful backstabs or using assassinate will always guarantee §cShadow Betrayal§r §ffor §c15§r §fseconds.",
                 "\n\n§cShadow Betrayal§r is a debuff that will do the following:",
                 "\n§c-§r Get rid of the regeneration effect upon application",
                 "\n§c-§r Emit particle effects and create deceiving sounds",
                 "\n§c-§r Make it difficult for the target to see their health",
                 "\n§c-§r Reduce healing effectiveness by §c50%",
-                "\n§c-§r Be detected by Dark Elves and their Evolutions in a §a60§r block radius"
+                "\n§c-§r Will glow this §0color§r (black) to Dark Elves and their Evolutions in a §a60§r block radius"
             ]
         },
         {

@@ -1,6 +1,5 @@
 {
     "powers": [
-		"assassin:misc/hunters_instinct/night_vision_3",
 		"assassin:misc/hunters_instinct/hunter",
 		"assassin:misc/hunters_instinct/lethal_training_3",
 		"assassin:shadow_abilities/stealth/concealed_presence",
@@ -26,11 +25,11 @@
 		"assassin:negatives/ruthlessness",
 		"assassin:negatives/too_agile",
 		"assassin:negatives/light_body3",
+		"assassin:negatives/weaker_weapons",
 		"assassin:negatives/merciless",
 		"assassin:negatives/too_bright",
 		"assassin:negatives/om_nom",
 		"assassin:negatives/lightning_bad",
-		"assassin:damage/melee_attack",
 		"assassin:shadow_abilities/stealth/stealth",
 		"assassin:shadow_abilities/stealth/stealth_meter",
 		"assassin:mobility/dash/constants",
@@ -44,6 +43,6 @@
 	"order": 0,
 	"impact": 3,
 	"name": "Elder Dark Elf",
-	"description": "You're now the pinnacle of the Dark Elves, becoming a master assassin who lurks in the shadows. No one is safe from you...",
+	"description": "With the last assassination of your target, you have evolved into an Elder Dark Elf, becoming a true master assassin and shadow manipulator. Your targets won't even know that their life is in your hands...",
 	"unchoosable": true	
 }

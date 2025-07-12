@@ -60,11 +60,6 @@
                 }
             ]
         },
-        "target_condition": {
-            "type": "origins:power",
-            "power": "*:shadow_abilities/decoy/decoy_power",
-            "inverted": true
-        },
         "damage_condition": {
             "type": "origins:type",
             "damage_type": "minecraft:player_attack"
@@ -87,12 +82,7 @@
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 0.25 0.25"
-                },
-                {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:entity.player.attack.crit",
-                    "pitch": 0.8
+                    "command": "playsound overloadedorigins:backstab_attack master @s ~ ~ ~ 0.25 0.25"
                 },
                 {
                     "type": "origins:if_else",

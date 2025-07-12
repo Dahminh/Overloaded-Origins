@@ -14,7 +14,7 @@
 			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/restricted.png",
 			"text": [
 				"§c§nMerciless",
-				"\nYou hunt down your targets with only melee attacks, refusing to use certain items.",
+				"\nYou were trained to use melee weapons and only melee weapons, making it a habit to never use defensive tools and ranged weapons.",
 				"\n\n§nExplanation§r:\n\n",
 				"You cannot use:",
 				"\n§c-§r Bows",

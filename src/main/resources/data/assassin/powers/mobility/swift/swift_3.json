@@ -30,17 +30,8 @@
 			"value": -41
 		},
 		"damage_condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:name",
-					"name": "fall"
-				},
-				{
-					"type": "origins:name",
-					"name": "fall.player"
-				}
-			]
+			"type": "origins:in_tag",
+			"tag": "minecraft:is_fall"
 		}
 	},
 	"badges": [
@@ -49,7 +40,7 @@
 			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/swift.png",
 			"text": [
 				"§a§nSwift-Footed III",
-				"\nYou're a natural born athlete and trained that athleticism to it's fullest during your training.",
+				"\nYou're a natural born athlete and trained that athleticism to the fullest during your training.",
 				"\n\n§nExplanation§r:\n\n",
 				"You have §a50%§r more movement speed.",
 				"\n\nYou jump §a2.5 blocks§r higher while sprinting.",

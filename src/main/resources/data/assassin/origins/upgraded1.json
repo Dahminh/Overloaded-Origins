@@ -1,6 +1,5 @@
 {
     "powers": [
-		"assassin:misc/hunters_instinct/night_vision_2",
 		"assassin:misc/hunters_instinct/hunter",
 		"assassin:misc/hunters_instinct/lethal_training_2",
 		"assassin:shadow_abilities/stealth/concealed_presence",
@@ -26,11 +25,11 @@
 		"assassin:negatives/ruthlessness",
 		"assassin:negatives/too_agile",
 		"assassin:negatives/light_body2",
+		"assassin:negatives/weaker_weapons",
 		"assassin:negatives/merciless",
 		"assassin:negatives/too_bright",
 		"assassin:negatives/om_nom",
 		"assassin:negatives/lightning_bad",
-		"assassin:damage/melee_attack",
 		"assassin:shadow_abilities/stealth/stealth",
 		"assassin:shadow_abilities/stealth/stealth_meter",
 		"assassin:mobility/dash/constants",
@@ -42,13 +41,13 @@
 	"order": 0,
 	"impact": 3,
 	"name": "High Dark Elf",
-	"description": "You're now a High Dark Elf, greatly enhancing your assassination related skills. Your connection to the shadows are stronger.",
+	"description": "After countless assassinations, you have evolved into a High Dark Elf, greatly enhancing your assassination skills while having a stronger connection with the shadows.",
 	"unchoosable": true,
 	"upgrades": [
 		{
 			"condition": "minecraft:adventure/kill_all_mobs",
 			"origin": "assassin:upgraded2",
-			"announcement": "You have evolved into a Elder Dark Elf. You are now at the pinnacle of your Origin."
+			"announcement": "You have evolved into a Elder Dark Elf. No one is safe from you...."
 		}
 	]
 }

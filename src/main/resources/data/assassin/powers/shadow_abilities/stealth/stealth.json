@@ -86,12 +86,12 @@
 	},
 	"tick_action": {
 		"type": "origins:action_over_time",
-		"interval": 1,
+		"interval": 10,
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:shadow_abilities/decoy/decoy_charges",
 			"operation": "add",
-			"change": 1
+			"change": 10
 		},
 		"condition": {
 			"type": "origins:status_effect",

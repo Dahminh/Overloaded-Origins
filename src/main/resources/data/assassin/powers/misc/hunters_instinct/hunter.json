@@ -7,28 +7,67 @@
 			"key": "key.origins.quinary_active"
 		}
 	},
-	"switch": {
-		"type": "origins:active_self",
-		"key": {
-			"key": "key.origins.quinary_active"
+	"glowing": {
+		"type": "origins:entity_glow",
+		"bientity_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:distance",
+					"comparison": "<=",
+					"compare_to": 24
+				},
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:distance",
+							"comparison": "<=",
+							"compare_to": 6
+						},
+						{
+							"type": "origins:relative_rotation",
+							"actor_rotation": "head",
+							"target_rotation": "body",
+							"comparison": ">",
+							"compare_to": 0.125
+						},
+						{
+							"type": "origins:can_see",
+							"shape_type": "visual"
+						}
+					],
+					"inverted": true
+				}
+			]
 		},
-        "entity_action": {
-            "type": "origins:if_else",
-			"condition": {
-				"type": "origins:power_active",
-				"power": "*:*_toggle"
-			},
-			"if_action": {
-				"type": "origins:revoke_power",
-				"power": "assassin:misc/hunters_instinct/glowing",
-				"source": "assassin:assassin"
-			},
-			"else_action": {
-				"type": "origins:grant_power",
-				"power": "assassin:misc/hunters_instinct/glowing",
-				"source": "assassin:assassin"
-			}
-        }
-    },
+		"entity_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:living"
+				},
+				{
+					"type": "origins:entity_type",
+					"entity_type": "minecraft:armor_stand",
+					"inverted": true
+				},
+				{
+					"type": "origins:status_effect",
+					"effect": "overloadedorigins:shadow_betrayal",
+					"inverted": true
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:power_active",
+			"power": "*:*_toggle"
+		},
+		"hidden": true,
+		"use_teams": false,
+		"red": 0.75,
+		"green": 0.75,
+		"blue": 0.75
+	},
 	"hidden": true
 }

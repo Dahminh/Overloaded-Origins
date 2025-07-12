@@ -1,17 +1,24 @@
 {
-    "type": "origins:simple",
+	"type": "origins:night_vision",
+	"strength": 0.7,
     "badges": [
 		{
 			"type": "origins:tooltip",
 			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/hunter.png",
 			"text": [
 				"§a§nHunter's Instinct",
-				"\nBeing raised in the dark for so long and training your senses to an extreme, you're able to see in the dark and sense nearby mobs.",
+				"\nWhile training, you have honed your detection skills to an extreme, allowing you to avoid countless life threatening situations while finding the perfect opportunities for ambushing your targets. Your eyes have also become accustomed to the dark due to constantly training in the dark.",
 				"\n\n§nExplanation§r:\n\n",
 				"You have permanent §anight vision§r§f.",
 				"\n\n[§bQuinary Toggleable Ability§r], Toggling with [",
 				{"keybind": "key.origins.quinary_active"},
-				"] will give any mob in a §a24 block§r §fradius the glowing effect. The glowing effect is only visible to you."
+				"] will give any mob in a §a24 block§r §fradius the glowing effect. The glowing effect is only visible to you.",
+				"\n\nThey will glow this ",
+				{
+					"text": "color",
+					"color": "#c0c0c0"
+				},
+				" (gray)."
 			]
 		},
 		{
@@ -28,10 +35,10 @@
 			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/leather.png",
 			"text": [
 				"§a§nImproved Leather Armor II",
-				"\nBeing forced to wear leather for so long, you have learned how to maintain and keep it in peak conditions.",
+				"\nBeing only able to wear leather armor for so long, you have learned how to maintain and keep it in peak conditions.",
 				"\n\n§nExplanation§r:\n\n",
                 "You will take §a-3§r damage durability for any equipped leather armor when taking durability damage",
-				"\n\nAny leather armor in your inventory will repair itself by §a10%§r of its durability every §a5§r seconds."
+				"\n\nAny leather armor in your mainhand will repair itself by §a10%§r of its durability every §a5§r seconds."
 			],
 			"type": "origins:tooltip"
 		},

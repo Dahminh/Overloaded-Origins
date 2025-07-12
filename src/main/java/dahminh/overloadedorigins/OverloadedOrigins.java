@@ -6,7 +6,9 @@ import dahminh.overloadedorigins.entity.custom.ShadowDecoyEntity;
 import dahminh.overloadedorigins.entity.custom.SpectreEntity;
 import dahminh.overloadedorigins.item.Items;
 import dahminh.overloadedorigins.registry.factory.OverloadedOriginsEntityActions;
+import dahminh.overloadedorigins.registry.factory.OverloadedOriginsPowerFactories;
 import dahminh.overloadedorigins.sound.OOSounds;
+import dahminh.overloadedorigins.stat.OOStats;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -24,7 +26,9 @@ public class OverloadedOrigins implements ModInitializer {
 		OOEffects.registerEffects();
 		Items.registerItems();
 		OverloadedOriginsEntityActions.register();
+		OverloadedOriginsPowerFactories.register();
 		OOSounds.registerSounds();
+		OOStats.registerStats();
 		FabricDefaultAttributeRegistry.register(OOEntities.SHADOW_DECOY, ShadowDecoyEntity.createShadowDecoyAttributes());
 	}
 

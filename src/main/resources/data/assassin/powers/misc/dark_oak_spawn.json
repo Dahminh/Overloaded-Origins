@@ -13,9 +13,7 @@
                 "§a§nNatural Inhabitant",
                 "\nInstead of being raised in Oak Forests like your Light Elven counterparts, you are raised in Dark Oak Forests.",
                 "\n\n§nExplanation§r:\n\n",
-                "You spawn in a Dark Oak Forest.",
-                "\n\n§4NOTE:",
-                "\nIt may take a lot longer than usual for you to spawn in a Dark Oak Biome."
+                "You spawn in a Dark Oak Forest."
             ]
         },
         {
@@ -33,7 +31,7 @@
             "sprite": "overloadedorigins:textures/gui/badge/dark_elf/dexterous.png",
             "text": [
                 "§a§nDexterous",
-                "\nAs an Elf, you are naturally able to handle weapons, tools, and items effectively.",
+                "\nAs an Elf, you are naturally able to skillfully handle most weapons, tools, and items which subsequently improves your lethality.",
                 "\n\n§nExplanation§r:\n\n",
                 "You have §a2x§r attack speed."
             ]

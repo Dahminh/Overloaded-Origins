@@ -64,12 +64,19 @@
 			]
 		}
 	},
-	"name": [
-		{"translate": "power.assassin.mobility/dash.name", "color": "light_purple"},
-		{"text": " III"}
-	],
+	"name": {
+		"translate": "power.assassin.mobility/dash.name",
+		"fallback": "Dash III",
+		"color": "light_purple",
+		"with": [
+			{
+				"text": "III"
+			}
+		]
+	},
 	"description": {
-		"translate": "power.assassin.mobility/dash.description"
+		"translate": "power.assassin.mobility/dash.description",
+		"fallback": "You have the ability to become enveloped by your shadow and quickly dash."
 	},
     "badges": [
 		{

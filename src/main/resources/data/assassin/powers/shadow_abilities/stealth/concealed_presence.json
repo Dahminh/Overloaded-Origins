@@ -139,6 +139,7 @@
 	"feature_2": {
 		"type": "origins:prevent_feature_render",
 		"features": [
+            "shoulder_parrot",
 			"held_item"
 		],
         "condition": {
@@ -198,12 +199,12 @@
 	},
 	"tick_action": {
 		"type": "origins:action_over_time",
-		"interval": 1,
+		"interval": 40,
 		"entity_action": {
             "type": "origins:apply_effect",
             "effect": {
                 "effect": "minecraft:invisibility",
-                "duration": 2,
+                "duration": 41,
                 "amplifier": 4,
                 "show_particles": false
             }
@@ -239,11 +240,6 @@
             "compare_to": 0,
             "resource": "*:*_meter"
         },
-		"target_condition": {
-			"type": "origins:power",
-			"power": "*:shadow_abilities/decoy/decoy_power",
-			"inverted": true
-		},
 		"cooldown": 0
 	},
 	"clear_2": {

@@ -8,10 +8,11 @@
 			"sprite": "overloadedorigins:textures/gui/badge/dark_elf/crippled.png",
 			"text": [
 				"§c§nToo Agile III",
-				"\nDue to having a heavy agility based build, you had to give up defence and risk the possibility of getting crippled.",
+				"\nDue to having a heavy agility based build, you had to give up defence, which risk the possibility of getting crippled and the strength to effectively wield heavy weapons.",
 				"\n\n§nExplanation§r:\n\n",
 				"You cannot wear any armor stronger than leather armor.",
-				"\n\nWhenever you get hit, you will be crippled, receiving §cSlowness V§r for §c3§r seconds."
+				"\n\nWhenever you get hit, you will be crippled, receiving §cSlowness V§r for §c3§r seconds.",
+				"\n\nHeavy weapons such as Axes will deal §c25%§r less damage."
 			]
 		},
 		{

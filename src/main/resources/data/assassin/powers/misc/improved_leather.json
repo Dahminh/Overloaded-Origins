@@ -111,7 +111,7 @@
             },
             "entity_action": {
                 "type": "origins:execute_command",
-                "command": "playsound minecraft:item.armor.equip_leather player @s ~ ~ ~ 1 1"
+                "command": "playsound overloadedorigins:leather_armor_repair player @s ~ ~ ~ 1 1"
             },
             "item_condition": {
                 "type": "origins:and",
@@ -121,6 +121,11 @@
                         "ingredient": {
                             "tag": "*:leather_armor"
                         }
+                    },
+                    {
+                        "type": "origins:relative_durability",
+                        "compare_to": 1,
+                        "comparison": "<"
                     }
                 ]
             },

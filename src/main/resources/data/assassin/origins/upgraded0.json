@@ -1,6 +1,5 @@
 {
     "powers": [
-		"assassin:misc/hunters_instinct/night_vision_1",
 		"assassin:misc/hunters_instinct/hunter",
 		"assassin:misc/hunters_instinct/lethal_training_1",
 		"assassin:shadow_abilities/stealth/concealed_presence",
@@ -26,11 +25,11 @@
 		"assassin:negatives/ruthlessness",
 		"assassin:negatives/too_agile",
 		"assassin:negatives/light_body1",
+		"assassin:negatives/weaker_weapons",
 		"assassin:negatives/merciless",
 		"assassin:negatives/too_bright",
 		"assassin:negatives/om_nom",
 		"assassin:negatives/lightning_bad",
-		"assassin:damage/melee_attack",
 		"assassin:shadow_abilities/stealth/stealth",
 		"assassin:shadow_abilities/stealth/stealth_meter",
 		"assassin:mobility/dash/constants",

@@ -1,87 +1,61 @@
 {
-    "type": "origins:multiple",
-    "resource": {
-        "type": "origins:resource",
-        "min": 0,
-        "max": 2147483647
-    },
-	"assassinate": {
-		"type": "origins:modify_damage_dealt",
-		"target_condition": {
-			"type": "origins:relative_health",
-			"comparison": "==",
-			"compare_to": 1.0
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:status_effect",
-					"effect": "overloadedorigins:shadow_cloak"
-				},
-				{
-					"type": "origins:status_effect",
-					"effect": "minecraft:glowing",
-					"inverted": true
-				}
-			]
-			
-		},
-		"modifiers": [
-			{
-                "operation": "set_base",
-                "value": 0,
-                "resource": "*:*_resource",
-				"modifier": {
-					"operation": "multiply_total_multiplicative",
-					"value": -0.99
-				}
-            },
-			{
-				"name": "Assassinate",
-				"operation": "multiply_total_multiplicative",
-				"value": 0.5
-			}
-			
-		],
-		"target_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:item.shield.break",
-					"pitch": 1.8
-				},
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:blindness",
-							"duration": 300,
-							"amplifier": 0
-						},
-						{
-							"effect": "minecraft:slowness",
-							"duration": 100,
-							"amplifier": 4
-						}
-					]
-				}
-			]
-		},
-        "self_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:execute_command",
-                    "command": "function assassin:crit_maths"
-                }
-            ]
-        },
-        "damage_condition": {
-			"type": "origins:type",
-			"damage_type": "minecraft:player_attack"
-		}
+	"type": "origins:modify_damage_dealt",
+	"hidden": true,
+	"target_condition": {
+		"type": "origins:relative_health",
+		"comparison": "==",
+		"compare_to": 1.0
 	},
-	"hidden": true
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:status_effect",
+				"effect": "overloadedorigins:shadow_cloak"
+			},
+			{
+				"type": "origins:status_effect",
+				"effect": "minecraft:glowing",
+				"inverted": true
+			}
+		]
+		
+	},
+	"modifiers": [
+		{
+			"name": "Assassinate",
+			"operation": "multiply_total_multiplicative",
+			"value": 0.5
+		}
+		
+	],
+	"target_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:play_sound",
+				"sound": "overloadedorigins:assassinate",
+				"pitch": 1.8
+			},
+			{
+				"type": "origins:apply_effect",
+				"effects": [
+					{
+						"effect": "minecraft:blindness",
+						"duration": 300,
+						"amplifier": 0
+					},
+					{
+						"effect": "minecraft:slowness",
+						"duration": 100,
+						"amplifier": 4
+					}
+				]
+			}
+		]
+	},
+	"damage_condition": {
+		"type": "origins:type",
+		"damage_type": "minecraft:player_attack"
+	}
 }

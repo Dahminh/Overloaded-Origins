@@ -42,7 +42,7 @@
     },
     "tick_actions": {
         "type": "origins:action_over_time",
-        "interval": 1,
+        "interval": 10,
         "entity_action": {
             "type": "origins:and",
             "actions": [
@@ -50,13 +50,13 @@
                     "type": "origins:change_resource",
                     "resource": "*:shadow_abilities/stealth/stealth_stealth",
                     "operation": "add",
-                    "change": -2
+                    "change": -20
                 },
                 {
                     "type": "origins:change_resource",
                     "resource": "*:shadow_abilities/decoy/decoy_charges",
                     "operation": "add",
-                    "change": 1
+                    "change": 10
                 }
             ]
         },
