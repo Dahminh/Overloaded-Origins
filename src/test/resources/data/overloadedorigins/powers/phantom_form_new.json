@@ -5,8 +5,8 @@
         "type": "origins:cooldown",
         "cooldown": 60,
         "hud_render": {
-            "bar_index": 2,
-            "sprite_location": "origins:textures/gui/phantom.png",
+            "bar_index": 10,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
             "should_render": true
         }
     },
@@ -14,10 +14,25 @@
         "type": "origins:cooldown",
         "cooldown": 150,
         "hud_render": {
-            "bar_index": 2,
-            "sprite_location": "origins:textures/gui/phantom.png",
+            "bar_index": 10,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
             "should_render": true
         }
+    },
+    "flight_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "hud_render": {
+            "bar_index": 10,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "should_render": true
+        }
+    },
+    "flight_toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5
     },
     "toggle": {
         "type": "origins:toggle",
@@ -50,30 +65,6 @@
             ]
         }
     },
-	"fall_damage_resistant": {
-		"type": "origins:modify_damage_taken",
-		"modifier": {
-			"operation": "addition",
-			"value": -17
-		},
-		"damage_condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:name",
-					"name": "fall"
-				},
-				{
-					"type": "origins:name",
-					"name": "fall.player"
-				}
-			]
-		},
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-	},
     "undead": {
         "type": "origins:entity_group",
         "group": "undead",
@@ -164,7 +155,11 @@
 		"condition": {
 			"type": "origins:power_active",
             "power": "*:*_toggle"
-		}
+		},
+        "name": {
+            "text": "Phantom Form",
+            "color": "green"
+        }
 	},
   	"prevent_entity_use": {
 		"type": "origins:prevent_entity_use",
@@ -225,7 +220,19 @@
             ]
         }
     },
-    "rise": {
+    "rise_in_block": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -243,18 +250,6 @@
                 }
             ]
         },
-        "type": "origins:active_self",
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:levitation",
-                "duration": 2,
-                "amplifier": 3,
-                "show_particles": false,
-                "show_icon": false
-            }
-        },
-        "cooldown": 1,
         "hud_render": {
             "should_render": false
         },
@@ -263,7 +258,49 @@
             "continuous": true
         }
     },
-    "fall": {
+    "rise_outside_block": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_flight_toggle",
+                    "operation": "add",
+                    "change": 1
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_flight_toggle",
+                        "comparison": "==",
+                        "compare_to": 5
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:levitation",
+                                    "duration": 2,
+                                    "amplifier": 3,
+                                    "show_particles": false,
+                                    "show_icon": false
+                                }
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:*_flight_resource",
+                                "change": -1
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 1,
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -276,8 +313,41 @@
                     "block_condition": {
                         "type": "origins:movement_blocking"
                     },
-                    "comparison": ">=",
-                    "compare_to": 1
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_flight_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
+    },
+    "no_longer_flying": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_flight_toggle",
+            "operation": "set",
+            "change": 0
+        }
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
                 }
             ]
         },
@@ -299,6 +369,39 @@
         "key": {
             "key": "key.sneak",
             "continuous": true
+        }
+    },
+    "phasing": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 32,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
+    "flight_resource_regen": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "operation": "add",
+            "change": 20,
+            "resource": "*:*_flight_resource"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "comparison": "<",
+            "compare_to": 5,
+            "resource": "*:*_flight_toggle"
         }
     }
 }

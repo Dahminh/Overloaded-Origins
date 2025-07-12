@@ -1,0 +1,17 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 20,
+        "block_action": {
+            "type": "origins:spawn_entity",
+            "entity_type": "minecraft:armor_stand",
+            "tag": "{NoGravity:1b,Tags:[\"anchorPoint\"]}",
+            "entity_action": {
+                "type": "origins:grant_power",
+                "power": "*:raycast_test",
+                "source": "*:*"
+            }
+        }
+    }
+}

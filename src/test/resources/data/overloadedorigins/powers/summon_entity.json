@@ -1,0 +1,17 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:spawn_entity",
+        "entity_type": "minecraft:armor_stand",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:grant_power",
+                    "power": "phantom:haunt/aoe_effects/aoe_effect_2",
+                    "source": "apoli:command"
+                }
+            ]
+        }
+    }
+}

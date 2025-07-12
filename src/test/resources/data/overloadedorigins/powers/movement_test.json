@@ -1,0 +1,20 @@
+{
+    "type": "origins:multiple",
+    "dash": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 16,
+            "hit_action": {
+                "type": "origins:add_velocity",
+                "space": "local",
+                "z": 0.25
+            },
+            "command_along_ray": "particle dust_color_transition 0.090 0.576 1.000 1 0.078 0.078 1.000 ~ ~ ~ 0.1 0 0.1 1 0 normal"
+        },
+        "key": {
+            "key": "key.origins.primary_active",
+            "continuous": true
+        }
+    }
+}

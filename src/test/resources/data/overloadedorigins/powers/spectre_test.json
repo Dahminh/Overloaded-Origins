@@ -1,0 +1,20 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:block_action_at",
+        "block_action": {
+            "type": "origins:offset",
+            "y": 1,
+            "action": {
+                "type": "origins:spawn_entity",
+                "entity_type": "minecraft:phantom",
+                "tag": "{Tags:[\"spectre\"],NoAI:1b}",
+                "entity_action": {
+                    "type": "origins:grant_power",
+                    "power": "phantom:positives/fearmonger/spectre_missile",
+                    "source": "apoli:command"
+                }
+            }
+        }
+    }
+}

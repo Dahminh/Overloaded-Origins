@@ -1,0 +1,6 @@
+{
+    "type": "origins:attribute_modify_transfer",
+    "class": "modify_damage_dealt",
+    "attribute": "additionalentityattributes:critical_bonus_damage",
+    "multiplier": 1.25
+}

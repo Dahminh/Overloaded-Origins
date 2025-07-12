@@ -1,0 +1,113 @@
+{
+    "type": "origins:multiple",
+    "enemy_runner": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:distance",
+                    "comparison": "<=",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:relative_rotation",
+                    "actor_rotation": "head",
+                    "target_rotation": "body",
+                    "comparison": ">",
+                    "compare_to": 0.125
+                }
+            ]
+        },
+        "target_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:moving"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:player",
+                            "inverted": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:sprinting"
+                }
+            ]
+        },
+        "target_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "overloadedorigins:fear",
+                        "duration": 100
+                    }
+                }
+            ]
+        }
+    },
+    "detect_enemy_runner": {
+        "type": "origins:entity_glow",
+        "use_teams": false,
+        "red": 0.0,
+        "green": 1.0,
+        "blue": 0.0,
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:distance",
+                    "comparison": "<=",
+                    "compare_to": 6
+                },
+                {
+                    "type": "origins:relative_rotation",
+                    "actor_rotation": "head",
+                    "target_rotation": "body",
+                    "comparison": ">",
+                    "compare_to": 0.125
+                },
+                {
+                    "type": "origins:can_see",
+                    "shape_type": "visual"
+                }
+            ]
+        },
+        "entity_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:moving"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:player",
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:living"
+                        },
+                        {
+                            "type": "origins:entity_type",
+                            "entity_type": "minecraft:armor_stand",
+                            "inverted": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:sprinting"
+                }
+            ]
+        }
+    }
+}

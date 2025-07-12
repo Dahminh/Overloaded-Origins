@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:raycast",
+        "bientity_action": {
+            "type": "origins:add_to_set",
+            "set": "*:entity_set_test_1",
+            "time_limit": 1000
+        }
+    }
+}

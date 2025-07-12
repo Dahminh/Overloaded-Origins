@@ -1,0 +1,16 @@
+{
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "render_outline": false,
+    "bientity_condition": {
+        "type": "origins:invert",
+        "condition": {
+            "type": "origins:relative_rotation",
+            "axes": ["x","z"],
+            "actor_rotation": "head",
+            "target_rotation": "body",
+            "comparison": ">",
+            "compare_to": 0.125
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "type": "origins:multiple",
+    "swing": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:raycast",
+            "block": false,
+            "distance": 30,
+            "command_along_ray": "particle dust_color_transition 0.090 0.576 1.000 1 0.078 0.078 1.000 ~ ~ ~ 0.1 0 0.1 1 0 normal",
+            "bientity_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:distance",
+                    "compare_to": 10,
+                    "comparison": ">="
+                },
+                "if_action": {
+                    "type": "origins:add_velocity",
+                    "z": -0.25,
+                    "y": -0.1
+                },
+                "else_action": {
+                    "type": "origins:add_velocity",
+                    "z": -0.1
+                }
+            }
+        }
+    },
+    "timer": {
+        "type": "origins:action_over_time",
+        "interval": 15,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "kill @s"
+        }
+    }
+}

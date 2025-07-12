@@ -1,0 +1,23 @@
+{
+    "type": "origins:multiple",
+    "inventory_power": {
+        "type": "overloadedorigins:inventory",
+        "title": "Test Inventory",
+        "inventory_filter": {
+            "type": "origins:food"
+        },
+        "container_type": "chest"
+    },
+    "give_items": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "overloadedorigins:give",
+            "stack": {
+                "item": "minecraft:melon_slice"
+            },
+            "inventory_type": "power",
+            "power": "*:*_inventory_power"
+        }
+    }
+}

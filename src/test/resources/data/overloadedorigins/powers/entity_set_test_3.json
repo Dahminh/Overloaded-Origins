@@ -1,0 +1,25 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:action_on_set",
+        "set": "*:entity_set_test_1",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:damage",
+                    "amount": 0,
+                    "damage_type": "minecraft:magic"
+                },
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "say HIT"
+                    }
+                }
+            ]
+        }
+    }
+}

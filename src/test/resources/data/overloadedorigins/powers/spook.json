@@ -1,0 +1,77 @@
+{
+    "type": "origins:multiple",
+    "dmg_resource": {
+        "type": "origins:resource",
+        "max": 2147483647,
+        "min": 0
+    },
+    "delay_damage": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_action": {
+            "type": "origins:delay",
+            "ticks": 40,
+            "action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:damage",
+                        "damage_type": "minecraft:magic",
+                        "amount": 0,
+                        "modifier": {
+                            "operation": "set_base",
+                            "resource": "*:*_dmg_resource",
+                            "value": 0,
+                            "modifier": {
+                                "operation": "multiply_total_multiplicative",
+                                "value": -0.90
+                            }
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:delay",
+                            "ticks": 1,
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "scoreboard players set @s dmgDealtTotal 0"
+                                    },
+                                    {
+                                        "type": "origins:change_resource",
+                                        "change": 0,
+                                        "operation": "set",
+                                        "resource": "*:*_dmg_resource"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "self_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "resource operation @s overloadedorigins:spook_dmg_resource = @s dmgDealtTotal"
+                    },
+                    "ticks": 1
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "say hit and store"
+                }
+            ]
+        },
+        "damage_condition": {
+            "type": "origins:type",
+            "damage_type": "minecraft:player_attack"
+        }
+    }
+}

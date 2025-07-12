@@ -1,0 +1,41 @@
+{
+    "type": "origins:multiple",
+    "set": {
+        "type": "origins:entity_set",
+        "action_on_add": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "say ADD"
+            }
+        },
+        "action_on_remove": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "say REMOVE"
+            }
+        }
+    },
+    "punch": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:remove_from_set",
+                    "set": "*:*_set"
+                },
+                {
+                    "type": "origins:delay",
+                    "ticks": 1,
+                    "action": {
+                        "type": "origins:add_to_set",
+                        "set": "*:*_set",
+                        "time_limit": 200
+                    }
+                }
+            ]
+        }
+    }
+}

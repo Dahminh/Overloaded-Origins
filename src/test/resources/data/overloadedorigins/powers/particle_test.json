@@ -1,0 +1,18 @@
+{
+    "type": "overloadedorigins:particle",
+    "frequency": 3,
+    "visible_while_invisible": true,
+    "y_type": "body",
+    "scale": 0.5,
+    "spread": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.25
+    },
+    "offset_y": 0,
+    "particle": {
+        "type": "minecraft:dust_color_transition",
+        "params": "0.212 0.275 0.039 2 0.392 0.510 0.075"
+    },
+    "count": 2
+}

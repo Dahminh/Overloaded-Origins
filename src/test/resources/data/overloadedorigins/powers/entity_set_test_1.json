@@ -1,0 +1,41 @@
+{
+    "type": "origins:entity_set",
+    "action_on_add": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "say i added"
+                }
+            },
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "say me"
+                }
+            }
+        ]
+    },
+    "action_on_remove": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "say ive been removed"
+                }
+            },
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "say from this set"
+                }
+            }
+        ]
+    }
+}

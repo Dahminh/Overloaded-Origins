@@ -1,0 +1,28 @@
+{
+    "type": "origins:multiple",
+    "give_enchants": {
+        "type": "origins:modify_enchantment_level",
+        "enchantment": "minecraft:looting",
+        "modifiers": [
+            {
+                "operation": "addition",
+                "value": 3
+            }
+        ]
+    },
+    "has_enchantment_test": {
+        "type": "origins:self_action_on_hit",
+        "cooldown": 0,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "say Has Looting Level > 3"
+        },
+        "condition": {
+            "type": "origins:enchantment",
+            "enchantment": "minecraft:looting",
+            "calculation": "sum",
+            "comparison": ">=",
+            "compare_to": 3
+        }
+    }
+}
