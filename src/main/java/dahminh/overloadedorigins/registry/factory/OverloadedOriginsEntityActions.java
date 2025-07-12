@@ -10,7 +10,9 @@ import net.minecraft.registry.Registry;
 
 public class OverloadedOriginsEntityActions {
     public static void register() {
+
         register(RandomTeleport.getFactory());
+        register(GiveAction.getFactory());
     }
 
     public static ActionFactory<Entity> register(ActionFactory<Entity> actionFactory) {

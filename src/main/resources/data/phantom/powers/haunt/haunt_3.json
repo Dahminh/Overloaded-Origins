@@ -1,0 +1,52 @@
+{
+    "type": "origins:action_on_hit",
+    "bientity_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:health",
+                    "comparison": "<=",
+                    "compare_to": 0
+                }
+            },
+            {
+                "type": "origins:in_set",
+                "set": "*:haunt/constants_haunted_target"
+            }
+        ]
+    },
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:spawn_entity",
+            "entity_type": "minecraft:armor_stand",
+            "tag": "{Marker:1b,Invisible:1b}",
+            "entity_action": {
+                "type": "origins:grant_power",
+                "power": "phantom:haunt/aoe_effects/aoe_effect_2",
+                "source": "apoli:command"
+            }
+        }
+    },
+	"name": "§d§nHaunt III",
+	"description": "You have the ability to haunt individual victims, greatly enhancing your fear effects against them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/haunt.png",
+            "text": [
+                "[§a20 Minute Cooldown§r]",
+				"\n[§bSecondary Active Ability§r], use with [",
+				{"keybind": "key.origins.primary_active"},
+				"] will haunt the target on your crosshair, giving them §cFear I§r for §c1§r minute and emitting a §cFear Wave§r from their location.",
+                "\n\nThis ability has a §a40§r block range",
+                "\n\n§dHaunted§r targets will always be detected, glowing this §2color§r (dark green) and take increased effects from §eFleeing means Fear§r.",
+                "\n\nIf you are hitting the §dHaunted§r target (player) from behind and they are running (sprinting) while not holding an item with at least §7Smite I§r, giving them §cFear II§r for §c7.5§r seconds.",
+                "\n\nIf the §dHaunted§r target is not a player and you kill them, the cooldown is §arefreshed§r and a §cFear Wave§r will be emitted from their body.",
+                "\n\nIf the §dHaunted§r target kills you, they will no longer be §dHaunted§r and will be §cimmune§r to being §dHaunted§r for §c20§r minutes."
+			]
+        }
+    ]
+}

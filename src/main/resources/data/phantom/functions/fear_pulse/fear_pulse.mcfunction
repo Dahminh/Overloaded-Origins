@@ -1,0 +1,1 @@
+summon item_display ~ ~1 ~ {view_range:2f,shadow_radius:0f,shadow_strength:0f,start_interpolation:0,interpolation_duration:0,Tags:["fear_pulse"],brightness:{sky:15,block:15},item:{id:"overloadedorigins:fear_pulse",Count:1b},Rotation:[0f,90f]}

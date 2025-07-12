@@ -1,0 +1,22 @@
+{
+    "type": "origins:simple",
+	"name": "§d§nHaunt I",
+	"description": "You have the ability to haunt individual victims, greatly enhancing your fear effects against them.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/haunt.png",
+            "text": [
+                "[§a20 Minute Cooldown§r]",
+				"\n[§bSecondary Active Ability§r], use with [",
+				{"keybind": "key.origins.primary_active"},
+				"] will haunt the target on your crosshair, giving them §cFear I§r for §c1§r minute.",
+                "\n\nThis ability has a §a40§r block range",
+                "\n\n§dHaunted§r targets will always be detected, glowing this §2color§r (dark green) and take increased effects from §eFleeing means Fear§r.",
+                "\n\nIf you are hitting the §dHaunted§r target (player) from behind and they are running (sprinting) while not holding an item with at least §7Smite I§r, giving them §cFear II§r for §c7.5§r seconds.",
+                "\n\nIf the §dHaunted§r target is not a player and you kill them, the cooldown is §arefreshed§r.",
+                "\n\nIf the §dHaunted§r target kills you, they will no longer be §dHaunted§r and will be §cimmune§r to being §dHaunted§r for §c20§r minutes."
+			]
+        }
+    ]
+}

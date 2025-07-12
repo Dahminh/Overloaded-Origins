@@ -1,0 +1,25 @@
+{
+    "type": "origins:self_action_on_kill",
+    "hidden": true,
+    "cooldown": 20,
+    "hud_render": {
+        "bar_index": 11,
+        "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+        "should_render": true
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:fire_projectile",
+                "entity_type": "overloadedorigins:spectre",
+                "speed": -0.25
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.sculk_shrieker.shriek",
+                "pitch": 0.25
+            }
+        ]
+    }
+}

@@ -1,15 +1,12 @@
 {
     "powers": [
-        "phantom:positives/concealed_weapon",
-        "phantom:positives/ghost_touch",
         "phantom:positives/night_vision",
         "phantom:positives/fearmonger/fearmonger_1",
-        "phantom:terrify/terrify_1",
-        "phantom:terrify/constants",
         "phantom:positives/raw_food_good",
         "phantom:phantom_form/constants",
         "phantom:phantom_form/overlay",
         "phantom:neutral/transparent",
+        "phantom:neutral/fear_fleeing/fear_fleeing_1",
         "phantom:negatives/burn_in_daylight",
         "phantom:negatives/pyrophobia/constants",
         "phantom:negatives/pyrophobia/pyrophobia_1",
@@ -18,8 +15,9 @@
         "phantom:negatives/strange_anatomy",
         "phantom:negatives/undead_nightmare",
         "phantom:positives/fearmonger/fear_detection",
-        "phantom:positives/fearmonger/fear_meter",
-        "phantom:phantom_form/phasing_1"
+        "phantom:phantom_form/phasing_1",
+        "phantom:haunt/constants",
+        "phantom:haunt/haunt_1"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"

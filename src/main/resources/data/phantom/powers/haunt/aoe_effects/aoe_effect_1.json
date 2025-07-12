@@ -1,0 +1,194 @@
+{
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 3,
+        "max_action": {
+            "type": "origins:execute_command",
+            "command": "kill @s"
+        }
+    },
+    "action_over_time": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else_list",
+                    "actions": [
+                        {
+                            "condition": {
+                                "type": "origins:resource",
+                                "compare_to": 0,
+                                "comparison": "==",
+                                "resource": "*:*_resource"
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:area_of_effect",
+                                        "radius": 1,
+                                        "bientity_action": {
+                                            "type": "apoli:target_action",
+                                            "action": {
+                                                "type": "origins:apply_effect",
+                                                "effect": {
+                                                    "effect": "overloadedorigins:fear",
+                                                    "duration": 300
+                                                }
+                                            }
+                                        },
+                                        "bientity_condition": {
+                                            "type": "origins:target_condition",
+                                            "condition": {
+                                                "type": "origins:or",
+                                                "inverted": true,
+                                                "conditions": [
+                                                    {
+                                                        "type": "origins:origin",
+                                                        "origin": "phantom:upgraded1"
+                                                    },
+                                                    {
+                                                        "type": "origins:origin",
+                                                        "origin": "phantom:upgraded2"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "function phantom:fear_pulse/1r"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:resource",
+                                "compare_to": 1,
+                                "comparison": "==",
+                                "resource": "*:*_resource"
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:area_of_effect",
+                                        "radius": 2,
+                                        "bientity_action": {
+                                            "type": "apoli:target_action",
+                                            "action": {
+                                                "type": "origins:apply_effect",
+                                                "effect": {
+                                                    "effect": "overloadedorigins:fear",
+                                                    "duration": 200
+                                                }
+                                            }
+                                        },
+                                        "bientity_condition": {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:target_condition",
+                                                    "condition": {
+                                                        "type": "origins:or",
+                                                        "inverted": true,
+                                                        "conditions": [
+                                                            {
+                                                                "type": "origins:origin",
+                                                                "origin": "phantom:upgraded1"
+                                                            },
+                                                            {
+                                                                "type": "origins:origin",
+                                                                "origin": "phantom:upgraded2"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "origins:distance",
+                                                    "comparison": ">",
+                                                    "compare_to": 1
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "function phantom:fear_pulse/2r"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "condition": {
+                                "type": "origins:resource",
+                                "compare_to": 2,
+                                "comparison": "==",
+                                "resource": "*:*_resource"
+                            },
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:area_of_effect",
+                                        "radius": 4,
+                                        "bientity_action": {
+                                            "type": "apoli:target_action",
+                                            "action": {
+                                                "type": "origins:apply_effect",
+                                                "effect": {
+                                                    "effect": "overloadedorigins:fear"
+                                                }
+                                            }
+                                        },
+                                        "bientity_condition": {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:target_condition",
+                                                    "condition": {
+                                                        "type": "origins:or",
+                                                        "inverted": true,
+                                                        "conditions": [
+                                                            {
+                                                                "type": "origins:origin",
+                                                                "origin": "phantom:upgraded1"
+                                                            },
+                                                            {
+                                                                "type": "origins:origin",
+                                                                "origin": "phantom:upgraded2"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "origins:distance",
+                                                    "comparison": ">",
+                                                    "compare_to": 2
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "function phantom:fear_pulse/4r"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:change_resource",
+                    "change": 1,
+                    "resource": "*:*_resource"
+                }
+            ]
+        }
+    }
+}

@@ -17,150 +17,78 @@
             "power": "*:phantom_form/constants_toggle"
         }
     },
-    "fear_pulse": {
+    "rise_outside_block": {
         "type": "origins:active_self",
-        "cooldown": 600,
-        "hud_render": {
-            "bar_index": 11,
-            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
-            "should_render": true
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:phantom_form/constants_toggle"
-        },
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
-                    "type": "origins:delay",
-                    "action": {
-                        "type": "origins:execute_command",
-                        "command": "function phantom:fear_pulse/1"
-                    },
-                    "ticks": 15
+                    "type": "origins:change_resource",
+                    "resource": "*:phantom_form/constants_flight_toggle",
+                    "operation": "add",
+                    "change": 1
                 },
                 {
-                    "type": "origins:delay",
-                    "action": {
-                        "type": "origins:execute_command",
-                        "command": "function phantom:fear_pulse/2"
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:phantom_form/constants_flight_toggle",
+                        "comparison": "==",
+                        "compare_to": 5
                     },
-                    "ticks": 18
-                },
-                {
-                    "type": "origins:delay",
-                    "ticks": 21,
-                    "action": {
+                    "if_action": {
                         "type": "origins:and",
                         "actions": [
                             {
-                                "type": "origins:area_of_effect",
-                                "radius": 5,
-                                "bientity_action": {
-                                    "type": "origins:target_action",
-                                    "action": {
-                                        "type": "origins:apply_effect",
-                                        "effect": {
-                                            "effect": "overloadedorigins:fear",
-                                            "duration": 250,
-                                            "amplifier": 0
-                                        }
-                                    }
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:levitation",
+                                    "duration": 2,
+                                    "amplifier": 3,
+                                    "show_particles": false,
+                                    "show_icon": false
                                 }
                             },
                             {
-                                "type": "origins:execute_command",
-                                "command": "function phantom:fear_pulse/3"
+                                "type": "origins:change_resource",
+                                "resource": "*:phantom_form/constants_flight_resource",
+                                "change": -2
                             }
                         ]
                     }
-                },
-                {
-                    "type": "origins:delay",
-                    "ticks": 24,
-                    "action": {
-                        "type": "origins:and",
-                        "actions": [
-                            {
-                                "type": "origins:area_of_effect",
-                                "radius": 10,
-                                "bientity_action": {
-                                    "type": "origins:target_action",
-                                    "action": {
-                                        "type": "origins:apply_effect",
-                                        "effect": {
-                                            "effect": "overloadedorigins:fear",
-                                            "duration": 225,
-                                            "amplifier": 0
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "origins:execute_command",
-                                "command": "function phantom:fear_pulse/4"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "origins:delay",
-                    "action": {
-                        "type": "origins:execute_command",
-                        "command": "function phantom:fear_pulse/5"
-                    },
-                    "ticks": 27
-                },
-                {
-                    "type": "origins:delay",
-                    "ticks": 30,
-                    "action": {
-                        "type": "origins:and",
-                        "actions": [
-                            {
-                                "type": "origins:area_of_effect",
-                                "radius": 15,
-                                "bientity_action": {
-                                    "type": "origins:target_action",
-                                    "action": {
-                                        "type": "origins:apply_effect",
-                                        "effect": {
-                                            "effect": "overloadedorigins:fear",
-                                            "duration": 200,
-                                            "amplifier": 0
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "origins:execute_command",
-                                "command": "function phantom:fear_pulse/6"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "type": "origins:area_of_effect",
-                    "radius": 15,
-                    "bientity_action": {
-                        "type": "origins:target_action",
-                        "action": {
-                            "type": "origins:apply_effect",
-                            "effect": {
-                                "effect": "minecraft:darkness",
-                                "duration": 60,
-                                "amplifier": 0
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "origins:play_sound",
-                    "sound": "minecraft:block.sculk_shrieker.shriek",
-                    "pitch": 0.25
                 }
             ]
+        },
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:phantom_form/constants_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:phantom_form/constants_flight_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
         }
     },
 	"name": "§d§nPhantom Form III",
@@ -176,8 +104,7 @@
                 "\n\nWhile §d§nPhantom Form§r is active, you will:",
                 "\n§a-§r Able to phase through blocks",
                 "\n§a-§r Invisible",
-                "\n§a-§r Fall damage resistant up to §a20 blocks§r",
-                "\n§a-§r Be able to fly when it is night time in the Overworld",
+                "\n§a-§r Be able to fly for up to §a15§r seconds",
                 "\n§e-§r Considered an undead",
                 "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
                 "\n§c-§r Not be able to attack unless §a§nTerrify§r is active",
@@ -188,17 +115,6 @@
                 "\n§c-§r Crying Obsidian",
                 "\n\nYou can only have §d§nPhantom Form§r active when you have 3 bars or more of hunger."
 			]
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "overloadedorigins:textures/gui/badge/phantom/fear_pulse.png",
-            "text": [
-                "§d§nPhantom Form§r Continued:",
-                "\n[§a30 Second Cooldown§r]",
-                "\nAfter toggling off §d§nPhantom Form§r§f, you will emit a Fear Pulse that will spread §cFear§r to nearby entities.",
-                "\n\nEntities in a §a15§r block radius will receive §cDarkness§r for §c3§r seconds",
-                "\n\nAfter §a1.05§r / §a1.2§r / §a1.5§r second, entities in a §a5§r / §a10§r / §a15§r block radius will receive §cFear§r for §c12.5§r / §c11.25§r / §c10§r seconds"
-            ]
         }
     ]
 }

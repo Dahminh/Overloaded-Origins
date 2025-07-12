@@ -19,6 +19,28 @@
             "should_render": true
         }
     },
+    "flight_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 600,
+        "hud_render": {
+            "bar_index": 11,
+            "sprite_location": "overloadedorigins:textures/gui/resource_bar_1.png",
+            "should_render": true,
+            "condition": {
+                "type": "origins:resource",
+                "compare_to": 600,
+                "comparison": "<",
+                "resource": "*:*_flight_resource"
+            }
+        }
+    },
+    "flight_toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5
+    },
     "toggle": {
         "type": "origins:toggle",
         "key": {
@@ -50,30 +72,6 @@
             ]
         }
     },
-	"fall_damage_resistant": {
-		"type": "origins:modify_damage_taken",
-		"modifier": {
-			"operation": "addition",
-			"value": -17
-		},
-		"damage_condition": {
-			"type": "origins:or",
-			"conditions": [
-				{
-					"type": "origins:name",
-					"name": "fall"
-				},
-				{
-					"type": "origins:name",
-					"name": "fall.player"
-				}
-			]
-		},
-        "condition": {
-            "type": "origins:power_active",
-            "power": "*:*_toggle"
-        }
-	},
     "undead": {
         "type": "origins:entity_group",
         "group": "undead",
@@ -91,49 +89,28 @@
             "power": "*:*_toggle"
         }
     },
-	"particles_1": {
-		"type": "origins:particle",
-		"particle": {
-			"type": "minecraft:ash"
-		},
-		"spread": {
-			"x": 0.25,
-			"y": 0.5, 
-			"z": 0.25
-			},
-		"count": 8,
-        "speed": 1.0,
-		"offset_y": 0.1,
-		"frequency": 5,
-		"visible_while_invisible": true,
-		"visible_in_first_person": false,
-		"condition": {
-		  "type": "origins:power_active",
-		  "power": "*:*_toggle"
-		}
-	},
-    "particles_2": {
-		"type": "origins:particle",
-		"particle": {
-            "type": "minecraft:dust_color_transition",
-            "params": "0.46 0.62 0.24 1 0.17 0.22 0.07"
+    "particles": {
+        "type": "overloadedorigins:particle",
+        "frequency": 3,
+        "visible_while_invisible": true,
+        "y_type": "body",
+        "scale": 0.5,
+        "spread": {
+            "x": 0.25,
+            "y": 0.3,
+            "z": 0.25
         },
-		"spread": {
-			"x": 0.25,
-			"y": 0.5, 
-			"z": 0.25
-			},
-		"count": 12,
-        "speed": 1.0,
-		"offset_y": 1,
-		"frequency": 5,
-		"visible_while_invisible": true,
-		"visible_in_first_person": false,
+        "offset_y": 0,
+        "particle": {
+            "type": "minecraft:dust_color_transition",
+            "params": "0.212 0.275 0.039 2 0.392 0.510 0.075"
+        },
+        "count": 2,
 		"condition": {
 		  "type": "origins:power_active",
 		  "power": "*:*_toggle"
 		}
-	},
+    },
     "sound": {
 		"type": "origins:action_over_time",
 		"interval": 120,
@@ -166,8 +143,7 @@
             "power": "*:*_toggle"
 		},
         "name": {
-            "text": "Phantom Form",
-            "color": "green"
+            "text": "§cPhantom Form"
         }
 	},
   	"prevent_entity_use": {
@@ -200,6 +176,21 @@
             "power": "*:*_toggle"
         }
     },
+    "feature_render": {
+        "type": "origins:prevent_feature_render",
+        "features": [
+            "armor",
+			"elytra",
+			"cape",
+            "shoulder_parrot",
+			"held_item",
+			"stuck_objects"
+        ],
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
+        }
+    },
     "no_collision": {
         "type": "origins:prevent_entity_collision",
         "condition": {
@@ -214,22 +205,23 @@
             "value": -1
         },
         "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:power_active",
-                    "power": "*:*_toggle"
-                },
-                {
-                    "type": "origins:resource",
-                    "comparison": ">",
-                    "compare_to": 0,
-                    "resource": "*:terrify/constants_cooldown"
-                }
-            ]
+            "type": "origins:power_active",
+            "power": "*:*_toggle"
         }
     },
-    "rise": {
+    "rise_in_block": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "duration": 2,
+                "amplifier": 3,
+                "show_particles": false,
+                "show_icon": false
+            }
+        },
+        "cooldown": 1,
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -247,27 +239,21 @@
                 }
             ]
         },
-        "type": "origins:active_self",
-        "entity_action": {
-            "type": "origins:apply_effect",
-            "effect": {
-                "effect": "minecraft:levitation",
-                "duration": 2,
-                "amplifier": 3,
-                "show_particles": false,
-                "show_icon": false
-            }
-        },
-        "cooldown": 1,
-        "hud_render": {
-            "should_render": false
-        },
         "key": {
             "key": "key.jump",
             "continuous": true
         }
     },
-    "fall": {
+    "no_longer_flying": {
+        "type": "origins:action_on_land",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_flight_toggle",
+            "operation": "set",
+            "change": 0
+        }
+    },
+    "sneaking": {
         "condition": {
             "type": "origins:and",
             "conditions": [
@@ -297,12 +283,25 @@
             }
         },
         "cooldown": 1,
-        "hud_render": {
-            "should_render": false
-        },
         "key": {
             "key": "key.sneak",
             "continuous": true
+        }
+    },
+    "flight_resource_regen": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "operation": "add",
+            "change": 20,
+            "resource": "*:*_flight_resource"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "comparison": "<",
+            "compare_to": 5,
+            "resource": "*:*_flight_toggle"
         }
     }
 }

@@ -12,8 +12,7 @@
                     "type": "origins:exposed_to_sun"
                 },
                 {       
-                    "type": "origins:power_active",
-                    "power": "*:phantom_form/constants_toggle",
+                    "type": "origins:invisible",
                     "inverted": true
                 }
             ]
@@ -32,8 +31,7 @@
                     "type": "origins:exposed_to_sun"
                 },
                 {       
-                    "type": "origins:power_active",
-                    "power": "*:phantom_form/constants_toggle",
+                    "type": "origins:invisible",
                     "inverted": true
                 }
             ]

@@ -1,16 +1,12 @@
 {
     "powers": [
-        "phantom:positives/concealed_weapon",
-        "phantom:positives/ghost_touch",
         "phantom:positives/night_vision",
         "phantom:positives/fearmonger/fearmonger_2",
-        "phantom:terrify/terrify_2",
-        "phantom:terrify/constants",
         "phantom:positives/raw_food_good",
         "phantom:phantom_form/constants",
         "phantom:phantom_form/overlay",
-        "phantom:phantom_form/phantom_flight",
         "phantom:neutral/transparent",
+        "phantom:neutral/fear_fleeing/fear_fleeing_2",
         "phantom:negatives/burn_in_daylight",
         "phantom:negatives/pyrophobia/constants",
         "phantom:negatives/pyrophobia/pyrophobia_2",
@@ -19,9 +15,9 @@
         "phantom:negatives/strange_anatomy",
         "phantom:negatives/undead_nightmare",
         "phantom:positives/fearmonger/fear_detection",
-        "phantom:positives/fearmonger/hysteria",
-        "phantom:positives/fearmonger/fear_meter",
-        "phantom:phantom_form/phasing_2"
+        "phantom:phantom_form/phasing_2",
+        "phantom:haunt/constants",
+        "phantom:haunt/haunt_2"
     ],
     "icon": {
         "item": "minecraft:phantom_membrane"
@@ -30,12 +26,12 @@
     "order": 0,
     "impact": 3,
     "name": "Phantom Haunter",
-    "description": "You're now a Phantom Haunter, becoming more spectral and scarier than before.",
+    "description": "Phantom Haunters are evolved to be much more spectral and terrifying, enjoying the fear inflicted by their haunted victims.",
 	"upgrades": [
 		{
 			"condition": "minecraft:adventure/kill_all_mobs",
 			"origin": "phantom:upgraded2",
-			"announcement": "You have evolved into a Phantom Wraith. You are now at the pinnacle of your Origin."
+			"announcement": "You have evolved into a Phantom Wraith. All will fear you..."
 		}
 	]
 }

@@ -15,9 +15,9 @@
             "sprite": "overloadedorigins:textures/gui/badge/phantom/photoallergic.png",
             "text": [
                 "§c§nPhotoallergic",
-                "\nYou begin to burn in daylight if §d§nPhantom Form§r is not active.",
+                "\nYou begin to burn in daylight if you are not invisible.",
                 "\n\n§nExplanation§r:\n\n",
-                "You burn and deal §c-25%§r damage whenever you are exposed to the Sun and not in §d§nPhantom Form§r§f."
+                "You burn and deal §c-25%§r damage whenever you are exposed to the Sun or while not invisible."
             ]
         },
         {

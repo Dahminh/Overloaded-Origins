@@ -1,18 +1,95 @@
 {
-    "type": "origins:phasing",
-    "blacklist": true,
-    "render_type": "blindness",
-    "view_distance": 32,
-    "block_condition": {
-        "type": "origins:in_tag",
-        "tag": "origins:unphasable"
+    "type": "origins:multiple",
+    "phasing": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 32,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:phantom_form/constants_toggle"
+        }
     },
-    "phase_down_condition": {
-        "type": "origins:sneaking"
-    },
-    "condition": {
-        "type": "origins:power_active",
-        "power": "*:phantom_form/constants_toggle"
+    "rise_outside_block": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:phantom_form/constants_flight_toggle",
+                    "operation": "add",
+                    "change": 1
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:phantom_form/constants_flight_toggle",
+                        "comparison": "==",
+                        "compare_to": 5
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:levitation",
+                                    "duration": 2,
+                                    "amplifier": 3,
+                                    "show_particles": false,
+                                    "show_icon": false
+                                }
+                            },
+                            {
+                                "type": "origins:change_resource",
+                                "resource": "*:phantom_form/constants_flight_resource",
+                                "change": -6
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 1,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:power_active",
+                    "power": "*:phantom_form/constants_toggle"
+                },
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:movement_blocking"
+                    },
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "*:phantom_form/constants_flight_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.jump",
+            "continuous": true
+        }
     },
 	"name": "§d§nPhantom Form I",
 	"description": "You can switch between human and Phantom form at will, but only while you are saturated enough to sprint.",
@@ -27,7 +104,7 @@
                 "\n\nWhile §d§nPhantom Form§r is active, you will:",
                 "\n§a-§r Able to phase through blocks",
                 "\n§a-§r Invisible",
-                "\n§a-§r Fall damage resistant up to §a20 blocks§r",
+                "\n§a-§r Be able to fly for up to §a5§r seconds",
                 "\n§e-§r Considered an undead",
                 "\n§c-§r Not be able to interact with entities, use items, and place or break blocks",
                 "\n§c-§r Not be able to attack unless §a§nTerrify§r is active",

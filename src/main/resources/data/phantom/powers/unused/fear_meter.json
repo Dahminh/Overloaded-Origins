@@ -285,5 +285,22 @@
                 }
             ]
         }
+    },
+    "summon_spectres": {
+        "type": "origins:action_over_time",
+        "interval": 100,
+        "entity_action": {
+            "type": "origins:fire_projectile",
+            "entity_type": "overloadedorigins:spectre",
+            "count": 1,
+            "divergence": 100,
+            "speed": -0.25
+        },
+        "condition": {
+            "type": "origins:resource",
+            "compare_to": 10,
+            "comparison": "==",
+            "resource": "*:*_meter"
+        }
     }
 }

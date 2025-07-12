@@ -1,5 +1,14 @@
 {
-    "type": "origins:simple",
+    "type": "origins:self_action_on_hit",
+    "entity_action": {
+        "type": "origins:feed",
+        "food": 2,
+        "saturation": 2
+    },
+    "target_condition": {
+        "type": "origins:status_effect",
+        "effect": "overloadedorigins:fear"
+    },
     "name": "§a§nFearmonger II",
     "description": "You are fueled by fear and deliberately intend to spread fear wherever you go.",
     "badges": [
@@ -7,50 +16,43 @@
             "type": "origins:tooltip",
             "sprite": "overloadedorigins:textures/gui/badge/phantom/fear.png",
             "text": [
-                "§a§nFear",
-                "\nFear is a debuff that will reduce:",
+                "§a§nFear Usurper II",
+                "\nYou feed off the fear of your victims, empowering yourself to create a never ending cycle of inflicting and feasting off of fear upon your victims.",
+                "\n\n§nExplanation§r:\n\n",
+                "Fear is a debuff that will reduce:",
                 "\n§c-§r Movement Speed by §c15§r%",
                 "\n§c-§r Attack Speed by §c10§r%",
                 "\n§c-§r Attack Damage by §c1§r",
                 "\nPer Level",
-                "\n\nThese effects stack with §cSlowness§r, §cMining Fatigue§r, and §cWeakness§r"
+                "\n\nThese effects can stack with §cSlowness§r, §cMining Fatigue§r, and §cWeakness§r",
+                "\n\nWhen attacking a target that is inflicted with §cFear§r, you will gain §a2§r Hunger Point and Saturation per hit."
             ]
         },
         {
             "type": "origins:tooltip",
             "sprite": "overloadedorigins:textures/gui/badge/phantom/fear_detection.png",
             "text": [
-                "§a§nFear Detection",
-                "\nBeing an Origin empowered by fear, you can detect nearby terrified prey.",
+                "§a§nDread Detection",
+                "\nYou can easily sense nearby victims that are inflicted with fear to terrorize and haunt them even more.",
                 "\n\n§nExplanation§r:\n\n",
-                "You can detect nearby entities that are under the §cFear§r debuff in a §a60§r block radius."
+                "Entities that are under the §cFear§r debuff and are in a §a60§r block radius will glow this ",
+                {
+                    "text": "color",
+                    "color": "#36460a"
+                },
+                " (swamp green)."
             ]
         },
         {
             "type": "origins:tooltip",
-            "sprite": "overloadedorigins:textures/gui/badge/phantom/hysteria.png",
+            "sprite": "overloadedorigins:textures/gui/badge/phantom/fear_flee.png",
             "text": [
-                "§a§nHysteria",
-                "\nFear spreads fear and that fear spreads more fear.",
+                "§e§nFleeing means Fear II",
+                "\nThose that run from you are more susceptible to fear, allowing you to easily inflict fear into them. However, if you ever run from your targets, it shows that you are scared and a Phantom that is scared is a weak Phantom.",
                 "\n\n§nExplanation§r:\n\n",
-                "[§a20 Second Cooldown§r]",
-                "\nKilling any entities with the §cFear§r debuff will spread §cFear§r to other entities like a Fear Pulse.",
-                "\n\nAfter §a1.25§r / §a1.5§r seconds from the kill, entities in a §a6§r / §a9§r block radius will receive §cFear§r for §c10§r / §c7.5§r seconds"
-            ]
-        },
-        {
-            "type": "origins:tooltip",
-            "sprite": "overloadedorigins:textures/gui/badge/phantom/fear_meter.png",
-            "text": [
-                "§e§nFear Usurper I",
-                "\nYou become stronger by absorbing the fear from your targets. However, you can also become weaker when your targets no longer fear you.",
-                "\n\n§nExplanation§r:\n\n",
-                "You have a Fear meter that determines how much Fear you have absorbed and lost. The meter ranges from -5 (§eYellow§r) to 5 (§aGreen§r)",
-                "\n\n§eYellow§r: Taking hits (with the Smite enchantmnet) will subtract §c1§r (§c2§r) from the meter.",
-                "\nAt §eMIN§r Stacks: targets that hit you will get rid of the §cFear§r debuff from themselves and you will lose §c2§r Hunger Points and Saturation per hit.",
-                "\n\n§aGreen§r: Dealing damage to targets (with the §cFear§r debuff) will add §a1§r (§a2§r) to the meter.",
-                "\nAt §aMAX§r Stacks: hitting targets will receive §cFear§r for §c5§r seconds and you will gain §a1§r Hunger Point and Saturation per hit.",
-                "\n\nStacks will decay when out of combat for 15 seconds, decaying at a rate of §e1§r every §e2§r seconds."
+                "Melee attacking a moving entity (sprinting player) from behind will apply §cFear I§r for §c7.5§r seconds.",
+                "\n\nIf the target you hit is §dHaunted§r and not holding an item with at least §7Smite III§r, will apply §cFear II§r for §c10§r seconds.",
+                "\n\nIf you are sprinting and get hit from behind in a §c6§r block radius, you will receive §cFear I§r for §c12.5§r seconds."
             ]
         }
     ]
